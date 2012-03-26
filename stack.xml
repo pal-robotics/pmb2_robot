@@ -1,7 +1,7 @@
 <stack>
-  <description brief="reem_robot">reem_robot</description>
+  <description brief="reem_robot">Scripts and configuration files to launch when bringing up REEM. </description>
   <author>Maintained by Adolfo Rodriguez Tsouroukdissian</author>
-  <license>BSD</license>  
+  <license>Modified BSD</license>  
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/reem_robot</url>
   <depend stack="reem_common" /> <!-- reem_description, reem_machine -->
