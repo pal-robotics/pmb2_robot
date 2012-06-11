@@ -9,4 +9,7 @@
     <param name="tf_prefix" type="string" value="" />
   </node>
 
+  <!-- Point head action -->
+  <include file="$(find reem_bringup)/launch/point_head_action.launch" />
+
 </launch>

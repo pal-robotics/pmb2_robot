@@ -1,0 +1,11 @@
+<launch>
+  <group ns="head_traj_controller">
+    <node name="point_head_action" pkg="pr2_head_action" type="pr2_head_action" output="screen" >
+      <rosparam>
+        pan_link:  head_1_link
+        tilt_link: head_2_link
+        success_angle_threshold: 0.01
+      </rosparam>
+    </node>
+  </group>
+</launch>
