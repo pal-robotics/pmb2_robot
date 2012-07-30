@@ -1,6 +1,6 @@
 <launch>
   <group ns="head_traj_controller">
-    <node name="point_head_action" pkg="pr2_head_action" type="pr2_head_action" output="screen" >
+    <node name="point_head_action" pkg="reem_head_action" type="reem_head_action" output="screen" >
       <rosparam>
         pan_link:  head_1_link
         tilt_link: head_2_link
