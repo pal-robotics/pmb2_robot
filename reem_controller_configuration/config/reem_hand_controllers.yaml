@@ -1,0 +1,39 @@
+right_hand_controller:
+  type: "robot_mechanism_controllers/JointTrajectoryActionController"
+  joints:
+    - hand_right_thumb_joint
+    - hand_right_index_1_joint
+    - hand_right_middle_1_joint
+
+  joint_trajectory_action_node:
+    joints:
+      - hand_right_thumb_joint
+      - hand_right_index_1_joint
+      - hand_right_middle_1_joint
+    constraints:
+      goal_time: 0.6
+      hand_right_thumb_joint:
+        goal: 0.02
+      hand_right_index_1_joint:
+        goal: 0.02
+      hand_right_middle_1_joint:
+        goal: 0.02
+
+left_hand_controller:
+  type: "robot_mechanism_controllers/JointTrajectoryActionController"
+  joints:
+    - hand_left_thumb_joint
+    - hand_left_index_1_joint
+    - hand_left_middle_1_joint
+  joint_trajectory_action_node:
+    joints:
+      - hand_left_thumb_joint
+      - hand_left_index_1_joint
+      - hand_left_middle_1_joint
+    constraints:
+      hand_left_thumb_joint:
+        goal: 0.02
+      hand_left_index_1_joint:
+        goal: 0.02
+      hand_left_middle_1_joint:
+        goal: 0.02

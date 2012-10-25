@@ -9,7 +9,10 @@
     <param name="tf_prefix" type="string" value="" />
   </node>
 
-  <!-- Point head action -->
+  <!-- Default controllers -->
+  <include file="$(find reem_controller_configuration)/launch/reem_default_controllers.launch" />
+
+  <!-- Point head action TODO: Move to default controllers! -->
   <include file="$(find reem_bringup)/launch/point_head_action.launch" />
 
 </launch>

@@ -1,11 +1,10 @@
 <launch>
   <!-- Basic Reem setup -->
   <include file="$(find reem_bringup)/launch/reem.launch" />
-
   <!-- Joint state publisher -->
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
     <param name="use_gui" type="bool" value="false" />
-    <param name="rate" type="int" value="100" />
+    <param name="rate" type="int" value="25" />
     <rosparam param="source_list">[/pal_motors_controller/command]</rosparam>
   </node>
 </launch>
