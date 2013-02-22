@@ -10,7 +10,6 @@
   <url>http://ros.org/wiki/reem_bringup</url>
 
   <depend package="reem_description"/>
-  <depend package="reem_machine"/>
   <depend package="robot_state_publisher"/>
 
 </package>

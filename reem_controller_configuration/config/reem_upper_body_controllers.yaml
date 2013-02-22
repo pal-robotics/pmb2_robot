@@ -1,6 +1,6 @@
 upper_body_controller:
   type: "robot_mechanism_controllers/JointTrajectoryActionController"
-  joints:
+  joints: &upper_body_joints
     - torso_1_joint
     - torso_2_joint
     - head_1_joint
@@ -20,60 +20,42 @@ upper_body_controller:
     - arm_left_6_joint
     - arm_left_7_joint
   joint_trajectory_action_node:
-    joints:
-      - torso_1_joint
-      - torso_2_joint
-      - head_1_joint
-      - head_2_joint
-      - arm_right_1_joint
-      - arm_right_2_joint
-      - arm_right_3_joint
-      - arm_right_4_joint
-      - arm_right_5_joint
-      - arm_right_6_joint
-      - arm_right_7_joint
-      - arm_left_1_joint
-      - arm_left_2_joint
-      - arm_left_3_joint
-      - arm_left_4_joint
-      - arm_left_5_joint
-      - arm_left_6_joint
-      - arm_left_7_joint
+    joints: *upper_body_joints
     constraints:
       goal_time: 0.6
       torso_1_joint:
-        goal: 0.02
+        goal: &goal_pos_constraint 0.02
       torso_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       head_1_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       head_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_1_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_3_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_4_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_5_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_6_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_7_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_1_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_3_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_4_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_5_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_6_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_7_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint

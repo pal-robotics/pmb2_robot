@@ -1,12 +1,10 @@
 torso_controller:
   type: "robot_mechanism_controllers/JointTrajectoryActionController"
-  joints:
+  joints: &torso_joints
     - torso_1_joint
     - torso_2_joint
   joint_trajectory_action_node:
-    joints:
-      - torso_1_joint
-      - torso_2_joint
+    joints: *torso_joints
     constraints:
       goal_time: 0.6
       torso_1_joint:

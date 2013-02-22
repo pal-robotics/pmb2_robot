@@ -1,10 +1,6 @@
 <launch>
-  <!-- Upper body -->
-  <rosparam command="load" file="$(find reem_controller_configuration)/config/reem_upper_body_controllers.yaml" />
-
   <!-- Arms -->
   <rosparam command="load" file="$(find reem_controller_configuration)/config/reem_arm_controllers.yaml" />
-  <rosparam command="load" file="$(find reem_controller_configuration)/config/reem_both_arms_controllers.yaml" />
 
   <!-- Hands -->
   <rosparam command="load" file="$(find reem_controller_configuration)/config/reem_hand_controllers.yaml" />

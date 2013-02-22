@@ -1,12 +1,10 @@
 head_traj_controller:
   type: "robot_mechanism_controllers/JointTrajectoryActionController"
-  joints:
+  joints: &head_joints
     - head_1_joint
     - head_2_joint
   joint_trajectory_action_node:
-    joints:
-      - head_1_joint
-      - head_2_joint
+    joints: *head_joints
     constraints:
       goal_time: 0.6
       head_1_joint:

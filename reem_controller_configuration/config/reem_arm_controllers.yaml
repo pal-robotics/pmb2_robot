@@ -1,6 +1,6 @@
 right_arm_controller:
   type: "robot_mechanism_controllers/JointTrajectoryActionController"
-  joints:
+  joints: &arm_right_joints
     - arm_right_1_joint
     - arm_right_2_joint
     - arm_right_3_joint
@@ -9,34 +9,27 @@ right_arm_controller:
     - arm_right_6_joint
     - arm_right_7_joint
   joint_trajectory_action_node:
-    joints:
-      - arm_right_1_joint
-      - arm_right_2_joint
-      - arm_right_3_joint
-      - arm_right_4_joint
-      - arm_right_5_joint
-      - arm_right_6_joint
-      - arm_right_7_joint
+    joints: *arm_right_joints
     constraints:
-      goal_time: 0.6
+      goal_time: &goal_time_constraint 0.6
       arm_right_1_joint:
-        goal: 0.02
+        goal: &goal_pos_constraint 0.02
       arm_right_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_3_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_4_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_5_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_6_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_7_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
 
 right_arm_torso_controller:
   type: "robot_mechanism_controllers/JointTrajectoryActionController"
-  joints:
+  joints: &arm_right_torso_joints
     - torso_1_joint
     - torso_2_joint
     - arm_right_1_joint
@@ -47,40 +40,31 @@ right_arm_torso_controller:
     - arm_right_6_joint
     - arm_right_7_joint
   joint_trajectory_action_node:
-    joints:
-      - torso_1_joint
-      - torso_2_joint
-      - arm_right_1_joint
-      - arm_right_2_joint
-      - arm_right_3_joint
-      - arm_right_4_joint
-      - arm_right_5_joint
-      - arm_right_6_joint
-      - arm_right_7_joint
+    joints: *arm_right_torso_joints
     constraints:
-      goal_time: 0.6
+      goal_time: *goal_time_constraint
       torso_1_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       torso_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_1_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_3_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_4_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_5_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_6_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_right_7_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
 
 left_arm_controller:
   type: "robot_mechanism_controllers/JointTrajectoryActionController"
-  joints:
+  joints: &arm_left_joints
     - arm_left_1_joint
     - arm_left_2_joint
     - arm_left_3_joint
@@ -89,27 +73,20 @@ left_arm_controller:
     - arm_left_6_joint
     - arm_left_7_joint
   joint_trajectory_action_node:
-    joints:
-      - arm_left_1_joint
-      - arm_left_2_joint
-      - arm_left_3_joint
-      - arm_left_4_joint
-      - arm_left_5_joint
-      - arm_left_6_joint
-      - arm_left_7_joint
+    joints: *arm_left_joints
     constraints:
-      goal_time: 0.6
+      goal_time: *goal_time_constraint
       arm_left_1_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_2_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_3_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_4_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_5_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_6_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
       arm_left_7_joint:
-        goal: 0.02
+        goal: *goal_pos_constraint
