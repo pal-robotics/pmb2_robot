@@ -1,6 +1,16 @@
+<?xml version="1.0"?>
+
+<!-- Test ros_control integration of REEM on a dummy implementation of the ActuatorsManager.
+     This test does not use the actual ActuatorsManager, but a minimal implenentation of its interface.
+ -->
+
 <launch>
   <!-- Deployer -->
-  <!--TODO-->
+  <arg name="orocos_target" value="$(optenv OROCOS_TARGET gnulinux)" />
+  <node name="rt_control"
+        pkg="ocl"
+        type="deployer-$(arg orocos_target)"
+        args="-s $(find reem_hardware_tests)/config/dummy_act_mgr_test.ops --no-consolelog --"/>
 
   <!-- Robot model -->
   <include file="$(find reem_description)/robots/upload_reem.launch" />

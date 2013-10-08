@@ -1,0 +1,15 @@
+<package>
+  <description brief="reemc_hardware_tests"></description>
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reemc_hardware_tests</url>
+
+  <depend package="reem_controller_configuration"/>
+  <depend package="reem_description"/>
+  <depend package="robot_state_publisher"/>
+  <depend package="reem_hardware"/>
+  <depend package="roscpp"/>
+  <depend package="rtt"/>
+  <depend package="ocl"/>
+</package>

@@ -1,0 +1,35 @@
+// Global constants
+const double control_period = 0.01
+
+// ROS interface plugin
+import("rtt_rosnode")
+
+// Actuators manager
+const string act_mgr_name  = "actuatorsMgr"
+const int act_mgr_priority = HighestPriority
+
+import("reem_hardware_tests")
+loadComponent(act_mgr_name, "reem_hardware::DummyActuatorsManager")
+setActivity(act_mgr_name, control_period, act_mgr_priority, ORO_SCHED_RT)
+
+// Reem hardware
+const string robot_hw_name   = "robot_hw"
+const string estop_port_name = "emergency_stop_state"
+const int robot_hw_priority  = (HighestPriority + LowestPriority)/2
+
+import("reem_hardware")
+loadComponent(robot_hw_name, "reem_hardware::ReemHardware")
+setActivity(robot_hw_name, control_period, robot_hw_priority, ORO_SCHED_RT)
+
+// Connect components
+addPeer(robot_hw_name, act_mgr_name)
+connectPorts(robot_hw_name, act_mgr_name)
+connectServices(robot_hw_name, act_mgr_name)
+stream(robot_hw_name + "." + estop_port_name, ros.topic(estop_port_name))
+
+// Startup
+actuatorsMgr.configure
+actuatorsMgr.start
+
+robot_hw.configure
+robot_hw.start

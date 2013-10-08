@@ -1,0 +1,18 @@
+<package>
+  <description brief="reem_hardware"></description>
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Modified BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reemc_hardware</url>
+
+  <depend package="roscpp"/>
+  <depend package="controller_manager"/>
+  <depend package="pal_ros_control"/>
+  <depend package="realtime_tools"/>
+  <depend package="rtt"/>
+  <depend package="rtt_std_msgs"/>
+  <depend package="std_srvs"/>
+
+</package>
+
+
