@@ -8,6 +8,11 @@
   <!-- Controller configuration -->
   <include file="$(find reem_controller_configuration)/launch/default_controllers.launch" />
 
+
+  <!-- Pre-recorded motions executor -->
+  <include file="$(find reem_bringup)/launch/play_motion.launch" />
+
+
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0" />
