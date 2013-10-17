@@ -17,7 +17,8 @@
               left_arm_controller
               right_arm_controller
               left_hand_controller
-              right_hand_controller" />
+              right_hand_controller
+              mobile_base_controller" />
 
   <!-- Point head action -->
   <group ns="head_controller">
