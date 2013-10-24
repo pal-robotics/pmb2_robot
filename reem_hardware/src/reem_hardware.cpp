@@ -51,9 +51,9 @@ using std::string;
 namespace
 {
 const string ACT_POS_CUR_PORT        = "act_position";
-const string ACT_VEL_CUR_PORT        = "act_velocity";
+const string ACT_VEL_CUR_PORT        = ""; //"act_velocity";
 const string ACT_POS_REF_PORT        = "ref_position";
-const string ACT_VEL_REF_PORT        = ""; //"ref_velocity";
+const string ACT_VEL_REF_PORT        = "ref_velocity";
 
 const string EMERGENCY_STOP_PORT     = "emergency_stop_state";
 }
