@@ -11,4 +11,4 @@ mobile_base_controller:
   wheel_radius_multiplier: 1.0
 
   # Threshold to consider cmd_vel commands old [s] 
-  cmd_vel_old_threshold: 1.0
+  cmd_vel_old_threshold: 0.5
