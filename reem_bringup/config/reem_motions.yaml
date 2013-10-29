@@ -204,53 +204,53 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 10.0
-    carry_small_object:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.1, 0.0, 0.25, 1.0, 0.2, -1.2, 1.5, 0.9, 0.9, 1.4, 1.0,
-          0.2, -1.2, 1.5, 0.9, 0.9, 1.4]
-        time_from_start: 2.0
+    # carry_small_object:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.1, 0.0, 0.25, 1.0, 0.2, -1.2, 1.5, 0.9, 0.9, 1.4, 1.0,
+    #       0.2, -1.2, 1.5, 0.9, 0.9, 1.4]
+    #     time_from_start: 2.0
     center_head:
       joints: [head_1_joint, head_2_joint]
       points:
       - positions: [0.0, 0.0]
         time_from_start: 0.0
-    come_here:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, -0.25, 1.7, 0.0, -1.3, 0.5, 1.3, -0.2, 0.0, 1.7,
-          0.0, -1.3, 0.5, 1.3, -0.2, 0.0]
-        time_from_start: 2.0
-      - positions: [0.0, 0.0, 0.0, 0.1, 1.2, 1.0, -1.3, 2.0, 1.3, -0.6, 0.0, 1.2,
-          1.0, -1.3, 2.0, 1.3, -0.6, 0.0]
-        time_from_start: 3.5
-      - positions: [0.0, 0.0, 0.0, 0.1, 1.2, 1.0, -1.3, 2.0, 1.3, -0.6, 0.0, 1.2,
-          1.0, -1.3, 2.0, 1.3, -0.6, 0.0]
-        time_from_start: 4.25
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 5.25
-    deliver_small_object:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.2, 0.0, -0.15, 1.2, 0.0, -1.25, 1.0, 0.8, 0.65, 1.6, 1.2,
-          0.0, -1.25, 1.0, 0.8, 0.65, 1.6]
-        time_from_start: 0.0
+    # come_here:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.0, 0.0, -0.25, 1.7, 0.0, -1.3, 0.5, 1.3, -0.2, 0.0, 1.7,
+    #       0.0, -1.3, 0.5, 1.3, -0.2, 0.0]
+    #     time_from_start: 2.0
+    #   - positions: [0.0, 0.0, 0.0, 0.1, 1.2, 1.0, -1.3, 2.0, 1.3, -0.6, 0.0, 1.2,
+    #       1.0, -1.3, 2.0, 1.3, -0.6, 0.0]
+    #     time_from_start: 3.5
+    #   - positions: [0.0, 0.0, 0.0, 0.1, 1.2, 1.0, -1.3, 2.0, 1.3, -0.6, 0.0, 1.2,
+    #       1.0, -1.3, 2.0, 1.3, -0.6, 0.0]
+    #     time_from_start: 4.25
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 5.25
+    # deliver_small_object:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.2, 0.0, -0.15, 1.2, 0.0, -1.25, 1.0, 0.8, 0.65, 1.6, 1.2,
+    #       0.0, -1.25, 1.0, 0.8, 0.65, 1.6]
+    #     time_from_start: 0.0
     deny:
       joints: [head_1_joint]
       points:
@@ -310,36 +310,36 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
           0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
-    human_form:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
-          0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
-        time_from_start: 2.0
-      - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
-          0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
-        time_from_start: 2.5
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.7, -0.4, 2.0, 1.0, -1.0, 0.0, 0.4,
-          0.7, -0.4, 2.0, 1.0, -1.0, 0.0]
-        time_from_start: 4.5
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.7, -0.4, 2.0, 1.0, -1.0, 0.0, 0.4,
-          0.7, -0.4, 2.0, 1.0, -1.0, 0.0]
-        time_from_start: 5.0
-      - positions: [0.0, -0.15, 0.0, 0.1, 0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4,
-          0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4]
-        time_from_start: 7.0
-      - positions: [0.0, -0.15, 0.0, 0.1, 0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4,
-          0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4]
-        time_from_start: 8.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 10.0
+    # human_form:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
+    #       0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
+    #     time_from_start: 2.0
+    #   - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
+    #       0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
+    #     time_from_start: 2.5
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.7, -0.4, 2.0, 1.0, -1.0, 0.0, 0.4,
+    #       0.7, -0.4, 2.0, 1.0, -1.0, 0.0]
+    #     time_from_start: 4.5
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.7, -0.4, 2.0, 1.0, -1.0, 0.0, 0.4,
+    #       0.7, -0.4, 2.0, 1.0, -1.0, 0.0]
+    #     time_from_start: 5.0
+    #   - positions: [0.0, -0.15, 0.0, 0.1, 0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4,
+    #       0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4]
+    #     time_from_start: 7.0
+    #   - positions: [0.0, -0.15, 0.0, 0.1, 0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4,
+    #       0.2618, 0.1, 0.5, 0.6109, 0.0, 0.0, 1.4]
+    #     time_from_start: 8.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 10.0
     interact_to_rest:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -382,39 +382,39 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 2.8
-    joystick_crowd_salute:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, -0.1, 0.0, 0.0, 0.2, 1.8, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
-          1.8, 1.57, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.1, -0.1, 0.3, 0.0, 0.2, 1.75, 1.57, 1.2, 0.2, 0.0, 0.0, 0.2,
-          1.75, 1.57, 1.2, 0.2, 0.0, 0.0]
-        time_from_start: 3.0
-      - positions: [0.3, -0.1, 0.1, -0.15, 0.2, 1.8, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
-          1.8, 1.57, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
-      - positions: [-0.1, -0.1, -0.3, -0.05, 0.2, 1.55, 1.57, 1.4, 0.2, 0.0, 0.0,
-          0.2, 1.55, 1.57, 1.4, 0.2, 0.0, 0.0]
-        time_from_start: 5.5
-      - positions: [-0.3, -0.1, -0.1, -0.15, 0.2, 1.7, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
-          1.7, 1.57, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 6.5
-      - positions: [0.0, -0.1, 0.0, -0.15, 0.2, 1.75, 1.57, 1.2, 0.2, 0.0, 0.0, 0.2,
-          1.75, 1.57, 1.2, 0.2, 0.0, 0.0]
-        time_from_start: 7.5
-      - positions: [0.0, -0.1, 0.0, -0.15, 0.2, 1.8, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
-          1.8, 1.57, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 8.5
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 10.5
+    # joystick_crowd_salute:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, -0.1, 0.0, 0.0, 0.2, 1.8, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
+    #       1.8, 1.57, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.0
+    #   - positions: [0.1, -0.1, 0.3, 0.0, 0.2, 1.75, 1.57, 1.2, 0.2, 0.0, 0.0, 0.2,
+    #       1.75, 1.57, 1.2, 0.2, 0.0, 0.0]
+    #     time_from_start: 3.0
+    #   - positions: [0.3, -0.1, 0.1, -0.15, 0.2, 1.8, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
+    #       1.8, 1.57, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.0
+    #   - positions: [-0.1, -0.1, -0.3, -0.05, 0.2, 1.55, 1.57, 1.4, 0.2, 0.0, 0.0,
+    #       0.2, 1.55, 1.57, 1.4, 0.2, 0.0, 0.0]
+    #     time_from_start: 5.5
+    #   - positions: [-0.3, -0.1, -0.1, -0.15, 0.2, 1.7, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
+    #       1.7, 1.57, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 6.5
+    #   - positions: [0.0, -0.1, 0.0, -0.15, 0.2, 1.75, 1.57, 1.2, 0.2, 0.0, 0.0, 0.2,
+    #       1.75, 1.57, 1.2, 0.2, 0.0, 0.0]
+    #     time_from_start: 7.5
+    #   - positions: [0.0, -0.1, 0.0, -0.15, 0.2, 1.8, 1.57, 0.6, 0.0, 0.0, 0.0, 0.2,
+    #       1.8, 1.57, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 8.5
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 10.5
     joystick_emphasize:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -622,30 +622,30 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 9.5
-    joystick_show_touchscreen:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0,
-          0.3, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 0.85
-      - positions: [0.0, 0.1, 0.0, 0.4, -0.3, 0.1, -0.1, 0.5, 0.0, 0.0, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 2.1
-      - positions: [0.0, 0.1, 0.0, 0.4, -0.3, 0.1, -0.1, 0.5, 0.0, 0.0, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 3.35
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0,
-          0.4, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 4.35
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 5.199999999999999
+    # joystick_show_touchscreen:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0,
+    #       0.3, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.85
+    #   - positions: [0.0, 0.1, 0.0, 0.4, -0.3, 0.1, -0.1, 0.5, 0.0, 0.0, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 2.1
+    #   - positions: [0.0, 0.1, 0.0, 0.4, -0.3, 0.1, -0.1, 0.5, 0.0, 0.0, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 3.35
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.0,
+    #       0.4, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.35
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 5.199999999999999
     joystick_wave:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -691,36 +691,36 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 4.0
-    look_down:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.2, 0.1, 0.0, 0.2, 0.2, 0.17, -0.5, 0.6, 0.0, 0.0, 0.0, 0.2,
-          0.17, -0.5, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 0.5
-      - positions: [0.4, 0.6, 0.2, 0.345, 0.4, 0.3, -0.0, 0.7, -0.3, -0.2, 0.0, -0.1,
-          0.3, -0.2, 0.6, 0.1, 0.1, 0.0]
-        time_from_start: 2.25
-      - positions: [0.4, 0.6, 0.2, 0.345, 0.4, 0.3, -0.0, 0.7, -0.3, -0.2, 0.0, -0.1,
-          0.3, -0.2, 0.6, 0.1, 0.1, 0.0]
-        time_from_start: 2.75
-      - positions: [-0.4, 0.6, -0.2, 0.345, -0.1, 0.3, -0.2, 0.6, 0.1, 0.1, 0.0, 0.4,
-          0.3, -0.0, 0.7, -0.3, -0.2, 0.0]
-        time_from_start: 4.75
-      - positions: [-0.4, 0.6, -0.2, 0.345, -0.1, 0.3, -0.2, 0.6, 0.1, 0.1, 0.0, 0.4,
-          0.3, -0.0, 0.7, -0.3, -0.2, 0.0]
-        time_from_start: 5.25
-      - positions: [-0.2, 0.1, 0.0, 0.2, 0.2, 0.17, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.2,
-          0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 7.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 7.5
+    # look_down:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.2, 0.1, 0.0, 0.2, 0.2, 0.17, -0.5, 0.6, 0.0, 0.0, 0.0, 0.2,
+    #       0.17, -0.5, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.5
+    #   - positions: [0.4, 0.6, 0.2, 0.345, 0.4, 0.3, -0.0, 0.7, -0.3, -0.2, 0.0, -0.1,
+    #       0.3, -0.2, 0.6, 0.1, 0.1, 0.0]
+    #     time_from_start: 2.25
+    #   - positions: [0.4, 0.6, 0.2, 0.345, 0.4, 0.3, -0.0, 0.7, -0.3, -0.2, 0.0, -0.1,
+    #       0.3, -0.2, 0.6, 0.1, 0.1, 0.0]
+    #     time_from_start: 2.75
+    #   - positions: [-0.4, 0.6, -0.2, 0.345, -0.1, 0.3, -0.2, 0.6, 0.1, 0.1, 0.0, 0.4,
+    #       0.3, -0.0, 0.7, -0.3, -0.2, 0.0]
+    #     time_from_start: 4.75
+    #   - positions: [-0.4, 0.6, -0.2, 0.345, -0.1, 0.3, -0.2, 0.6, 0.1, 0.1, 0.0, 0.4,
+    #       0.3, -0.0, 0.7, -0.3, -0.2, 0.0]
+    #     time_from_start: 5.25
+    #   - positions: [-0.2, 0.1, 0.0, 0.2, 0.2, 0.17, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.2,
+    #       0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 7.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 7.5
     nav:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -750,57 +750,57 @@ play_motion:
         time_from_start: 1.5
       - positions: [0.0]
         time_from_start: 2.0
-    nuance_hand_left:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [-0.05, 0.05, 0.15, 0.1, 0.2, 0.0, -0.3, 0.8, 0.3, -0.45, 0.4,
-          0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.7
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 1.325
-    nuance_hand_right:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.05, 0.05, -0.15, 0.1, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0,
-          0.2, 0.0, -0.3, 0.8, 0.3, -0.45, 0.4]
-        time_from_start: 0.7
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 1.325
-    open_arms_fast:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, -0.1, 0.0, 0.1, 0.3, 0.2, -0.2, 1.8, 0.0, 0.3, 0.0, 0.3,
-          0.2, -0.2, 1.8, 0.0, 0.3, 0.0]
-        time_from_start: 0.6
-      - positions: [0.0, -0.15, 0.0, 0.15, 0.6, 0.3, 0.0, 1.6, 0.0, 0.3, 0.0, 0.6,
-          0.3, 0.0, 1.6, 0.0, 0.3, 0.0]
-        time_from_start: 0.8999999999999999
-      - positions: [0.0, -0.1, 0.0, 0.1, 0.4, 0.2, 0.3, 1.4, 0.0, 0.3, 0.0, 0.4, 0.2,
-          0.3, 1.4, 0.0, 0.3, 0.0]
-        time_from_start: 1.2
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 1.9
+    # nuance_hand_left:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [-0.05, 0.05, 0.15, 0.1, 0.2, 0.0, -0.3, 0.8, 0.3, -0.45, 0.4,
+    #       0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.7
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 1.325
+    # nuance_hand_right:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.05, 0.05, -0.15, 0.1, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0,
+    #       0.2, 0.0, -0.3, 0.8, 0.3, -0.45, 0.4]
+    #     time_from_start: 0.7
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 1.325
+    # open_arms_fast:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, -0.1, 0.0, 0.1, 0.3, 0.2, -0.2, 1.8, 0.0, 0.3, 0.0, 0.3,
+    #       0.2, -0.2, 1.8, 0.0, 0.3, 0.0]
+    #     time_from_start: 0.6
+    #   - positions: [0.0, -0.15, 0.0, 0.15, 0.6, 0.3, 0.0, 1.6, 0.0, 0.3, 0.0, 0.6,
+    #       0.3, 0.0, 1.6, 0.0, 0.3, 0.0]
+    #     time_from_start: 0.8999999999999999
+    #   - positions: [0.0, -0.1, 0.0, 0.1, 0.4, 0.2, 0.3, 1.4, 0.0, 0.3, 0.0, 0.4, 0.2,
+    #       0.3, 1.4, 0.0, 0.3, 0.0]
+    #     time_from_start: 1.2
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 1.9
     open_arms:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -822,30 +822,30 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.2
-    point_far_away:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.5, 0.3, -0.9, 1.2, 0.3, -0.3, 0.0, 0.0,
-          0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.1, 0.15, 0.1, -0.2, 1.7, 0.1, -0.9, 0.3, 0.5, -0.1, 0.4, -0.4,
-          0.2, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.5
-      - positions: [0.1, 0.15, 0.1, -0.2, 1.7, 0.1, -0.9, 0.3, 0.5, -0.1, 0.4, -0.4,
-          0.2, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 3.25
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.5, 0.3, -0.9, 1.2, 0.3, -0.3, 0.0, 0.0,
-          0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 4.75
+    # point_far_away:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.5, 0.3, -0.9, 1.2, 0.3, -0.3, 0.0, 0.0,
+    #       0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.1, 0.15, 0.1, -0.2, 1.7, 0.1, -0.9, 0.3, 0.5, -0.1, 0.4, -0.4,
+    #       0.2, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.5
+    #   - positions: [0.1, 0.15, 0.1, -0.2, 1.7, 0.1, -0.9, 0.3, 0.5, -0.1, 0.4, -0.4,
+    #       0.2, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 3.25
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.5, 0.3, -0.9, 1.2, 0.3, -0.3, 0.0, 0.0,
+    #       0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 4.75
     point_front_left_fast:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -909,129 +909,129 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.5
-    point_to_left:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.1, 0.05, 0.3, 0.1, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
-          0.35, 0.17, -0.9, 0.8, 0.1, -0.7, 0.0]
-        time_from_start: 1.0
-      - positions: [0.3, 0.2, 0.5, 0.345, 0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0,
-          -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0]
-        time_from_start: 2.2
-      - positions: [0.3, 0.2, 0.5, 0.345, 0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0,
-          -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0]
-        time_from_start: 3.2
-      - positions: [0.1, 0.05, 0.3, 0.1, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
-          0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 4.2
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 5.2
-    point_to_right:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [-0.1, 0.05, -0.3, 0.1, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0,
-          0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [-0.3, 0.2, -0.5, 0.345, -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0,
-          0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0]
-        time_from_start: 2.2
-      - positions: [-0.3, 0.2, -0.5, 0.345, -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0,
-          0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0]
-        time_from_start: 3.2
-      - positions: [-0.1, 0.05, -0.3, 0.1, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0,
-          0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
-        time_from_start: 4.2
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 5.2
-    point_to_top_left:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.2, -0.05, 0.8, -0.2, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
-          0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2]
-        time_from_start: 1.0
-      - positions: [0.6, -0.15, 0.8, -0.2, 0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0,
-          0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2]
-        time_from_start: 2.2
-      - positions: [0.6, -0.15, 0.8, -0.2, 0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0,
-          0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2]
-        time_from_start: 3.2
-      - positions: [0.2, -0.05, 0.4, -0.05, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
-          0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2]
-        time_from_start: 4.2
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 5.2
-    point_to_top_right:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [-0.2, -0.05, -0.8, -0.2, 0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2,
-          0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [-0.6, -0.15, -0.8, -0.2, 0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2,
-          0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0]
-        time_from_start: 2.2
-      - positions: [-0.6, -0.15, -0.8, -0.2, 0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2,
-          0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0]
-        time_from_start: 3.2
-      - positions: [-0.2, -0.05, -0.4, -0.05, 0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2,
-          0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
-        time_from_start: 4.2
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 5.2
-    question:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.15, 0.0, -0.2, 0.1, 0.2, 0.3, 2.0, 1.0, 0.6, 0.0, 0.1,
-          0.2, 0.3, 2.0, 1.0, 0.6, 0.0]
-        time_from_start: 1.25
-      - positions: [0.0, 0.15, 0.0, -0.2, 0.1, 0.2, 0.3, 2.0, 1.0, 0.6, 0.0, 0.1,
-          0.2, 0.3, 2.0, 1.0, 0.6, 0.0]
-        time_from_start: 2.25
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 3.75
-    receive_flag:
-      joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
-        arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
-        arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
-        arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
-          0.9, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
+    # point_to_left:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.1, 0.05, 0.3, 0.1, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
+    #       0.35, 0.17, -0.9, 0.8, 0.1, -0.7, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.3, 0.2, 0.5, 0.345, 0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0,
+    #       -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.2
+    #   - positions: [0.3, 0.2, 0.5, 0.345, 0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0,
+    #       -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0]
+    #     time_from_start: 3.2
+    #   - positions: [0.1, 0.05, 0.3, 0.1, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
+    #       0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 4.2
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 5.2
+    # point_to_right:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [-0.1, 0.05, -0.3, 0.1, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0,
+    #       0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [-0.3, 0.2, -0.5, 0.345, -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0,
+    #       0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0]
+    #     time_from_start: 2.2
+    #   - positions: [-0.3, 0.2, -0.5, 0.345, -0.175, 0.2, -0.175, 1.05, 0.0, 0.0, 0.0,
+    #       0.175, 0.524, 0.873, 0.7, 0.61, 0.0, 0.0]
+    #     time_from_start: 3.2
+    #   - positions: [-0.1, 0.05, -0.3, 0.1, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0,
+    #       0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
+    #     time_from_start: 4.2
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 5.2
+    # point_to_top_left:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.2, -0.05, 0.8, -0.2, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
+    #       0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2]
+    #     time_from_start: 1.0
+    #   - positions: [0.6, -0.15, 0.8, -0.2, 0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0,
+    #       0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2]
+    #     time_from_start: 2.2
+    #   - positions: [0.6, -0.15, 0.8, -0.2, 0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0,
+    #       0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2]
+    #     time_from_start: 3.2
+    #   - positions: [0.2, -0.05, 0.4, -0.05, 0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0,
+    #       0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2]
+    #     time_from_start: 4.2
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 5.2
+    # point_to_top_right:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [-0.2, -0.05, -0.8, -0.2, 0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2,
+    #       0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [-0.6, -0.15, -0.8, -0.2, 0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2,
+    #       0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0]
+    #     time_from_start: 2.2
+    #   - positions: [-0.6, -0.15, -0.8, -0.2, 0.3, 0.2, -0.5, 0.8, 1.4, -0.6, -0.2,
+    #       0.175, 0.7, 0.873, 1.2, 1.2, -0.2, 0.0]
+    #     time_from_start: 3.2
+    #   - positions: [-0.2, -0.05, -0.4, -0.05, 0.35, 0.17, -0.9, 0.8, 0.8, -0.7, -0.2,
+    #       0.0, 0.15, 0.2618, 1.05, 0.35, 0.0, 0.0]
+    #     time_from_start: 4.2
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 5.2
+    # question:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.15, 0.0, -0.2, 0.1, 0.2, 0.3, 2.0, 1.0, 0.6, 0.0, 0.1,
+    #       0.2, 0.3, 2.0, 1.0, 0.6, 0.0]
+    #     time_from_start: 1.25
+    #   - positions: [0.0, 0.15, 0.0, -0.2, 0.1, 0.2, 0.3, 2.0, 1.0, 0.6, 0.0, 0.1,
+    #       0.2, 0.3, 2.0, 1.0, 0.6, 0.0]
+    #     time_from_start: 2.25
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 3.75
+    # receive_flag:
+    #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
+    #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
+    #     arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
+    #     arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
+    #       0.9, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.0
     rest_to_interact:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1056,21 +1056,21 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 0.0
-    robocup_end_presentation:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 0.1
-      - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
-          0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 1.1
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.1
+    # robocup_end_presentation:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.1
+    #   - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
+    #       0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.1
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.1
     # robocup_kamehameha:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1098,428 +1098,428 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 11.0
-    robocup_middle_presentation:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 0.1
-      - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.02, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 0.7999999999999999
-      - positions: [0.2, 0.2, 0.0, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 1.2999999999999998
-      - positions: [0.2, 0.17, 0.2, 0.1, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 1.9
-      - positions: [0.2, 0.15, 0.3, 0.1, -0.3, 0.04, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
-        time_from_start: 2.7
-      - positions: [0.2, 0.15, 0.4, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
-        time_from_start: 3.5
-      - positions: [0.2, 0.17, -0.2, 0.05, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.1, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 4.6
-      - positions: [0.2, 0.19, -0.3, 0.06, -0.3, 0.03, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 5.1
-      - positions: [0.2, 0.2, -0.5, 0.08, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 5.5
-      - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 5.9
-    robocup_presentation:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
-          0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
-      - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 4.1
-      - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.02, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 4.8
-      - positions: [0.2, 0.2, 0.0, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 5.3
-      - positions: [0.2, 0.17, 0.2, 0.1, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 5.8999999999999995
-      - positions: [0.2, 0.15, 0.3, 0.1, -0.3, 0.04, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
-        time_from_start: 6.699999999999999
-      - positions: [0.2, 0.15, 0.4, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
-        time_from_start: 7.499999999999999
-      - positions: [0.2, 0.17, -0.2, 0.05, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.1, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 8.6
-      - positions: [0.2, 0.19, -0.3, 0.06, -0.3, 0.03, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
-        time_from_start: 9.1
-      - positions: [0.2, 0.2, -0.5, 0.08, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 9.5
-      - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 9.9
-      - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
-          0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 10.9
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 11.9
-    robocup_quetedoi:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.2, 0.2, 0.0, 0.0, -0.5, 0.6, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.5
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.5
-    robocup_recorded:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [-0.0170231, -0.220539, 0.00364614, 0.00727352, 0.281227, 0.150296,
-          0.0843031, 0.217535, 0.25343, 0.00886248, -0.256175, 0.336873, 0.00401588,
-          0.233476, 0.266453, -0.624382, -0.0019293, 0.62215]
-        time_from_start: 2.0
-      - positions: [-0.0169325, -0.220603, 0.00366295, 0.00729522, 0.281321, 0.150022,
-          0.0851657, 0.217431, 0.253586, 0.00885471, -0.256181, 0.336877, 0.00382918,
-          0.234077, 0.266449, -0.625838, -0.00193374, 0.62367]
-        time_from_start: 2.5
-      - positions: [-0.0206196, -0.221563, 0.00455275, 0.00628412, 0.287937, 0.154905,
-          0.0731023, 0.212674, 0.259176, 0.00968265, -0.256078, 0.338057, -0.000459261,
-          0.232399, 0.26573, -0.692914, -0.00151606, 0.694835]
-        time_from_start: 3.0
-      - positions: [-0.0266861, -0.224735, 0.00383583, 0.00622427, 0.287949, 0.159242,
-          0.0491569, 0.206357, 0.254828, 0.010449, -0.256943, 0.331782, -0.00206054,
-          0.230234, 0.269903, -0.755279, -0.00200342, 0.754189]
-        time_from_start: 3.5
-      - positions: [-0.0251251, -0.232163, 0.00398422, 0.00636031, 0.286116, 0.157679,
-          0.0431059, 0.201804, 0.254283, 0.0105261, -0.255537, 0.323772, -0.00693574,
-          0.255354, 0.277402, -0.758198, -0.00281889, 0.755803]
-        time_from_start: 4.0
-      - positions: [-0.0279251, -0.232678, 0.00386279, 0.00596049, 0.284487, 0.160521,
-          0.0360187, 0.204233, 0.253697, 0.0106684, -0.25398, 0.321847, -0.013499,
-          0.268087, 0.283668, -0.731733, -0.00284233, 0.733032]
-        time_from_start: 4.5
-      - positions: [-0.0227828, -0.225482, 0.00391625, 0.00702211, 0.298501, 0.168409,
-          -0.0237284, 0.198787, 0.25199, 0.0118097, -0.248902, 0.322486, -0.0108243,
-          0.269794, 0.28736, -0.704742, -0.00343485, 0.705672]
-        time_from_start: 5.0
-      - positions: [-0.0221491, -0.224719, 0.00393543, 0.00615565, 0.333998, 0.174459,
-          -0.0840342, 0.190578, 0.240495, 0.0120137, -0.24499, 0.335771, 0.00753735,
-          0.214322, 0.280658, -0.710303, -0.00179414, 0.717854]
-        time_from_start: 5.5
-      - positions: [-0.00883779, -0.231902, 0.00459959, 0.00443638, 0.401765, 0.163882,
-          -0.132441, 0.18426, 0.237382, 0.0128383, -0.237927, 0.36427, 0.0315727,
-          0.132437, 0.273625, -0.75747, -0.000225993, 0.756783]
-        time_from_start: 6.0
-      - positions: [0.000313474, -0.234421, 0.00491915, 0.0047833, 0.447369, 0.148019,
-          -0.200249, 0.184614, 0.230647, 0.0140759, -0.229492, 0.393461, 0.0346291,
-          0.0851596, 0.269118, -0.772849, 0.00164208, 0.77188]
-        time_from_start: 6.5
-      - positions: [0.00267129, -0.232152, 0.00483104, 0.00370146, 0.452398, 0.140393,
-          -0.249897, 0.192349, 0.218534, 0.0142942, -0.220444, 0.407297, 0.0321148,
-          0.0629742, 0.260742, -0.764478, 0.0018308, 0.761179]
-        time_from_start: 7.0
-      - positions: [-0.00380093, -0.229222, 0.00446901, 0.00176032, 0.418349, 0.135961,
-          -0.216786, 0.2053, 0.208871, 0.0135407, -0.214136, 0.396178, 0.0229849,
-          0.102815, 0.255855, -0.77684, 0.00126439, 0.774484]
-        time_from_start: 7.5
-      - positions: [-0.0164243, -0.212851, 0.00398627, 0.000365594, 0.384086, 0.130951,
-          -0.203819, 0.204369, 0.208222, 0.0145662, -0.205905, 0.372003, 0.0121922,
-          0.11626, 0.257165, -0.800815, 0.00162101, 0.803035]
-        time_from_start: 8.0
-      - positions: [-0.0183655, -0.18729, 0.00284267, -0.000678692, 0.37362, 0.120005,
-          -0.234477, 0.188428, 0.198856, 0.0144271, -0.200573, 0.354258, 0.0249539,
-          0.11288, 0.25618, -0.810956, 0.00117411, 0.810768]
-        time_from_start: 8.5
-      - positions: [-0.0284619, -0.159386, 0.00394203, 0.000495078, 0.379106, 0.119411,
-          -0.199308, 0.171916, 0.192345, 0.0124417, -0.197144, 0.36616, 0.0367788,
-          0.085297, 0.238289, -0.678798, 0.00284029, 0.673604]
-        time_from_start: 9.0
-      - positions: [-0.0426167, -0.13993, 0.00467093, 0.00299075, 0.415625, 0.1356,
-          -0.184521, 0.148789, 0.197685, 0.0114941, -0.194495, 0.410328, 0.0380497,
-          0.0373644, 0.214276, -0.36928, 0.00482678, 0.3586]
-        time_from_start: 9.5
-      - positions: [-0.0504593, -0.148949, 0.00383932, 0.00316649, 0.479185, 0.135654,
-          -0.172228, 0.110013, 0.190323, 0.0119, -0.19522, 0.459853, 0.0446657, 0.0459244,
-          0.205188, 0.0315406, 0.0054633, -0.0322178]
-        time_from_start: 10.0
-      - positions: [-0.0403968, -0.170577, 0.00499539, 0.00280623, 0.519328, 0.12803,
-          -0.186468, 0.0939374, 0.196058, 0.0120541, -0.191562, 0.474187, 0.0498567,
-          0.0642144, 0.210555, 0.225459, 0.00509739, -0.223293]
-        time_from_start: 10.5
-      - positions: [-0.0413102, -0.19146, 0.00566442, 0.00152641, 0.526325, 0.129429,
-          -0.233391, 0.100745, 0.191118, 0.0121783, -0.191238, 0.483634, 0.0470823,
-          0.026189, 0.218036, 0.33732, 0.00586192, -0.331147]
-        time_from_start: 11.0
-      - positions: [-0.0311043, -0.208998, 0.00613344, 0.00196662, 0.501337, 0.113814,
-          -0.245241, 0.120219, 0.187932, 0.0127615, -0.189927, 0.475005, 0.045766,
-          -0.065623, 0.228133, 0.330342, 0.00766917, -0.324736]
-        time_from_start: 11.5
-      - positions: [-0.019491, -0.216312, 0.00666651, 0.00169934, 0.459133, 0.108316,
-          -0.230804, 0.146222, 0.187132, 0.0120181, -0.188603, 0.451206, 0.0474552,
-          -0.126299, 0.235478, 0.293239, 0.00805632, -0.296098]
-        time_from_start: 12.0
-      - positions: [-0.0301336, -0.211492, 0.00657337, 0.000753562, 0.383286, 0.120101,
-          -0.109367, 0.183447, 0.185071, 0.00986654, -0.192631, 0.41118, 0.0372109,
-          -0.0773203, 0.241538, 0.302957, 0.00655404, -0.313615]
-        time_from_start: 12.5
-      - positions: [-0.0507107, -0.210008, 0.0053606, 0.00133197, 0.307976, 0.128756,
-          0.0515191, 0.197815, 0.196275, 0.00757168, -0.196314, 0.361299, 0.0139672,
-          0.0448948, 0.252842, 0.378927, 0.00505474, -0.383595]
-        time_from_start: 13.0
-      - positions: [-0.0600096, -0.202492, 0.00527225, 0.000540586, 0.277307, 0.13239,
-          0.115404, 0.192741, 0.203606, 0.00681646, -0.201655, 0.331992, -0.0038002,
-          0.131585, 0.267096, 0.460809, 0.00327561, -0.462949]
-        time_from_start: 13.5
-      - positions: [-0.060532, -0.18292, 0.0057592, 0.000183379, 0.303681, 0.140592,
-          0.100277, 0.174336, 0.210721, 0.0074157, -0.20983, 0.336831, 0.00662709,
-          0.146719, 0.271352, 0.510348, 0.00467227, -0.50427]
-        time_from_start: 14.0
-      - positions: [-0.057936, -0.180853, 0.00715796, 0.00135904, 0.360409, 0.152666,
-          0.0456643, 0.156612, 0.216319, 0.00821769, -0.215705, 0.373555, 0.0195669,
-          0.104628, 0.259492, 0.467535, 0.00591414, -0.466572]
-        time_from_start: 14.5
-      - positions: [-0.0554976, -0.184914, 0.00749214, 0.00380996, 0.438734, 0.159892,
-          -0.0231346, 0.139493, 0.219189, 0.0090242, -0.220099, 0.424738, 0.027165,
-          0.0495679, 0.246907, 0.42199, 0.00642966, -0.421878]
-        time_from_start: 15.0
-      - positions: [-0.0475763, -0.1983, 0.00762812, 0.00532443, 0.499733, 0.155295,
-          -0.0911394, 0.130202, 0.221473, 0.0102409, -0.221198, 0.456288, 0.0299153,
-          0.0240033, 0.244975, 0.416627, 0.005299, -0.420159]
-        time_from_start: 15.5
-      - positions: [-0.0464949, -0.209471, 0.00847676, 0.00393427, 0.487724, 0.15688,
-          -0.14036, 0.198471, 0.224647, 0.0114186, -0.22299, 0.476542, 0.0338655,
-          0.00344721, 0.24433, 0.417453, 0.00591459, -0.415719]
-        time_from_start: 16.0
-      - positions: [-0.0518451, -0.220809, 0.00910112, 0.00138912, 0.479541, 0.15152,
-          -0.172951, 0.22425, 0.22328, 0.0097514, -0.227234, 0.48198, 0.0340436, -0.0385214,
-          0.250087, 0.382223, 0.00678466, -0.382301]
-        time_from_start: 16.5
-      - positions: [-0.0627029, -0.204162, 0.0102067, 0.000961027, 0.48241, 0.141162,
-          -0.166364, 0.184514, 0.22765, 0.00983695, -0.228371, 0.480875, 0.0197382,
-          -0.0758635, 0.2521, 0.328987, 0.00832764, -0.329709]
-        time_from_start: 17.0
-      - positions: [-0.0665561, -0.175903, 0.00946129, -0.000386447, 0.480025, 0.125319,
-          -0.190293, 0.159607, 0.230301, 0.0103195, -0.228813, 0.471997, 0.0119568,
-          -0.0662366, 0.252708, 0.302053, 0.00814066, -0.307141]
-        time_from_start: 17.5
-      - positions: [-0.0660229, -0.133197, 0.00812997, -0.000365793, 0.490972, 0.110554,
-          -0.206902, 0.131567, 0.227741, 0.00912676, -0.230316, 0.475974, 0.0213591,
-          -0.0599472, 0.238906, 0.286635, 0.00917759, -0.284724]
-        time_from_start: 18.0
-      - positions: [-0.0666055, -0.078549, 0.00763943, 0.00289704, 0.496798, 0.125772,
-          -0.180026, 0.150717, 0.229919, 0.0087221, -0.231149, 0.509999, 0.0415377,
-          -0.0838164, 0.201529, 0.246031, 0.0100002, -0.247348]
-        time_from_start: 18.5
-      - positions: [-0.0790368, -0.052681, 0.00661143, 0.0027867, 0.4189, 0.173491,
-          -0.120325, 0.309253, 0.230995, 0.00979582, -0.231848, 0.548691, 0.0598219,
-          -0.0543927, 0.164779, 0.225569, 0.00948752, -0.231816]
-        time_from_start: 19.0
-      - positions: [-0.102379, -0.0602065, 0.00601444, 0.00145983, 0.323529, 0.216235,
-          -0.0466357, 0.489469, 0.227905, 0.0100353, -0.232763, 0.577696, 0.0685294,
-          -0.00942561, 0.145472, 0.232601, 0.00952348, -0.234328]
-        time_from_start: 19.5
-      - positions: [-0.110964, -0.0944682, 0.0058588, 0.00253543, 0.298406, 0.235139,
-          -0.0340109, 0.582244, 0.229908, 0.0115197, -0.232581, 0.587856, 0.0755911,
-          -0.000813329, 0.1572, 0.267302, 0.00839917, -0.265834]
-        time_from_start: 20.0
-      - positions: [-0.112342, -0.115869, 0.00754751, 0.00639062, 0.275124, 0.228544,
-          -0.0319921, 0.657897, 0.229168, 0.0105487, -0.235579, 0.579949, 0.0630218,
-          -0.00994287, 0.179929, 0.289843, 0.00849025, -0.289791]
-        time_from_start: 20.5
-      - positions: [-0.120424, -0.139764, 0.0101296, 0.00867238, 0.237327, 0.214602,
-          -0.0354835, 0.759087, 0.235569, 0.00962785, -0.239085, 0.56949, 0.0313906,
-          -0.0490682, 0.195833, 0.266036, 0.00951463, -0.264597]
-        time_from_start: 21.0
-      - positions: [-0.115944, -0.14873, 0.0114615, 0.0111228, 0.228401, 0.191624,
-          -0.0551348, 0.779186, 0.236568, 0.00697694, -0.242595, 0.566116, 0.023303,
-          -0.103151, 0.201799, 0.225815, 0.0120738, -0.223422]
-        time_from_start: 21.5
-      - positions: [-0.0822569, -0.144165, 0.0125238, 0.0123685, 0.264437, 0.158972,
-          -0.0968289, 0.682402, 0.241463, 0.00687234, -0.244332, 0.551011, 0.0285912,
-          -0.138874, 0.206523, 0.195605, 0.0135359, -0.19865]
-        time_from_start: 22.0
-      - positions: [-0.0442451, -0.0989958, 0.0114757, 0.0136748, 0.336088, 0.139955,
-          -0.17255, 0.558695, 0.244974, 0.00737426, -0.246256, 0.57783, 0.0338104,
-          -0.188142, 0.183011, 0.175972, 0.0149022, -0.174309]
-        time_from_start: 22.5
-      - positions: [-0.00405217, -0.0428912, 0.00970613, 0.0144407, 0.361056, 0.134316,
-          -0.226369, 0.512619, 0.245628, 0.00733468, -0.248273, 0.606244, 0.0342038,
-          -0.207691, 0.140561, 0.148463, 0.0148339, -0.152589]
-        time_from_start: 23.0
-      - positions: [0.0350744, 0.00602908, 0.00625099, 0.0132082, 0.340546, 0.144135,
-          -0.229108, 0.540075, 0.244678, 0.00594988, -0.248718, 0.6491, 0.0452634,
-          -0.17102, 0.0637729, 0.124616, 0.0155739, -0.12708]
-        time_from_start: 23.5
-      - positions: [0.0790015, 0.0203297, 0.00150418, 0.0117308, 0.330595, 0.14651,
-          -0.225273, 0.568346, 0.244656, 0.0060507, -0.2484, 0.685355, 0.0842226,
-          -0.120238, 0.0154137, 0.118104, 0.0175454, -0.118462]
-        time_from_start: 24.0
-      - positions: [0.140464, 0.00556682, -0.00141684, 0.0130986, 0.36959, 0.129541,
-          -0.242108, 0.533069, 0.246149, 0.00680768, -0.249901, 0.58934, 0.136818,
-          -0.0147512, 0.189098, 0.125708, 0.0187266, -0.127007]
-        time_from_start: 24.5
-      - positions: [0.173996, -0.0295393, -0.00128601, 0.0128541, 0.394576, 0.133967,
-          -0.228688, 0.489915, 0.250924, 0.00876563, -0.253369, 0.49359, 0.148298,
-          0.0354007, 0.364358, 0.121335, 0.0197111, -0.123992]
-        time_from_start: 25.0
-      - positions: [0.200444, -0.0684464, -0.00241806, 0.0106695, 0.454283, 0.12807,
-          -0.240117, 0.371359, 0.252634, 0.0100951, -0.254796, 0.454285, 0.152058,
-          0.0507822, 0.428182, 0.115641, 0.0189947, -0.120768]
-        time_from_start: 25.5
-      - positions: [0.239989, -0.103132, -0.00187602, 0.0115271, 0.462643, 0.11087,
-          -0.189765, 0.292432, 0.25291, 0.0100665, -0.258661, 0.447243, 0.163459,
-          0.0494453, 0.440081, 0.114646, 0.0203175, -0.118746]
-        time_from_start: 26.0
-      - positions: [0.285749, -0.116716, -0.00119312, 0.0117387, 0.417083, 0.113608,
-          -0.157588, 0.322715, 0.261953, 0.012147, -0.259877, 0.438595, 0.187606,
-          0.028683, 0.453793, 0.116161, 0.0198862, -0.120231]
-        time_from_start: 26.5
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 27.5
-    robocup_start_presentation:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
-          0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
-          0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
-        time_from_start: 4.0
-    robocup_waiting:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.01, 0.02, 0.01, -0.01, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.4
-      - positions: [0.02, 0.04, 0.03, -0.02, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.12, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.04, 0.06, 0.04, -0.05, -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.13, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.8
-      - positions: [0.08, 0.04, 0.04, -0.01, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.13, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 3.5999999999999996
-      - positions: [0.08, 0.02, 0.02, 0.03, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 4.199999999999999
-      - positions: [0.1, 0.0, 0.01, 0.05, -0.4, 0.08, -0.108, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.1, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 4.6
-      - positions: [0.09, 0.02, -0.03, 0.06, -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 5.0
-      - positions: [0.05, 0.04, -0.05, 0.06, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 5.8
-      - positions: [0.03, 0.06, -0.04, 0.03, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 6.3999999999999995
-      - positions: [-0.01, 0.04, -0.02, 0.01, -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0,
-          0.0, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 6.999999999999999
-      - positions: [-0.04, 0.02, -0.02, 0.01, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0,
-          0.0, -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 7.599999999999999
-      - positions: [-0.06, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.1, -0.12, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 7.999999999999999
-      - positions: [-0.08, 0.02, 0.03, 0.02, -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.13, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 8.399999999999999
-      - positions: [-0.07, 0.04, 0.05, 0.03, -0.4, 0.12, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 9.2
-      - positions: [-0.05, 0.06, 0.08, 0.06, -0.4, 0.1, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 10.0
-      - positions: [-0.03, 0.04, 0.05, 0.03, -0.4, 0.1, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 10.6
-      - positions: [-0.02, 0.02, 0.03, 0.01, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 11.0
-      - positions: [-0.01, 0.0, 0.01, 0.0, -0.4, 0.1, -0.09, 0.6109, 0.0, 0.0, 0.0,
-          -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 11.4
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 12.4
-    salute:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.17, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0,
-          0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.0
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
-          0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 1.85
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 2.0,
-          0.6, -1.1, 2.05, -0.1, 0.0, 0.0]
-        time_from_start: 4.35
-      - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 2.0,
-          0.6, -1.1, 2.05, -0.1, 0.0, 0.0]
-        time_from_start: 6.85
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.17, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0,
-          0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 8.85
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 9.85
+    # robocup_middle_presentation:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.1
+    #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.02, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.7999999999999999
+    #   - positions: [0.2, 0.2, 0.0, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 1.2999999999999998
+    #   - positions: [0.2, 0.17, 0.2, 0.1, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 1.9
+    #   - positions: [0.2, 0.15, 0.3, 0.1, -0.3, 0.04, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
+    #     time_from_start: 2.7
+    #   - positions: [0.2, 0.15, 0.4, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
+    #     time_from_start: 3.5
+    #   - positions: [0.2, 0.17, -0.2, 0.05, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.1, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 4.6
+    #   - positions: [0.2, 0.19, -0.3, 0.06, -0.3, 0.03, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 5.1
+    #   - positions: [0.2, 0.2, -0.5, 0.08, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 5.5
+    #   - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 5.9
+    # robocup_presentation:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
+    #       0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.0
+    #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.0
+    #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.1
+    #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.02, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.8
+    #   - positions: [0.2, 0.2, 0.0, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 5.3
+    #   - positions: [0.2, 0.17, 0.2, 0.1, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 5.8999999999999995
+    #   - positions: [0.2, 0.15, 0.3, 0.1, -0.3, 0.04, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
+    #     time_from_start: 6.699999999999999
+    #   - positions: [0.2, 0.15, 0.4, 0.1, -0.3, 0.06, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.2]
+    #     time_from_start: 7.499999999999999
+    #   - positions: [0.2, 0.17, -0.2, 0.05, -0.3, 0.05, 0.2, 0.7, 0.0, 0.0, 0.1, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 8.6
+    #   - positions: [0.2, 0.19, -0.3, 0.06, -0.3, 0.03, 0.2, 0.7, 0.0, 0.0, 0.2, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.1]
+    #     time_from_start: 9.1
+    #   - positions: [0.2, 0.2, -0.5, 0.08, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 9.5
+    #   - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 9.9
+    #   - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
+    #       0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 10.9
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 11.9
+    # robocup_quetedoi:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.2, 0.2, 0.0, 0.0, -0.5, 0.6, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.5
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.5
+    # robocup_recorded:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [-0.0170231, -0.220539, 0.00364614, 0.00727352, 0.281227, 0.150296,
+    #       0.0843031, 0.217535, 0.25343, 0.00886248, -0.256175, 0.336873, 0.00401588,
+    #       0.233476, 0.266453, -0.624382, -0.0019293, 0.62215]
+    #     time_from_start: 2.0
+    #   - positions: [-0.0169325, -0.220603, 0.00366295, 0.00729522, 0.281321, 0.150022,
+    #       0.0851657, 0.217431, 0.253586, 0.00885471, -0.256181, 0.336877, 0.00382918,
+    #       0.234077, 0.266449, -0.625838, -0.00193374, 0.62367]
+    #     time_from_start: 2.5
+    #   - positions: [-0.0206196, -0.221563, 0.00455275, 0.00628412, 0.287937, 0.154905,
+    #       0.0731023, 0.212674, 0.259176, 0.00968265, -0.256078, 0.338057, -0.000459261,
+    #       0.232399, 0.26573, -0.692914, -0.00151606, 0.694835]
+    #     time_from_start: 3.0
+    #   - positions: [-0.0266861, -0.224735, 0.00383583, 0.00622427, 0.287949, 0.159242,
+    #       0.0491569, 0.206357, 0.254828, 0.010449, -0.256943, 0.331782, -0.00206054,
+    #       0.230234, 0.269903, -0.755279, -0.00200342, 0.754189]
+    #     time_from_start: 3.5
+    #   - positions: [-0.0251251, -0.232163, 0.00398422, 0.00636031, 0.286116, 0.157679,
+    #       0.0431059, 0.201804, 0.254283, 0.0105261, -0.255537, 0.323772, -0.00693574,
+    #       0.255354, 0.277402, -0.758198, -0.00281889, 0.755803]
+    #     time_from_start: 4.0
+    #   - positions: [-0.0279251, -0.232678, 0.00386279, 0.00596049, 0.284487, 0.160521,
+    #       0.0360187, 0.204233, 0.253697, 0.0106684, -0.25398, 0.321847, -0.013499,
+    #       0.268087, 0.283668, -0.731733, -0.00284233, 0.733032]
+    #     time_from_start: 4.5
+    #   - positions: [-0.0227828, -0.225482, 0.00391625, 0.00702211, 0.298501, 0.168409,
+    #       -0.0237284, 0.198787, 0.25199, 0.0118097, -0.248902, 0.322486, -0.0108243,
+    #       0.269794, 0.28736, -0.704742, -0.00343485, 0.705672]
+    #     time_from_start: 5.0
+    #   - positions: [-0.0221491, -0.224719, 0.00393543, 0.00615565, 0.333998, 0.174459,
+    #       -0.0840342, 0.190578, 0.240495, 0.0120137, -0.24499, 0.335771, 0.00753735,
+    #       0.214322, 0.280658, -0.710303, -0.00179414, 0.717854]
+    #     time_from_start: 5.5
+    #   - positions: [-0.00883779, -0.231902, 0.00459959, 0.00443638, 0.401765, 0.163882,
+    #       -0.132441, 0.18426, 0.237382, 0.0128383, -0.237927, 0.36427, 0.0315727,
+    #       0.132437, 0.273625, -0.75747, -0.000225993, 0.756783]
+    #     time_from_start: 6.0
+    #   - positions: [0.000313474, -0.234421, 0.00491915, 0.0047833, 0.447369, 0.148019,
+    #       -0.200249, 0.184614, 0.230647, 0.0140759, -0.229492, 0.393461, 0.0346291,
+    #       0.0851596, 0.269118, -0.772849, 0.00164208, 0.77188]
+    #     time_from_start: 6.5
+    #   - positions: [0.00267129, -0.232152, 0.00483104, 0.00370146, 0.452398, 0.140393,
+    #       -0.249897, 0.192349, 0.218534, 0.0142942, -0.220444, 0.407297, 0.0321148,
+    #       0.0629742, 0.260742, -0.764478, 0.0018308, 0.761179]
+    #     time_from_start: 7.0
+    #   - positions: [-0.00380093, -0.229222, 0.00446901, 0.00176032, 0.418349, 0.135961,
+    #       -0.216786, 0.2053, 0.208871, 0.0135407, -0.214136, 0.396178, 0.0229849,
+    #       0.102815, 0.255855, -0.77684, 0.00126439, 0.774484]
+    #     time_from_start: 7.5
+    #   - positions: [-0.0164243, -0.212851, 0.00398627, 0.000365594, 0.384086, 0.130951,
+    #       -0.203819, 0.204369, 0.208222, 0.0145662, -0.205905, 0.372003, 0.0121922,
+    #       0.11626, 0.257165, -0.800815, 0.00162101, 0.803035]
+    #     time_from_start: 8.0
+    #   - positions: [-0.0183655, -0.18729, 0.00284267, -0.000678692, 0.37362, 0.120005,
+    #       -0.234477, 0.188428, 0.198856, 0.0144271, -0.200573, 0.354258, 0.0249539,
+    #       0.11288, 0.25618, -0.810956, 0.00117411, 0.810768]
+    #     time_from_start: 8.5
+    #   - positions: [-0.0284619, -0.159386, 0.00394203, 0.000495078, 0.379106, 0.119411,
+    #       -0.199308, 0.171916, 0.192345, 0.0124417, -0.197144, 0.36616, 0.0367788,
+    #       0.085297, 0.238289, -0.678798, 0.00284029, 0.673604]
+    #     time_from_start: 9.0
+    #   - positions: [-0.0426167, -0.13993, 0.00467093, 0.00299075, 0.415625, 0.1356,
+    #       -0.184521, 0.148789, 0.197685, 0.0114941, -0.194495, 0.410328, 0.0380497,
+    #       0.0373644, 0.214276, -0.36928, 0.00482678, 0.3586]
+    #     time_from_start: 9.5
+    #   - positions: [-0.0504593, -0.148949, 0.00383932, 0.00316649, 0.479185, 0.135654,
+    #       -0.172228, 0.110013, 0.190323, 0.0119, -0.19522, 0.459853, 0.0446657, 0.0459244,
+    #       0.205188, 0.0315406, 0.0054633, -0.0322178]
+    #     time_from_start: 10.0
+    #   - positions: [-0.0403968, -0.170577, 0.00499539, 0.00280623, 0.519328, 0.12803,
+    #       -0.186468, 0.0939374, 0.196058, 0.0120541, -0.191562, 0.474187, 0.0498567,
+    #       0.0642144, 0.210555, 0.225459, 0.00509739, -0.223293]
+    #     time_from_start: 10.5
+    #   - positions: [-0.0413102, -0.19146, 0.00566442, 0.00152641, 0.526325, 0.129429,
+    #       -0.233391, 0.100745, 0.191118, 0.0121783, -0.191238, 0.483634, 0.0470823,
+    #       0.026189, 0.218036, 0.33732, 0.00586192, -0.331147]
+    #     time_from_start: 11.0
+    #   - positions: [-0.0311043, -0.208998, 0.00613344, 0.00196662, 0.501337, 0.113814,
+    #       -0.245241, 0.120219, 0.187932, 0.0127615, -0.189927, 0.475005, 0.045766,
+    #       -0.065623, 0.228133, 0.330342, 0.00766917, -0.324736]
+    #     time_from_start: 11.5
+    #   - positions: [-0.019491, -0.216312, 0.00666651, 0.00169934, 0.459133, 0.108316,
+    #       -0.230804, 0.146222, 0.187132, 0.0120181, -0.188603, 0.451206, 0.0474552,
+    #       -0.126299, 0.235478, 0.293239, 0.00805632, -0.296098]
+    #     time_from_start: 12.0
+    #   - positions: [-0.0301336, -0.211492, 0.00657337, 0.000753562, 0.383286, 0.120101,
+    #       -0.109367, 0.183447, 0.185071, 0.00986654, -0.192631, 0.41118, 0.0372109,
+    #       -0.0773203, 0.241538, 0.302957, 0.00655404, -0.313615]
+    #     time_from_start: 12.5
+    #   - positions: [-0.0507107, -0.210008, 0.0053606, 0.00133197, 0.307976, 0.128756,
+    #       0.0515191, 0.197815, 0.196275, 0.00757168, -0.196314, 0.361299, 0.0139672,
+    #       0.0448948, 0.252842, 0.378927, 0.00505474, -0.383595]
+    #     time_from_start: 13.0
+    #   - positions: [-0.0600096, -0.202492, 0.00527225, 0.000540586, 0.277307, 0.13239,
+    #       0.115404, 0.192741, 0.203606, 0.00681646, -0.201655, 0.331992, -0.0038002,
+    #       0.131585, 0.267096, 0.460809, 0.00327561, -0.462949]
+    #     time_from_start: 13.5
+    #   - positions: [-0.060532, -0.18292, 0.0057592, 0.000183379, 0.303681, 0.140592,
+    #       0.100277, 0.174336, 0.210721, 0.0074157, -0.20983, 0.336831, 0.00662709,
+    #       0.146719, 0.271352, 0.510348, 0.00467227, -0.50427]
+    #     time_from_start: 14.0
+    #   - positions: [-0.057936, -0.180853, 0.00715796, 0.00135904, 0.360409, 0.152666,
+    #       0.0456643, 0.156612, 0.216319, 0.00821769, -0.215705, 0.373555, 0.0195669,
+    #       0.104628, 0.259492, 0.467535, 0.00591414, -0.466572]
+    #     time_from_start: 14.5
+    #   - positions: [-0.0554976, -0.184914, 0.00749214, 0.00380996, 0.438734, 0.159892,
+    #       -0.0231346, 0.139493, 0.219189, 0.0090242, -0.220099, 0.424738, 0.027165,
+    #       0.0495679, 0.246907, 0.42199, 0.00642966, -0.421878]
+    #     time_from_start: 15.0
+    #   - positions: [-0.0475763, -0.1983, 0.00762812, 0.00532443, 0.499733, 0.155295,
+    #       -0.0911394, 0.130202, 0.221473, 0.0102409, -0.221198, 0.456288, 0.0299153,
+    #       0.0240033, 0.244975, 0.416627, 0.005299, -0.420159]
+    #     time_from_start: 15.5
+    #   - positions: [-0.0464949, -0.209471, 0.00847676, 0.00393427, 0.487724, 0.15688,
+    #       -0.14036, 0.198471, 0.224647, 0.0114186, -0.22299, 0.476542, 0.0338655,
+    #       0.00344721, 0.24433, 0.417453, 0.00591459, -0.415719]
+    #     time_from_start: 16.0
+    #   - positions: [-0.0518451, -0.220809, 0.00910112, 0.00138912, 0.479541, 0.15152,
+    #       -0.172951, 0.22425, 0.22328, 0.0097514, -0.227234, 0.48198, 0.0340436, -0.0385214,
+    #       0.250087, 0.382223, 0.00678466, -0.382301]
+    #     time_from_start: 16.5
+    #   - positions: [-0.0627029, -0.204162, 0.0102067, 0.000961027, 0.48241, 0.141162,
+    #       -0.166364, 0.184514, 0.22765, 0.00983695, -0.228371, 0.480875, 0.0197382,
+    #       -0.0758635, 0.2521, 0.328987, 0.00832764, -0.329709]
+    #     time_from_start: 17.0
+    #   - positions: [-0.0665561, -0.175903, 0.00946129, -0.000386447, 0.480025, 0.125319,
+    #       -0.190293, 0.159607, 0.230301, 0.0103195, -0.228813, 0.471997, 0.0119568,
+    #       -0.0662366, 0.252708, 0.302053, 0.00814066, -0.307141]
+    #     time_from_start: 17.5
+    #   - positions: [-0.0660229, -0.133197, 0.00812997, -0.000365793, 0.490972, 0.110554,
+    #       -0.206902, 0.131567, 0.227741, 0.00912676, -0.230316, 0.475974, 0.0213591,
+    #       -0.0599472, 0.238906, 0.286635, 0.00917759, -0.284724]
+    #     time_from_start: 18.0
+    #   - positions: [-0.0666055, -0.078549, 0.00763943, 0.00289704, 0.496798, 0.125772,
+    #       -0.180026, 0.150717, 0.229919, 0.0087221, -0.231149, 0.509999, 0.0415377,
+    #       -0.0838164, 0.201529, 0.246031, 0.0100002, -0.247348]
+    #     time_from_start: 18.5
+    #   - positions: [-0.0790368, -0.052681, 0.00661143, 0.0027867, 0.4189, 0.173491,
+    #       -0.120325, 0.309253, 0.230995, 0.00979582, -0.231848, 0.548691, 0.0598219,
+    #       -0.0543927, 0.164779, 0.225569, 0.00948752, -0.231816]
+    #     time_from_start: 19.0
+    #   - positions: [-0.102379, -0.0602065, 0.00601444, 0.00145983, 0.323529, 0.216235,
+    #       -0.0466357, 0.489469, 0.227905, 0.0100353, -0.232763, 0.577696, 0.0685294,
+    #       -0.00942561, 0.145472, 0.232601, 0.00952348, -0.234328]
+    #     time_from_start: 19.5
+    #   - positions: [-0.110964, -0.0944682, 0.0058588, 0.00253543, 0.298406, 0.235139,
+    #       -0.0340109, 0.582244, 0.229908, 0.0115197, -0.232581, 0.587856, 0.0755911,
+    #       -0.000813329, 0.1572, 0.267302, 0.00839917, -0.265834]
+    #     time_from_start: 20.0
+    #   - positions: [-0.112342, -0.115869, 0.00754751, 0.00639062, 0.275124, 0.228544,
+    #       -0.0319921, 0.657897, 0.229168, 0.0105487, -0.235579, 0.579949, 0.0630218,
+    #       -0.00994287, 0.179929, 0.289843, 0.00849025, -0.289791]
+    #     time_from_start: 20.5
+    #   - positions: [-0.120424, -0.139764, 0.0101296, 0.00867238, 0.237327, 0.214602,
+    #       -0.0354835, 0.759087, 0.235569, 0.00962785, -0.239085, 0.56949, 0.0313906,
+    #       -0.0490682, 0.195833, 0.266036, 0.00951463, -0.264597]
+    #     time_from_start: 21.0
+    #   - positions: [-0.115944, -0.14873, 0.0114615, 0.0111228, 0.228401, 0.191624,
+    #       -0.0551348, 0.779186, 0.236568, 0.00697694, -0.242595, 0.566116, 0.023303,
+    #       -0.103151, 0.201799, 0.225815, 0.0120738, -0.223422]
+    #     time_from_start: 21.5
+    #   - positions: [-0.0822569, -0.144165, 0.0125238, 0.0123685, 0.264437, 0.158972,
+    #       -0.0968289, 0.682402, 0.241463, 0.00687234, -0.244332, 0.551011, 0.0285912,
+    #       -0.138874, 0.206523, 0.195605, 0.0135359, -0.19865]
+    #     time_from_start: 22.0
+    #   - positions: [-0.0442451, -0.0989958, 0.0114757, 0.0136748, 0.336088, 0.139955,
+    #       -0.17255, 0.558695, 0.244974, 0.00737426, -0.246256, 0.57783, 0.0338104,
+    #       -0.188142, 0.183011, 0.175972, 0.0149022, -0.174309]
+    #     time_from_start: 22.5
+    #   - positions: [-0.00405217, -0.0428912, 0.00970613, 0.0144407, 0.361056, 0.134316,
+    #       -0.226369, 0.512619, 0.245628, 0.00733468, -0.248273, 0.606244, 0.0342038,
+    #       -0.207691, 0.140561, 0.148463, 0.0148339, -0.152589]
+    #     time_from_start: 23.0
+    #   - positions: [0.0350744, 0.00602908, 0.00625099, 0.0132082, 0.340546, 0.144135,
+    #       -0.229108, 0.540075, 0.244678, 0.00594988, -0.248718, 0.6491, 0.0452634,
+    #       -0.17102, 0.0637729, 0.124616, 0.0155739, -0.12708]
+    #     time_from_start: 23.5
+    #   - positions: [0.0790015, 0.0203297, 0.00150418, 0.0117308, 0.330595, 0.14651,
+    #       -0.225273, 0.568346, 0.244656, 0.0060507, -0.2484, 0.685355, 0.0842226,
+    #       -0.120238, 0.0154137, 0.118104, 0.0175454, -0.118462]
+    #     time_from_start: 24.0
+    #   - positions: [0.140464, 0.00556682, -0.00141684, 0.0130986, 0.36959, 0.129541,
+    #       -0.242108, 0.533069, 0.246149, 0.00680768, -0.249901, 0.58934, 0.136818,
+    #       -0.0147512, 0.189098, 0.125708, 0.0187266, -0.127007]
+    #     time_from_start: 24.5
+    #   - positions: [0.173996, -0.0295393, -0.00128601, 0.0128541, 0.394576, 0.133967,
+    #       -0.228688, 0.489915, 0.250924, 0.00876563, -0.253369, 0.49359, 0.148298,
+    #       0.0354007, 0.364358, 0.121335, 0.0197111, -0.123992]
+    #     time_from_start: 25.0
+    #   - positions: [0.200444, -0.0684464, -0.00241806, 0.0106695, 0.454283, 0.12807,
+    #       -0.240117, 0.371359, 0.252634, 0.0100951, -0.254796, 0.454285, 0.152058,
+    #       0.0507822, 0.428182, 0.115641, 0.0189947, -0.120768]
+    #     time_from_start: 25.5
+    #   - positions: [0.239989, -0.103132, -0.00187602, 0.0115271, 0.462643, 0.11087,
+    #       -0.189765, 0.292432, 0.25291, 0.0100665, -0.258661, 0.447243, 0.163459,
+    #       0.0494453, 0.440081, 0.114646, 0.0203175, -0.118746]
+    #     time_from_start: 26.0
+    #   - positions: [0.285749, -0.116716, -0.00119312, 0.0117387, 0.417083, 0.113608,
+    #       -0.157588, 0.322715, 0.261953, 0.012147, -0.259877, 0.438595, 0.187606,
+    #       0.028683, 0.453793, 0.116161, 0.0198862, -0.120231]
+    #     time_from_start: 26.5
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 27.5
+    # robocup_start_presentation:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.0, 0.0, -0.3, 0.1, -0.5, 0.0, 0.2, 0.4, 0.0, 0.0, 0.0, 0.0,
+    #       0.2, 0.0, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.0
+    #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
+    #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.0
+    # robocup_waiting:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.01, 0.02, 0.01, -0.01, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.4
+    #   - positions: [0.02, 0.04, 0.03, -0.02, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.12, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.0
+    #   - positions: [0.04, 0.06, 0.04, -0.05, -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.13, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.8
+    #   - positions: [0.08, 0.04, 0.04, -0.01, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.13, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 3.5999999999999996
+    #   - positions: [0.08, 0.02, 0.02, 0.03, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.199999999999999
+    #   - positions: [0.1, 0.0, 0.01, 0.05, -0.4, 0.08, -0.108, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.1, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 4.6
+    #   - positions: [0.09, 0.02, -0.03, 0.06, -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 5.0
+    #   - positions: [0.05, 0.04, -0.05, 0.06, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 5.8
+    #   - positions: [0.03, 0.06, -0.04, 0.03, -0.4, 0.06, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 6.3999999999999995
+    #   - positions: [-0.01, 0.04, -0.02, 0.01, -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0,
+    #       0.0, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 6.999999999999999
+    #   - positions: [-0.04, 0.02, -0.02, 0.01, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0,
+    #       0.0, -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 7.599999999999999
+    #   - positions: [-0.06, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.1, -0.12, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 7.999999999999999
+    #   - positions: [-0.08, 0.02, 0.03, 0.02, -0.4, 0.11, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.13, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 8.399999999999999
+    #   - positions: [-0.07, 0.04, 0.05, 0.03, -0.4, 0.12, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 9.2
+    #   - positions: [-0.05, 0.06, 0.08, 0.06, -0.4, 0.1, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 10.0
+    #   - positions: [-0.03, 0.04, 0.05, 0.03, -0.4, 0.1, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.07, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 10.6
+    #   - positions: [-0.02, 0.02, 0.03, 0.01, -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.08, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 11.0
+    #   - positions: [-0.01, 0.0, 0.01, 0.0, -0.4, 0.1, -0.09, 0.6109, 0.0, 0.0, 0.0,
+    #       -0.4, 0.09, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 11.4
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 12.4
+    # salute:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.17, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0,
+    #       0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
+    #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 1.85
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 2.0,
+    #       0.6, -1.1, 2.05, -0.1, 0.0, 0.0]
+    #     time_from_start: 4.35
+    #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 2.0,
+    #       0.6, -1.1, 2.05, -0.1, 0.0, 0.0]
+    #     time_from_start: 6.85
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.17, -0.5, 0.6109, 0.0, 0.0, 0.0, 0.0,
+    #       0.17, -0.5, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 8.85
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 9.85
     shake_left:
       joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
         arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1592,45 +1592,45 @@ play_motion:
       - positions: [0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35, 0.17, -0.9,
           0.8, 0.1, -0.4, 0.0]
         time_from_start: 9.25
-    show_head:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
-          0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
-        time_from_start: 2.0
-      - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
-          0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
-        time_from_start: 2.5
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 4.5
-    show_platform:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.9, 0.3, 0.3, 0.5, -0.1, 0.2, 0.0, 1.2, 1.9, 0.6, -1.5708, -0.175,
-          0.25, -0.175, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 2.0
-      - positions: [0.95, 0.35, -0.6, -0.2, -0.1, 0.25, 0.3, 0.9, 1.5, 0.4, -1.2,
-          -0.175, 0.28, -0.175, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 3.0
-      - positions: [0.95, 0.35, -0.6, -0.2, -0.1, 0.25, 0.3, 0.9, 1.5, 0.4, -1.2,
-          -0.175, 0.28, -0.175, 0.6, 0.0, 0.0, 0.0]
-        time_from_start: 5.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 7.0
+    # show_head:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
+    #       0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
+    #     time_from_start: 2.0
+    #   - positions: [0.0, -0.05, 0.0, -0.1, 1.7, 0.8, -0.6, 2.0, 1.0, -0.4, 1.2, 1.7,
+    #       0.8, -0.6, 2.0, 1.0, -0.4, 1.2]
+    #     time_from_start: 2.5
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 4.5
+    # show_platform:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.9, 0.3, 0.3, 0.5, -0.1, 0.2, 0.0, 1.2, 1.9, 0.6, -1.5708, -0.175,
+    #       0.25, -0.175, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.0
+    #   - positions: [0.95, 0.35, -0.6, -0.2, -0.1, 0.25, 0.3, 0.9, 1.5, 0.4, -1.2,
+    #       -0.175, 0.28, -0.175, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 3.0
+    #   - positions: [0.95, 0.35, -0.6, -0.2, -0.1, 0.25, 0.3, 0.9, 1.5, 0.4, -1.2,
+    #       -0.175, 0.28, -0.175, 0.6, 0.0, 0.0, 0.0]
+    #     time_from_start: 5.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 7.0
     show_size_large:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1655,42 +1655,42 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 5.0
-    show_touchscreen_fast:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 0.75
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 1.5
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 3.0
-    show_touchscreen:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 1.25
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 2.5
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 4.5
+    # show_touchscreen_fast:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 0.75
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 1.5
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 3.0
+    # show_touchscreen:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 1.25
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.4, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 2.5
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 4.5
     start_reem:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1703,81 +1703,81 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 3.0
-    walk_arms2:
-      joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
-        arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
-        arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
-        arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [-0.05, 0.0, -0.55, 0.1, -0.05, 0.5, 0.1, 0.0, 0.0, -0.1, 0.1,
-          -0.15, 0.7, -0.1, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.05, 0.0, -0.1, 0.1, -0.15, 0.7, -0.1, 0.0, 0.0, -0.55, 0.1,
-          -0.05, 0.5, 0.1, 0.0, 0.0]
-        time_from_start: 1.5
-      - positions: [-0.05, 0.0, -0.55, 0.1, -0.05, 0.5, 0.1, 0.0, 0.0, -0.1, 0.1,
-          -0.15, 0.7, -0.1, 0.0, 0.0]
-        time_from_start: 3.0
-    walk_arms:
-      joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
-        arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
-        arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
-        arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4, 0.25,
-          -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [-0.05, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.25, 0.1,
-          -0.15, 0.7, -0.1, 0.0, 0.0]
-        time_from_start: 0.75
-      - positions: [0.05, 0.0, -0.25, 0.1, -0.15, 0.7, -0.1, 0.0, 0.0, -0.4, 0.25,
-          -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 2.25
-      - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4, 0.25,
-          -0.1, 0.6109, 0.0, 0.0, 0.0]
-        time_from_start: 3.0
-    wave_flag:
-      joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
-        arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
-        arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
-        arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
-          0.9, 0.0, 0.0, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
-          0.78, 0.6, 0.25, 0.0]
-        time_from_start: 0.5
-      - positions: [0.05, 0.0, -0.4, 0.14, -0.1, 0.57, 0.05, 0.0, 0.0, 0.4, 0.1, 0.5,
-          0.9, 0.2, 0.1, 0.0]
-        time_from_start: 1.35
-      - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
-          0.78, -0.6, -0.25, 0.0]
-        time_from_start: 1.85
-      - positions: [-0.05, 0.0, -0.4, 0.1, -0.1, 0.57, -0.05, 0.0, 0.0, 0.4, 0.1,
-          -0.5, 0.9, -0.2, -0.1, 0.0]
-        time_from_start: 2.7
-      - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
-          0.78, 0.6, 0.25, 0.0]
-        time_from_start: 3.2
-      - positions: [0.05, 0.0, -0.4, 0.14, -0.1, 0.57, 0.05, 0.0, 0.0, 0.4, 0.1, 0.5,
-          0.9, 0.2, 0.1, 0.0]
-        time_from_start: 4.05
-      - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
-          0.78, -0.6, -0.25, 0.0]
-        time_from_start: 4.55
-      - positions: [-0.05, 0.0, -0.4, 0.1, -0.1, 0.57, -0.05, 0.0, 0.0, 0.4, 0.1,
-          -0.5, 0.9, -0.2, -0.1, 0.0]
-        time_from_start: 5.3999999999999995
-      - positions: [0.0, 0.0, -0.4, 0.1, -0.12, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
-          0.78, 0.6, 0.25, 0.0]
-        time_from_start: 5.8999999999999995
-      - positions: [0.05, 0.0, -0.4, 0.14, -0.1, 0.57, 0.05, 0.0, 0.0, 0.4, 0.1, 0.5,
-          0.9, 0.2, 0.1, 0.0]
-        time_from_start: 6.749999999999999
-      - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
-          0.9, 0.0, 0.0, 0.0]
-        time_from_start: 7.749999999999999
+    # walk_arms2:
+    #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
+    #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
+    #     arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
+    #     arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [-0.05, 0.0, -0.55, 0.1, -0.05, 0.5, 0.1, 0.0, 0.0, -0.1, 0.1,
+    #       -0.15, 0.7, -0.1, 0.0, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.05, 0.0, -0.1, 0.1, -0.15, 0.7, -0.1, 0.0, 0.0, -0.55, 0.1,
+    #       -0.05, 0.5, 0.1, 0.0, 0.0]
+    #     time_from_start: 1.5
+    #   - positions: [-0.05, 0.0, -0.55, 0.1, -0.05, 0.5, 0.1, 0.0, 0.0, -0.1, 0.1,
+    #       -0.15, 0.7, -0.1, 0.0, 0.0]
+    #     time_from_start: 3.0
+    # walk_arms:
+    #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
+    #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
+    #     arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
+    #     arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4, 0.25,
+    #       -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [-0.05, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.25, 0.1,
+    #       -0.15, 0.7, -0.1, 0.0, 0.0]
+    #     time_from_start: 0.75
+    #   - positions: [0.05, 0.0, -0.25, 0.1, -0.15, 0.7, -0.1, 0.0, 0.0, -0.4, 0.25,
+    #       -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 2.25
+    #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4, 0.25,
+    #       -0.1, 0.6109, 0.0, 0.0, 0.0]
+    #     time_from_start: 3.0
+    # wave_flag:
+    #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
+    #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
+    #     arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
+    #     arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
+    #       0.9, 0.0, 0.0, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
+    #       0.78, 0.6, 0.25, 0.0]
+    #     time_from_start: 0.5
+    #   - positions: [0.05, 0.0, -0.4, 0.14, -0.1, 0.57, 0.05, 0.0, 0.0, 0.4, 0.1, 0.5,
+    #       0.9, 0.2, 0.1, 0.0]
+    #     time_from_start: 1.35
+    #   - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
+    #       0.78, -0.6, -0.25, 0.0]
+    #     time_from_start: 1.85
+    #   - positions: [-0.05, 0.0, -0.4, 0.1, -0.1, 0.57, -0.05, 0.0, 0.0, 0.4, 0.1,
+    #       -0.5, 0.9, -0.2, -0.1, 0.0]
+    #     time_from_start: 2.7
+    #   - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
+    #       0.78, 0.6, 0.25, 0.0]
+    #     time_from_start: 3.2
+    #   - positions: [0.05, 0.0, -0.4, 0.14, -0.1, 0.57, 0.05, 0.0, 0.0, 0.4, 0.1, 0.5,
+    #       0.9, 0.2, 0.1, 0.0]
+    #     time_from_start: 4.05
+    #   - positions: [0.0, 0.0, -0.4, 0.12, -0.1, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
+    #       0.78, -0.6, -0.25, 0.0]
+    #     time_from_start: 4.55
+    #   - positions: [-0.05, 0.0, -0.4, 0.1, -0.1, 0.57, -0.05, 0.0, 0.0, 0.4, 0.1,
+    #       -0.5, 0.9, -0.2, -0.1, 0.0]
+    #     time_from_start: 5.3999999999999995
+    #   - positions: [0.0, 0.0, -0.4, 0.1, -0.12, 0.6, 0.0, 0.0, 0.0, 0.3, 0.1, -0.1,
+    #       0.78, 0.6, 0.25, 0.0]
+    #     time_from_start: 5.8999999999999995
+    #   - positions: [0.05, 0.0, -0.4, 0.14, -0.1, 0.57, 0.05, 0.0, 0.0, 0.4, 0.1, 0.5,
+    #       0.9, 0.2, 0.1, 0.0]
+    #     time_from_start: 6.749999999999999
+    #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
+    #       0.9, 0.0, 0.0, 0.0]
+    #     time_from_start: 7.749999999999999
     wave_no_head:
       joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
         arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1799,33 +1799,33 @@ play_motion:
       - positions: [0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35, 0.17, -0.9,
           0.8, 0.1, -0.4, 0.0]
         time_from_start: 4.3
-    wave_present:
-      joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
-        arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
-        arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
-        arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
-      points:
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 0.0
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.4, 0.15,
-          0.4, 2.0, -1.4, 0.6, 0.0]
-        time_from_start: 1.5
-      - positions: [0.0, 0.0, 0.0, 0.25, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.4,
-          0.4, -0.4, 2.0, -1.4, 0.6, 0.0]
-        time_from_start: 2.3
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.4, 0.15,
-          0.4, 2.0, -1.4, 0.6, 0.0]
-        time_from_start: 3.3
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 4.55
-      - positions: [0.0, 0.1, 0.0, 0.345, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.6,
-          0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
-        time_from_start: 5.8
-      - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
-          0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
-        time_from_start: 7.8
+    # wave_present:
+    #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
+    #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
+    #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
+    #     arm_right_4_joint, arm_right_5_joint, arm_right_6_joint, arm_right_7_joint]
+    #   points:
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 0.0
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.4, 0.15,
+    #       0.4, 2.0, -1.4, 0.6, 0.0]
+    #     time_from_start: 1.5
+    #   - positions: [0.0, 0.0, 0.0, 0.25, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.4,
+    #       0.4, -0.4, 2.0, -1.4, 0.6, 0.0]
+    #     time_from_start: 2.3
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.4, 0.15,
+    #       0.4, 2.0, -1.4, 0.6, 0.0]
+    #     time_from_start: 3.3
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 4.55
+    #   - positions: [0.0, 0.1, 0.0, 0.345, 0.1, 0.15, 0.0, 0.3, 0.0, 0.0, 0.0, 0.6,
+    #       0.35, -0.85, 2.0, 0.55, -0.65, 0.0]
+    #     time_from_start: 5.8
+    #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
+    #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
+    #     time_from_start: 7.8
     wave:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
