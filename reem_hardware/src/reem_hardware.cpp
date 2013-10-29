@@ -150,6 +150,15 @@ bool ReemHardware::startHook()
 //     return false;
   }
 
+  // Hold current position
+  // TODO: Can we get rid of the eror message at start of one lost cycle?
+  if (!actuators_.read(ros::Duration(0.005))) // TODO: Remove magic number!
+  {
+    ROS_ERROR("Can't start component: Couldn't read actuators state");
+    return false;
+  }
+  robot_hw_->holdPosition();
+
   // Initialize previous control cycle timestamp
   last_ticks_ = RTT::os::TimeService::Instance()->getTicks();
 
@@ -221,7 +230,7 @@ void ReemHardware::stopHook()
 {
   // Reset raw data and forward null commands to actuator manager
   actuators_.stop();
-  actuators_.write();
+  actuators_.write(); // NOTE: Not really needed but a redundant safety measure
 }
 
 void ReemHardware::cleanupHook()
