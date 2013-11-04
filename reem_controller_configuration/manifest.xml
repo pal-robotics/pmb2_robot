@@ -8,7 +8,6 @@
   <license>Modified BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/reem_controller_configuration</url>
-
   <depend package="controller_manager"/>
   <depend package="joint_state_controller"/>
   <depend package="joint_trajectory_controller"/>

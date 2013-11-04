@@ -8,11 +8,7 @@
   <license>Modified BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/reem_bringup</url>
-
   <depend package="reem_description"/>
   <depend package="reem_head_action"/>
   <depend package="robot_state_publisher"/>
-
 </package>
-
-
