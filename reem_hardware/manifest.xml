@@ -10,7 +10,6 @@
   <depend package="pal_ros_control"/>
   <depend package="realtime_tools"/>
   <depend package="rtt"/>
-  <depend package="rtt_std_msgs"/>
   <depend package="std_srvs"/>
 
 </package>
