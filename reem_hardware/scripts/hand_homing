@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Check preconditions with user
+TEXT_BOLD='\033[1m'
+TEXT_RESET='\e[0m'
+
+restart_robot_hw ()
+{
+  echo "Hand homing failed. Restarting ros_control component..."
+  rosservice call /robot_hw/start; 
+}
+
+if [[ "$1" != "--yes" ]]; then
+  ready=''
+  echo -e "Is the robot in a configuration that allows it to$TEXT_BOLD close its hands without colliding$TEXT_RESET with itself or the environment [yes/no]?"
+  while [[ $ready != 'yes' ]]; do
+    read ready
+  
+    if [[ $ready == 'no' ]]; then
+      echo 'Aborting...'
+      exit 1
+    fi
+
+    if [[ $ready != 'yes' ]]; then
+      echo -e "Please answer$TEXT_BOLD yes$TEXT_RESET or$TEXT_BOLD no$TEXT_RESET to the above question, or ctrl+c to abort."
+    fi
+  done
+fi
+#exit 0
+echo 'Stopping ros_control component...'
+rosservice call /robot_hw/stop
+if [ $? != 0 ]; then
+  exit 1
+fi
+
+echo 'Invalidating existing homing values...'
+rosservice call /hand_left/homing/invalidate
+if [ $? != 0 ]; then
+  restart_robot_hw
+  exit 2
+fi
+rosservice call /hand_right/homing/invalidate
+if [ $? != 0 ]; then
+  restart_robot_hw
+  exit 3
+fi
+sleep 1
+
+NUM_RETRIES=4
+rosservice call /hand_left/homing/start
+if [ $? != 0 ]; then
+  restart_robot_hw
+  exit 4
+fi
+
+for i in `seq 1 $NUM_RETRIES`;
+do
+  echo "$i/$NUM_RETRIES  Homing left hand, please wait..."
+  sleep 5 # Wait for completion
+done
+
+rosservice call /hand_right/homing/start
+if [ $? != 0 ]; then
+  restart_robot_hw
+  exit 5
+fi
+for i in `seq 1 $NUM_RETRIES`;
+do
+  echo "$i/$NUM_RETRIES Homing right hand, please wait..."
+  sleep 5 # Wait for completion
+done
+
+echo 'Restarting ros_control component...'
+rosservice call /robot_hw/start
+if [ $? != 0 ]; then
+  exit 6
+fi
+
+echo 'Hand homing done!'

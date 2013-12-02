@@ -51,6 +51,7 @@ const string POS_CUR_PORT            = "act_position";
 const string VEL_CUR_PORT            = "act_velocity";
 const string POS_REF_PORT            = "ref_position";
 const string VEL_REF_PORT            = "ref_velocity";
+const string BASE_ORIENTATION_PORT   = "orientation_base";
 const string GET_ACTUATORS_NAMES     = "getActuatorsNames";
 
 const string ACT_MANAGER_NAME   = "actuatorsMgr";
@@ -119,6 +120,7 @@ public:
     eff_.resize(dim, 0.0);
     pos_cmd_.resize(dim, nan_val);
     vel_cmd_.resize(dim, nan_val);
+    orientation_.resize(4, 0.0); orientation_[3] = 1.0;
 
     // Data flow interface
     ports()->addPort(POS_CUR_PORT, pos_ref_port_);
@@ -127,6 +129,9 @@ public:
     ports()->addPort(VEL_REF_PORT, vel_cmd_port_);
     pos_ref_port_.setDataSample(pos_); // Preallocate resources
     vel_ref_port_.setDataSample(vel_); // Preallocate resources
+
+    ports()->addPort(BASE_ORIENTATION_PORT, orientation_port_);
+    orientation_port_.setDataSample(orientation_);  // Preallocate resources
 
     provides()->addOperation(GET_ACTUATORS_NAMES,
                              &DummyActuatorsManager::getActuatorsNames,
@@ -174,6 +179,8 @@ protected:
     // Write current state
     pos_ref_port_.write(pos_);
     vel_ref_port_.write(vel_); // NOTE: Comment!
+
+    orientation_port_.write(orientation_);
   }
 
 private:
@@ -185,12 +192,14 @@ private:
   vector<double> eff_;
   vector<double> pos_cmd_;
   vector<double> vel_cmd_;
+  vector<double> orientation_;
 
   // Actuators manager interface
   RTT::OutputPort< vector<double> >  pos_ref_port_;
   RTT::OutputPort< vector<double> >  vel_ref_port_;
   RTT::InputPort< vector<double> >   pos_cmd_port_;
   RTT::InputPort< vector<double> >   vel_cmd_port_;
+  RTT::OutputPort< vector<double> >  orientation_port_;
 };
 
 ORO_CREATE_COMPONENT(reem_hardware::DummyActuatorsManager);

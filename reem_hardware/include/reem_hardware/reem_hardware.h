@@ -79,6 +79,10 @@ protected:
 private:
   // Actuators manager interface
   pal_ros_control::ActuatorAccesor actuators_;
+  double dummy_caster_data_; // Dummy raw caster data
+
+  // Inclinometer interface. We use the IMu interface, but only measure orientation in one axis
+  pal_ros_control::ImuSensorAccesor  base_orientation_;
 
   // Emergency stop
   pal_ros_control::EmergencyStopAccesor e_stop_;
@@ -117,6 +121,13 @@ private:
     if (isRunning()) {do_stop_ = true;}
     return true;
   }
+
+  /**
+   * \brief Add dummy caster joints to robot hardware abstraction.
+   * Caster joints don't have sensors, so we set them to zero and make them show up in joint_states mostly for cosmetic
+   * reasons (otherwise things like tf and the RobotModel Rviz plugin can't update the frame locations).
+   */
+  bool addDummyCasters();
 };
 
 } // namespace

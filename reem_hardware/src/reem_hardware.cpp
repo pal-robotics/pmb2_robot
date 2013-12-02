@@ -55,6 +55,10 @@ const string ACT_VEL_CUR_PORT        = ""; //"act_velocity";
 const string ACT_POS_REF_PORT        = "ref_position";
 const string ACT_VEL_REF_PORT        = "ref_velocity";
 
+const string BASE_ORIENTATION_NAME   = "base_inclinometer";      // TODO: Fetch from URDF?
+const string BASE_ORIENTATION_FRAME  = "base_inclinometer_link"; // TODO: Fetch from URDF?
+const string BASE_ORIENTATION_PORT   = "orientation_base";
+
 const string EMERGENCY_STOP_PORT     = "emergency_stop_state";
 }
 
@@ -68,6 +72,11 @@ ReemHardware::ReemHardware(const string &name)
                ACT_POS_REF_PORT,
                ACT_VEL_REF_PORT,
                this),
+    dummy_caster_data_(0.0),
+    base_orientation_(BASE_ORIENTATION_NAME,
+                      BASE_ORIENTATION_FRAME,
+                      BASE_ORIENTATION_PORT,
+                      this),
     e_stop_(EMERGENCY_STOP_PORT,
             this),
     do_stop_(false)
@@ -85,6 +94,10 @@ bool ReemHardware::configureHook()
   // Setup actuators
   if (!actuators_.configure()) {return false;}
 
+  // Setup inclinometer
+  if (!base_orientation_.configure()) {return false;}
+  pal_ros_control::RawImuDataList imu_data(1, base_orientation_.getData());
+
   // Setup callback queue and spinner thread
   ros::NodeHandle nh;
   nh.setCallbackQueue(&cb_queue_);
@@ -95,7 +108,7 @@ bool ReemHardware::configureHook()
   {
     robot_hw_.reset(new pal_ros_control::RosControlRobot(actuators_.getData(),
                                                          pal_ros_control::RawForceTorqueDataList(), // empty
-                                                         pal_ros_control::RawImuDataList(), // empty
+                                                         imu_data,
                                                          nh));
   }
   catch(const std::runtime_error& ex)
@@ -108,6 +121,9 @@ bool ReemHardware::configureHook()
     ROS_ERROR_STREAM("Unexpected exception caught while constructing robot hardware abstraction.");
     return false;
   }
+
+  // Add dummy caster joints to robot hardware abstraction
+  if (!addDummyCasters()) {return false;}
 
   // Reset controller manager
   controller_manager_.reset(new controller_manager::ControllerManager(robot_hw_.get(), nh));
@@ -132,7 +148,8 @@ bool ReemHardware::startHook()
   }
 
   // Precondition: Connected ports
-  if (!actuators_.start())
+  if (!actuators_.start() ||
+      !base_orientation_.start())
       //!e_stop_.start())// TODO: Add estop check?
   {
     return false;
@@ -201,6 +218,8 @@ void ReemHardware::updateHook()
   // Read current robot state
   const bool read_act_ok = actuators_.read(period);
   if (!read_act_ok) {return;}
+  // TODO: Check sensors as well when bailing out?
+  /*const bool base_orientation_ok = */base_orientation_.read();
 
 
   robot_hw_->read(time, period);
@@ -245,6 +264,36 @@ void ReemHardware::cleanupHook()
   // Shutdown start/stop services
   start_service_.shutdown();
   stop_service_.shutdown();
+}
+
+bool ReemHardware::addDummyCasters()
+{
+  // Preconditions
+  if (!robot_hw_)
+  {
+    ROS_ERROR("Robot hardware abstraction not yet initialized. Not adding dummy casters.");
+    return false;
+  }
+  hardware_interface::JointStateInterface* js_iface = robot_hw_->get<hardware_interface::JointStateInterface>();
+  if (!js_iface)
+  {
+    ROS_ERROR("Robot hardware abstraction does not have a JointStates interface!. Not adding dummy casters.");
+    return false;
+  }
+
+  // Add dummy casters
+  double* dummy = &dummy_caster_data_;
+  hardware_interface::JointStateHandle caster_left_1("caster_left_1_joint", dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_left_2("caster_left_2_joint", dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_right_1("caster_right_1_joint", dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_right_2("caster_right_2_joint", dummy, dummy, dummy);
+
+  js_iface->registerHandle(caster_left_1);
+  js_iface->registerHandle(caster_left_2);
+  js_iface->registerHandle(caster_right_1);
+  js_iface->registerHandle(caster_right_2);
+
+  return true;
 }
 
 ORO_CREATE_COMPONENT(reem_hardware::ReemHardware);

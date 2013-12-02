@@ -6,10 +6,13 @@ torso_controller:
 
   constraints:
     goal_time: &goal_time_constraint 0.6
+    stopped_velocity_tolerance: &stopped_velocity_constraint 0.05
     torso_1_joint:
       goal: &goal_pos_constraint 0.02
     torso_2_joint:
       goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
 
 head_controller:
   type: "position_controllers/JointTrajectoryController"
@@ -19,10 +22,13 @@ head_controller:
 
   constraints:
     goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     head_1_joint:
       goal: *goal_pos_constraint
     head_2_joint:
       goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
 
 left_arm_controller:
   type: "position_controllers/JointTrajectoryController"
@@ -36,6 +42,7 @@ left_arm_controller:
     - arm_left_7_joint
   constraints:
     goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     arm_left_1_joint:
       goal: *goal_pos_constraint
     arm_left_2_joint:
@@ -51,6 +58,8 @@ left_arm_controller:
     arm_left_7_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 right_arm_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -63,6 +72,7 @@ right_arm_controller:
     - arm_right_7_joint
   constraints:
     goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     arm_right_1_joint:
       goal: *goal_pos_constraint
     arm_right_2_joint:
@@ -78,6 +88,8 @@ right_arm_controller:
     arm_right_7_joint:
       goal: *goal_pos_constraint
 
+  stop_trajectory_duration: 0.0
+
 right_hand_controller:
   type: "position_controllers/JointTrajectoryController"
   joints:
@@ -87,12 +99,15 @@ right_hand_controller:
 
   constraints:
     goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     hand_right_index_joint:
       goal: *goal_pos_constraint
     hand_right_middle_joint:
       goal: *goal_pos_constraint
     hand_right_thumb:
       goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
 
 left_hand_controller:
   type: "position_controllers/JointTrajectoryController"
@@ -103,9 +118,12 @@ left_hand_controller:
 
   constraints:
     goal_time: *goal_time_constraint
+    stopped_velocity_tolerance: *stopped_velocity_constraint
     hand_left_index_joint:
       goal: *goal_pos_constraint
     hand_left_middle_joint:
       goal: *goal_pos_constraint
     hand_left_thumb:
       goal: *goal_pos_constraint
+
+  stop_trajectory_duration: 0.0
