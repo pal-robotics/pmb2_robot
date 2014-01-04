@@ -3,16 +3,30 @@ teleop:
     type: topic
     message_type: geometry_msgs/Twist
     topic_name: cmd_vel
-    deadman_buttons: [4]
     axis_mappings:
       -
         axis: 1
         target: linear.x
-        scale: 0.5
+        scale: 1.0
       -
-        axis: 0
+        axis: 2
         target: angular.z
-        scale: 0.5
+        scale: 1.0
+
+  joy_priority:
+    type: action
+    action_name: joy_priority_action 
+    buttons: [0]
+
+  joy_turbo_decrease:
+    type: action
+    action_name: joy_turbo_decrease
+    buttons: [1, 4, 5]
+
+  joy_turbo_increase:
+    type: action
+    action_name: joy_turbo_increase
+    buttons: [3, 4, 5]
 
   home:
     type: action
