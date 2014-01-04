@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>reem_robot</name>
+  <version>0.9.0</version>
+  <description>Description and launch files for the REEM robot</description>
+  <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
+  <maintainer email="paul.mathieu@pal-robotics.com">Paul Mathieu</maintainer>
+  <license>BSD</license>
+  <author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>reem_description</run_depend>
+  <run_depend>reem_bringup</run_depend>
+  <run_depend>reem_controller_configuration</run_depend>
+  <run_depend>reem_hardware</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
