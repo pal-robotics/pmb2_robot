@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>reem_controller_configuration</name>
+  <version>0.9.0</version>
+  <description>Launch files and scripts needed to configure
+    the controllers of the REEM robot.</description>
+  <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
+  <maintainer email="paul.mathieu@pal-robotics.com">Paul Mathieu</maintainer>
+  <license>Modified BSD</license>
+  <author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>joint_trajectory_controller</run_depend>
+  <run_depend>controller_manager</run_depend>
+  <run_depend>diff_drive_controller</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+
+</package>
