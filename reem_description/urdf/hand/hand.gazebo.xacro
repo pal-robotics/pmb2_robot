@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <xacro:macro name="hand_grasping_hack" params="side">
+      <gazebo>
+        <gripper name="${side}_grasp_hack">
+          <!--<grasp_check attach_steps="20" detach_steps="40" min_contact_count="2" />-->
+          <grasp_check>
+            <attach_steps>20</attach_steps>
+            <detach_steps>20</detach_steps>
+            <min_contact_count>20</min_contact_count>
+          </grasp_check>
+          <gripper_link>hand_${side}_middle_1_link</gripper_link>
+          <gripper_link>hand_${side}_index_1_link</gripper_link>
+          <gripper_link>hand_${side}_middle_2_link</gripper_link>
+          <gripper_link>hand_${side}_index_2_link</gripper_link>
+          <gripper_link>hand_${side}_middle_3_link</gripper_link>
+          <gripper_link>hand_${side}_index_3_link</gripper_link>
+          <palm_link>hand_${side}_thumb_link</palm_link>
+        </gripper>
+      </gazebo>
+    </xacro:macro>
+
+</robot>

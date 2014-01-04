@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2012, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot  xmlns:xacro="http://www.ros.org/wiki/xacro"
+        xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+        name="reem" >
+
+  <!-- The following included files set up definitions of parts of the robot body -->
+
+  <!-- Arm -->
+  <xacro:include filename="$(find reem_description)/urdf/arm/arm.urdf.xacro" />
+
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find reem_description)/gazebo/gazebo.urdf.xacro" />
+  <!-- Materials for visualization -->
+  <xacro:include filename="$(find reem_description)/urdf/materials.urdf.xacro" />
+
+  <!-- Fixed structure -->
+  <joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0.7" rpy="${-90.0 * deg_to_rad} 0 0" />
+    <child link="base_link" />
+    <parent link="base_footprint"/>
+  </joint>
+
+  <link name="base_footprint">
+    <inertial>
+      <mass value="50.0" />
+      <origin xyz="0 0 0.1"/>
+      <inertia ixx="1.2083" ixy="0.0" ixz="0.0"
+                iyy="1.2083" iyz="0.0" izz="2.0833" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.5 0.2" />
+      </geometry>
+      <material name="White" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.5 0.2" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="base_link">
+  <inertial>
+      <mass value="20.0" />
+      <origin xyz="0 0 0"/>
+      <inertia ixx="1.6833" ixy="0.0" ixz="0.0"
+                iyy="0.08333" iyz="0.0" izz="1.7333" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 1.0 0.1" />
+      </geometry>
+      <material name="White" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 1.0 0.1" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- The reflect parameter takes the value 1 or -1 to respectively distinguish right from left side in expressions -->
+  <xacro:reem_arm name="arm" parent="base_link" side="right" reflect="1.0"  />
+
+</robot>
+
+

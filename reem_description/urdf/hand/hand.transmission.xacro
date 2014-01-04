@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+ <!-- Thumb -->
+  <xacro:macro name="hand_thumb_transmission" params="name reduction" >
+    <transmission name="${name}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${name}_motor" >
+        <mechanicalReduction>${reduction}</mechanicalReduction>
+      </actuator>
+      <joint name="${name}_joint" >
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+  </xacro:macro>
+
+  <!-- Other fingers -->
+  <!-- TODO: Implement as a single underactuated custom transmission for the whole finger -->
+  <xacro:macro name="hand_finger_transmission" params="finger_name actuator_reduction" >
+    <!-- Actuator -->
+    <transmission name="${finger_name}_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${finger_name}_motor" >
+        <mechanicalReduction>${actuator_reduction}</mechanicalReduction>
+      </actuator>
+      <joint name="${finger_name}_joint" >
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <!-- Read-only finger phalanxes -->
+    <transmission name="${finger_name}_1_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${finger_name}_1_motor" >
+        <mechanicalReduction>1.0</mechanicalReduction>
+      </actuator>
+      <joint name="${finger_name}_1_joint" >
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="${finger_name}_2_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${finger_name}_2_motor" >
+        <mechanicalReduction>1.0</mechanicalReduction>
+      </actuator>
+      <joint name="${finger_name}_2_joint" >
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+      </joint>
+    </transmission>
+
+    <transmission name="${finger_name}_3_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <actuator name="${finger_name}_3_motor" >
+        <mechanicalReduction>1.0</mechanicalReduction>
+      </actuator>
+      <joint name="${finger_name}_3_joint" >
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+      </joint>
+    </transmission>
+  </xacro:macro>
+
+</robot>
+

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find reem_description)/urdf/deg_to_rad.xacro" />
+<!--  <xacro:include filename="$(find reem_description)/urdf/marker/marker.gazebo.xacro" /> -->
+
+  <xacro:macro name="marker" params="name parent origin rpy reflect texture">
+
+    <link name="marker_${name}_link">
+      <inertial>
+        <origin xyz="0.01747 ${reflect * 0.0014} ${reflect * 0.128}" rpy="0 0 0" />
+        <mass value="0.01" />
+        <inertia ixx="0.1"  ixy="0"  ixz="0" iyy="0.1" iyz="0" izz="0.1" />
+      </inertial>
+      <visual>
+        <geometry>
+          <mesh filename="package://reem_description/meshes/marker/hand_marker.dae"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+	  <box size="0.09 0.09 0.000000001"/> <!-- SIZE OF THE MARKER + MARGIN -->
+        </geometry>
+      </collision> 
+    </link>
+
+    <joint name="marker_${name}_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link="marker_${name}_link" />
+      <origin xyz="${origin}" rpy="${rpy}" />
+    </joint>
+
+    <!-- extensions 
+    <xacro:marker_gazebo name="${name}" texture="${texture}" /> -->
+
+  </xacro:macro>
+  
+</robot>
+

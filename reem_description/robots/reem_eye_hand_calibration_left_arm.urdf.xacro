@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot  xmlns:xacro="http://www.ros.org/wiki/xacro"
+        xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+        name="reem" >
+
+  <!-- The following included files set up definitions of parts of the robot body -->
+
+  <!-- Base -->
+  <xacro:include filename="$(find reem_description)/urdf/base/base.urdf.xacro" />
+  <!-- Torso -->
+  <xacro:include filename="$(find reem_description)/urdf/torso/torso.urdf.xacro" />
+  <!-- Head -->
+  <xacro:include filename="$(find reem_description)/urdf/head/head.urdf.xacro" />
+  <!-- Arm -->
+  <xacro:include filename="$(find reem_description)/urdf/arm/arm.urdf.xacro" />
+  <!-- Hand -->
+  <xacro:include filename="$(find reem_description)/urdf/hand/hand.urdf.xacro" />
+  <!-- Eye-hand calibration chessboard -->
+  <xacro:include filename="$(find reem_description)/urdf/eyeHandCalibrationChessBoard.urdf.xacro" />
+  <!-- Camera sensors -->
+  <xacro:include filename="$(find reem_description)/urdf/sensors/stereo_camera.urdf.xacro" />
+<!--   <xacro:include filename="$(find reem_description)/urdf/sensors/back_camera.urdf.xacro" /> -->
+
+  <!-- Generic simulator_gazebo plugins -->
+  <xacro:include filename="$(find reem_description)/gazebo/gazebo.urdf.xacro" />
+  <!-- Materials for visualization -->
+  <xacro:include filename="$(find reem_description)/urdf/materials.urdf.xacro" />
+
+  <!-- Now we can start using the macros included above to define the actual robot -->
+  <xacro:reem_base  name="base"/>
+  <xacro:reem_cargo  name="base"/>
+  <xacro:reem_torso name="torso" parent="base_link"/>
+  <xacro:reem_head  name="head"  parent="torso_2_link"/>
+
+  <!-- The reflect parameter takes the value 1 or -1 to respectively distinguish right from left side in expressions -->
+  <xacro:reem_arm name="arm" parent="torso_2_link" side="right" reflect="1.0"  />
+  <xacro:reem_arm name="arm" parent="torso_2_link" side="left"  reflect="-1.0" />
+
+  <xacro:reem_hand name="hand" parent="arm_right_tool_link" side="right" reflect="1.0"  />
+  <xacro:reem_hand name="hand" parent="arm_left_tool_link"  side="left"  reflect="-1.0" />
+
+  <xacro:reem_eye_hand_calibration_chessboard_gazebo name="eyeHandCalibrationChessBoard" side="left"  reflect="-1.0" />
+
+  <!-- stereo camera -->
+  <!-- IMPORTANT: focal_length = image_width/(2tan(hfov/2)) -->
+  <xacro:stereo_camera_v0 parent="head_2_link" name="stereo" focal_length_left="459.84" hfov_left="71" focal_length_right="459.84" hfov_right="71" image_format="B8G8R8" image_width="656" image_height="492" >
+    <!-- The following transformations expresses the pose of the stereo_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  head_2_link. -->
+    <origin xyz="0.08203  -0.09558  0.04132" rpy="1.56293 -0.00855922 -0.0201307" />
+  </xacro:stereo_camera_v0>
+
+<!--   <xacro:back_camera_v0 parent="torso_2_link" name="back" focal_length="557" hfov="75" image_format="B8G8R8" image_width="640" image_height="480" >  -->
+    <!-- The following transformations expresses the pose of the back_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  torso_2_link. -->
+    <!--<origin xyz="-0.140 -0.302 -0.000" rpy="-3.142 1.571 0.211" />
+  </xacro:back_camera_v0>-->
+
+</robot>
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="hokuyo_lx30_laser_gazebo_v0" params="name ros_topic update_rate min_angle max_angle">
+
+    <gazebo reference="base_link">
+
+      <sensor:ray name="${name}">
+        <rayCount>181</rayCount>
+        <rangeCount>513</rangeCount>
+        <laserCount>1</laserCount>
+
+        <origin>0.00027 0.0 0</origin>
+        <!-- <displayRays>fan</displayRays> -->
+				<displayRays>false</displayRays>
+
+        <minAngle>${min_angle}</minAngle>
+        <maxAngle>${max_angle}</maxAngle>
+
+        <minRange>0.1</minRange>
+        <maxRange>30</maxRange>
+        <resRange>1</resRange>
+        <updateRate>${update_rate}</updateRate>
+
+        <controller:gazebo_ros_laser name="gazebo_ros_${name}_controller" plugin="libgazebo_ros_laser.so">
+          <gaussianNoise>0.005</gaussianNoise>
+          <alwaysOn>true</alwaysOn>
+          <updateRate>${update_rate}</updateRate>
+          <topicName>${ros_topic}</topicName>
+          <frameName>${name}_link</frameName>
+          <interface:laser name="gazebo_ros_${name}_iface" />
+          <hokuyoMinIntensity>101.0</hokuyoMinIntensity>
+        </controller:gazebo_ros_laser>
+      </sensor:ray>
+      <material>Gazebo/Grey</material>
+    </gazebo>
+
+  </xacro:macro>

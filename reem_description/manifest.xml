@@ -1,0 +1,15 @@
+<package>
+  <description brief="reem_description">
+    This package contains the description (mechanical, kinematic, visual, etc.) of the REEM robot.
+  </description>
+  <author>Adolfo Rodriguez Tsouroukdissian</author>
+  <license>Creative Commons BY-NC-ND 3.0</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reem_description</url>
+  <depend package="pr2_mechanism_model"/>
+  <depend package="pal_gazebo_plugins"/>
+  <rosdep name="gazebo"/>
+  <export>
+    <gazebo gazebo_media_path="${prefix}"/>
+  </export>
+</package>
