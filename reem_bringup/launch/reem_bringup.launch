@@ -1,7 +1,4 @@
 <launch>
-  <!-- PID gains -->
-  <rosparam command="load" file="$(find reem_controller_configuration_gazebo)/config/pids.yaml"/>
-
   <!-- Diff drive controller parameters -->
   <include file="$(find reem_controller_configuration_gazebo)/launch/load_mobile_base_params.launch"/>
 
