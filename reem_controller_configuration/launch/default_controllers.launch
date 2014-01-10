@@ -8,9 +8,6 @@
   <!-- Joint trajectory controllers -->
   <rosparam command="load" file="$(find reem_controller_configuration)/config/joint_trajectory_controllers.yaml" />
 
-  <!-- Diff drive controller -->
-  <rosparam command="load" file="$(find reem_controller_configuration)/config/mobile_base_controller.yaml" />
-
   <!-- Controllers that come up started -->
   <node name="default_controllers_spawner"
         pkg="controller_manager" type="spawner" output="screen"
