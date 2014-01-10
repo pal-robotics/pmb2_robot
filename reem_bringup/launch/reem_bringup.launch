@@ -1,7 +1,4 @@
 <launch>
-  <!-- Diff drive controller parameters -->
-  <include file="$(find reem_controller_configuration_gazebo)/launch/load_mobile_base_params.launch"/>
-
   <!-- Load default controllers -->
   <include file="$(find reem_controller_configuration)/launch/default_controllers.launch"/>
 

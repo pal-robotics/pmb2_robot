@@ -1,6 +1,9 @@
 <launch>
+  <!-- Diff drive controller parameters -->
+  <rosparam command="load" file="$(find reem_controller_configuration)/config/mobile_base_controller.yaml"/>
+
   <!-- Robot model -->
-  <include file="$(find reem_description)/robots/upload_reem.launch" />
+  <include file="$(find reem_description)/robots/upload_reem.launch"/>
 
   <!-- bring up robot -->
   <include file="$(find reem_bringup)/launch/reem_bringup.launch"/>
