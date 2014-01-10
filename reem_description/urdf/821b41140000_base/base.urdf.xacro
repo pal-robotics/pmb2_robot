@@ -62,6 +62,18 @@
       </collision>
     </link>
 
+  <!-- contact model for wheel surface -->
+   <gazebo reference="wheel_${side}_link">
+     <kp>1000000.0</kp>
+     <kd>100.0</kd>
+     <mu1>1.0</mu1>
+     <mu2>1.0</mu2>
+     <fdir1>0 0 1</fdir1>
+     <maxVel>1.0</maxVel>
+     <minDepth>0.00</minDepth>
+     <cfmDamping>1</cfmDamping>
+   </gazebo>
+
     <joint name="wheel_${side}_joint" type="continuous">
       <parent link="base_link" />
       <child link="wheel_${side}_link" />
@@ -126,6 +138,18 @@
         </geometry>
       </collision>
     </link>
+
+   <!-- contact model for caster wheel surface -->
+   <gazebo reference="caster_${side}_2_link">
+     <kp>1000000.0</kp>
+     <kd>100.0</kd>
+     <mu1>1.0</mu1>
+     <mu2>1.0</mu2>
+     <fdir1>0 0 1</fdir1>
+     <maxVel>1.0</maxVel>
+     <minDepth>0.00</minDepth>
+     <cfmDamping>1</cfmDamping>
+   </gazebo>
 
     <joint name="caster_${side}_1_joint" type="continuous">
       <parent link="base_link" />
