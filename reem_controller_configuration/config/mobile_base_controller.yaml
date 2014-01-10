@@ -12,3 +12,20 @@ mobile_base_controller:
 
   # Velocity commands timeout [s] 
   cmd_vel_timeout: 0.25
+
+  # Velocity and acceleration limits
+  # Whenever a min_* is unspecified, default to -max_*
+  linear:
+    x:
+      has_velocity_limits    : true
+      max_velocity           : 1.0 # m/s
+      min_velocity           : -0.5 #m/s
+      has_acceleration_limits: true
+      max_acceleration       : 0.8 # m/s^2
+      min_acceleration       : -0.4 # m/s^2
+  angular:
+    z:
+      has_velocity_limits    : true
+      max_velocity           : 1.7 # rad/s
+      has_acceleration_limits: true
+      max_acceleration       : 1.5 # rad/s^2
