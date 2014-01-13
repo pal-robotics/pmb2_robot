@@ -17,7 +17,8 @@
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch"/>
 
-  <!-- IR and Sonar to cloud -->
+  <!-- Bumper, IR and Sonar to cloud -->
+  <include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
   <include file="$(find sensor_to_cloud)/launch/ir_to_cloud.launch"/>
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
 
