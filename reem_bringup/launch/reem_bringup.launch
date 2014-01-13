@@ -22,9 +22,6 @@
   <include file="$(find sensor_to_cloud)/launch/ir_to_cloud.launch"/>
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
 
-  <!-- Emergency Stop -->
-  <include file="$(find reem_2dnav)/launch/emergency_stop.launch"/>
-
   <!-- Joystick controller -->
   <include file="$(find reem_bringup)/launch/joystick_teleop.launch"/>
 
