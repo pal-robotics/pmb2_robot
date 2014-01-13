@@ -23,7 +23,6 @@
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
 
   <!-- Emergency Stop -->
-  <include file="$(find reem_laser_sensors)/launch/laser_filter.launch"/>
   <include file="$(find reem_2dnav)/launch/emergency_stop.launch"/>
 
   <!-- Joystick controller -->
