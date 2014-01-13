@@ -12,5 +12,6 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>xacro</run_depend>
+  <run_depend>pal_gazebo_plugins</run_depend>
 
 </package>
