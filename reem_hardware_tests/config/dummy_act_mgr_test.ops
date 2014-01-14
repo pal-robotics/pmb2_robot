@@ -3,6 +3,7 @@ const double control_period = 0.01
 
 // ROS interface plugin
 import("rtt_rosnode")
+import("rtt_roscomm")
 
 // Actuators manager
 const string act_mgr_name  = "actuatorsMgr"
@@ -25,7 +26,7 @@ setActivity(robot_hw_name, control_period, robot_hw_priority, ORO_SCHED_RT)
 addPeer(robot_hw_name, act_mgr_name)
 connectPorts(robot_hw_name, act_mgr_name)
 connectServices(robot_hw_name, act_mgr_name)
-stream(robot_hw_name + "." + estop_port_name, ros.topic(estop_port_name))
+stream(robot_hw_name + "." + estop_port_name, rostopic.connection(estop_port_name))
 
 // Startup
 actuatorsMgr.configure
