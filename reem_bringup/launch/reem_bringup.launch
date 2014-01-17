@@ -15,7 +15,9 @@
   <include file="$(find pal_mobile_base)/launch/mobile_base.launch"/>
 
   <!-- Speed limit -->
-  <include file="$(find speed_limit)/launch/speed_limit.launch"/>
+  <include file="$(find speed_limit)/launch/speed_limit.launch">
+    <arg name="config" value="$(find reem_bringup)/config/speed_limit.yaml"/>
+  </include>
 
   <!-- Bumper, IR and Sonar to cloud -->
   <include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
