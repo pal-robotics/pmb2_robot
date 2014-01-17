@@ -52,10 +52,10 @@
 
   <!-- stereo camera -->
   <!-- IMPORTANT: focal_length = image_width/(2tan(hfov/2)) -->  
-  <xacro:stereo_camera_v0 parent="head_2_link" name="stereo" focal_length_left="459.840874" hfov_left="${71.0*deg_to_rad}" focal_length_right="459.840874" hfov_right="${71.0*deg_to_rad}" image_format="B8G8R8" image_width="656" image_height="492">
+  <xacro:reem_stereo_camera parent="head_2_link" name="stereo" focal_length="459.840874" hfov="${71.0*deg_to_rad}"  image_format="B8G8R8" image_width="656" image_height="492">
     <!-- The following transformations expresses the pose of the stereo_link (X pointing forward, Z upwards and Y leftwards, contrary to the stereo_optical_link which has Z pointing forward) wrt  head_2_link. -->
     <origin xyz="${cal_stereo_x} ${cal_stereo_y} ${cal_stereo_z}" rpy="${cal_stereo_roll} ${cal_stereo_pitch} ${cal_stereo_yaw}" />
-  </xacro:stereo_camera_v0>
+  </xacro:reem_stereo_camera>
 
   <!-- back camera -->
   <xacro:reem_back_camera parent="torso_2_link" name="back_camera" focal_length="376.002379" hfov="${89.999451423*deg_to_rad}" image_format="B8G8R8" image_width="752" image_height="480" >

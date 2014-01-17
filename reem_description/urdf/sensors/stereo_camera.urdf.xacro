@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="reem" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <!-- stereo camera macro uses stingrayf033c_camera macros -->
+  <xacro:include filename="$(find reem_description)/urdf/sensors/stingrayf033c_stereo_camera.gazebo.xacro" />
   <xacro:include filename="$(find reem_description)/urdf/sensors/stingrayf033c_camera.urdf.xacro" />
 
   <property name="stereo_dx" value="0.00" />
-  <property name="stereo_dy" value="-0.073" /> <!-- stereo baseline according to stereo_link which has X pointing forward, Y leftwards and Z upwards (required by Gazebo for a camera sensor) --> 
+  <property name="stereo_dy" value="-0.073" /> <!-- stereo baseline according to base_link which has X pointing forward, Y leftwards and Z upwards (required by Gazebo for a camera sensor) --> 
   <property name="stereo_dz" value="0.00" />   
   <property name="stereo_rx" value="0.00" />
   <property name="stereo_ry" value="0.00" />
   <property name="stereo_rz" value="0.00" />
 
   <!-- this macro is used for creating wide and narrow double stereo camera links -->
-  <xacro:macro name="stereo_camera_v0" params="name parent focal_length_left hfov_left focal_length_right hfov_right image_format image_width image_height *origin">
+  <xacro:macro name="reem_stereo_camera" params="name parent focal_length hfov image_format image_width image_height *origin">
 
     <joint name="${name}_frame_joint" type="fixed">
       <insert_block name="origin" />
@@ -43,7 +43,7 @@
         <geometry>
           <box size="0.001 0.001 0.001" />
         </geometry>
-        <material name="Blue" />
+        <material name="Blue"/>
       </visual>
 
       <collision>
@@ -73,22 +73,22 @@
     </link>
 
     <!-- stereo left camera -->
-    <xacro:stingrayf033c_camera_v0 name="${name}_gazebo_l_stereo_camera" image_format="${image_format}" image_topic_name="/${name}/left/image"
-                            camera_info_topic_name="/${name}/left/camera_info" parent="${name}_link"
-                            hfov="${hfov_left}" focal_length="${focal_length_left}"
-                            frame_id="${name}_optical_frame" hack_baseline="0"
-                            image_width="${image_width}" image_height="${image_height}">
+    <xacro:stingrayf033c_camera name="${name}_gazebo_left_camera" parent="${name}_link">
       <origin xyz="0 0 0" rpy="0.0 0.0 0.0" />
-    </xacro:stingrayf033c_camera_v0>
+    </xacro:stingrayf033c_camera>
 
     <!-- stereo right camera -->
-    <xacro:stingrayf033c_camera_v0 name="${name}_gazebo_r_stereo_camera" image_format="${image_format}" image_topic_name="/${name}/right/image"
-                            camera_info_topic_name="/${name}/right/camera_info" parent="${name}_gazebo_l_stereo_camera_frame"
-                            hfov="${hfov_right}" focal_length="${focal_length_right}"
-                            frame_id="${name}_optical_frame" hack_baseline="${-stereo_dy}"
-                            image_width="${image_width}" image_height="${image_height}">
+    <xacro:stingrayf033c_camera name="${name}_gazebo_right_camera" parent="${name}_link">
       <origin xyz="${stereo_dx} ${stereo_dy} ${stereo_dz}" rpy="${stereo_rx} ${stereo_ry} ${stereo_rz}" />
-    </xacro:stingrayf033c_camera_v0>
+    </xacro:stingrayf033c_camera>
+
+
+    <!-- Stereo camera Gazebo simulation -->
+    <xacro:stingrayf033c_stereo_camera_gazebo name="${name}" image_format="${image_format}" 
+                                   hfov="${hfov}" focal_length="${focal_length}"                                   
+                                   frame_id="${name}_optical_frame" hack_baseline="${-stereo_dy}"
+                                   image_width="${image_width}" image_height="${image_height}"/>
+
 
   </xacro:macro>
 </robot>

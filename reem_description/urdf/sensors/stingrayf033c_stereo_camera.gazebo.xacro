@@ -1,22 +1,34 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="reem" xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="stingrayf033c_camera_gazebo_v0" params="name image_format image_topic_name camera_info_topic_name hfov focal_length frame_id hack_baseline image_width image_height">
-    <gazebo reference="${name}_frame">
-      <sensor type="camera" name="${name}_sensor">
-        <update_rate>15.0</update_rate>
+  <xacro:macro name="stingrayf033c_stereo_camera_gazebo" params="name image_format hfov focal_length frame_id hack_baseline image_width image_height">
+    <gazebo reference="${name}_link">
 
-        <camera name="${name}">
-          <pose>0 -${hack_baseline} 0 0 0 0</pose>
+      <sensor type="multicamera" name="gazebo_${name}_camera">
+        <update_rate>25.0</update_rate>
+        <camera name="left">
+          <horizontal_fov>${ hfov }</horizontal_fov>
+          <image>
+            <width>${image_width} </width>
+            <height> ${image_height}</height>
+            <format>${image_format}</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>100</far>
+          </clip>
+        </camera>
+    <camera name="right">
+          <pose>0 -${hack_baseline} 0 0 0 0</pose>  <!-- the pose is wrt /stereo_link which is the parent of stereo_optical_frame -->
           <horizontal_fov>${ hfov }</horizontal_fov>
           <image>
             <width>${image_width} </width>
@@ -28,13 +40,12 @@
            <far>100</far>
          </clip>
        </camera>
-
-       <plugin name="${name}_controller" filename="libgazebo_ros_camera.so">
+       <plugin name="stereo_camera_controller" filename="libgazebo_ros_multicamera.so">
          <alwaysOn>true</alwaysOn>
-         <updateRate>15.0</updateRate>
+         <updateRate>25.0</updateRate>
          <cameraName>${name}</cameraName>
-         <imageTopicName>${image_topic_name}</imageTopicName>
-         <cameraInfoTopicName>${camera_info_topic_name}</cameraInfoTopicName>
+         <imageTopicName>image</imageTopicName>
+         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
          <frameName>${frame_id}</frameName>
          <hackBaseline>${hack_baseline}</hackBaseline>
          <CxPrime>${(image_width+1)/2}</CxPrime>
@@ -51,3 +62,6 @@
   </gazebo>
   </xacro:macro>
 </robot>
+
+
+ 

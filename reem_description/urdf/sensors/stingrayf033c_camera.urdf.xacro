@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -9,54 +9,16 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <!-- XML namespaces -->
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
-  
-  <xacro:include filename="$(find reem_description)/urdf/sensors/stingrayf033c_camera.gazebo.xacro" />
-
-  <!-- hack_baseline is used to simulate right stereo camera projection matrix translation to left stereo camera frame, currently on the hardware,
-       custom left stereo camera frame_id is passed to right stereo stingrayf033c camera node at launch time, baseline is stored on the camera. -->
-  <xacro:macro name="stingrayf033c_camera_v0" params="name image_format image_topic_name camera_info_topic_name parent hfov focal_length frame_id hack_baseline image_width image_height *origin">
+<robot name="reem" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="stingrayf033c_camera" params="name parent *origin">
 
     <joint name="${name}_frame_joint" type="fixed">
       <insert_block name="origin" />
       <parent link="${parent}"/>
-      <child link="${name}_frame"/>
-    </joint>
-    <link name="${name}_frame">
-
-      <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" />
-        <inertia ixx="0"  ixy="0.0"  ixz="0.0"
-                 iyy="0"  iyz="0.0"
-                 izz="0" />
-      </inertial>
-
-      <visual>
-        <origin xyz="-0.01 0 0" rpy="0 ${deg_to_rad * 90} 0" />
-        <geometry>
-          <cylinder radius="0.01" length="0.02" />
-        </geometry>
-        <material name="Blue" />
-      </visual>
-
-      <!--
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <geometry>
-          <box size="0.01 0.01 0.01" />
-        </geometry>
-      </collision>
-      -->
-    </link>
-
-    <joint name="${name}_optical_frame_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" />      
-      <parent link="${name}_frame" />
-      <child link="${name}_optical_frame"/>
+      <child link="${name}_link"/>
     </joint>
 
-    <link name="${name}_optical_frame">
+    <link name="${name}_link">
       <inertial>
         <mass value="0.1" />
         <origin xyz="0 0 0" />
@@ -64,16 +26,14 @@
                  iyy="0"  iyz="0.0"
                  izz="0" />
       </inertial>
+      <visual>
+        <origin xyz="-0.01 0 0" rpy="0 ${deg_to_rad * 90} 0" />
+        <geometry>
+          <cylinder radius="0.01" length="0.018" />
+        </geometry>
+        <material name="Blue"/>
+      </visual>
     </link>
-
-
-    <!-- extensions -->
-    <xacro:stingrayf033c_camera_gazebo_v0 name="${name}" image_format="${image_format}" image_topic_name="${image_topic_name}"
-                                   camera_info_topic_name="${camera_info_topic_name}"
-                                   hfov="${hfov}" focal_length="${focal_length}"                                   
-                                   frame_id="${frame_id}" hack_baseline="${hack_baseline}"
-                                   image_width="${image_width}" image_height="${image_height}"/>
-
 
   </xacro:macro>
 
