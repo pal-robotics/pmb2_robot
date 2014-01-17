@@ -1,0 +1,46 @@
+speed_limit:
+  base_laser:
+    type: laser
+    topic: scan_filtered
+    obstacle_max_dist: 1.5
+    stop_dist: 0.3
+    speed_factor: 0.5
+    fixed: true
+
+#  torso_laser:
+#    type: laser
+#    topic: hokuyo/LAS_01 
+#    obstacle_max_dist: 0.9
+#    stop_dist: 0.4
+#    speed_factor: 0.5
+#    fixed: true
+
+  base_sonars:
+    type: range
+    topic: sonar_base
+    obstacle_max_dist: 0.6
+    stop_dist: 0.1
+    speed_factor: 0.3
+    blacklist: []
+    whitelist: []
+    fixed: true
+
+#  torso_sonars:
+#    type: range
+#    topic: sonar_torso
+#    obstacle_max_dist: 0.7
+#    stop_dist: 0.1
+#    speed_factor: 0.5
+#    blacklist: []
+#    whitelist: []
+#    fixed: false
+
+#  base_irs:
+#    type: range
+#    topic: ir_base
+#    obstacle_max_dist: 1.0 
+#    stop_dist: 0.2 
+#    speed_factor: 0.5 
+#    blacklist: []
+#    whitelist: []
+#    fixed: true
