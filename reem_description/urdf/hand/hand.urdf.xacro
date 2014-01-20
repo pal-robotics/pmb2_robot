@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2011-2014, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -39,9 +39,9 @@
 
     <link name="${hand_name}_${hand_side}_${finger_name}_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" /> <!--TODO: Fill up-->
-        <mass value="0.05" />
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00175 -0.01837 -0.00198" rpy="0 0 0" />
+        <mass value="0.055" />
+        <inertia ixx="0.00001450121"  ixy="-0.00000065488"  ixz="-0.00000039654" iyy="0.0000072995" iyz="0.00000012168" izz="0.00001262409" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -70,9 +70,9 @@
 
     <link name="${hand_name}_${hand_side}_${finger_name}_1_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" /> <!--TODO: Fill up-->
-        <mass value="0.05" />
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00175 -0.01837 -0.00198" rpy="0 0 0" />
+        <mass value="0.055" />
+        <inertia ixx="0.00001450121"  ixy="-0.00000065488"  ixz="-0.00000039654" iyy="0.0000072995" iyz="0.00000012168" izz="0.00001262409" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -100,9 +100,9 @@
 
     <link name="${hand_name}_${hand_side}_${finger_name}_2_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" /> <!--TODO: Fill up-->
-        <mass value="0.05" />
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00181 -0.01275 -0.00064" rpy="0 0 0" />
+        <mass value="0.02972" />
+        <inertia ixx="0.00000428193"  ixy="-0.00000049978"  ixz="-0.00000002985" iyy="0.00000254434" iyz="0.00000007762" izz="0.00000345152" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -130,9 +130,9 @@
 
     <link name="${hand_name}_${hand_side}_${finger_name}_3_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" /> <!--TODO: Fill up-->
-        <mass value="0.05" />
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> <!--TODO: Fill up-->
+        <origin xyz="0 -0.00704 0.00019" rpy="0 0 0" />
+        <mass value="0.01522" />
+        <inertia ixx="0.00000128478"  ixy="-0.00000008056"  ixz="-0.00000001698" iyy="0.00000080139" iyz="-0.00000002884" izz="0.00000090928" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -166,10 +166,9 @@
 
     <link name="${name}_${side}_palm_link">
       <inertial>
-        <!--<origin xyz="0.07547 ${-reflect * 0.00468} 0.00291" rpy="0 0 0" />-->
-        <origin xyz="0 ${-reflect * 0.07547} 0 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
-        <mass value="0.41066" /> <!--NOTE: Assigning 0.05kg to each of the ten phalanxes-->
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+        <origin xyz="0.05904 ${-reflect * 0.00925} -0.00075 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
+        <mass value="0.68275" /> 
+        <inertia ixx="0.00045643484"  ixy="0.00001885321"  ixz="-0.0000103596" iyy="0.00076077407" iyz="-0.00000266311" izz="0.00052521525" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -215,9 +214,9 @@
 
     <link name="${name}_${side}_thumb_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" /> <!--TODO: Fill up-->
-        <mass value="0.05" />
-        <inertia ixx="0"  ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" /> <!--TODO: Fill up-->
+        <origin xyz="0.00049 0.00451 ${-reflect*0.04179}" rpy="0 0 0" />
+        <mass value="0.07088" />
+        <inertia ixx="0.0000699364"  ixy="0.00000345915"  ixz="0.00000425008" iyy="0.00002675459" iyz="0.00002381865" izz="0.00004787167" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
