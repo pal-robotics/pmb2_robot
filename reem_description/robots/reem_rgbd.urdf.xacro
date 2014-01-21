@@ -21,7 +21,7 @@
   <!-- Head-mounted ASUS Xtion Pro Live -->
   <xacro:include filename="$(find reem_description)/urdf/sensors/xtion_pro_live.urdf.xacro" />
   <xacro:xtion_pro_live parent="head_2_link" name="head_mount_xtion" > <!-- name is appended to create link and topic names -->
-     
+
      <!-- pose of head_mount_xtion_frame wrt /head_2_link -->
      <origin xyz="${cal_head_mount_xtion_x}
                   ${cal_head_mount_xtion_y}

@@ -9,14 +9,12 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-
   <xacro:include filename="$(find reem_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find reem_description)/urdf/base/base.gazebo.xacro" />
   <xacro:include filename="$(find reem_description)/urdf/base/base.transmission.xacro" />
 
   <xacro:include filename="$(find reem_description)/urdf/sensors/sick_laser_reem.urdf.xacro" />
   <xacro:include filename="$(find reem_description)/urdf/sensors/range.urdf.xacro" />
-  <xacro:include filename="$(find reem_description)/urdf/sensors/hokuyo_laser_reem.urdf.xacro" />
   <xacro:include filename="$(find reem_description)/urdf/sensors/hokuyo_laser_reem.urdf.xacro" />
   <xacro:include filename="$(find reem_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find reem_description)/urdf/sensors/bumper.urdf.xacro" />

@@ -167,7 +167,7 @@
     <link name="${name}_${side}_palm_link">
       <inertial>
         <origin xyz="0.05904 ${-reflect * 0.00925} -0.00075 " rpy="0 0 0" /> <!--TODO: This does not make sense!, there must be a bug in how Gazebo bungles the CoM of a chain of fixed joints-->
-        <mass value="0.68275" /> 
+        <mass value="0.68275" />
         <inertia ixx="0.00045643484"  ixy="0.00001885321"  ixz="-0.0000103596" iyy="0.00076077407" iyz="-0.00000266311" izz="0.00052521525" />
       </inertial>
       <visual>

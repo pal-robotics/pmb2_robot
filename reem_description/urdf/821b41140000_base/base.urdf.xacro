@@ -229,7 +229,7 @@
       <child link="${name}_link" />
       <parent link="${name}_footprint"/>
     </joint>
- 
+
    <link name="${name}_center">
       <inertial>
         <mass value="1.0" />
@@ -277,19 +277,19 @@
 
     <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="${0.16919 + base_link_offset_x} 0.14919 0.280" rpy="0.0 0.0 0.349" /> 
+      <origin xyz="${0.16919 + base_link_offset_x} 0.14919 0.280" rpy="0.0 0.0 0.349" />
     </xacro:range_reem>
 
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="${0.16919 + base_link_offset_x} -0.14919 0.280" rpy="0.0 0.0 -0.349" /> 
+      <origin xyz="${0.16919 + base_link_offset_x} -0.14919 0.280" rpy="0.0 0.0 -0.349" />
     </xacro:range_reem>
- 
+
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="${0.13676 + base_link_offset_x} 0.27111 0.280" rpy="0.0 0.0 0.8377" /> 
+      <origin xyz="${0.13676 + base_link_offset_x} 0.27111 0.280" rpy="0.0 0.0 0.8377" />
     </xacro:range_reem>
- 
+
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_12" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.13676 + base_link_offset_x} -0.27111 0.280" rpy="0.0 0.0 -0.8377" />
@@ -307,37 +307,37 @@
 
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_06" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
-      <origin xyz="${-0.35563 + base_link_offset_x} 0.28266 0.25" rpy="0.0 0.0 1.9547" /> 
+      <origin xyz="${-0.35563 + base_link_offset_x} 0.28266 0.25" rpy="0.0 0.0 1.9547" />
     </xacro:range_reem>
 
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_10" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
-      <origin xyz="${-0.35563 + base_link_offset_x} -0.28266 0.25" rpy="0.0 0.0 -1.9547" /> 
+      <origin xyz="${-0.35563 + base_link_offset_x} -0.28266 0.25" rpy="0.0 0.0 -1.9547" />
     </xacro:range_reem>
 
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_07" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="${-0.48412 + base_link_offset_x} 0.15127 0.29" rpy="0.0 0.0 2.6354" /> 
+      <origin xyz="${-0.48412 + base_link_offset_x} 0.15127 0.29" rpy="0.0 0.0 2.6354" />
     </xacro:range_reem>
 
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_09" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="${-0.48412 + base_link_offset_x} -0.15127 0.29" rpy="0.0 0.0 -2.6354" /> 
+      <origin xyz="${-0.48412 + base_link_offset_x} -0.15127 0.29" rpy="0.0 0.0 -2.6354" />
     </xacro:range_reem>
 
    <!-- base sonar -->
     <xacro:range_reem name="${name}_sonar_08" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="${-0.51188 + base_link_offset_x} 0.0 0.26" rpy="0.0 0.0 -3.1415" />  
+      <origin xyz="${-0.51188 + base_link_offset_x} 0.0 0.26" rpy="0.0 0.0 -3.1415" />
     </xacro:range_reem>
 
-   <!-- base ir --> 
+   <!-- base ir -->
     <xacro:range_reem name="${name}_ir_01" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
       <origin xyz="${0.1804 + base_link_offset_x} -0.12463 0.22" rpy="0.0 -0.8726 0.0" />
-    </xacro:range_reem> 
+    </xacro:range_reem>
 
     <xacro:range_reem name="${name}_ir_02" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
       <origin xyz="${0.18574 + base_link_offset_x} 0.0 0.22" rpy="0.0 -0.8726 0.0" />
-    </xacro:range_reem> 
+    </xacro:range_reem>
 
     <xacro:range_reem name="${name}_ir_03" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
       <origin xyz="${0.1804 + base_link_offset_x} 0.12463 0.22" rpy="0.0 -0.8726 0.0" />
@@ -346,7 +346,7 @@
     <!-- bumper front right -->
     <xacro:bumper_reem name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
       <origin xyz="${0.225 + base_link_offset_x} -0.15 0.20" rpy="0 0 ${-15.0 * deg_to_rad}" />
-    </xacro:bumper_reem>  
+    </xacro:bumper_reem>
 
     <!-- bumper front left -->
     <xacro:bumper_reem name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
