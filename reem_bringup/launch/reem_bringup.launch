@@ -12,7 +12,7 @@
   <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
 
   <!-- Mobile base -->
-  <include file="$(find pal_mobile_base)/launch/mobile_base.launch"/>
+  <include file="$(find reem_bringup)/launch/mobile_base.launch"/>
 
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch">

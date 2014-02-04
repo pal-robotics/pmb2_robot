@@ -1,0 +1,13 @@
+<launch>
+
+  <include file="$(find pal_mobile_base)/launch/mobile_base.launch">
+    <arg name="imu" value="base_inclinometer"/>
+
+    <arg name="config"        value="$(find reem_bringup)/config/mobile_base.yaml"/>
+    <arg name="config_locks"  value="$(find reem_bringup)/config/mobile_base_locks.yaml"/>
+    <arg name="config_topics" value="$(find reem_bringup)/config/mobile_base_topics.yaml"/>
+
+    <arg name="config_joy" value="$(find reem_bringup)/config/joystick.yaml"/>
+  </include>
+
+</launch>
