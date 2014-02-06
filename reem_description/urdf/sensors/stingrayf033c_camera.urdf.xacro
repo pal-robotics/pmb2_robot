@@ -35,6 +35,25 @@
       </visual>
     </link>
 
+
+    <!-- attach optical frame to the camera link -->
+    <joint name="${name}_optical_frame_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-M_PI/2} 0.0 ${-M_PI/2}" /> <!-- rotate frame from x-forward to z-forward camera coords -->      
+      <parent link="${name}_link"/>
+      <child link="${name}_optical_frame"/>
+    </joint>
+    <!-- optical frame for the stereo camera, with z-forward notation, this is the frame stereo camera images users should refer to -->
+    <link name="${name}_optical_frame" type="camera">
+      <inertial>
+        <mass value="0.01" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <inertia ixx="0"  ixy="0"  ixz="0" 
+                 iyy="0"  iyz="0"  
+                 izz="0" /> <!-- this inertia is made up for now. -->
+      </inertial>
+    </link>
+
+
   </xacro:macro>
 
 </robot>
