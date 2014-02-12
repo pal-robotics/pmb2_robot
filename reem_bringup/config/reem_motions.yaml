@@ -9,6 +9,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.707, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0,
           0.707, 0.0, 0.1, 0.0, 0.0, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Arms T
+        usage: posture
+        description: Both arms set straight pointing sideways at 45 degrees.
     bow:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -39,6 +43,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 6.5
+      meta:
+        name: Bow
+        usage: greet
+        description: Makes a short reverence with both arms back.
     brochure_tray:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -48,6 +56,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.2, -0.45, 1.25, 0.1, 0.15, 0.2, 0.35,
           0.2, -0.45, 1.2, 0.1, 0.15, 0.2]
         time_from_start: 2.0
+      meta:
+        name: Hold Brochure Tray
+        usage: posture
+        description: Sets hands in holding brochure tray position.
     car_drive_ferrari:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -117,6 +129,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 17.099999999999998
+      meta:
+        name: Car Drive Ferrari
+        usage: specific
+        description: Turns steering wheel, then changes gear and finally turns steering wheel again.
     car_drive_long:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -168,6 +184,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 14.749999999999998
+      meta:
+        name: Car Drive Long
+        usage: specific
+        description: Changes gear and moves an imaginary steering wheel.    
     car_drive:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -204,6 +224,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 10.0
+      meta:
+        name: Car Drive
+        usage: specific
+        description: Moves an imaginary steering wheel.
     # carry_small_object:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -216,11 +240,19 @@ play_motion:
     #   - positions: [0.0, 0.1, 0.0, 0.25, 1.0, 0.2, -1.2, 1.5, 0.9, 0.9, 1.4, 1.0,
     #       0.2, -1.2, 1.5, 0.9, 0.9, 1.4]
     #     time_from_start: 2.0
+    #   meta:
+    #     name: Carry Small Object
+    #     usage: specific
+    #     description: Carry small object between both hands.
     center_head:
       joints: [head_1_joint, head_2_joint]
       points:
       - positions: [0.0, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Center Head
+        usage: posture
+        description: Moves only head to a centered posture.
     # come_here:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -242,6 +274,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 5.25
+    #   meta:
+    #     name: Come Here
+    #     usage: call
+    #     description: Moves both arms in front, from far to close.
     # deliver_small_object:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -251,6 +287,10 @@ play_motion:
     #   - positions: [0.0, 0.2, 0.0, -0.15, 1.2, 0.0, -1.25, 1.0, 0.8, 0.65, 1.6, 1.2,
     #       0.0, -1.25, 1.0, 0.8, 0.65, 1.6]
     #     time_from_start: 0.0
+    #   meta:
+    #     name: Deliver Small Object
+    #     usage: specific
+    #     description: Deliver small object carried between both hands. To be used after Carry Small Object.
     deny:
       joints: [head_1_joint]
       points:
@@ -262,6 +302,10 @@ play_motion:
         time_from_start: 1.5
       - positions: [0.0]
         time_from_start: 2.0
+      meta:
+        name: Deny
+        usage: reply
+        description: Moves head left-right.
     enumerate_two:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -292,6 +336,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 4.2
+      meta:
+        name: Enumerate Two
+        usage: emphasize
+        description: Point to two places down and in front of the robot with the right hand.
     hands_down:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -301,6 +349,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Hands Down
+        usage: posture
+        description: Both arms down but not completely stretched.
     home:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -310,6 +362,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
           0.0, 0.0, 0.0, 0.0, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Home
+        usage: posture
+        description: Both arms down and completely stretched.
     # human_form:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -340,6 +396,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 10.0
+    #   meta:
+    #     name: Human Form
+    #     usage: specific
+    #     description: Shows head, touchscreen and body with both arms.
     interact_to_rest:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -355,6 +415,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 1.85
+      meta:
+        name: Interact to Rest
+        usage: specific
+        description: Moves from Interact to Rest postures.
     interact:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -364,6 +428,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Interact
+        usage: posture
+        description: Same posture as in Hands Down.
     joystick_bow:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -382,6 +450,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 2.8
+      meta:
+        name: Joystick Bow
+        usage: greet
+        description: Makes a short reverence with both arms back.
     # joystick_crowd_salute:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -415,6 +487,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 10.5
+    #   meta:
+    #     name: Joystick Crowd Salute
+    #     usage: greet
+    #     description: Crowd salute.
     joystick_emphasize:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -442,6 +518,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 6.5
+      meta:
+        name: Joystick Emphasize
+        usage: greet
+        description: Emphasize with both arms.
     joystick_point_front_left:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -463,6 +543,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 3.5
+      meta:
+        name: Joystick Point Front Left
+        usage: show
+        description: Points front with the left hand.
     joystick_point_front_right:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -484,6 +568,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 3.5
+      meta:
+        name: Joystick Point Front Right.
+        usage: show
+        description: Points front with the right hand.
     joystick_point_to_left:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -502,6 +590,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 4.0
+      meta:
+        name: Joystick Point Left
+        usage: show
+        description: Points down-left with left hand. Emphasizes with head, torso and right arm.
     joystick_point_to_right:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -520,6 +612,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 4.0
+      meta:
+        name: Joystick Point Right
+        usage: show
+        description: Points down-right with right hand. Emphasizes with head, torso and left arm.
     joystick_salute:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -544,6 +640,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 8.0
+      meta:
+        name: Joystick Salute
+        usage: greet
+        description: Right arm military salute.
     joystick_shake_left:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -583,6 +683,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 9.5
+      meta:
+        name: Joystick Shake Left
+        usage: greet
+        description: Left arm handshaking.
     joystick_shake_right:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -622,6 +726,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 9.5
+      meta:
+        name: Joystick Shake Right
+        usage: greet
+        description: Right arm handshaking.
     # joystick_show_touchscreen:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -646,6 +754,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 5.199999999999999
+    #   meta:
+    #     name: Joystick Show Touchscreen
+    #     usage: showSelf
+    #     description: Shows touchscreen with right hand.
     joystick_wave:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -673,6 +785,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 5.8
+      meta:
+        name: Joystick Wave
+        usage: greet
+        description: Waves with right hand and nodes.
     joystick_were_here:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -691,6 +807,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 4.0
+      meta:
+        name: Joystick We're Here
+        usage: emphasize
+        description: Opens both arms with palms up.
     # look_down:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -721,6 +841,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 7.5
+    #   meta:
+    #     name: Look Down
+    #     usage: search
+    #     description: Looks to the floor left and right.
     nav:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -730,6 +854,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Navigate
+        usage: posture
+        description: Same posture as in Rest.
     nod:
       joints: [head_2_joint]
       points:
@@ -739,6 +867,10 @@ play_motion:
         time_from_start: 1.0
       - positions: [0.0]
         time_from_start: 2.0
+      meta:
+        name: Nod
+        usage: reply
+        description: Moves head up-down.
     'no':
       joints: [head_1_joint]
       points:
@@ -750,6 +882,10 @@ play_motion:
         time_from_start: 1.5
       - positions: [0.0]
         time_from_start: 2.0
+      meta:
+        name: 'No'
+        usage: reply
+        description: Moves head left-right.
     # nuance_hand_left:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -765,6 +901,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 1.325
+    #   meta:
+    #     name: Nuance Hand Left
+    #     usage: emphasize
+    #     description: Slight motion of head and left hand.
     # nuance_hand_right:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -780,6 +920,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 1.325
+    #   meta:
+    #     name: Nuance Hand Right
+    #     usage: emphasize
+    #     description: Slight motion of head and right hand.
     # open_arms_fast:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -801,6 +945,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 1.9
+    #   meta:
+    #     name: Open Arms Fast
+    #     usage: emphasize
+    #     description: Symmetric circular motion of both arms fast.
     open_arms:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -822,6 +970,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.2
+      meta:
+        name: Open Arms
+        usage: emphasize
+        description: Symmetric circular motion of both arms.
     # point_far_away:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -846,6 +998,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 4.75
+    #   meta:
+    #     name: Point Far Away
+    #     usage: show
+    #     description: Point front with left arm stretched and torso bent.
     point_front_left_fast:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -867,6 +1023,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.0
+      meta:
+        name: Point Front Left Fast
+        usage: show
+        description: Points front with the left hand fast.
     point_front_left:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -888,6 +1048,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.5
+      meta:
+        name: Point Left
+        usage: show
+        description: Points down-left with left hand. Emphasizes with head, torso and right arm.
     point_front_right:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -909,6 +1073,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.5
+      meta:
+        name: Point Front Right
+        usage: show
+        description: Points front with the right hand.
     # point_to_left:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -933,6 +1101,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 5.2
+    #   meta:
+    #     name: Point Left
+    #     usage: show
+    #     description: Points down-left with left hand. Emphasizes with head, torso and right arm.
     # point_to_right:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -957,6 +1129,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 5.2
+    #   meta:
+    #     name: Point Right
+    #     usage: show
+    #     description: Points down-right with right hand. Emphasizes with head, torso and left arm.
     # point_to_top_left:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -981,6 +1157,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 5.2
+    #   meta:
+    #     name: Point Top Left
+    #     usage: show
+    #     description: Points up-right with the left hand. Emphasizes with head, torso and right arm.
     # point_to_top_right:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1005,6 +1185,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 5.2
+    #   meta:
+    #     name: Point Top Right
+    #     usage: show
+    #     description: Points upright with the right hand.
     # question:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1032,6 +1216,10 @@ play_motion:
     #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
     #       0.9, 0.0, 0.0, 0.0]
     #     time_from_start: 0.0
+    #   meta:
+    #     name: Question
+    #     usage: reply
+    #     description: Opens both arms with the palms up.
     rest_to_interact:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1047,6 +1235,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 1.85
+      meta:
+        name: Rest to Interact
+        usage: specific
+        description: Moves from Rest to Interact postures.
     rest:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1056,6 +1248,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 0.0
+      meta:
+        name: Rest
+        usage: posture
+        description: Both arms down and in front of the robot.
     # robocup_end_presentation:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1071,6 +1267,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 2.1
+    #   meta:
+    #     name: Robocup End Presentation
+    #     usage: misc
+    #     description:
     # robocup_kamehameha:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1098,7 +1298,11 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 11.0
-    # robocup_middle_presentation:
+    #   meta:
+    #     name: Robocup Kamehame
+    #     usage: misc
+    #     description:
+ # robocup_middle_presentation:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
     #     arm_left_7_joint, arm_right_1_joint, arm_right_2_joint, arm_right_3_joint,
@@ -1134,6 +1338,10 @@ play_motion:
     #   - positions: [0.2, 0.2, -0.7, 0.1, -0.3, 0.01, 0.2, 0.7, 0.0, 0.0, 0.3, 0.7,
     #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
     #     time_from_start: 5.9
+    #   meta:
+    #     name: Robocup middle presentation
+    #     usage: misc
+    #     description:
     # robocup_presentation:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1185,6 +1393,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 11.9
+    #   meta:
+    #     name: Robocup presentation
+    #     usage: misc
+    #     description:
     # robocup_quetedoi:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1200,6 +1412,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 2.5
+    #   meta:
+    #     name: Robocup que te doy
+    #     usage: misc
+    #     description:
     # robocup_recorded:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1412,6 +1628,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 27.5
+    #   meta:
+    #     name: Robocup speech
+    #     usage: misc
+    #     description:
     # robocup_start_presentation:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1427,6 +1647,10 @@ play_motion:
     #   - positions: [0.2, 0.2, -0.2, 0.2, -0.3, 0.0, 0.2, 0.7, 0.0, 0.0, 0.0, 0.7,
     #       0.2, -0.6, 0.8, 0.0, 0.0, 0.0]
     #     time_from_start: 4.0
+    #   meta:
+    #     name: Robocup start presentation
+    #     usage: misc
+    #     description:
     # robocup_waiting:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1493,6 +1717,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
     #       0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 12.4
+    #   meta:
+    #     name: Robocup waiting
+    #     usage: misc
+    #     description:
     # salute:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1520,6 +1748,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 9.85
+    #   meta:
+    #     name: Salute
+    #     usage: greet
+    #     description: Right arm military salute, moving both arms to the back before and after the salute.
     shake_left:
       joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
         arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1556,6 +1788,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35, 0.17, -0.9,
           0.8, 0.1, -0.4, 0.0]
         time_from_start: 9.25
+      meta:
+        name: Shake Left
+        usage: greet
+        description: Left arm handshaking.
     shake_right:
       joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
         arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1592,6 +1828,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35, 0.17, -0.9,
           0.8, 0.1, -0.4, 0.0]
         time_from_start: 9.25
+      meta:
+        name: Shake Right
+        usage: greet
+        description: Right arm handshaking.
     # show_head:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1610,6 +1850,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 4.5
+    #   meta:
+    #     name: Show Head
+    #     usage: showSelf
+    #     description: Shows head with both arms.
     # show_platform:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1631,6 +1875,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 7.0
+    #   meta:
+    #     name: Show Platform
+    #     usage: showSelf
+    #     description: Shows the cargo platform in the back with the left hand while moving the torso and looking intially to the platform and then to the front.
     show_size_large:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1655,6 +1903,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 5.0
+      meta:
+        name: Show Size Large
+        usage: emphasize
+        description: Moves both hands to show a distance in front of the robot and looks to each hand.
     # show_touchscreen_fast:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1673,6 +1925,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 3.0
+    #   meta:
+    #     name: Show Touchscreen Fast
+    #     usage: showSelf
+    #     description: Shows touchscreen fast with right arm.
     # show_touchscreen:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1691,6 +1947,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 4.5
+    #   meta:
+    #     name: Show Touchscreen
+    #     usage: showSelf
+    #     description: Shows touchscreen with right arm.
     start_reem:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1703,6 +1963,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4,
           0.25, -0.1, 0.6109, 0.0, 0.0, 0.0]
         time_from_start: 3.0
+      meta:
+        name: Start REEM
+        usage: posture
+        description: Moves from an initial configuration where the arms are roughly stretched to the sides to hands-down.
     # walk_arms2:
     #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
     #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1718,7 +1982,11 @@ play_motion:
     #   - positions: [-0.05, 0.0, -0.55, 0.1, -0.05, 0.5, 0.1, 0.0, 0.0, -0.1, 0.1,
     #       -0.15, 0.7, -0.1, 0.0, 0.0]
     #     time_from_start: 3.0
-    # walk_arms:
+    #   meta:
+    #     name: Walk arms 2
+    #     usage: misc
+    #     description:
+ # walk_arms:
     #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
     #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
     #     arm_right_2_joint, arm_right_3_joint, arm_right_4_joint, arm_right_5_joint,
@@ -1736,6 +2004,10 @@ play_motion:
     #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, -0.4, 0.25,
     #       -0.1, 0.6109, 0.0, 0.0, 0.0]
     #     time_from_start: 3.0
+    #   meta:
+    #     name: Walk arms
+    #     usage: misc
+    #     description:
     # wave_flag:
     #   joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
     #     arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1778,6 +2050,10 @@ play_motion:
     #   - positions: [0.0, 0.0, -0.4, 0.25, -0.1, 0.6109, 0.0, 0.0, 0.0, 0.2, 0.1, -0.1,
     #       0.9, 0.0, 0.0, 0.0]
     #     time_from_start: 7.749999999999999
+    #   meta:
+    #     name: Wave Flag
+    #     usage: specific
+    #     description: Wave flag held in right hand.
     wave_no_head:
       joints: [torso_1_joint, torso_2_joint, arm_left_1_joint, arm_left_2_joint, arm_left_3_joint,
         arm_left_4_joint, arm_left_5_joint, arm_left_6_joint, arm_left_7_joint, arm_right_1_joint,
@@ -1799,6 +2075,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35, 0.17, -0.9,
           0.8, 0.1, -0.4, 0.0]
         time_from_start: 4.3
+      meta:
+        name: Wave no head
+        usage: greet
+        description: Waves with right hand.
     # wave_present:
     #   joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
     #     arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1826,6 +2106,10 @@ play_motion:
     #   - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
     #       0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
     #     time_from_start: 7.8
+    #   meta:
+    #     name: Wave Present
+    #     usage: greet
+    #     description: Waves with right hand and shows self.
     wave:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1847,6 +2131,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 4.3
+      meta:
+        name: Wave
+        usage: greet
+        description: Waves with right hand and nodes.
     were_here:
       joints: [torso_1_joint, torso_2_joint, head_1_joint, head_2_joint, arm_left_1_joint,
         arm_left_2_joint, arm_left_3_joint, arm_left_4_joint, arm_left_5_joint, arm_left_6_joint,
@@ -1862,6 +2150,10 @@ play_motion:
       - positions: [0.0, 0.0, 0.0, 0.0, 0.35, 0.17, -0.9, 0.8, 0.1, -0.4, 0.0, 0.35,
           0.17, -0.9, 0.8, 0.1, -0.4, 0.0]
         time_from_start: 3.5
+      meta:
+        name: We're Here
+        usage: emphasize
+        description: Opens both arms with palms up.
     yes_fast:
       joints: [head_2_joint]
       points:
@@ -1871,6 +2163,10 @@ play_motion:
         time_from_start: 0.5
       - positions: [0.0]
         time_from_start: 1.0
+      meta:
+        name: 'Yes'
+        usage: reply
+        description: Moves head up-down.
     'yes':
       joints: [head_2_joint]
       points:
@@ -1880,3 +2176,7 @@ play_motion:
         time_from_start: 1.0
       - positions: [0.0]
         time_from_start: 2.0
+      meta:
+        name: 'Yes'
+        usage: reply
+        description: Moves head up-down.
