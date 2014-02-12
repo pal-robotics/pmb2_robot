@@ -66,6 +66,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${90.0 * deg_to_rad}" effort="2.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_1_link">
@@ -96,6 +97,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_2_link">
@@ -126,6 +128,7 @@
       <axis xyz="0 0 1" />
       <limit lower="${0.0 * deg_to_rad}" upper="${80.0 * deg_to_rad}" effort="1.0" velocity="${hand_max_vel}" />
       <dynamics friction="${hand_friction}" damping="${hand_damping}"/>
+      <mimic joint="${hand_name}_${hand_side}_${finger_name}_joint" multiplier="-1.0" offset="0.0" />
     </joint>
 
     <link name="${hand_name}_${hand_side}_${finger_name}_3_link">
