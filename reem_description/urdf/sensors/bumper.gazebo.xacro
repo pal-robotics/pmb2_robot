@@ -21,7 +21,7 @@
         <plugin filename="libgazebo_ros_bumper.so" name="gazebo_reem_ros_bumper">
           <alwaysOn>true</alwaysOn>
           <updateRate>${update_rate}</updateRate>
-          <bumperTopicName>${ros_topic}</bumperTopicName>
+          <topicName>${ros_topic}</topicName>
           <frameName>${name}_link</frameName>
         </plugin>
       </sensor>
