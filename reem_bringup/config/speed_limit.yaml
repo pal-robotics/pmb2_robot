@@ -43,3 +43,13 @@ speed_limit:
 #    blacklist: []
 #    whitelist: []
 #    fixed: true
+
+  base_bumpers:
+    type: bumper
+    topic: bumper_base
+    obstacle_max_dist: 1.0
+    stop_dist: 1.0
+    speed_factor: 1.0
+    blacklist: []
+    whitelist: []
+    fixed: true
