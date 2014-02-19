@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(reem_controller_configuration)
+project(ant_controller_configuration)
 
 find_package(catkin REQUIRED)
 

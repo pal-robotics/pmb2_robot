@@ -10,22 +10,5 @@
         pkg="controller_manager" type="spawner" output="screen"
         args="joint_state_controller
               imu_sensor_controller
-              torso_controller
-              head_controller
-              left_arm_controller
-              right_arm_controller
-              left_hand_controller
-              right_hand_controller
               mobile_base_controller" />
-
-  <!-- Point head action -->
-  <group ns="head_controller">
-    <node name="point_head_action" pkg="reem_head_action" type="reem_head_action" output="screen" >
-      <rosparam>
-        pan_link:  head_1_link
-        tilt_link: head_2_link
-        success_angle_threshold: 0.01
-      </rosparam>
-    </node>
-  </group>
 </launch>
