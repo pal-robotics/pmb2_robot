@@ -1,0 +1,13 @@
+<launch>
+  <!-- Diff drive controller parameters -->
+  <rosparam command="load" file="$(find ant_controller_configuration)/config/mobile_base_controller.yaml"/>
+
+  <!-- Joint trajectory controllers -->
+  <rosparam command="load" file="$(find ant_controller_configuration)/config/joint_trajectory_controllers.yaml" />
+
+  <!-- Robot model -->
+  <include file="$(find ant_description)/robots/upload_ant.launch"/>
+
+  <!-- bring up robot -->
+  <include file="$(find ant_bringup)/launch/ant_bringup.launch"/>
+</launch>

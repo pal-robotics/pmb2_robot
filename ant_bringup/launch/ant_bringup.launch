@@ -1,6 +1,6 @@
 <launch>
   <!-- Load default controllers -->
-  <include file="$(find reem_controller_configuration)/launch/default_controllers.launch"/>
+  <include file="$(find ant_controller_configuration)/launch/default_controllers.launch"/>
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
@@ -12,11 +12,11 @@
   <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
 
   <!-- Mobile base -->
-  <include file="$(find reem_bringup)/launch/mobile_base.launch"/>
+  <include file="$(find ant_bringup)/launch/mobile_base.launch"/>
 
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch">
-    <arg name="config" value="$(find reem_bringup)/config/speed_limit.yaml"/>
+    <arg name="config" value="$(find ant_bringup)/config/speed_limit.yaml"/>
   </include>
 
   <!-- Bumper, IR and Sonar to cloud -->
@@ -24,12 +24,6 @@
   <include file="$(find sensor_to_cloud)/launch/ir_to_cloud.launch"/>
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
 
-  <!-- Emergency Stop -->
-  <include file="$(find reem_2dnav)/launch/emergency_stop.launch"/>
-
   <!-- Joystick controller -->
-  <include file="$(find reem_bringup)/launch/joystick_teleop.launch"/>
-
-  <!-- Pre-recorded motions executor -->
-  <include file="$(find reem_bringup)/launch/play_motion.launch"/>
+  <include file="$(find ant_bringup)/launch/joystick_teleop.launch"/>
 </launch>

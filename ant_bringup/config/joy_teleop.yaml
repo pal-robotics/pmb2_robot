@@ -27,30 +27,3 @@ teleop:
     type: action
     action_name: joy_turbo_increase
     buttons: [3, 4, 5]
-
-  home:
-    type: action
-    action_name: play_motion
-    action_goal:
-      motion_name: home
-      reach_time:
-        secs: 3
-    buttons: [8, 1]
-
-  arms_t:
-    type: action
-    action_name: play_motion
-    action_goal:
-      motion_name: arms_t
-      reach_time:
-        secs: 3
-    buttons: [8, 0]
-
-  hands_down:
-    type: action
-    action_name: play_motion
-    action_goal:
-      motion_name: hands_down
-      reach_time:
-        secs: 3
-    buttons: [8, 2]

@@ -7,13 +7,6 @@ speed_limit:
     speed_factor: 0.5
     fixed: true
 
-  torso_laser:
-    type: floorscan
-    topic: hokuyo/LAS_01
-    hole_tolerance      : 0.1  # [m] how deep a hole before stopping (default 0.1)
-    fov                 : 1.0  # [rad] field of view                 (default 1.0)
-    fixed: true
-
   base_sonars:
     type: range
     topic: sonar_base
@@ -23,16 +16,6 @@ speed_limit:
     blacklist: []
     whitelist: []
     fixed: true
-
-#  torso_sonars:
-#    type: range
-#    topic: sonar_torso
-#    obstacle_max_dist: 0.7
-#    stop_dist: 0.1
-#    speed_factor: 0.5
-#    blacklist: []
-#    whitelist: []
-#    fixed: false
 
 #  base_irs:
 #    type: range
