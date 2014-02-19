@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>ant_robot</name>
+  <version>0.9.0</version>
+  <description>Description and launch files for the ANT robot</description>
+  <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
+  <license>BSD</license>
+  <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>ant_description</run_depend>
+  <run_depend>ant_bringup</run_depend>
+  <run_depend>ant_controller_configuration</run_depend>
+  <run_depend>ant_hardware</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
