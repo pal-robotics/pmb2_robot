@@ -25,8 +25,8 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //////////////////////////////////////////////////////////////////////////////
 
-#ifndef REEM_HARDWARE_REEM_HARDWARE_H
-#define REEM_HARDWARE_REEM_HARDWARE_H
+#ifndef ANT_HARDWARE_ANT_HARDWARE_H
+#define ANT_HARDWARE_ANT_HARDWARE_H
 
 // C++ standard
 #include <vector>
@@ -61,13 +61,13 @@ namespace pal_ros_control
   class RosControlRobot;
 }
 
-namespace reem_hardware
+namespace ant_hardware
 {
 
-class ReemHardware : public RTT::TaskContext
+class AntHardware : public RTT::TaskContext
 {
 public:
-  ReemHardware(const std::string& name);
+  AntHardware(const std::string& name);
 
 protected:
   bool configureHook();
@@ -81,7 +81,7 @@ private:
   pal_ros_control::ActuatorAccesor actuators_;
   double dummy_caster_data_; // Dummy raw caster data
 
-  // Inclinometer interface. We use the IMu interface, but only measure orientation in one axis
+  // Inclinometer interface. We use the IMU interface, but only measure orientation in one axis
   pal_ros_control::ImuSensorAccesor  base_orientation_;
 
   // Emergency stop

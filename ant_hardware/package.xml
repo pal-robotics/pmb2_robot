@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package>
-  <name>reem_hardware</name>
+  <name>ant_hardware</name>
   <version>0.9.0</version>
-  <description>ROS control plugin for REEM</description>
+  <description>ROS control plugin for ANT</description>
 
-  <maintainer email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</maintainer>
-  <author email="adolfo.rodriguez@pal-robotics.com">Adolfo Rodriguez Tsouroukdissian</author>
+  <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
+  <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
   <license>BSD</license>
 

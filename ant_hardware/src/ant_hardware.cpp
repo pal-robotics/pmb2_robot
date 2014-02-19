@@ -43,7 +43,7 @@
 #include <pal_ros_control/ros_control_robot.h>
 
 // Project
-#include <reem_hardware/reem_hardware.h>
+#include <ant_hardware/ant_hardware.h>
 
 using std::vector;
 using std::string;
@@ -62,10 +62,10 @@ const string BASE_ORIENTATION_PORT   = "orientation_base";
 const string EMERGENCY_STOP_PORT     = "emergency_stop_state";
 }
 
-namespace reem_hardware
+namespace ant_hardware
 {
 
-ReemHardware::ReemHardware(const string &name)
+AntHardware::AntHardware(const string &name)
   : RTT::TaskContext(name, PreOperational),
     actuators_(ACT_POS_CUR_PORT,
                ACT_VEL_CUR_PORT,
@@ -82,7 +82,7 @@ ReemHardware::ReemHardware(const string &name)
     do_stop_(false)
 {}
 
-bool ReemHardware::configureHook()
+bool AntHardware::configureHook()
 {
   // Precondition
   if (isConfigured())
@@ -129,8 +129,8 @@ bool ReemHardware::configureHook()
   controller_manager_.reset(new controller_manager::ControllerManager(robot_hw_.get(), nh));
 
   // Start/stop services
-  start_service_ = nh.advertiseService(getName() + "/start", &ReemHardware::startService, this);
-  stop_service_  = nh.advertiseService(getName() + "/stop",  &ReemHardware::stopService,  this);
+  start_service_ = nh.advertiseService(getName() + "/start", &AntHardware::startService, this);
+  stop_service_  = nh.advertiseService(getName() + "/stop",  &AntHardware::stopService,  this);
 
   // Start servicing ros callbacks
   spinner_->start();
@@ -138,7 +138,7 @@ bool ReemHardware::configureHook()
   return true;
 }
 
-bool ReemHardware::startHook()
+bool AntHardware::startHook()
 {
   // Precondition: Configured component
   if (!isConfigured())
@@ -168,7 +168,7 @@ bool ReemHardware::startHook()
   }
 
   // Hold current position
-  // TODO: Can we get rid of the eror message at start of one lost cycle?
+  // TODO: Can we get rid of the error message at start of one lost cycle?
   if (!actuators_.read(ros::Duration(0.005))) // TODO: Remove magic number!
   {
     ROS_ERROR("Can't start component: Couldn't read actuators state");
@@ -182,7 +182,7 @@ bool ReemHardware::startHook()
   return true;
 }
 
-void ReemHardware::updateHook()
+void AntHardware::updateHook()
 {
   // Stop if requested
   if (do_stop_)
@@ -245,14 +245,14 @@ void ReemHardware::updateHook()
   }
 }
 
-void ReemHardware::stopHook()
+void AntHardware::stopHook()
 {
   // Reset raw data and forward null commands to actuator manager
   actuators_.stop();
   actuators_.write(); // NOTE: Not really needed but a redundant safety measure
 }
 
-void ReemHardware::cleanupHook()
+void AntHardware::cleanupHook()
 {
   // Stop servicing ros callbacks
   spinner_->stop();
@@ -266,7 +266,7 @@ void ReemHardware::cleanupHook()
   stop_service_.shutdown();
 }
 
-bool ReemHardware::addDummyCasters()
+bool AntHardware::addDummyCasters()
 {
   // Preconditions
   if (!robot_hw_)
@@ -296,6 +296,6 @@ bool ReemHardware::addDummyCasters()
   return true;
 }
 
-ORO_CREATE_COMPONENT(reem_hardware::ReemHardware);
+ORO_CREATE_COMPONENT(ant_hardware::AntHardware);
 
 } // namespace

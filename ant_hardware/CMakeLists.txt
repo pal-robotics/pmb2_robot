@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(reem_hardware)
+project(ant_hardware)
 
 find_package(catkin REQUIRED COMPONENTS roscpp
     controller_manager
@@ -12,7 +12,7 @@ include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 
 catkin_package(
   INCLUDE_DIRS include
-  LIBRARIES reem_hardware
+  LIBRARIES ant_hardware
   CATKIN_DEPENDS
     controller_manager
     pal_ros_control
@@ -22,10 +22,10 @@ catkin_package(
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-orocos_component(reem_hardware src/reem_hardware.cpp)
-target_link_libraries(reem_hardware ${catkin_LIBRARIES})
+orocos_component(ant_hardware src/ant_hardware.cpp)
+target_link_libraries(ant_hardware ${catkin_LIBRARIES})
 
-orocos_install_headers(include/reem_hardware/reem_hardware.h)
+orocos_install_headers(include/ant_hardware/ant_hardware.h)
 orocos_generate_package()
 
 install(PROGRAMS scripts/hand_homing
