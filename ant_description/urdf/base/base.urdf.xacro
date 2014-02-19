@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011-2014, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/base/base.gazebo.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/base/base.transmission.xacro" />
+
+  <xacro:include filename="$(find ant_description)/urdf/sensors/sick_laser_ant.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_laser_ant.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro" />
+
+  <!--wheel characteristics-->
+  <property name="dist_between_wheels" value="0.540" />
+  <property name="wheel_radius" value="0.093" />
+  <property name="wheel_width" value="0.044" />
+  <property name="wheel_torque" value="50.0" />
+  <property name="wheel_velocity" value="1.5" /> <!-- m/s -->
+
+ <!--caster characteristics-->
+  <property name="dist_between_casters" value="0.300" />
+  <property name="caster_radius"        value="0.0625" />
+  <property name="caster_width"         value="0.037" />
+  <property name="caster_trailing_dist" value="0.038" />
+
+  <xacro:macro name="ant_wheel" params="side reflect" parent="base_link">
+
+    <!--************************-->
+    <!--        WHEELS          -->
+    <!--************************-->
+    <link name="wheel_${side}_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="1.0" />
+        <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+        <!--<origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="3.5" />
+        <inertia ixx="0.00156"  ixy="0"  ixz="0" iyy="0.00156" iyz="0" izz="0.0273" />-->
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}" />
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}" />
+        </geometry>
+      </collision>
+    </link>
+
+  <!-- contact model for wheel surface -->
+   <gazebo reference="wheel_${side}_link">
+     <kp>100000000.0</kp>
+     <kd>10000.0</kd>
+     <mu1>1.0</mu1>
+     <mu2>1.0</mu2>
+     <minDepth>0.00</minDepth>
+   </gazebo>
+
+    <joint name="wheel_${side}_joint" type="continuous">
+      <parent link="base_link" />
+      <child link="wheel_${side}_link" />
+      <origin xyz="0 ${-dist_between_wheels / 2 * reflect} ${wheel_radius}" rpy="${-90.0 * deg_to_rad} 0 0" />
+      <axis xyz="0 0 1" />
+      <limit effort="${wheel_torque}" velocity="${wheel_velocity / wheel_radius}"/>
+    </joint>
+
+    <!-- extensions -->
+    <xacro:ant_wheel_transmission side="${side}" />
+
+  </xacro:macro>
+
+  <xacro:macro name="ant_caster" params="side reflect">
+    <!--************************-->
+    <!--        CASTERS         -->
+    <!--************************-->
+
+    <link name="caster_${side}_1_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1" />
+        <inertia  ixx="0.012411765597" ixy="-0.000711733678" ixz="0.00050272983"
+                  iyy="0.015218160428" iyz="-0.000004273467"
+                  izz="0.011763977943" />
+        <!--<origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1" />
+        <inertia  ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />-->
+      </inertial>
+      <visual>
+        <origin xyz="${0.5 * caster_radius - caster_trailing_dist} 0 ${0.5 * caster_radius}" rpy="0 0 0" />
+        <geometry>
+          <box size="${caster_radius} ${1.2 * caster_width} ${caster_radius}"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+        <origin xyz="${0.5 * caster_radius - caster_trailing_dist} 0 ${0.5 * caster_radius}" rpy="0 0 0" />
+        <geometry>
+          <box size="${caster_radius} ${1.2 * caster_width} ${caster_radius}"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="caster_${side}_2_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.4" />
+        <inertia  ixx="0.00044" ixy="0" ixz="0" iyy="0.00044" iyz="0" izz="0.00078" />
+        </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${caster_radius}" length="${caster_width}"/>
+        </geometry>
+        <material name="DarkGrey" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="${caster_radius}" length="${caster_width}"/>
+        </geometry>
+      </collision>
+    </link>
+
+   <!-- contact model for caster wheel surface -->
+   <gazebo reference="caster_${side}_2_link">
+     <kp>100000000.0</kp>
+     <kd>10000.0</kd>
+     <mu1>1.0</mu1>
+     <mu2>1.0</mu2>
+     <minDepth>0.00</minDepth>
+   </gazebo>
+
+    <joint name="caster_${side}_1_joint" type="continuous">
+      <parent link="base_link" />
+      <child link="caster_${side}_1_link" />
+      <origin xyz="-0.3805 ${-dist_between_casters / 2 * reflect} ${caster_radius}" rpy="0 0 0" />
+      <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="caster_${side}_2_joint" type="continuous">
+      <parent link="caster_${side}_1_link" />
+      <child link="caster_${side}_2_link" />
+      <origin xyz="${-caster_trailing_dist} 0 0" rpy="${-90.0 * deg_to_rad} 0 0" />
+      <axis xyz="0 0 1" />
+    </joint>
+  </xacro:macro>
+
+  <!-- simplified box collision geometry for sick laser -->
+  <property name="base_laser_x" value="0.0468" />
+  <property name="base_laser_y" value="0.0" />
+  <property name="base_laser_z" value="0.081" />
+
+  <!-- simplified box collision geometry for hokuyo laser -->
+  <property name="torso_laser_x" value="0.0073" />
+  <property name="torso_laser_y" value="0.0" />
+  <property name="torso_laser_z" value="0.77" />
+
+  <!-- base_link x-axis offset -->
+  <property name="base_link_offset_x" value="-0.0327"/>
+
+  <xacro:macro name="ant_base" params="name">
+
+    <!--************************-->
+    <!--        BASE            -->
+    <!--************************-->
+
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.14527 -0.00003 0.24721" rpy="0 0 0" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
+        <mass value="63.58850" />
+        <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
+<!--         <origin xyz="-0.15006 -0.00031 0.24965" rpy="0 0 0" /> -->
+<!--         <mass value="64.063" /> -->
+        <!-- NOTE: Assuming box with d=0.6, w=0.5, h=0.4 -->
+<!--         <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> -->
+      </inertial>
+      <visual>
+        <origin xyz="${base_link_offset_x} 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://ant_description/meshes/base/base.dae" />
+        </geometry>
+        <material name="LightGrey" />
+      </visual>
+      <collision>
+        <origin xyz="${base_link_offset_x} 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://ant_description/meshes/base/base_collision.stl" />
+        </geometry>
+        <material name="LightGrey" />
+      </collision>
+    </link>
+
+    <!-- base_footprint fictitious link(frame). It coincides with base_link in our case. Provided for convenience when
+    using the navigation stack -->
+    <link name="${name}_footprint">
+      <visual>
+        <origin xyz="0 0 0.2" rpy="0 0 0" />
+        <geometry>
+          <box size="0.01 0.01 0.01" />
+        </geometry>
+
+        <material name="White" />
+      </visual>
+      <collision>
+        <origin xyz="0 0 0.2" rpy="0 0 0" />
+        <geometry>
+          <box size="0.001 0.001 0.001" />
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_footprint_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <child link="${name}_link" />
+      <parent link="${name}_footprint"/>
+    </joint>
+
+   <link name="${name}_center">
+      <inertial>
+        <mass value="1.0" />
+        <origin xyz="-0.0 0 0" />
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" izz="0.01" />
+      </inertial>
+      <visual>
+        <origin xyz="-0.0 0 0" rpy="0 0 0" />
+        <geometry>
+          <box size="0.01 0.01 0.01" />
+        </geometry>
+
+        <material name="White" />
+      </visual>
+      <collision>
+        <origin xyz="-0.0 0 0.2" rpy="0 0 0" />
+        <geometry>
+          <box size="0.001 0.001 0.001" />
+        </geometry>
+      </collision>
+    </link>
+
+   <joint name="${name}_center_joint" type="fixed">
+      <origin xyz="${-0.195 + base_link_offset_x} 0 0" rpy="0 0 0" />
+      <child link="${name}_center" />
+      <parent link="${name}_link"/>
+    </joint>
+
+
+   <!-- base laser -->
+    <xacro:sick_ant_laser name="${name}_laser" parent="${name}" ros_topic="scan_filtered" update_rate="25" min_angle="${-79 * deg_to_rad}" max_angle="${79 * deg_to_rad}" >
+      <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="${180.0 * deg_to_rad} 0 0" />
+    </xacro:sick_ant_laser>
+
+   <!-- torso laser -->
+    <xacro:hokuyo_ant_laser name="${name}_torso_laser" parent="${name}" ros_topic="hokuyo/LAS_01" update_rate="10" min_angle="${-63 * deg_to_rad}" max_angle="${63 * deg_to_rad}" >
+      <origin xyz="${torso_laser_x} ${torso_laser_y} ${torso_laser_z}" rpy="-0.03 ${52 * deg_to_rad} -0.05" />
+    </xacro:hokuyo_ant_laser>
+
+    <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${0.17131 + base_link_offset_x} 0.0 0.280" rpy="0.0 0.0 0.0" />
+    </xacro:range_ant>
+
+    <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${0.16919 + base_link_offset_x} 0.14919 0.280" rpy="0.0 0.0 0.349" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${0.16919 + base_link_offset_x} -0.14919 0.280" rpy="0.0 0.0 -0.349" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${0.13676 + base_link_offset_x} 0.27111 0.280" rpy="0.0 0.0 0.8377" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_12" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${0.13676 + base_link_offset_x} -0.27111 0.280" rpy="0.0 0.0 -0.8377" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.14 + base_link_offset_x} 0.33455 0.27" rpy="0.0 0.0 1.5708" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_11" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.14 + base_link_offset_x} -0.33455 0.27" rpy="0.0 0.0 -1.5708" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_06" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.35563 + base_link_offset_x} 0.28266 0.25" rpy="0.0 0.0 1.9547" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_10" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.35563 + base_link_offset_x} -0.28266 0.25" rpy="0.0 0.0 -1.9547" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_07" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.48412 + base_link_offset_x} 0.15127 0.29" rpy="0.0 0.0 2.6354" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_09" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.48412 + base_link_offset_x} -0.15127 0.29" rpy="0.0 0.0 -2.6354" />
+    </xacro:range_ant>
+
+   <!-- base sonar -->
+    <xacro:range_ant name="${name}_sonar_08" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="${-0.51188 + base_link_offset_x} 0.0 0.26" rpy="0.0 0.0 -3.1415" />
+    </xacro:range_ant>
+
+   <!-- base ir -->
+    <xacro:range_ant name="${name}_ir_01" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
+      <origin xyz="${0.1804 + base_link_offset_x} -0.12463 0.22" rpy="0.0 -0.8726 0.0" />
+    </xacro:range_ant>
+
+    <xacro:range_ant name="${name}_ir_02" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
+      <origin xyz="${0.18574 + base_link_offset_x} 0.0 0.22" rpy="0.0 -0.8726 0.0" />
+    </xacro:range_ant>
+
+    <xacro:range_ant name="${name}_ir_03" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
+      <origin xyz="${0.1804 + base_link_offset_x} 0.12463 0.22" rpy="0.0 -0.8726 0.0" />
+    </xacro:range_ant>
+
+    <!-- bumper front right -->
+    <xacro:bumper_ant name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${0.225 + base_link_offset_x} -0.15 0.20" rpy="0 0 ${-15.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- bumper front left -->
+    <xacro:bumper_ant name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${0.225 + base_link_offset_x} 0.15 0.20" rpy="0 0 ${15.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- bumper left 1 -->
+    <xacro:bumper_ant name="${name}_bumper_03" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${-0.04 + base_link_offset_x} 0.33 0.1" rpy="0 0 ${90.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- bumper left 2 -->
+    <xacro:bumper_ant name="${name}_bumper_04" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${-0.3 + base_link_offset_x} 0.31 0.1" rpy="0 0 ${100.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- bumper back -->
+    <xacro:bumper_ant name="${name}_bumper_05" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${-0.545 + base_link_offset_x} 0.0 0.1" rpy="0 0 ${180.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- bumper right 2 -->
+    <xacro:bumper_ant name="${name}_bumper_06" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${-0.3 + base_link_offset_x} -0.31 0.1" rpy="0 0 ${-100.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- bumper right 1 -->
+    <xacro:bumper_ant name="${name}_bumper_07" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+      <origin xyz="${-0.04 + base_link_offset_x} -0.33 0.1" rpy="0 0 ${-90.0 * deg_to_rad}" />
+    </xacro:bumper_ant>
+
+    <!-- imu -->
+    <xacro:ant_imu name="base_inclinometer" parent="${name}_link" update_rate="100.0">
+      <origin xyz="-0.02977 -0.1497 0.164" rpy="0 ${M_PI} 0"/>
+    </xacro:ant_imu>
+
+    <!-- wheels -->
+    <xacro:ant_wheel side="right" reflect="1.0" />
+    <xacro:ant_wheel side="left" reflect="-1.0" />
+
+    <!-- casters -->
+    <xacro:ant_caster side="right" reflect=" 1.0" />
+    <xacro:ant_caster side="left"  reflect="-1.0" />
+
+    <!-- extensions -->
+    <xacro:ant_base_controllers />
+
+  </xacro:macro>
+
+
+  <xacro:macro name="ant_cargo" params="name">
+
+    <!--************************-->
+    <!--        CARGO           -->
+    <!--************************-->
+
+    <link name="${name}_cargo_link">
+      <inertial>
+        <mass value="1.0" />
+        <origin xyz="0 0 0" />
+        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
+                 iyy="0.01" iyz="0.0" izz="0.01" />
+        <!--<mass value="1.0" />
+        <origin xyz="0 0 -0.5" />
+        <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />-->
+      </inertial>
+      <visual>
+        <origin xyz="0 0 -0.5" rpy="0 0 0" />
+        <geometry>
+          <box size="0.001 0.001 0.001" />
+        </geometry>
+
+        <material name="Green" />
+      </visual>
+      <collision>
+        <origin xyz="0.05 0 0.02" rpy="0 0 0" />
+        <geometry>
+          <box size="0.30 0.30 0.25" /> <!-- Generous hand luggage size allowed in an airplane is 0.55x0.45x0.25. This slightly smaller. -->
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_cargo_link" type="fixed">
+      <origin xyz="${-0.41 + base_link_offset_x} 0 ${0.605 + 0.029}" rpy="0 0.18 0" />
+      <child link="${name}_cargo_link" />
+      <parent link="${name}_link"/>
+    </joint>
+
+  </xacro:macro>
+</robot>
