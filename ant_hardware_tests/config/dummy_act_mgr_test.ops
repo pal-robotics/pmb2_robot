@@ -9,17 +9,17 @@ import("rtt_roscomm")
 const string act_mgr_name  = "actuatorsMgr"
 const int act_mgr_priority = HighestPriority
 
-import("reem_hardware_tests")
-loadComponent(act_mgr_name, "reem_hardware::DummyActuatorsManager")
+import("ant_hardware_tests")
+loadComponent(act_mgr_name, "ant_hardware::DummyActuatorsManager")
 setActivity(act_mgr_name, control_period, act_mgr_priority, ORO_SCHED_RT)
 
-// Reem hardware
+// ANT hardware
 const string robot_hw_name   = "robot_hw"
 const string estop_port_name = "emergency_stop_state"
 const int robot_hw_priority  = (HighestPriority + LowestPriority)/2
 
-import("reem_hardware")
-loadComponent(robot_hw_name, "reem_hardware::ReemHardware")
+import("ant_hardware")
+loadComponent(robot_hw_name, "ant_hardware::AntHardware")
 setActivity(robot_hw_name, control_period, robot_hw_priority, ORO_SCHED_RT)
 
 // Connect components

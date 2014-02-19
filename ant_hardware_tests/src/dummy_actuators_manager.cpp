@@ -40,7 +40,7 @@
 #include <rtt/Component.hpp>
 
 
-namespace reem_hardware
+namespace ant_hardware
 {
 using std::string;
 using std::vector;
@@ -72,45 +72,6 @@ public:
     act_names_.push_back("caster_right_1_motor");
     act_names_.push_back("caster_right_2_motor");
 
-    act_names_.push_back("torso_1_motor");
-    act_names_.push_back("torso_2_motor");
-    act_names_.push_back("head_1_motor");
-    act_names_.push_back("head_2_motor");
-
-    act_names_.push_back("arm_left_1_motor");
-    act_names_.push_back("arm_left_2_motor");
-    act_names_.push_back("arm_left_3_motor");
-    act_names_.push_back("arm_left_4_motor");
-    act_names_.push_back("arm_left_5_motor");
-    act_names_.push_back("arm_left_6_motor");
-    act_names_.push_back("arm_left_7_motor");
-    act_names_.push_back("arm_right_1_motor");
-    act_names_.push_back("arm_right_2_motor");
-    act_names_.push_back("arm_right_3_motor");
-    act_names_.push_back("arm_right_4_motor");
-    act_names_.push_back("arm_right_5_motor");
-    act_names_.push_back("arm_right_6_motor");
-    act_names_.push_back("arm_right_7_motor");
-
-    act_names_.push_back("hand_left_thumb_motor");
-    act_names_.push_back("hand_left_index_motor");
-    act_names_.push_back("hand_left_index_1_motor");
-    act_names_.push_back("hand_left_index_2_motor");
-    act_names_.push_back("hand_left_index_3_motor");
-    act_names_.push_back("hand_left_middle_motor");
-    act_names_.push_back("hand_left_middle_1_motor");
-    act_names_.push_back("hand_left_middle_2_motor");
-    act_names_.push_back("hand_left_middle_3_motor");
-    act_names_.push_back("hand_right_thumb_motor");
-    act_names_.push_back("hand_right_index_motor");
-    act_names_.push_back("hand_right_index_1_motor");
-    act_names_.push_back("hand_right_index_2_motor");
-    act_names_.push_back("hand_right_index_3_motor");
-    act_names_.push_back("hand_right_middle_motor");
-    act_names_.push_back("hand_right_middle_1_motor");
-    act_names_.push_back("hand_right_middle_2_motor");
-    act_names_.push_back("hand_right_middle_3_motor");
-    
     act_names_.push_back("zzz_can_sync");
 
     const unsigned int dim = act_names_.size();
@@ -202,5 +163,5 @@ private:
   RTT::OutputPort< vector<double> >  orientation_port_;
 };
 
-ORO_CREATE_COMPONENT(reem_hardware::DummyActuatorsManager);
+ORO_CREATE_COMPONENT(ant_hardware::DummyActuatorsManager);
 }

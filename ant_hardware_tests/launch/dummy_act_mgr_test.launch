@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Test ros_control integration of REEM on a dummy implementation of the ActuatorsManager.
+<!-- Test ros_control integration of ANT on a dummy implementation of the ActuatorsManager.
      This test does not use the actual ActuatorsManager, but a minimal implenentation of its interface.
  -->
 
@@ -10,13 +10,13 @@
   <node name="rt_control"
         pkg="ocl"
         type="deployer-$(arg orocos_target)"
-        args="-s $(find reem_hardware_tests)/config/dummy_act_mgr_test.ops --no-consolelog --"/>
+        args="-s $(find ant_hardware_tests)/config/dummy_act_mgr_test.ops --no-consolelog --"/>
 
   <!-- Robot model -->
-  <include file="$(find reem_description)/robots/upload_reem.launch" />
+  <include file="$(find ant_description)/robots/upload_ant.launch" />
 
   <!-- Controller configuration -->
-  <include file="$(find reem_controller_configuration)/launch/default_controllers.launch" />
+  <include file="$(find ant_controller_configuration)/launch/default_controllers.launch" />
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
