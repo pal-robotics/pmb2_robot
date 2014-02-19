@@ -27,7 +27,3 @@ target_link_libraries(ant_hardware ${catkin_LIBRARIES})
 
 orocos_install_headers(include/ant_hardware/ant_hardware.h)
 orocos_generate_package()
-
-install(PROGRAMS scripts/hand_homing
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
