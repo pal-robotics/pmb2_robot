@@ -71,6 +71,7 @@ AntHardware::AntHardware(const string &name)
                ACT_VEL_CUR_PORT,
                ACT_POS_REF_PORT,
                ACT_VEL_REF_PORT,
+               "", // No max current command interface
                this),
     dummy_caster_data_(0.0),
     base_orientation_(BASE_ORIENTATION_NAME,
