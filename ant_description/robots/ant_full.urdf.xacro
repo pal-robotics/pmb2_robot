@@ -15,7 +15,6 @@
         name="ant" >
 
   <!-- The following included files set up definitions of parts of the robot body -->
-
   <!-- Base -->
   <xacro:include filename="$(find ant_description)/urdf/base/base.urdf.xacro" />
 
@@ -23,6 +22,9 @@
   <xacro:include filename="$(find ant_description)/gazebo/gazebo.urdf.xacro" />
   <!-- Materials for visualization -->
   <xacro:include filename="$(find ant_description)/urdf/materials.urdf.xacro" />
+
+  <!-- Now we can start using the macros included above to define the actual robot -->
+  <xacro:ant_base  name="base"/>
 </robot>
 
 
