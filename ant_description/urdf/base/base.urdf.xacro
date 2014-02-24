@@ -11,7 +11,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find ant_description)/urdf/base/base.gazebo.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/base/base.transmission.xacro" />
 
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro" />
