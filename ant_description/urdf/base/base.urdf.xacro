@@ -14,18 +14,17 @@
   <xacro:include filename="$(find ant_description)/urdf/base/base.gazebo.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/base/base.transmission.xacro" />
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/sick_laser_ant.urdf.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro" />
-  <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_laser_ant.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro" />
 
   <!--wheel characteristics-->
-  <property name="dist_between_wheels" value="0.540" />
-  <property name="wheel_radius" value="0.093" />
-  <property name="wheel_width" value="0.044" />
-  <property name="wheel_torque" value="50.0" />
-  <property name="wheel_velocity" value="1.5" /> <!-- m/s -->
+  <property name="wheel_separation" value="0.540" />
+  <property name="wheel_radius"     value="0.093" />
+  <property name="wheel_width"      value="0.044" />
+  <property name="wheel_torque"     value="50.0" />
+  <property name="wheel_velocity"   value="1.0" /> <!-- m/s -->
 
  <!--caster characteristics-->
   <property name="dist_between_casters" value="0.300" />
@@ -74,7 +73,7 @@
     <joint name="wheel_${side}_joint" type="continuous">
       <parent link="base_link" />
       <child link="wheel_${side}_link" />
-      <origin xyz="0 ${-dist_between_wheels / 2 * reflect} ${wheel_radius}" rpy="${-90.0 * deg_to_rad} 0 0" />
+      <origin xyz="0 ${-wheel_separation / 2 * reflect} ${wheel_radius}" rpy="${-90.0 * deg_to_rad} 0 0" />
       <axis xyz="0 0 1" />
       <limit effort="${wheel_torque}" velocity="${wheel_velocity / wheel_radius}"/>
     </joint>
@@ -160,15 +159,10 @@
     </joint>
   </xacro:macro>
 
-  <!-- simplified box collision geometry for sick laser -->
+  <!-- simplified box collision geometry for the laser -->
   <property name="base_laser_x" value="0.0468" />
   <property name="base_laser_y" value="0.0" />
   <property name="base_laser_z" value="0.081" />
-
-  <!-- simplified box collision geometry for hokuyo laser -->
-  <property name="torso_laser_x" value="0.0073" />
-  <property name="torso_laser_y" value="0.0" />
-  <property name="torso_laser_z" value="0.77" />
 
   <!-- base_link x-axis offset -->
   <property name="base_link_offset_x" value="-0.0327"/>
@@ -259,78 +253,72 @@
       <parent link="${name}_link"/>
     </joint>
 
+    <!-- laser -->
+    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-120 * deg_to_rad}" max_angle="${120 * deg_to_rad}" >
+      <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
+    </xacro:hokuyo_urg_04lx_ug01_laser>
 
-   <!-- base laser -->
-    <xacro:sick_ant_laser name="${name}_laser" parent="${name}" ros_topic="scan_filtered" update_rate="25" min_angle="${-79 * deg_to_rad}" max_angle="${79 * deg_to_rad}" >
-      <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="${180.0 * deg_to_rad} 0 0" />
-    </xacro:sick_ant_laser>
-
-   <!-- torso laser -->
-    <xacro:hokuyo_ant_laser name="${name}_torso_laser" parent="${name}" ros_topic="hokuyo/LAS_01" update_rate="10" min_angle="${-63 * deg_to_rad}" max_angle="${63 * deg_to_rad}" >
-      <origin xyz="${torso_laser_x} ${torso_laser_y} ${torso_laser_z}" rpy="-0.03 ${52 * deg_to_rad} -0.05" />
-    </xacro:hokuyo_ant_laser>
-
-    <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.17131 + base_link_offset_x} 0.0 0.280" rpy="0.0 0.0 0.0" />
     </xacro:range_ant>
 
-    <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.16919 + base_link_offset_x} 0.14919 0.280" rpy="0.0 0.0 0.349" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.16919 + base_link_offset_x} -0.14919 0.280" rpy="0.0 0.0 -0.349" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.13676 + base_link_offset_x} 0.27111 0.280" rpy="0.0 0.0 0.8377" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_12" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.13676 + base_link_offset_x} -0.27111 0.280" rpy="0.0 0.0 -0.8377" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.14 + base_link_offset_x} 0.33455 0.27" rpy="0.0 0.0 1.5708" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_11" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.14 + base_link_offset_x} -0.33455 0.27" rpy="0.0 0.0 -1.5708" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_06" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.35563 + base_link_offset_x} 0.28266 0.25" rpy="0.0 0.0 1.9547" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_10" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.35563 + base_link_offset_x} -0.28266 0.25" rpy="0.0 0.0 -1.9547" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_07" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.48412 + base_link_offset_x} 0.15127 0.29" rpy="0.0 0.0 2.6354" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_09" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.48412 + base_link_offset_x} -0.15127 0.29" rpy="0.0 0.0 -2.6354" />
     </xacro:range_ant>
 
-   <!-- base sonar -->
+    <!-- sonar -->
     <xacro:range_ant name="${name}_sonar_08" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.51188 + base_link_offset_x} 0.0 0.26" rpy="0.0 0.0 -3.1415" />
     </xacro:range_ant>
 
-   <!-- base ir -->
+    <!-- ir -->
     <xacro:range_ant name="${name}_ir_01" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
       <origin xyz="${0.1804 + base_link_offset_x} -0.12463 0.22" rpy="0.0 -0.8726 0.0" />
     </xacro:range_ant>
