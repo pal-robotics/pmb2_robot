@@ -21,7 +21,7 @@
   <!--wheel characteristics-->
   <property name="wheel_separation" value="0.42"/>
   <property name="wheel_radius"     value="0.1016"/>
-  <property name="wheel_width"      value="0.044"/>
+  <property name="wheel_width"      value="0.03737"/>
   <property name="wheel_torque"     value="50.0"/>
   <property name="wheel_velocity"   value="1.0"/>
 
