@@ -20,16 +20,16 @@
 
   <!--wheel characteristics-->
   <property name="wheel_separation" value="0.42"/>
-  <property name="wheel_radius"     value="0.1016"/>
+  <property name="wheel_radius"     value="0.09931"/>
   <property name="wheel_width"      value="0.03737"/>
   <property name="wheel_torque"     value="50.0"/>
   <property name="wheel_velocity"   value="1.0"/>
 
- <!--caster characteristics-->
-  <property name="dist_between_casters" value="0.300" />
-  <property name="caster_radius"        value="0.0625" />
-  <property name="caster_width"         value="0.037" />
-  <property name="caster_trailing_dist" value="0.038" />
+  <!--caster characteristics-->
+  <property name="dist_between_casters" value="0.300"/>
+  <property name="caster_radius"        value="0.025"/>
+  <property name="caster_width"         value="0.037"/>
+  <property name="caster_trailing_dist" value="0.038"/>
 
   <xacro:macro name="ant_wheel" params="side reflect" parent="base_link">
 
