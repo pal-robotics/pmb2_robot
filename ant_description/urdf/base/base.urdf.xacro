@@ -177,10 +177,6 @@
         <origin xyz="-0.14527 -0.00003 0.24721" rpy="0 0 0" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
         <mass value="63.58850" />
         <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
-<!--         <origin xyz="-0.15006 -0.00031 0.24965" rpy="0 0 0" /> -->
-<!--         <mass value="64.063" /> -->
-        <!-- NOTE: Assuming box with d=0.6, w=0.5, h=0.4 -->
-<!--         <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> -->
       </inertial>
       <visual>
         <origin xyz="${base_link_offset_x} 0 0" rpy="0 0 0" />
@@ -206,7 +202,6 @@
         <geometry>
           <box size="0.01 0.01 0.01" />
         </geometry>
-
         <material name="White" />
       </visual>
       <collision>
@@ -235,7 +230,6 @@
         <geometry>
           <box size="0.01 0.01 0.01" />
         </geometry>
-
         <material name="White" />
       </visual>
       <collision>
@@ -258,62 +252,62 @@
     </xacro:hokuyo_urg_04lx_ug01_laser>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.17131 + base_link_offset_x} 0.0 0.280" rpy="0.0 0.0 0.0" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.16919 + base_link_offset_x} 0.14919 0.280" rpy="0.0 0.0 0.349" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.16919 + base_link_offset_x} -0.14919 0.280" rpy="0.0 0.0 -0.349" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.13676 + base_link_offset_x} 0.27111 0.280" rpy="0.0 0.0 0.8377" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_12" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_12" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${0.13676 + base_link_offset_x} -0.27111 0.280" rpy="0.0 0.0 -0.8377" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.14 + base_link_offset_x} 0.33455 0.27" rpy="0.0 0.0 1.5708" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_11" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_11" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.5" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.14 + base_link_offset_x} -0.33455 0.27" rpy="0.0 0.0 -1.5708" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_06" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_06" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.35563 + base_link_offset_x} 0.28266 0.25" rpy="0.0 0.0 1.9547" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_10" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_10" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.5" minRange="0.005" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.35563 + base_link_offset_x} -0.28266 0.25" rpy="0.0 0.0 -1.9547" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_07" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_07" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.48412 + base_link_offset_x} 0.15127 0.29" rpy="0.0 0.0 2.6354" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_09" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_09" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.48412 + base_link_offset_x} -0.15127 0.29" rpy="0.0 0.0 -2.6354" />
     </xacro:range_ant>
 
     <!-- sonar -->
-    <xacro:range_ant name="${name}_sonar_08" parent="${name}" ros_topic="sonar_base" update_rate="5" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <xacro:range_ant name="${name}_sonar_08" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.7" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="${-0.51188 + base_link_offset_x} 0.0 0.26" rpy="0.0 0.0 -3.1415" />
     </xacro:range_ant>
 
