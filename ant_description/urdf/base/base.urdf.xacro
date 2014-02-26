@@ -28,7 +28,7 @@
   <!--caster characteristics-->
   <property name="dist_between_casters" value="0.300"/>
   <property name="caster_radius"        value="0.025"/>
-  <property name="caster_width"         value="0.037"/>
+  <property name="caster_width"         value="0.0164"/>
   <property name="caster_trailing_dist" value="0.038"/>
 
   <xacro:macro name="ant_wheel" params="side reflect" parent="base_link">
@@ -164,7 +164,7 @@
   <property name="base_laser_z" value="0.081" />
 
   <!-- base_link x-axis offset -->
-  <property name="base_link_offset_x" value="-0.0327"/>
+  <property name="base_link_offset_x" value="0.0"/>
 
   <xacro:macro name="ant_base" params="name">
 
@@ -174,7 +174,7 @@
 
     <link name="${name}_link">
       <inertial>
-        <origin xyz="-0.14527 -0.00003 0.24721" rpy="0 0 0" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
+        <origin xyz="0.0 0.0 0.24721" rpy="0 0 0" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
         <mass value="63.58850" />
         <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
       </inertial>
