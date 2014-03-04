@@ -15,7 +15,7 @@
   <run_depend>tf_lookup</run_depend>
   <run_depend>sensor_to_cloud</run_depend>
   <run_depend>speed_limit</run_depend>
-  <run_depend>pal_mobile_base</run_depend>
+  <run_depend>twist_mux</run_depend>
   <run_depend>joy_teleop</run_depend>
 
 </package>

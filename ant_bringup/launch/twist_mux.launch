@@ -1,0 +1,13 @@
+<launch>
+
+  <include file="$(find twist_mux)/launch/twist_mux.launch">
+    <arg name="imu" value="base_inclinometer"/>
+
+    <arg name="config"        value="$(find ant_bringup)/config/twist_mux/twist_mux.yaml"/>
+    <arg name="config_locks"  value="$(find ant_bringup)/config/twist_mux/twist_mux_locks.yaml"/>
+    <arg name="config_topics" value="$(find ant_bringup)/config/twist_mux/twist_mux_topics.yaml"/>
+
+    <arg name="config_joy" value="$(find ant_bringup)/config/twist_mux/joystick.yaml"/>
+  </include>
+
+</launch>
