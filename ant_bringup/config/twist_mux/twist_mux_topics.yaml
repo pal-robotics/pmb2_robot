@@ -1,4 +1,4 @@
-# Input topics handled/muxed by the mobile base.
+# Input topics handled/muxed by the twist mux.
 # For each topic:
 # - name    : name identifier to select the topic
 # - topic   : input topic of geometry_msgs::Twist type

@@ -1,4 +1,4 @@
-# Locks to stop the mobile base.
+# Locks to stop the twist mux.
 # For each lock:
 # - topic   : input topic that provides the lock; it must be of type std_msgs::Bool?!!! 
 # - timeout : == 0.0 -> not used
