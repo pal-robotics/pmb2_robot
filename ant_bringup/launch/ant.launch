@@ -8,6 +8,6 @@
   <!-- Robot model -->
   <include file="$(find ant_description)/robots/upload_ant.launch"/>
 
-  <!-- bring up robot -->
+  <!-- Bring up robot -->
   <include file="$(find ant_bringup)/launch/ant_bringup.launch"/>
 </launch>

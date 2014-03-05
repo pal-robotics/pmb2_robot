@@ -11,8 +11,8 @@
   <!-- TF lookup -->
   <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
 
-  <!-- Mobile base -->
-  <include file="$(find ant_bringup)/launch/mobile_base.launch"/>
+  <!-- Twist mux -->
+  <include file="$(find ant_bringup)/launch/twist_mux.launch"/>
 
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch">
