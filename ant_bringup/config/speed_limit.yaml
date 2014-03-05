@@ -1,38 +1,49 @@
 speed_limit:
-  base_laser:
-    type: laser
-    topic: scan_filtered
-    obstacle_max_dist: 1.5
-    stop_dist: 0.3
-    speed_factor: 0.5
-    fixed: true
+  reporters:
+    reem_ears:
+      type: reem_led
+      limit_color:
+        rgb: [0.8, 0.5, 0.2]
+      bypass_color:
+        rgb: [1.0, 0.0, 0.0]
+        blinking: true
+    reem_web:
+      type: reem_topic
+  limiters:
+    base_laser:
+      type: laser
+      topic: scan
+      obstacle_max_dist: 1.5
+      stop_dist: 0.3
+      speed_factor: 0.5
+      fixed: true
 
-  base_sonars:
-    type: range
-    topic: sonar_base
-    obstacle_max_dist: 0.6
-    stop_dist: 0.1
-    speed_factor: 0.3
-    blacklist: []
-    whitelist: []
-    fixed: true
+    base_sonars:
+      type: range
+      topic: sonar_base
+      obstacle_max_dist: 0.6
+      stop_dist: 0.1
+      speed_factor: 0.3
+      blacklist: []
+      whitelist: []
+      fixed: true
 
-#  base_irs:
-#    type: range
-#    topic: ir_base
-#    obstacle_max_dist: 1.0 
-#    stop_dist: 0.2 
-#    speed_factor: 0.5 
-#    blacklist: []
-#    whitelist: []
-#    fixed: true
+#    base_irs:
+#      type: range
+#      topic: ir_base
+#      obstacle_max_dist: 1.0 
+#      stop_dist: 0.2 
+#      speed_factor: 0.5 
+#      blacklist: []
+#      whitelist: []
+#      fixed: true
 
-  base_bumpers:
-    type: bumper
-    topic: bumper_base
-    obstacle_max_dist: 1.0
-    stop_dist: 1.0
-    speed_factor: 1.0
-    blacklist: []
-    whitelist: []
-    fixed: true
+    base_bumpers:
+      type: bumper
+      topic: bumper_base
+      obstacle_max_dist: 1.0
+      stop_dist: 1.0
+      speed_factor: 1.0
+      blacklist: []
+      whitelist: []
+      fixed: true
