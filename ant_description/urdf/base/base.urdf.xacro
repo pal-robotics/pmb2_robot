@@ -94,9 +94,6 @@
         <inertia  ixx="0.012411765597" ixy="-0.000711733678" ixz="0.00050272983"
                   iyy="0.015218160428" iyz="-0.000004273467"
                   izz="0.011763977943" />
-        <!--<origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="0.1" />
-        <inertia  ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />-->
       </inertial>
       <visual>
         <origin xyz="${0.5 * caster_radius - caster_trailing_dist} 0 ${0.5 * caster_radius}" rpy="0 0 0" />
@@ -218,7 +215,7 @@
       <parent link="${name}_footprint"/>
     </joint>
 
-   <link name="${name}_center">
+    <link name="${name}_center">
       <inertial>
         <mass value="1.0" />
         <origin xyz="-0.0 0 0" />
@@ -240,7 +237,7 @@
       </collision>
     </link>
 
-   <joint name="${name}_center_joint" type="fixed">
+    <joint name="${name}_center_joint" type="fixed">
       <origin xyz="${-0.195 + base_link_offset_x} 0 0" rpy="0 0 0" />
       <child link="${name}_center" />
       <parent link="${name}_link"/>
