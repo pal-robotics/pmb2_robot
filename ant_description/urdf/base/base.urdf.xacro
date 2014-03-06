@@ -276,31 +276,6 @@
       <origin xyz="${0.225 + base_link_offset_x} 0.15 0.20" rpy="0 0 ${15.0 * deg_to_rad}" />
     </xacro:bumper_ant>
 
-    <!-- bumper left 1 -->
-    <xacro:bumper_ant name="${name}_bumper_03" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="${-0.04 + base_link_offset_x} 0.33 0.1" rpy="0 0 ${90.0 * deg_to_rad}" />
-    </xacro:bumper_ant>
-
-    <!-- bumper left 2 -->
-    <xacro:bumper_ant name="${name}_bumper_04" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="${-0.3 + base_link_offset_x} 0.31 0.1" rpy="0 0 ${100.0 * deg_to_rad}" />
-    </xacro:bumper_ant>
-
-    <!-- bumper back -->
-    <xacro:bumper_ant name="${name}_bumper_05" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="${-0.545 + base_link_offset_x} 0.0 0.1" rpy="0 0 ${180.0 * deg_to_rad}" />
-    </xacro:bumper_ant>
-
-    <!-- bumper right 2 -->
-    <xacro:bumper_ant name="${name}_bumper_06" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="${-0.3 + base_link_offset_x} -0.31 0.1" rpy="0 0 ${-100.0 * deg_to_rad}" />
-    </xacro:bumper_ant>
-
-    <!-- bumper right 1 -->
-    <xacro:bumper_ant name="${name}_bumper_07" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="${-0.04 + base_link_offset_x} -0.33 0.1" rpy="0 0 ${-90.0 * deg_to_rad}" />
-    </xacro:bumper_ant>
-
     <!-- imu -->
     <xacro:ant_imu name="base_inclinometer" parent="${name}_link" update_rate="100.0">
       <origin xyz="-0.02977 -0.1497 0.164" rpy="0 ${180 * deg_to_rad} 0"/>
