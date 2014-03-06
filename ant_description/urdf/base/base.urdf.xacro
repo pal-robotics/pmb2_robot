@@ -13,6 +13,8 @@
   <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/base/base.transmission.xacro" />
 
+  <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.urdf.xacro" />
+
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
@@ -30,57 +32,6 @@
   <property name="caster_radius"        value="0.025"/>
   <property name="caster_width"         value="0.0164"/>
   <property name="caster_trailing_dist" value="0.038"/>
-
-  <xacro:macro name="ant_wheel" params="side reflect" parent="base_link">
-
-    <!--************************-->
-    <!--        WHEELS          -->
-    <!--************************-->
-    <link name="wheel_${side}_link">
-      <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="1.0" />
-        <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
-        <!--<origin xyz="0 0 0" rpy="0 0 0" />
-        <mass value="3.5" />
-        <inertia ixx="0.00156"  ixy="0"  ixz="0" iyy="0.00156" iyz="0" izz="0.0273" />-->
-      </inertial>
-      <visual>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <cylinder radius="${wheel_radius}" length="${wheel_width}" />
-        </geometry>
-        <material name="DarkGrey" />
-      </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-          <cylinder radius="${wheel_radius}" length="${wheel_width}" />
-        </geometry>
-      </collision>
-    </link>
-
-    <!-- contact model for wheel surface -->
-    <gazebo reference="wheel_${side}_link">
-      <kp>100000000.0</kp>
-      <kd>10000.0</kd>
-      <mu1>1.0</mu1>
-      <mu2>1.0</mu2>
-      <minDepth>0.00</minDepth>
-    </gazebo>
-
-    <joint name="wheel_${side}_joint" type="continuous">
-      <parent link="base_link" />
-      <child link="wheel_${side}_link" />
-      <origin xyz="0 ${-wheel_separation / 2 * reflect} ${wheel_radius}" rpy="${-90.0 * deg_to_rad} 0 0" />
-      <axis xyz="0 0 1" />
-      <limit effort="${wheel_torque}" velocity="${wheel_velocity / wheel_radius}"/>
-    </joint>
-
-    <!-- extensions -->
-    <xacro:ant_wheel_transmission side="${side}" />
-
-  </xacro:macro>
 
   <xacro:macro name="ant_caster" params="side reflect">
     <!--************************-->
@@ -163,6 +114,10 @@
   <!-- base_link x-axis offset -->
   <property name="base_link_offset_x" value="0.0"/>
 
+  <property name="base_radius" value="${(wheel_separation - wheel_width)/2 - 0.01}"/>
+  <property name="base_length" value="0.04"/>
+  <property name="base_link_offset_z" value="${base_length + 0.01}"/>
+
   <xacro:macro name="ant_base" params="name">
 
     <!--************************-->
@@ -176,16 +131,18 @@
         <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
       </inertial>
       <visual>
-        <origin xyz="${base_link_offset_x} 0 0" rpy="0 0 0" />
+        <origin xyz="${base_link_offset_x} 0 ${base_link_offset_z}" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/base/base.dae" />
+          <cylinder radius="${base_radius}" length="${base_length}"/>
+          <!--mesh filename="package://ant_description/meshes/base/base.dae" /-->
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
-        <origin xyz="${base_link_offset_x} 0 0" rpy="0 0 0" />
+        <origin xyz="${base_link_offset_x} 0 ${base_link_offset_z}" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/base/base_collision.stl" />
+          <cylinder radius="${base_radius}" length="${base_length}"/>
+          <!--mesh filename="package://ant_description/meshes/base/base_collision.stl" /-->
         </geometry>
         <material name="LightGrey" />
       </collision>
@@ -279,8 +236,10 @@
     </xacro:ant_imu>
 
     <!-- wheels -->
-    <xacro:ant_wheel side="right" reflect=" 1.0"/>
-    <xacro:ant_wheel side="left"  reflect="-1.0"/>
+    <xacro:wheel_ant side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
+    <xacro:ant_wheel_transmission side="right"/>
+    <xacro:wheel_ant side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
+    <xacro:ant_wheel_transmission side="left"/>
 
     <!-- casters -->
     <xacro:ant_caster side="right" reflect=" 1.0"/>
