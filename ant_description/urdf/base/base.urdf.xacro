@@ -311,19 +311,6 @@
       <origin xyz="${-0.51188 + base_link_offset_x} 0.0 0.26" rpy="0.0 0.0 -3.1415" />
     </xacro:range_ant>
 
-    <!-- ir -->
-    <xacro:range_ant name="${name}_ir_01" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
-      <origin xyz="${0.1804 + base_link_offset_x} -0.12463 0.22" rpy="0.0 -0.8726 0.0" />
-    </xacro:range_ant>
-
-    <xacro:range_ant name="${name}_ir_02" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
-      <origin xyz="${0.18574 + base_link_offset_x} 0.0 0.22" rpy="0.0 -0.8726 0.0" />
-    </xacro:range_ant>
-
-    <xacro:range_ant name="${name}_ir_03" parent="${name}" ros_topic="ir_base" update_rate="10" maxRange="1.45" minRange="0.01" fov="0.1" radiation="infrared">
-      <origin xyz="${0.1804 + base_link_offset_x} 0.12463 0.22" rpy="0.0 -0.8726 0.0" />
-    </xacro:range_ant>
-
     <!-- bumper front right -->
     <xacro:bumper_ant name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
       <origin xyz="${0.225 + base_link_offset_x} -0.15 0.20" rpy="0 0 ${-15.0 * deg_to_rad}" />
