@@ -28,34 +28,32 @@
   <property name="wheel_velocity"   value="1.0"/>
 
   <!-- Caster wheel characteristics -->
-  <property name="caster_separation" value="0.300"/>
+  <property name="caster_separation" value="0.200"/>
   <property name="caster_radius"     value="0.025"/>
   <property name="caster_width"      value="0.0164"/>
   <property name="caster_trailing"   value="0.038"/>
+  <property name="caster_offset_x"   value="0.140"/>
 
   <!-- base_link x-axis offset -->
   <property name="base_link_offset_x" value="0.0"/>
 
   <property name="base_radius" value="${(wheel_separation - wheel_width)/2 - 0.01}"/>
   <property name="base_length" value="0.04"/>
-  <property name="base_link_offset_z" value="${base_length + 0.01}"/>
+  <property name="base_link_offset_z" value="${base_length + 0.031}"/>
 
   <!-- simplified box collision geometry for the laser -->
   <property name="base_laser_x" value="0.15"/>
   <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="0.081"/>
+  <property name="base_laser_z" value="0.093"/>
 
   <xacro:macro name="ant_base" params="name">
 
-    <!--************************-->
-    <!--        BASE            -->
-    <!--************************-->
-
+    <!-- Base -->
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.0 0.0 0.24721" rpy="0 0 0" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
+        <origin xyz="0.0 0.0 0.26721" rpy="0 0 0" />
         <mass value="63.58850" />
-        <inertia ixx="3.42"  ixy="0"  ixz="0" iyy="4.33" iyz="0" izz="5.08" /> <!-- assuming d=0.6, w=0.5, h=0.4 -->
+        <inertia ixx="3.42" ixy="0" ixz="0" iyy="4.33" iyz="0" izz="5.08" />
       </inertial>
       <visual>
         <origin xyz="${base_link_offset_x} 0 ${base_link_offset_z}" rpy="0 0 0" />
@@ -93,7 +91,7 @@
     </joint>
 
     <!-- Laser -->
-    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-120 * deg_to_rad}" max_angle="${120 * deg_to_rad}" >
+    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-100 * deg_to_rad}" max_angle="${100 * deg_to_rad}" >
       <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
     </xacro:hokuyo_urg_04lx_ug01_laser>
 
@@ -132,8 +130,8 @@
     <xacro:wheel_ant side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
 
     <!-- Casters wheels -->
-    <xacro:caster_ant side="right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" parent="${name}"/>
-    <xacro:caster_ant side="left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" parent="${name}"/>
+    <xacro:caster_ant side="right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
+    <xacro:caster_ant side="left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
 
   </xacro:macro>
 
