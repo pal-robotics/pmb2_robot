@@ -19,7 +19,7 @@
       <mu1>1.0</mu1>
       <mu2>1.0</mu2>
       <minDepth>0.00</minDepth>
-    </gazebo>  
+    </gazebo>
   </xacro:macro>
 
 </robot>
