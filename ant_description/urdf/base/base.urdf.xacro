@@ -79,13 +79,6 @@
     <!-- base_footprint fictitious link(frame). It coincides with base_link in our case. Provided for convenience when
     using the navigation stack -->
     <link name="${name}_footprint">
-      <visual>
-        <origin xyz="0 0 0.2" rpy="0 0 0" />
-        <geometry>
-          <box size="0.01 0.01 0.01" />
-        </geometry>
-        <material name="White" />
-      </visual>
       <collision>
         <origin xyz="0 0 0.2" rpy="0 0 0" />
         <geometry>
@@ -98,34 +91,6 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
       <child link="${name}_link" />
       <parent link="${name}_footprint"/>
-    </joint>
-
-    <link name="${name}_center">
-      <inertial>
-        <mass value="1.0" />
-        <origin xyz="-0.0 0 0" />
-        <inertia ixx="0.01" ixy="0.0" ixz="0.0"
-                 iyy="0.01" iyz="0.0" izz="0.01" />
-      </inertial>
-      <visual>
-        <origin xyz="-0.0 0 0" rpy="0 0 0" />
-        <geometry>
-          <box size="0.01 0.01 0.01" />
-        </geometry>
-        <material name="White" />
-      </visual>
-      <collision>
-        <origin xyz="-0.0 0 0.2" rpy="0 0 0" />
-        <geometry>
-          <box size="0.001 0.001 0.001" />
-        </geometry>
-      </collision>
-    </link>
-
-    <joint name="${name}_center_joint" type="fixed">
-      <origin xyz="${-0.195 + base_link_offset_x} 0 0" rpy="0 0 0" />
-      <child link="${name}_center" />
-      <parent link="${name}_link"/>
     </joint>
 
     <!-- Laser -->
