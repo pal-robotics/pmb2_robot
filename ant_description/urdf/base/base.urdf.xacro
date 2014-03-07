@@ -73,8 +73,7 @@
       </collision>
     </link>
 
-    <!-- base_footprint fictitious link(frame). It coincides with base_link in our case. Provided for convenience when
-    using the navigation stack -->
+    <!-- Base footprint -->
     <link name="${name}_footprint">
       <collision>
         <origin xyz="0 0 0.2" rpy="0 0 0" />
@@ -130,8 +129,11 @@
     <xacro:wheel_ant side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
 
     <!-- Casters wheels -->
-    <xacro:caster_ant side="right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
-    <xacro:caster_ant side="left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
+    <xacro:caster_ant side="front_right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
+    <xacro:caster_ant side="front_left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
+
+    <xacro:caster_ant side="back_right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
+    <xacro:caster_ant side="back_left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
 
   </xacro:macro>
 
