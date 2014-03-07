@@ -11,7 +11,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro" />
-  <xacro:include filename="$(find ant_description)/urdf/base/base.transmission.xacro" />
 
   <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.urdf.xacro" />
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.urdf.xacro" />
@@ -130,9 +129,7 @@
 
     <!-- Wheels -->
     <xacro:wheel_ant side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
-    <xacro:ant_wheel_transmission side="right"/>
     <xacro:wheel_ant side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
-    <xacro:ant_wheel_transmission side="left"/>
 
     <!-- Casters wheels -->
     <xacro:caster_ant side="right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" parent="${name}"/>

@@ -11,6 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <xacro:include filename="$(find ant_description)/urdf/wheels/caster.transmission.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.gazebo.xacro"/>
 
   <xacro:macro name="caster_ant" params="side reflect radius width separation trailing parent">
@@ -72,7 +73,10 @@
       <axis xyz="0 0 1"/>
     </joint>
 
-    <!-- gazebo extensions -->
+    <!-- Transmission -->
+    <!--xacro:ant_caster_transmission name="" side="${side}" number="" reduction=""-->
+
+    <!-- Gazebo extensions -->
     <xacro:caster_ant_gazebo side="${side}"/>
   </xacro:macro>
 </robot>
