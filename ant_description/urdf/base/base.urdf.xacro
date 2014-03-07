@@ -31,7 +31,7 @@
   <property name="caster_separation" value="0.300"/>
   <property name="caster_radius"     value="0.025"/>
   <property name="caster_width"      value="0.0164"/>
-  <property name="caster_trailing"   value="0.138"/>
+  <property name="caster_trailing"   value="0.038"/>
 
   <!-- base_link x-axis offset -->
   <property name="base_link_offset_x" value="0.0"/>
