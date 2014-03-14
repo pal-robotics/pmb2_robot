@@ -1,13 +1,6 @@
 speed_limit:
   reporters:
-    reem_ears:
-      type: reem_led
-      limit_color:
-        rgb: [0.8, 0.5, 0.2]
-      bypass_color:
-        rgb: [1.0, 0.0, 0.0]
-        blinking: true
-    reem_web:
+    ant_web:
       type: reem_topic
   limiters:
     base_laser:
