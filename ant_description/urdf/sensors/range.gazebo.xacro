@@ -11,7 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="range_ant_gazebo" params="name ros_topic update_rate maxRange minRange fov radiation" >
+  <xacro:macro name="range_gazebo" params="name ros_topic update_rate maxRange minRange fov radiation" >
     <gazebo reference="${name}_link">
       <sensor type="ray" name="${name}">
         <pose>0 0 0 0 0 0</pose>
