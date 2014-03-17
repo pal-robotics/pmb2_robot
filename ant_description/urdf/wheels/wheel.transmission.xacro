@@ -11,7 +11,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- Wheel transmission -->
-  <xacro:macro name="ant_wheel_transmission" params="side">
+  <xacro:macro name="wheel_transmission" params="side">
     <transmission name="wheel_${side}_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <actuator name="wheel_${side}_motor" >

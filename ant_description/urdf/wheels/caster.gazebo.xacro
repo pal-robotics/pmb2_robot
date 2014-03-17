@@ -11,7 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="caster_ant_gazebo" params="side">
+  <xacro:macro name="caster_gazebo" params="side">
     <!-- Contact model for the caster wheel surface -->
     <gazebo reference="caster_${side}_link">
       <kp>100000000.0</kp>

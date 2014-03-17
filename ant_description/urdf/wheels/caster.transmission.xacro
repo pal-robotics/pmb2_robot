@@ -11,7 +11,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- Caster transmissions -->
-  <xacro:macro name="ant_caster_transmission" params="name side number reduction" >
+  <xacro:macro name="caster_transmission" params="name side number reduction" >
     <transmission name="${name}_${side}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
       <actuator name="${name}_${side}_${number}_motor" >

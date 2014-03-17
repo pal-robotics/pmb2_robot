@@ -14,7 +14,7 @@
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.transmission.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.gazebo.xacro"/>
 
-  <xacro:macro name="caster_ant" params="side reflect radius width separation trailing offset_x parent">
+  <xacro:macro name="caster" params="side reflect radius width separation trailing offset_x parent">
     <link name="caster_${side}_1_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -74,9 +74,9 @@
     </joint>
 
     <!-- Transmission -->
-    <!--xacro:ant_caster_transmission name="" side="${side}" number="" reduction=""-->
+    <!--xacro:caster_transmission name="" side="${side}" number="" reduction=""-->
 
     <!-- Gazebo extensions -->
-    <xacro:caster_ant_gazebo side="${side}"/>
+    <xacro:caster_gazebo side="${side}"/>
   </xacro:macro>
 </robot>

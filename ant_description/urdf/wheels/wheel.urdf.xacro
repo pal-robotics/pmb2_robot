@@ -14,7 +14,7 @@
   <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.transmission.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.gazebo.xacro"/>
 
-  <xacro:macro name="wheel_ant" params="side reflect radius width torque velocity separation parent">
+  <xacro:macro name="wheel" params="side reflect radius width torque velocity separation parent">
     <link name="wheel_${side}_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -45,9 +45,9 @@
     </joint>
 
     <!-- Transmission -->
-    <xacro:ant_wheel_transmission side="${side}"/>
+    <xacro:wheel_transmission side="${side}"/>
 
     <!-- Gazebo extensions -->
-    <xacro:wheel_ant_gazebo side="${side}"/>
+    <xacro:wheel_gazebo side="${side}"/>
   </xacro:macro>
 </robot>

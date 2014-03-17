@@ -46,7 +46,7 @@
   <property name="base_laser_y" value="0.0"/>
   <property name="base_laser_z" value="0.093"/>
 
-  <xacro:macro name="ant_base" params="name">
+  <xacro:macro name="base" params="name">
 
     <!-- Base -->
     <link name="${name}_link">
@@ -125,15 +125,15 @@
     </xacro:ant_imu>
 
     <!-- Wheels -->
-    <xacro:wheel_ant side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
-    <xacro:wheel_ant side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
+    <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
+    <xacro:wheel side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
 
     <!-- Casters wheels -->
-    <xacro:caster_ant side="front_right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
-    <xacro:caster_ant side="front_left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
+    <xacro:caster side="front_right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
+    <xacro:caster side="front_left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
 
-    <xacro:caster_ant side="back_right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
-    <xacro:caster_ant side="back_left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
+    <xacro:caster side="back_right" reflect=" 1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
+    <xacro:caster side="back_left"  reflect="-1.0" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
 
   </xacro:macro>
 
