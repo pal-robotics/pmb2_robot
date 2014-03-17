@@ -13,7 +13,7 @@
 
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.gazebo.xacro" />
 
-  <xacro:macro name="range_ant" params="name parent *origin ros_topic update_rate maxRange minRange fov radiation">
+  <xacro:macro name="range_sensor" params="name parent *origin ros_topic update_rate maxRange minRange fov radiation">
     <link name="${name}_link">
       <inertial>
         <mass value="0.001" />
