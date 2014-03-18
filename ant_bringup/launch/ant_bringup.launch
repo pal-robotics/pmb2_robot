@@ -20,9 +20,13 @@
   </include>
 
   <!-- Bumper, IR and Sonar to cloud -->
+  <!-- @todo use custom config (requires changes in sensor_to_cloud -->
   <include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
-  <include file="$(find sensor_to_cloud)/launch/ir_to_cloud.launch"/>
+    <!--arg name="config" value="$(find ant_bringup)/config/sensor_to_cloud/bumper_to_cloud.yaml"/>
+  </include-->
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
+    <!--arg name="config" value="$(find ant_bringup)/config/sensor_to_cloud/sonar_to_cloud.yaml"/>
+  </include-->
 
   <!-- Joystick controller -->
   <include file="$(find ant_bringup)/launch/joystick_teleop.launch"/>
