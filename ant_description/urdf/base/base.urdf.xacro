@@ -94,17 +94,17 @@
 
     <!-- Sonar -->
     <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.18 0.0 0.1" rpy="0.0 0.0 0.0" />
+      <origin xyz="0.18 0.0 0.12" rpy="0.0 ${-10.0 * deg_to_rad} 0.0" />
     </xacro:range_sensor>
 
     <!-- Sonar -->
     <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.15 0.1 0.1" rpy="0.0 0.0 ${40.0 * deg_to_rad}" />
+      <origin xyz="0.15 0.1 0.12" rpy="0.0 ${-10.0 * deg_to_rad} ${40.0 * deg_to_rad}" />
     </xacro:range_sensor>
 
     <!-- Sonar -->
     <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.15 -0.1 0.1" rpy="0.0 0.0 ${-40.0 * deg_to_rad}" />
+      <origin xyz="0.15 -0.1 0.12" rpy="0.0 ${-10.0 * deg_to_rad} ${-40.0 * deg_to_rad}" />
     </xacro:range_sensor>
 
     <!-- Bumper right -->
