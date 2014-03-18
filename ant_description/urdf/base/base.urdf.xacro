@@ -42,7 +42,7 @@
   <!-- simplified box collision geometry for the laser -->
   <property name="base_laser_x" value="0.15"/>
   <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="0.093"/>
+  <property name="base_laser_z" value="0.153"/>
 
   <xacro:macro name="base" params="name">
 
