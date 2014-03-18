@@ -24,9 +24,9 @@ speed_limit:
 #    base_irs:
 #      type: range
 #      topic: ir_base
-#      obstacle_max_dist: 1.0 
-#      stop_dist: 0.2 
-#      speed_factor: 0.5 
+#      obstacle_max_dist: 1.0
+#      stop_dist: 0.2
+#      speed_factor: 0.5
 #      blacklist: []
 #      whitelist: []
 #      fixed: true
