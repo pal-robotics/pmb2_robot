@@ -81,12 +81,11 @@ private:
   pal_ros_control::ActuatorAccesor actuators_;
   double dummy_caster_data_; // Dummy raw caster data
 
-  // Inclinometer interface. We use the IMU interface, but only measure orientation in one axis
-  pal_ros_control::ImuSensorAccesor  base_orientation_;
-
   // Emergency stop
+#ifdef HAS_EMERGENCY_STOP
   pal_ros_control::EmergencyStopAccesor e_stop_;
   bool e_stop_prev_val_;
+#endif
   bool restart_controllers_;
 
   // Time management

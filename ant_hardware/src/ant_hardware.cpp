@@ -52,35 +52,31 @@ namespace
 {
 const string ACT_POS_CUR_PORT        = "act_position";
 const string ACT_VEL_CUR_PORT        = ""; //"act_velocity";
-const string ACT_POS_REF_PORT        = "ref_position";
+const string ACT_POS_REF_PORT        = ""; //"ref_position";
 const string ACT_VEL_REF_PORT        = "ref_velocity";
 
-const string BASE_ORIENTATION_NAME   = "base_inclinometer";      // TODO: Fetch from URDF?
-const string BASE_ORIENTATION_FRAME  = "base_inclinometer_link"; // TODO: Fetch from URDF?
-const string BASE_ORIENTATION_PORT   = "orientation_base";
-
+#ifdef HAST_EMERGENCY_STOP
 const string EMERGENCY_STOP_PORT     = "emergency_stop_state";
+#endif
 }
 
 namespace ant_hardware
 {
 
 AntHardware::AntHardware(const string &name)
-  : RTT::TaskContext(name, PreOperational),
-    actuators_(ACT_POS_CUR_PORT,
+  : RTT::TaskContext(name, PreOperational)
+  , actuators_(ACT_POS_CUR_PORT,
                ACT_VEL_CUR_PORT,
                ACT_POS_REF_PORT,
                ACT_VEL_REF_PORT,
                "", // No max current command interface
-               this),
-    dummy_caster_data_(0.0),
-    base_orientation_(BASE_ORIENTATION_NAME,
-                      BASE_ORIENTATION_FRAME,
-                      BASE_ORIENTATION_PORT,
-                      this),
-    e_stop_(EMERGENCY_STOP_PORT,
-            this),
-    do_stop_(false)
+               this)
+  , dummy_caster_data_(0.0)
+#ifdef HAS_EMERGENCY_STOP
+  , e_stop_(EMERGENCY_STOP_PORT,
+            this)
+#endif
+  , do_stop_(false)
 {}
 
 bool AntHardware::configureHook()
@@ -95,10 +91,6 @@ bool AntHardware::configureHook()
   // Setup actuators
   if (!actuators_.configure()) {return false;}
 
-  // Setup inclinometer
-  if (!base_orientation_.configure()) {return false;}
-  pal_ros_control::RawImuDataList imu_data(1, base_orientation_.getData());
-
   // Setup callback queue and spinner thread
   ros::NodeHandle nh;
   nh.setCallbackQueue(&cb_queue_);
@@ -109,7 +101,7 @@ bool AntHardware::configureHook()
   {
     robot_hw_.reset(new pal_ros_control::RosControlRobot(actuators_.getData(),
                                                          pal_ros_control::RawForceTorqueDataList(), // empty
-                                                         imu_data,
+                                                         pal_ros_control::RawImuDataList(), // empty
                                                          nh));
   }
   catch(const std::runtime_error& ex)
@@ -149,24 +141,29 @@ bool AntHardware::startHook()
   }
 
   // Precondition: Connected ports
-  if (!actuators_.start() ||
-      !base_orientation_.start())
+  if (!actuators_.start())
+#ifdef HAS_EMERGENCY_STOP
       //!e_stop_.start())// TODO: Add estop check?
+#endif
   {
     return false;
   }
 
   // Controller restart variables
   restart_controllers_ = true;
+#ifdef HAS_EMERGENCY_STOP
   e_stop_prev_val_     = false;
+#endif
 
   // Check e-stop
+#ifdef HAS_EMERGENCY_STOP
   if (!e_stop_.read())
   {
     // TODO: Enable!
 //     ROS_ERROR("Can't start component: Couldn't read emergency stop state");
 //     return false;
   }
+#endif
 
   // Hold current position
   // TODO: Can we get rid of the error message at start of one lost cycle?
@@ -205,23 +202,27 @@ void AntHardware::updateHook()
   last_ticks_ = ticks; // Cache current time
 
   // Emergency stop management
+#ifdef HAS_EMERGENCY_STOP
   e_stop_.read();
   const bool estop_released = e_stop_prev_val_ && !e_stop_.getValue();
   if (!restart_controllers_ && estop_released)
+#else
+  if (!restart_controllers_)
+#endif
   {
     restart_controllers_ = true;
     actuators_.resetVelocityEstimator();
   }
+#ifdef HAS_EMERGENCY_STOP
   e_stop_prev_val_ = e_stop_.getValue(); // Cache current value for next update cycle
 
   if (e_stop_.getValue()) {return;} // Do nothing while in e-stop. TODO: Different policy?
+#endif
 
   // Read current robot state
   const bool read_act_ok = actuators_.read(period);
   if (!read_act_ok) {return;}
   // TODO: Check sensors as well when bailing out?
-  /*const bool base_orientation_ok = */base_orientation_.read();
-
 
   robot_hw_->read(time, period);
 
