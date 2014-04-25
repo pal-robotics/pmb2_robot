@@ -22,9 +22,10 @@
   <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
-  <property name="wheel_separation" value="0.42"/>
-  <property name="wheel_radius"     value="0.09931"/>
-  <property name="wheel_width"      value="0.03737"/>
+  <!-- Note that we temporary use Rebujito's -->
+  <property name="wheel_separation" value="0.444"/>
+  <property name="wheel_radius"     value="0.08"/>
+  <property name="wheel_width"      value="0.044"/>
   <property name="wheel_torque"     value="50.0"/>
   <property name="wheel_velocity"   value="1.0"/>
 
