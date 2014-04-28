@@ -41,12 +41,12 @@
 
 // ros
 #include <ros/callback_queue.h>
-#include <ros/spinner.h>
 #include <ros/service.h>
 #include <std_srvs/Empty.h>
 
 // pal_ros_control
 #include <pal_ros_control/hardware_accessors.h>
+#include <pal_ros_control/dumb_spinner.h>
 
 // realtime_tools
 #include <realtime_tools/realtime_clock.h>
@@ -73,6 +73,7 @@ protected:
   bool configureHook();
   bool startHook();
   void updateHook();
+  void errorHook();
   void stopHook();
   void cleanupHook();
 
@@ -82,11 +83,7 @@ private:
   double dummy_caster_data_; // Dummy raw caster data
 
   // Emergency stop
-#ifdef HAS_EMERGENCY_STOP
   pal_ros_control::EmergencyStopAccesor e_stop_;
-  bool e_stop_prev_val_;
-#endif
-  bool restart_controllers_;
 
   // Time management
   RTT::os::TimeService::ticks last_ticks_;
@@ -99,8 +96,11 @@ private:
   boost::scoped_ptr<controller_manager::ControllerManager> controller_manager_;
 
   // ROS callback processing
-  ros::CallbackQueue cb_queue_;
-  boost::scoped_ptr<ros::AsyncSpinner> spinner_;
+  typedef pal_ros_control::DumbSpinner DumbSpinner;
+  ros::CallbackQueue cm_queue_;                       // Services controller manager callbacks
+  ros::CallbackQueue start_stop_queue_;               // Services component start/stop requests
+  boost::scoped_ptr<DumbSpinner> cm_spinner_;         // Spinner for controller manager callback queue
+  boost::scoped_ptr<DumbSpinner> start_stop_spinner_; // Spinner for component start/stop callback queue
 
   // ROS services for starting/stopping
   ros::ServiceServer start_service_;
@@ -127,6 +127,28 @@ private:
    * reasons (otherwise things like tf and the RobotModel Rviz plugin can't update the frame locations).
    */
   bool addDummyCasters();
+
+  /**
+   * \brief Method called at every control step for getting up-to-date time variables.
+   * \param[in] ticks Current monotonic time in ticks.
+   * \param[out] time Current system time.
+   * \param [out] period Current control period.
+   */
+  void getTimeData(const RTT::os::TimeService::ticks& ticks,
+                   ros::Time& time,
+                   ros::Duration& period)
+  {
+    // Current time
+    using namespace RTT::os;
+    ros::Time realtime_time; realtime_time.fromNSec(TimeService::ticks2nsecs(ticks));
+    time = realtime_clock_.getSystemTime(realtime_time);
+
+    // Duration since last update
+    period.fromNSec(TimeService::ticks2nsecs(TimeService::Instance()->ticksSince(last_ticks_)));
+
+    // Cache current time
+    last_ticks_ = ticks;
+  }
 };
 
 } // namespace
