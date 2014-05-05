@@ -10,8 +10,11 @@ mobile_base_controller:
   wheel_separation_multiplier: 0.985
   wheel_radius_multiplier: 1.02
 
-  # Velocity commands timeout [s] 
+  # Velocity commands timeout [s]
   cmd_vel_timeout: 0.25
+
+  # Base frame_id
+  base_frame_id: base_footprint
 
   # Velocity and acceleration limits
   # Whenever a min_* is unspecified, default to -max_*
