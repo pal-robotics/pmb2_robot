@@ -124,19 +124,19 @@
     </xacro:imu_sensor>
 
     <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5" code="1">
+    <xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5" code="1">
       <origin xyz="0.17131 0.0 0.280" rpy="0.0 0.0 0.0" />
-    </xacro:ir_receiver-->
+    </xacro:ir_receiver>
 
     <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5" code="2">
+    <xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5" code="2">
       <origin xyz="0.16919 0.14919 0.280" rpy="0.0 0.0 0.349" />
-    </xacro:ir_receiver-->
+    </xacro:ir_receiver>
 
     <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5" code="3">
+    <xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5" code="3">
       <origin xyz="0.16919 -0.14919 0.280" rpy="0.0 0.0 -0.349" />
-    </xacro:ir_receiver-->
+    </xacro:ir_receiver>
 
     <!-- Wheels -->
     <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
