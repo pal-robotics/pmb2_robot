@@ -50,7 +50,7 @@
           <radiation>${radiation}</radiation>
         </plugin>
       </sensor>
-    </gazebo>  
+    </gazebo>
   </xacro:macro>
 
 </robot>
