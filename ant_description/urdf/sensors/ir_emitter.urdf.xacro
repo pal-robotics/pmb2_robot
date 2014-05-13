@@ -37,6 +37,6 @@
     </joint>
 
     <!-- gazebo extensions -->
-    <xacro:ir_emitter_gazebo name="${name}" code="${code}" range_min="${range_min}" range_max="${range_max}" fov="${fov}"/>
+    <!--xacro:ir_emitter_gazebo name="${name}" code="${code}" range_min="${range_min}" range_max="${range_max}" fov="${fov}"/-->
   </xacro:macro>
 </robot>

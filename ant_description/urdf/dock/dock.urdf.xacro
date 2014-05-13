@@ -56,6 +56,20 @@
       <parent link="${name}_footprint"/>
     </joint>
 
+    <!-- IR emitter -->
+    <xacro:ir_emitter name="${name}_ir_emitter_01" parent="${name}" code="0" range_min="0.0" range_max="0.75" fov="0.5">
+      <origin xyz="0.17131 0.0 0.280" rpy="0.0 0.0 0.0" />
+    </xacro:ir_emitter>
+
+    <!-- IR emitter -->
+    <xacro:ir_emitter name="${name}_ir_emitter_02" parent="${name}" code="0" range_min="0.0" range_max="0.75" fov="0.5">
+      <origin xyz="0.16919 0.14919 0.280" rpy="0.0 0.0 0.349" />
+    </xacro:ir_emitter>
+
+    <!-- IR emitter -->
+    <xacro:ir_emitter name="${name}_ir_emitter_03" parent="${name}" code="0" range_min="0.0" range_max="0.75" fov="0.5">
+      <origin xyz="0.16919 -0.14919 0.280" rpy="0.0 0.0 -0.349" />
+    </xacro:ir_emitter>
 
   </xacro:macro>
 
