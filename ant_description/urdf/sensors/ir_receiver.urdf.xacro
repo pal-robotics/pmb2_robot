@@ -13,7 +13,7 @@
 
   <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.gazebo.xacro" />
 
-  <xacro:macro name="ir_receiver" params="name parent *origin ros_topic update_rate range_min range_max fov code">
+  <xacro:macro name="ir_receiver" params="name parent *origin ros_topic update_rate range_min range_max fov">
     <link name="${name}_link">
       <inertial>
         <mass value="0.001" />
@@ -30,6 +30,6 @@
     </joint>
 
     <!-- gazebo extensions -->
-    <xacro:ir_receiver_gazebo name="${name}" ros_topic="${ros_topic}" update_rate="${update_rate}" range_min="${range_min}" range_max="${range_max}" fov="${fov}" code="${code}"/>
+    <xacro:ir_receiver_gazebo name="${name}" ros_topic="${ros_topic}" update_rate="${update_rate}" range_min="${range_min}" range_max="${range_max}" fov="${fov}"/>
   </xacro:macro>
 </robot>
