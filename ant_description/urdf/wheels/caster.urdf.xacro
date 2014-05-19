@@ -14,7 +14,7 @@
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.transmission.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.gazebo.xacro"/>
 
-  <xacro:macro name="caster" params="side reflect radius width separation trailing offset_x parent">
+  <xacro:macro name="caster" params="side radius width separation_x separation_y offset_z parent">
     <link name="caster_${side}_1_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -24,14 +24,14 @@
                   izz="0.011763977943"/>
       </inertial>
       <visual>
-        <origin xyz="${0.5 * radius - trailing} 0 ${0.5 * radius}" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <box size="${radius} ${1.2 * width} ${radius}"/>
         </geometry>
         <material name="DarkGrey"/>
       </visual>
       <collision>
-        <origin xyz="${0.5 * radius - trailing} 0 ${0.5 * radius}" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <box size="${radius} ${1.2 * width} ${radius}"/>
         </geometry>
@@ -62,14 +62,14 @@
     <joint name="caster_${side}_1_joint" type="continuous">
       <parent link="${parent}_link"/>
       <child link="caster_${side}_1_link"/>
-      <origin xyz="${offset_x} ${-separation / 2 * reflect} ${radius}" rpy="0 0 0"/>
+      <origin xyz="${separation_x} ${-separation_y / 2} ${offset_z - radius / 2}" rpy="0 0 0"/>
       <axis xyz="0 0 1"/>
     </joint>
 
     <joint name="caster_${side}_2_joint" type="continuous">
       <parent link="caster_${side}_1_link"/>
       <child link="caster_${side}_2_link"/>
-      <origin xyz="${-trailing} 0 0" rpy="${-90.0 * deg_to_rad} 0 0"/>
+      <origin xyz="${-radius / 2} 0 ${-radius + 0.0025}" rpy="${-90.0 * deg_to_rad} 0 0"/>
       <axis xyz="0 0 1"/>
     </joint>
 
