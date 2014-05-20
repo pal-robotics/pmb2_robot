@@ -112,22 +112,22 @@
 
     <!-- IMU -->
     <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
-      <origin xyz="0 0 0.2" rpy="0 0 0"/>
+      <origin xyz="0 0 ${base_length / 2}" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
     <!-- IR receiver -->
     <xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.17131 0.0 0.280" rpy="0.0 0.0 0.0" />
+      <origin xyz="0.17131 0.0 0.180" rpy="0.0 0.0 0.0" />
     </xacro:ir_receiver>
 
     <!-- IR receiver -->
     <xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 0.14919 0.280" rpy="0.0 0.0 0.349" />
+      <origin xyz="0.16919 0.14919 0.180" rpy="0.0 0.0 0.349" />
     </xacro:ir_receiver>
 
     <!-- IR receiver -->
     <xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 -0.14919 0.280" rpy="0.0 0.0 -0.349" />
+      <origin xyz="0.16919 -0.14919 0.180" rpy="0.0 0.0 -0.349" />
     </xacro:ir_receiver>
 
     <!-- Wheels -->
