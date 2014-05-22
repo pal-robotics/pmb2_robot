@@ -56,7 +56,8 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <cylinder radius="${base_radius}" length="${base_length}"/>
+          <!--cylinder radius="${base_radius}" length="${base_length}"/-->
+          <mesh filename="package://ant_description/meshes/base/base.stl" />
           <!--mesh filename="package://ant_description/meshes/base/base.dae" /-->
         </geometry>
         <material name="LightGrey" />
