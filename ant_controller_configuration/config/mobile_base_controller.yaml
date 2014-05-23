@@ -7,8 +7,8 @@ mobile_base_controller:
   twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
 
   # Wheel separation and radius multipliers for ANT
-  wheel_separation_multiplier: 0.985
-  wheel_radius_multiplier: 1.02
+  wheel_separation_multiplier: 1.03
+  wheel_radius_multiplier: 1.00
 
   # Velocity commands timeout [s]
   cmd_vel_timeout: 0.25
