@@ -22,27 +22,27 @@
   <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
-  <property name="wheel_radius"     value="0.08"/>
+  <property name="wheel_radius"     value="0.100"/>
   <property name="wheel_width"      value="0.044"/>
-  <property name="wheel_separation" value="0.444"/>
-  <property name="wheel_torque"     value="50.0"/>
+  <property name="wheel_separation" value="0.43408"/>
+  <property name="wheel_torque"     value="50.0"/><!--@todo try this: 6Nm-->
   <property name="wheel_velocity"   value="1.0"/>
 
   <!-- Caster wheel characteristics -->
   <property name="caster_radius"       value="0.025"/>
-  <property name="caster_width"        value="0.0164"/>
-  <property name="caster_separation_x" value="0.140"/>
-  <property name="caster_separation_y" value="0.200"/>
-  <property name="caster_offset_z"     value="-0.02"/> <!-- ${-base_length / 2} -->
+  <property name="caster_width"        value="0.020"/>
+  <property name="caster_separation_x" value="0.36734"/>
+  <property name="caster_separation_y" value="0.20362"/>
+  <property name="caster_offset_z"     value="-0.04252"/>
 
   <!-- Base characteristics -->
   <property name="base_radius" value="${(wheel_separation - wheel_width)/2 - 0.01}"/>
   <property name="base_length" value="0.04"/>
 
   <!-- Laser characteristics -->
-  <property name="base_laser_x" value="0.15"/>
+  <property name="base_laser_x" value="0.185"/>
   <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="0.083"/>
+  <property name="base_laser_z" value="0.05275"/>
 
   <xacro:macro name="base" params="name">
 
@@ -82,54 +82,55 @@
     </joint>
 
     <!-- Laser -->
-    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-100 * deg_to_rad}" max_angle="${100 * deg_to_rad}" >
+    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-90 * deg_to_rad}" max_angle="${90 * deg_to_rad}" >
       <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
     </xacro:hokuyo_urg_04lx_ug01_laser>
 
     <!-- Sonar -->
-    <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <!--xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="0.18 0.0 0.04" rpy="0.0 ${-10.0 * deg_to_rad} 0.0" />
-    </xacro:range_sensor>
+    </xacro:range_sensor-->
 
     <!-- Sonar -->
-    <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <!--xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="0.15 0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${40.0 * deg_to_rad}" />
-    </xacro:range_sensor>
+    </xacro:range_sensor-->
 
     <!-- Sonar -->
-    <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+    <!--xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
       <origin xyz="0.15 -0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${-40.0 * deg_to_rad}" />
-    </xacro:range_sensor>
+    </xacro:range_sensor-->
 
     <!-- Bumper right -->
-    <xacro:bumper name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+    <!--xacro:bumper name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
       <origin xyz="0.16 -0.12 0.00" rpy="0 0 ${-20.0 * deg_to_rad}" />
-    </xacro:bumper>
+    </xacro:bumper-->
 
     <!-- Bumper left -->
-    <xacro:bumper name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
+    <!--xacro:bumper name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
       <origin xyz="0.16 0.12 0.00" rpy="0 0 ${20.0 * deg_to_rad}" />
-    </xacro:bumper>
+    </xacro:bumper-->
 
     <!-- IMU -->
+    <!-- @todo ant_hardware_gazebo needs an IMU!  -->
     <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
       <origin xyz="0 0 ${base_length / 2}" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
     <!-- IR receiver -->
-    <xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
+    <!--xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
       <origin xyz="0.17131 0.0 0.180" rpy="0.0 0.0 0.0" />
-    </xacro:ir_receiver>
+    </xacro:ir_receiver-->
 
     <!-- IR receiver -->
-    <xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
+    <!--xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
       <origin xyz="0.16919 0.14919 0.180" rpy="0.0 0.0 0.349" />
-    </xacro:ir_receiver>
+    </xacro:ir_receiver-->
 
     <!-- IR receiver -->
-    <xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
+    <!--xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
       <origin xyz="0.16919 -0.14919 0.180" rpy="0.0 0.0 -0.349" />
-    </xacro:ir_receiver>
+    </xacro:ir_receiver-->
 
     <!-- Wheels -->
     <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
