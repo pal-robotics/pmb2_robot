@@ -296,15 +296,23 @@ bool AntHardware::addDummyCasters()
 
   // Add dummy casters
   double* dummy = &dummy_caster_data_;
-  hardware_interface::JointStateHandle caster_left_1("caster_left_1_joint", dummy, dummy, dummy);
-  hardware_interface::JointStateHandle caster_left_2("caster_left_2_joint", dummy, dummy, dummy);
-  hardware_interface::JointStateHandle caster_right_1("caster_right_1_joint", dummy, dummy, dummy);
-  hardware_interface::JointStateHandle caster_right_2("caster_right_2_joint", dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_back_left_1  ("caster_back_left_1_joint"  , dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_back_left_2  ("caster_back_left_2_joint"  , dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_back_right_1 ("caster_back_right_1_joint" , dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_back_right_2 ("caster_back_right_2_joint" , dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_front_left_1 ("caster_front_left_1_joint" , dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_front_left_2 ("caster_front_left_2_joint" , dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_front_right_1("caster_front_right_1_joint", dummy, dummy, dummy);
+  hardware_interface::JointStateHandle caster_front_right_2("caster_front_right_2_joint", dummy, dummy, dummy);
 
-  js_iface->registerHandle(caster_left_1);
-  js_iface->registerHandle(caster_left_2);
-  js_iface->registerHandle(caster_right_1);
-  js_iface->registerHandle(caster_right_2);
+  js_iface->registerHandle(caster_back_left_1);
+  js_iface->registerHandle(caster_back_left_2);
+  js_iface->registerHandle(caster_back_right_1);
+  js_iface->registerHandle(caster_back_right_2);
+  js_iface->registerHandle(caster_front_left_1);
+  js_iface->registerHandle(caster_front_left_2);
+  js_iface->registerHandle(caster_front_right_1);
+  js_iface->registerHandle(caster_front_right_2);
 
   return true;
 }
