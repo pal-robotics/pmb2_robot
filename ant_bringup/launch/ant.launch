@@ -1,6 +1,6 @@
 <launch>
-  <!-- Diff drive controller parameters -->
-  <rosparam command="load" file="$(find ant_controller_configuration)/config/mobile_base_controller.yaml"/>
+  <!-- Diff drive controller multipliers -->
+  <rosparam command="load" file="$(find ant_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
 
   <!-- Robot model -->
   <include file="$(find ant_description)/robots/upload_ant.launch"/>

@@ -1,4 +1,7 @@
 <launch>
+  <!-- Diff drive controller parameters -->
+  <rosparam command="load" file="$(find ant_controller_configuration)/config/mobile_base_controller.yaml"/>
+
   <!-- Load default controllers -->
   <include file="$(find ant_controller_configuration)/launch/default_controllers.launch"/>
 
@@ -21,11 +24,12 @@
 
   <!-- Bumper, IR and Sonar to cloud -->
   <!-- @todo use custom config (requires changes in sensor_to_cloud -->
-  <include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
-    <!--arg name="config" value="$(find ant_bringup)/config/sensor_to_cloud/bumper_to_cloud.yaml"/>
-  </include-->
+  <!-- @todo no bumper, IR or sonar yet -->
+  <!--include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
+    <arg name="config" value="$(find ant_bringup)/config/sensor_to_cloud/bumper_to_cloud.yaml"/>
+  </include>
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
-    <!--arg name="config" value="$(find ant_bringup)/config/sensor_to_cloud/sonar_to_cloud.yaml"/>
+    <arg name="config" value="$(find ant_bringup)/config/sensor_to_cloud/sonar_to_cloud.yaml"/>
   </include-->
 
   <!-- Joystick controller -->
