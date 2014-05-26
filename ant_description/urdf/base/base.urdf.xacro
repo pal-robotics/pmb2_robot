@@ -66,6 +66,7 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <cylinder radius="${base_radius}" length="${base_length}"/>
+          <!-- @todo base_collision.stl still the same as base.stl -->
           <!--mesh filename="package://ant_description/meshes/base/base_collision.stl" /-->
         </geometry>
         <material name="LightGrey" />
