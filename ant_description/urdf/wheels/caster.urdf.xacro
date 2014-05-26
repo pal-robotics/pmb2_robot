@@ -17,8 +17,8 @@
   <xacro:macro name="caster" params="side radius width separation_x separation_y offset_z parent">
     <link name="caster_${side}_1_link">
       <inertial>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="0.1"/>
+        <origin xyz="-0.00653 -0.00008 -0.01177" rpy="0 0 0"/>
+        <mass value="0.09556"/>
         <inertia  ixx="0.012411765597" ixy="-0.000711733678" ixz="0.00050272983"
                   iyy="0.015218160428" iyz="-0.000004273467"
                   izz="0.011763977943"/>
@@ -43,7 +43,7 @@
     <link name="caster_${side}_2_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="0.4"/>
+        <mass value="0.02425"/>
         <inertia  ixx="0.00044" ixy="0" ixz="0" iyy="0.00044" iyz="0" izz="0.00078"/>
         </inertial>
       <visual>
