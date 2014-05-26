@@ -18,7 +18,9 @@
       <inertial>
         <origin xyz="0 0 -0.04225" rpy="0 0 0" />
         <mass value="0.160" />
-        <inertia iyy="4.2412e-05" ixy="4.9927e-08" iyz="-9.8165e-09" ixx="3.7174e-05" ixz="1.1015e-05" izz="4.167e-05" />
+        <inertia ixx="0.00008631543" ixy="-0.00000088815" ixz="-0.00000094079"
+                 iyy="0.00008461544" iyz="0.00000139389"
+                 izz="0.00005947238" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />

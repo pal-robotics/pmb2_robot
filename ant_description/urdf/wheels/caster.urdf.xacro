@@ -19,9 +19,9 @@
       <inertial>
         <origin xyz="-0.00653 -0.00008 -0.01177" rpy="0 0 0"/>
         <mass value="0.09556"/>
-        <inertia  ixx="0.012411765597" ixy="-0.000711733678" ixz="0.00050272983"
-                  iyy="0.015218160428" iyz="-0.000004273467"
-                  izz="0.011763977943"/>
+        <inertia  ixx="0.00002195406" ixy="0.00000000009" ixz="0.00000370909"
+                  iyy="0.00001717745" iyz="-0.00000000032"
+                  izz="0.00002240463"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -44,7 +44,9 @@
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <mass value="0.02425"/>
-        <inertia  ixx="0.00044" ixy="0" ixz="0" iyy="0.00044" iyz="0" izz="0.00078"/>
+        <inertia  ixx="0.00000464376" ixy="0" ixz="0"
+                  iyy="0.00000464377" iyz="0"
+                  izz="0.00000802779"/>
         </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -79,7 +81,7 @@
     <joint name="caster_${side}_2_joint" type="continuous">
       <parent link="caster_${side}_1_link"/>
       <child link="caster_${side}_2_link"/>
-      <origin xyz="-0.017 0.0003 -0.032" rpy="${90.0 * deg_to_rad} 0 0"/>
+      <origin xyz="-0.017 0.0003 -0.032" rpy="${-90.0 * deg_to_rad} 0 0"/>
       <axis xyz="0 0 1"/>
     </joint>
 

@@ -19,7 +19,9 @@
       <inertial>
         <origin xyz="0 0 -0.0016" rpy="0 0 0"/>
         <mass value="3.33926"/>
-        <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        <inertia ixx="0.00668369447" ixy="0.00000007414" ixz="0.00000024433"
+                 iyy="0.00668332554" iyz="-0.00000005662"
+                 izz="0.01088090651"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -47,7 +49,7 @@
     <joint name="wheel_${side}_joint" type="continuous">
       <parent link="${parent}_link"/>
       <child link="wheel_${side}_link"/>
-      <origin xyz="0 ${-separation / 2 * reflect} 0" rpy="${90.0 * deg_to_rad} 0 0"/>
+      <origin xyz="0 ${-separation / 2 * reflect} 0" rpy="${-90.0 * deg_to_rad} 0 0"/>
       <axis xyz="0 0 1"/>
       <limit effort="${torque}" velocity="${velocity / radius}"/>
     </joint>
