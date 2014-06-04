@@ -54,6 +54,7 @@ const string ACT_POS_CUR_PORT        = "act_position";
 const string ACT_VEL_CUR_PORT        = ""; //"act_velocity";
 const string ACT_POS_REF_PORT        = ""; //"ref_position";
 const string ACT_VEL_REF_PORT        = "ref_velocity";
+const string ACT_EFF_REF_PORT        = ""; //"ref_current";
 
 const string EMERGENCY_STOP_PORT     = "emergency_stop_state";
 }
@@ -67,6 +68,7 @@ AntHardware::AntHardware(const string &name)
                ACT_VEL_CUR_PORT,
                ACT_POS_REF_PORT,
                ACT_VEL_REF_PORT,
+               ACT_EFF_REF_PORT,
                "", // No max current command interface
                this)
   , dummy_caster_data_(0.0)
