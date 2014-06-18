@@ -25,7 +25,7 @@
   <property name="wheel_radius"     value="0.100"/>
   <property name="wheel_width"      value="0.044"/>
   <property name="wheel_separation" value="0.43408"/>
-  <property name="wheel_torque"     value="50.0"/><!--@todo try this: 6Nm-->
+  <property name="wheel_torque"     value="6.0"/>
   <property name="wheel_velocity"   value="1.0"/>
 
   <!-- Caster wheel characteristics -->
