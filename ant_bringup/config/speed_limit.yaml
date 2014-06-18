@@ -7,7 +7,7 @@ speed_limit:
       type: laser
       topic: scan
       obstacle_max_dist: 1.5
-      stop_dist: 0.3
+      stop_dist: 0.15
       speed_factor: 0.5
       fixed: true
 
