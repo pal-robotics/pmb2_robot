@@ -19,7 +19,8 @@
 
   <!-- Speed limit -->
   <include file="$(find speed_limit)/launch/speed_limit.launch">
-    <arg name="config" value="$(find ant_bringup)/config/speed_limit.yaml"/>
+    <arg name="config"    value="$(find ant_bringup)/config/speed_limit.yaml"/>
+    <arg name="footprint" value="$(find ant_bringup)/config/footprint.yaml"/>
   </include>
 
   <!-- Bumper, IR and Sonar to cloud -->
