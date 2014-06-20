@@ -62,7 +62,7 @@
           <mesh filename="package://ant_description/meshes/base/base.stl" />
           <!--mesh filename="package://ant_description/meshes/base/base.dae" /-->
         </geometry>
-        <material name="LightGrey" />
+        <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -71,7 +71,7 @@
           <!-- @todo base_collision.stl still the same as base.stl -->
           <!--mesh filename="package://ant_description/meshes/base/base_collision.stl" /-->
         </geometry>
-        <material name="LightGrey" />
+        <material name="DarkGrey" />
       </collision>
     </link>
 
