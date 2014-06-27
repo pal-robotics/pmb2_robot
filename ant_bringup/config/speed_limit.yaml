@@ -7,8 +7,8 @@ speed_limit:
       type: laser
       topic: scan
       obstacle_max_dist: 1.5
-      #stop_dist: 0.05 # to use with the footprint (or radius)
-      stop_dist: 0.3
+      #stop_dist: 0.00   # no padding around the footprint
+      stop_dist: 0.3    # when not using the footprint
       speed_factor: 0.5
       fixed: true
 
