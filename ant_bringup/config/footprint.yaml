@@ -1,3 +1,0 @@
-#@todo speed_limit only supports polygon footprint wrt to the laser frame!
-#@todo it might use a robot_radius instead for circular footprints
-#robot_radius: 0.25
