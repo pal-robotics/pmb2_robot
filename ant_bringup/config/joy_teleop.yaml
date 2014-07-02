@@ -15,7 +15,7 @@ teleop:
 
   joy_priority:
     type: action
-    action_name: joy_priority_action 
+    action_name: joy_priority_action
     buttons: [0]
 
   joy_turbo_decrease:
@@ -27,3 +27,18 @@ teleop:
     type: action
     action_name: joy_turbo_increase
     buttons: [3, 4, 5]
+
+  joy_turbo_angular_decrease:
+    type: action
+    action_name: joy_turbo_angular_decrease
+    buttons: [0, 4, 5]
+
+  joy_turbo_angular_increase:
+    type: action
+    action_name: joy_turbo_angular_increase
+    buttons: [2, 4, 5]
+
+  joy_turbo_reset:
+    type: action
+    action_name: joy_turbo_reset
+    buttons: [4, 5, 7]
