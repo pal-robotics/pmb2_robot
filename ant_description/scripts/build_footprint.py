@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import math
-import numpy
 import yaml
 import argparse
 
