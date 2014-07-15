@@ -42,7 +42,7 @@
   <!-- Laser characteristics -->
   <property name="base_laser_x" value="0.185"/>
   <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="0.05275"/>
+  <property name="base_laser_z" value="0.25"/>
 
   <xacro:macro name="base" params="name">
 
