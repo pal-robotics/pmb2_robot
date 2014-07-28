@@ -1,9 +1,0 @@
-scan_height: 1     # pixels
-scan_time  : 0.033 # 30Hz
-
-# Range [min, max] greater than the actual sensor
-# e.g. Xtion Pro Live is [0.8, 3.5]m
-range_min:  0.45  # m
-range_max: 10.0   # m
-
-output_frame_id: base_xtion_link
