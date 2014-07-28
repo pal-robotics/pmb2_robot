@@ -1,9 +1,13 @@
 <launch>
+  <arg name="robot" default="full"/>
+
   <!-- Diff drive controller multipliers -->
   <rosparam command="load" file="$(find ant_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
 
   <!-- Robot model -->
-  <include file="$(find ant_description)/robots/upload_ant.launch"/>
+  <include file="$(find ant_description)/robots/upload_ant.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
 
   <!-- Bring up robot -->
   <include file="$(find ant_bringup)/launch/ant_bringup.launch"/>
