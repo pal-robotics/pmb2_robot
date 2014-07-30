@@ -16,7 +16,6 @@
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster.urdf.xacro"/>
 
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
@@ -40,15 +39,10 @@
   <property name="base_radius" value="${(wheel_separation - wheel_width)/2 - 0.01}"/>
   <property name="base_length" value="0.04"/>
 
-  <!-- Laser characteristics -->
-  <property name="base_laser_x" value="0.185"/>
-  <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="0.05275"/>
-
   <!-- RGBD characteristics -->
   <property name="base_rgbd_x" value="0.185"/>
   <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.23"/>
+  <property name="base_rgbd_z" value="0.05275"/>
 
   <xacro:macro name="base" params="name">
 
@@ -89,11 +83,6 @@
       <child link="${name}_link" />
       <parent link="${name}_footprint"/>
     </joint>
-
-    <!-- Laser -->
-    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-90 * deg_to_rad}" max_angle="${90 * deg_to_rad}" >
-      <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
-    </xacro:hokuyo_urg_04lx_ug01_laser>
 
     <!-- RGBD -->
     <xacro:xtion_pro_live name="${name}_xtion" parent="${name}">
