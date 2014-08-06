@@ -50,11 +50,14 @@ using std::string;
 
 namespace
 {
-const string ACT_POS_CUR_PORT        = "act_position";
-const string ACT_VEL_CUR_PORT        = ""; //"act_velocity";
-const string ACT_POS_REF_PORT        = ""; //"ref_position";
-const string ACT_VEL_REF_PORT        = "ref_velocity";
-const string ACT_EFF_REF_PORT        = ""; //"ref_current";
+
+pal_ros_control::ActuatorAccesor::PortNames actuatorPortNames()
+{
+  pal_ros_control::ActuatorAccesor::PortNames names;
+  names.position     = "act_position";
+  names.velocity_cmd = "ref_velocity";
+  return names;
+}
 
 const string EMERGENCY_STOP_PORT     = "emergency_stop_state";
 }
@@ -64,13 +67,7 @@ namespace ant_hardware
 
 AntHardware::AntHardware(const string &name)
   : RTT::TaskContext(name, PreOperational)
-  , actuators_(ACT_POS_CUR_PORT,
-               ACT_VEL_CUR_PORT,
-               ACT_POS_REF_PORT,
-               ACT_VEL_REF_PORT,
-               ACT_EFF_REF_PORT,
-               "", // No max current command interface
-               this)
+  , actuators_(actuatorPortNames(), this)
   , dummy_caster_data_(0.0)
   , e_stop_(EMERGENCY_STOP_PORT,
             this)
