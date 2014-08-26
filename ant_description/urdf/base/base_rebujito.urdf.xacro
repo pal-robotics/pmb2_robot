@@ -30,15 +30,14 @@
   <property name="wheel_velocity"   value="1.0"/>
 
   <!-- Caster wheel characteristics -->
-  <property name="caster_separation" value="0.200"/>
   <property name="caster_radius"     value="0.025"/>
   <property name="caster_width"      value="0.0164"/>
-  <property name="caster_trailing"   value="0.038"/>
-  <property name="caster_offset_x"   value="0.140"/>
+  <property name="caster_separation" value="0.35764"/>
+  <property name="caster_offset_z"   value="-0.028"/>
 
   <property name="base_radius" value="${(wheel_separation - wheel_width)/2 - 0.01}"/>
-  <property name="base_length" value="0.04"/>
-  <property name="base_offset_z" value="${base_length + 0.031}"/>
+  <!-- @todo once the mesh has the laser whole, we can reduce this base_offset_z -->
+  <property name="base_offset_z" value="0.2"/>
 
   <!-- simplified box collision geometry for the laser -->
   <property name="base_laser_x" value="0.15"/>
@@ -124,32 +123,13 @@
       <origin xyz="0 0 0.1" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
-    <!-- IR receiver -->
-    <xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.17131 0.0 0.280" rpy="0.0 0.0 0.0" />
-    </xacro:ir_receiver>
-
-    <!-- IR receiver -->
-    <xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 0.14919 0.280" rpy="0.0 0.0 0.349" />
-    </xacro:ir_receiver>
-
-    <!-- IR receiver -->
-    <xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 -0.14919 0.280" rpy="0.0 0.0 -0.349" />
-    </xacro:ir_receiver>
-
     <!-- Wheels -->
     <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
     <xacro:wheel side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
 
     <!-- Casters wheels -->
-    <xacro:caster side="front_right" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
-    <xacro:caster side="front_left"  radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${caster_offset_x}" parent="${name}"/>
-
-    <xacro:caster side="back_right" radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
-    <xacro:caster side="back_left"  radius="${caster_radius}" width="${caster_width}" separation="${caster_separation}" trailing="${caster_trailing}" offset_x="${-caster_offset_x}" parent="${name}"/>
-
+    <xacro:caster side="front" radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation}" separation_y="0" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="back"  radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation}" separation_y="0" offset_z="${caster_offset_z}" parent="${name}"/>
   </xacro:macro>
 
 </robot>
