@@ -17,7 +17,7 @@
 
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/softkinetic_ds311_rgbd_camera.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
