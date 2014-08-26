@@ -11,7 +11,7 @@
     </asset>
     <library_images>
         <image id="texture0" name="texture0">
-            <init_from>xtion_pro_live.png</init_from>
+            <init_from>softkinetic.png</init_from>
         </image>
     </library_images>
     <library_materials>
