@@ -11,7 +11,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/openni.gazebo.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/sensors/softkinetic_ds311_rgbd_camera.gazebo.xacro" />
 
   <!-- Macro -->
   <xacro:macro name="softkinetic_ds311_rgbd_camera" params="name parent *origin *calibration_origin">
@@ -22,16 +22,16 @@
     </joint>
     <link name="${name}_link">
       <inertial>
-        <mass value="0.01" />
+        <mass value="0.01"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
                  iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
+                 izz="0.0"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://ant_description/meshes/sensors/softkinetic/softkinetic.dae" />
+          <mesh filename="package://ant_description/meshes/sensors/softkinetic/softkinetic.dae"/>
         </geometry>
         <material name="Grey">
           <color rgba="0.5 0.5 0.5 1"/>
@@ -46,23 +46,23 @@
     </link>
 
     <joint name="${name}_optical_joint" type="fixed">
-      <insert_block name="calibration_origin" />
+      <insert_block name="calibration_origin"/>
       <parent link="${name}_link"/>
       <child link="${name}_optical_frame"/>
     </joint>
 
     <link name="${name}_optical_frame">
       <inertial>
-        <mass value="0.01" />
+        <mass value="0.01"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
                  iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
+                 izz="0.0"/>
       </inertial>
     </link>
 
     <!-- extensions -->
-    <xacro:openni_camera_gazebo_v0 name="${name}" />
+    <xacro:softkinetic_ds311_rgbd_camera_gazebo name="${name}"/>
 
   </xacro:macro>
 
