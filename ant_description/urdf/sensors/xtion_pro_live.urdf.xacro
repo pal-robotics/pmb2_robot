@@ -24,7 +24,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/openni.gazebo.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/sensors/xtion_pro_live.gazebo.xacro" />
 
   <!-- Macro -->
   <xacro:macro name="xtion_pro_live" params="name parent *origin *calibration_origin">
