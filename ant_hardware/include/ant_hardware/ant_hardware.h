@@ -79,11 +79,11 @@ protected:
 
 private:
   // Actuators manager interface
-  pal_ros_control::ActuatorAccesor actuators_;
+  pal_ros_control::ActuatorAccessor actuators_;
   double dummy_caster_data_; // Dummy raw caster data
 
   // Emergency stop
-  pal_ros_control::EmergencyStopAccesor e_stop_;
+  pal_ros_control::EmergencyStopAccessor e_stop_;
 
   // Time management
   RTT::os::TimeService::ticks last_ticks_;

@@ -51,9 +51,9 @@ using std::string;
 namespace
 {
 
-pal_ros_control::ActuatorAccesor::PortNames actuatorPortNames()
+pal_ros_control::ActuatorAccessor::PortNames actuatorPortNames()
 {
-  pal_ros_control::ActuatorAccesor::PortNames names;
+  pal_ros_control::ActuatorAccessor::PortNames names;
   names.position     = "act_position";
   names.velocity_cmd = "ref_velocity";
   return names;
