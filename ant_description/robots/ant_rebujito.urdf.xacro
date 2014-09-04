@@ -17,6 +17,7 @@
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
   <xacro:include filename="$(find ant_description)/urdf/base/base_rebujito.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/antennas/antennas.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find ant_description)/gazebo/gazebo.urdf.xacro" />
@@ -25,5 +26,7 @@
 
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base name="base"/>
+  <xacro:antenna name="antenna" parent="base_link" side="left"  reflect=" 1.0" />
+  <xacro:antenna name="antenna" parent="base_link" side="right" reflect="-1.0" />
 </robot>
 
