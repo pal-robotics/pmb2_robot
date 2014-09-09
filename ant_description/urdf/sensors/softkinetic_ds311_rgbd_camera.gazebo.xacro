@@ -23,15 +23,15 @@
         <always_on>true</always_on>
         <update_rate>10.0</update_rate>
         <camera>
-          <horizontal_fov>${58.0 * deg_to_rad}</horizontal_fov>
+          <horizontal_fov>${57.3 * deg_to_rad}</horizontal_fov>
           <image>
             <format>R8G8B8</format>
-            <width>640</width>
-            <height>480</height>
+            <width>160</width>
+            <height>120</height>
           </image>
           <clip>
             <near>0.1</near>
-            <far>100.0</far>
+            <far>4.0</far>
           </clip>
         </camera>
         <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
@@ -44,7 +44,8 @@
           <depthImageCameraInfoTopicName>depth_registered/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>depth_registered/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
-          <pointCloudCutoff>0.8</pointCloudCutoff>
+          <pointCloudCutoff>0.0</pointCloudCutoff>
+          <rangeMax>4.0</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
@@ -58,7 +59,7 @@
         <always_on>true</always_on>
         <update_rate>10.0</update_rate>
         <camera>
-          <horizontal_fov>${58.0 * deg_to_rad}</horizontal_fov>
+          <horizontal_fov>${50.0 * deg_to_rad}</horizontal_fov>
           <image>
             <format>R8G8B8</format>
             <width>640</width>
@@ -66,7 +67,7 @@
           </image>
           <clip>
             <near>0.1</near>
-            <far>100.0</far>
+            <far>4.0</far>
           </clip>
         </camera>
         <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
@@ -77,7 +78,8 @@
           <cameraInfoTopicName>rgb_data/camera_info</cameraInfoTopicName>
           <pointCloudTopicName>rgbd_data/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
-          <pointCloudCutoff>0.8</pointCloudCutoff>
+          <pointCloudCutoff>0.0</pointCloudCutoff>
+          <rangeMax>4.0</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>

@@ -14,7 +14,7 @@
   <xacro:include filename="$(find ant_description)/urdf/sensors/softkinetic_ds311_rgbd_camera.gazebo.xacro" />
 
   <!-- Macro -->
-  <xacro:macro name="softkinetic_ds311_rgbd_camera" params="name parent *origin *calibration_origin">
+  <xacro:macro name="softkinetic_ds311_rgbd_camera" params="name parent *origin *optical_origin">
     <joint name="${name}_frame_joint" type="fixed">
       <insert_block name="origin" />
       <parent link="${parent}_link"/>
@@ -46,7 +46,7 @@
     </link>
 
     <joint name="${name}_optical_joint" type="fixed">
-      <insert_block name="calibration_origin"/>
+      <insert_block name="optical_origin"/>
       <parent link="${name}_link"/>
       <child link="${name}_optical_frame"/>
     </joint>
