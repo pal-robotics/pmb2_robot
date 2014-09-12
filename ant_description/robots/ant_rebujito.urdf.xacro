@@ -17,23 +17,13 @@
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
   <xacro:include filename="$(find ant_description)/urdf/base/base_rebujito.urdf.xacro" />
-  <xacro:include filename="$(find ant_description)/urdf/antennas/antenna_array.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find ant_description)/gazebo/gazebo.urdf.xacro" />
   <!-- Materials for visualization -->
   <xacro:include filename="$(find ant_description)/urdf/materials.urdf.xacro" />
 
-  <!-- Properties -->
-  <xacro:property name="separation_y" value="0.48"/>
-
-  <xacro:property name="height_0"   value="0.2"/>
-  <xacro:property name="height_inc" value="0.35"/>
-
   <!-- Now we can start using the macros included above to define the actual robot -->
   <xacro:base name="base"/>
-
-  <xacro:antenna_array name="antenna" parent="base_link" side="left"  reflect=" 1.0" separation_y="${separation_y}" height_0="${height_0}" height_inc="${height_inc}" />
-  <xacro:antenna_array name="antenna" parent="base_link" side="right" reflect="-1.0" separation_y="${separation_y}" height_0="${height_0}" height_inc="${height_inc}" />
 </robot>
 
