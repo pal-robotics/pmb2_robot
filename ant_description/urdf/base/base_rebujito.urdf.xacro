@@ -37,7 +37,8 @@
   <property name="caster_offset_z"   value="-0.028"/>
 
   <!-- Antennas characteristics -->
-  <property name="antenna_separation_y" value="${wheel_separation + wheel_width}"/>
+  <!-- @todo ${wheel_separation + wheel_width} fails -->
+  <property name="antenna_separation_y" value="0.48"/>
   <property name="antenna_height_0"     value="0.2"/>
   <property name="antenna_height_inc"   value="0.35"/>
 
