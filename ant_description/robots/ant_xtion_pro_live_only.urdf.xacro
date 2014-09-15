@@ -16,7 +16,7 @@
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
-  <xacro:include filename="$(find ant_description)/urdf/base/base_rgbd_only.urdf.xacro" />
+  <xacro:include filename="$(find ant_description)/urdf/base/base_xtion_pro_live_only.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find ant_description)/gazebo/gazebo.urdf.xacro" />
