@@ -46,9 +46,39 @@
   <property name="base_laser_z" value="0.05275"/>
 
   <!-- RGBD characteristics -->
+  <!-- Setups: see :https://docs.google.com/a/pal-robotics.com/presentation/d/1AfR5_-aYmT7fTs_w-cQlUHA08lY2gSzhnPvTg2bpwMU/edit#slide=id.g36ad429de_037 -->
+  <!-- Setup #1: Similar to page #4 -->
+  <!--
   <property name="base_rgbd_x" value="0.185"/>
   <property name="base_rgbd_y" value="0.0"/>
   <property name="base_rgbd_z" value="0.23"/>
+  <property name="base_rgbd_r" value="0.0"/>
+  <property name="base_rgbd_p" value="0.0"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  -->
+  <!-- Setup #2: Similar to page #8 -->
+  <property name="base_rgbd_x" value="0.045"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <property name="base_rgbd_z" value="0.87"/>
+  <property name="base_rgbd_r" value="0.0"/>
+  <property name="base_rgbd_p" value="0.0"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <!-- Setup #3: Similar to page #8 -->
+  <property name="base_rgbd_x" value="0.045"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <property name="base_rgbd_z" value="0.87"/>
+  <property name="base_rgbd_r" value="0.0"/>
+  <property name="base_rgbd_p" value="30.0"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <!-- Setup #4: Similar to page #12 -->
+  <!--
+  <property name="base_rgbd_x" value="0.045"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <property name="base_rgbd_z" value="0.87"/>
+  <property name="base_rgbd_r" value="0.0"/>
+  <property name="base_rgbd_p" value="0.0"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  -->
 
   <xacro:macro name="base" params="name">
 
@@ -98,7 +128,7 @@
     <!-- RGBD -->
     <xacro:softkinetic_ds311_rgbd_camera name="${name}_rgbd_camera" parent="${name}">
       <!-- Pose of sensor frame wrt to base -->
-      <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="0 0 0"/>
+      <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="${base_rgbd_r * deg_to_rad} ${base_rgbd_p * deg_to_rad} ${base_rgbd_y * deg_to_rad}"/>
       <!-- Pose of optical frame wrt to sensor -->
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
     </xacro:softkinetic_ds311_rgbd_camera>
