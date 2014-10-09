@@ -57,20 +57,6 @@
   <property name="base_rgbd_y" value="0.0"/>
   -->
   <!-- Setup #2: Similar to page #8 -->
-  <property name="base_rgbd_x" value="0.045"/>
-  <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.87"/>
-  <property name="base_rgbd_r" value="0.0"/>
-  <property name="base_rgbd_p" value="0.0"/>
-  <property name="base_rgbd_y" value="0.0"/>
-  <!-- Setup #3: Similar to page #8 -->
-  <property name="base_rgbd_x" value="0.045"/>
-  <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.87"/>
-  <property name="base_rgbd_r" value="0.0"/>
-  <property name="base_rgbd_p" value="30.0"/>
-  <property name="base_rgbd_y" value="0.0"/>
-  <!-- Setup #4: Similar to page #12 -->
   <!--
   <property name="base_rgbd_x" value="0.045"/>
   <property name="base_rgbd_y" value="0.0"/>
@@ -79,6 +65,22 @@
   <property name="base_rgbd_p" value="0.0"/>
   <property name="base_rgbd_y" value="0.0"/>
   -->
+  <!-- Setup #3: Similar to page #8 -->
+  <!--
+  <property name="base_rgbd_x" value="0.045"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <property name="base_rgbd_z" value="0.87"/>
+  <property name="base_rgbd_r" value="0.0"/>
+  <property name="base_rgbd_p" value="30.0"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  -->
+  <!-- Setup #4: Similar to page #12 -->
+  <property name="base_rgbd_x" value="0.045"/>
+  <property name="base_rgbd_y" value="0.0"/>
+  <property name="base_rgbd_z" value="1.05"/>
+  <property name="base_rgbd_r" value="90.0"/>
+  <property name="base_rgbd_p" value="0.0"/>
+  <property name="base_rgbd_y" value="0.0"/>
 
   <xacro:macro name="base" params="name">
 
