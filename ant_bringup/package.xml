@@ -16,6 +16,7 @@
   <run_depend>sensor_to_cloud</run_depend>
   <run_depend>speed_limit</run_depend>
   <run_depend>twist_mux</run_depend>
+  <run_depend>joy</run_depend>
   <run_depend>joy_teleop</run_depend>
 
 </package>
