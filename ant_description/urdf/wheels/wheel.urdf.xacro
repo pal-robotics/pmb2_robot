@@ -17,10 +17,10 @@
   <xacro:macro name="wheel" params="side reflect radius width torque velocity separation parent">
     <link name="wheel_${side}_link">
       <inertial>
-        <origin xyz="0 0 -0.0016" rpy="0 0 0"/>
+        <origin xyz="0 0 ${-0.0016 * reflect}" rpy="0 0 0"/>
         <mass value="3.33926"/>
-        <inertia ixx="0.00668369447" ixy="0.00000007414" ixz="0.00000024433"
-                 iyy="0.00668332554" iyz="-0.00000005662"
+        <inertia ixx="0.00668369447" ixy="${ 0.00000007414 * reflect}" ixz="0.00000024433"
+                 iyy="0.00668332554" iyz="${-0.00000005662 * reflect}"
                  izz="0.01088090651"/>
       </inertial>
       <visual>
