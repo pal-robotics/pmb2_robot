@@ -26,7 +26,6 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <!--box size="${radius} ${1.2 * width} ${radius}"/-->
           <mesh filename="package://ant_description/meshes/wheels/caster.stl"/>
         </geometry>
         <material name="Grey"/>
@@ -34,7 +33,6 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <!--box size="${radius} ${1.2 * width} ${radius}"/-->
           <mesh filename="package://ant_description/meshes/wheels/caster.stl"/>
         </geometry>
       </collision>

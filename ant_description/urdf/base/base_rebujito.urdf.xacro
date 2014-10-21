@@ -63,16 +63,13 @@
       <visual>
         <origin xyz="0 0 ${base_offset_z}" rpy="0 0 0" />
         <geometry>
-          <!--cylinder radius="${base_radius}" length="${base_length}"/-->
           <mesh filename="package://ant_description/meshes/base/rebujito.stl" />
-          <!--mesh filename="package://ant_description/meshes/base/rebujito.dae" /-->
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 ${base_offset_z}" rpy="0 0 0" />
         <geometry>
-          <!--cylinder radius="${base_radius}" length="${base_length}"/-->
           <mesh filename="package://ant_description/meshes/base/rebujito_collision.stl" />
         </geometry>
         <material name="LightGrey" />
