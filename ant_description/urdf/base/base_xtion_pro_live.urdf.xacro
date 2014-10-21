@@ -96,7 +96,7 @@
     </xacro:hokuyo_urg_04lx_ug01_laser>
 
     <!-- RGBD -->
-    <xacro:xtion_pro_live name="${name}_xtion" parent="${name}">
+    <xacro:xtion_pro_live name="${name}_rgbd_camera" parent="${name}">
       <!-- Pose of sensor frame wrt to base -->
       <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="0 0 0"/>
       <!-- Pose of optical frame wrt to sensor -->
