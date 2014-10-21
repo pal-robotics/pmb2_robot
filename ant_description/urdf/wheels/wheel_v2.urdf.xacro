@@ -35,14 +35,6 @@
         <geometry>
           <cylinder radius="${radius}" length="${width}"/>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu> 0.01</mu>
-              <mu2>0.01</mu2>
-            </ode>
-          </friction>
-        </surface>
       </collision>
     </link>
 
