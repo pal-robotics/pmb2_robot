@@ -35,10 +35,6 @@
   <property name="caster_separation_y" value="0.20168"/>
   <property name="caster_offset_z"     value="-0.0335"/>
 
-  <!-- Base characteristics -->
-  <property name="base_radius" value="${(wheel_separation + wheel_width)/2}"/>
-  <property name="base_length" value="0.235"/>
-
   <!-- Laser characteristics -->
   <property name="base_laser_x" value="0.185"/>
   <property name="base_laser_y" value="0.0"/>
@@ -66,7 +62,6 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://ant_description/meshes/base/base_v2.stl" />
-          <!--cylinder radius="${base_radius}" length="${base_length}"/-->
         </geometry>
         <material name="DarkGrey" />
       </collision>
@@ -114,7 +109,7 @@
     <!-- IMU -->
     <!-- @todo ant_hardware_gazebo needs an IMU!  -->
     <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
-      <origin xyz="0 0 ${base_length / 2}" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
     <!-- IR receiver -->
