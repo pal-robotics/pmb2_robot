@@ -24,9 +24,9 @@
                  izz="0.00839239692"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="${-90.0 * (1 - reflect) * deg_to_rad} 0 0"/>
         <geometry>
-          <cylinder radius="${radius}" length="${width}"/>
+          <mesh filename="package://ant_description/meshes/wheels/wheel_v2.stl"/>
         </geometry>
         <material name="LightGrey"/>
       </visual>
