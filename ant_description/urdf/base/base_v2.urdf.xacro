@@ -61,7 +61,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/base/base_v2.stl" />
+          <mesh filename="package://ant_description/meshes/base/base_v2_collision.stl" />
         </geometry>
         <material name="DarkGrey" />
       </collision>
@@ -77,7 +77,8 @@
     </joint>
 
     <!-- Laser -->
-    <xacro:sick_tim511_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+    <!-- Theoretic FOV = 220º -->
+    <xacro:sick_tim511_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-108 * deg_to_rad}" max_angle="${108 * deg_to_rad}" >
       <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
     </xacro:sick_tim511_laser>
 
