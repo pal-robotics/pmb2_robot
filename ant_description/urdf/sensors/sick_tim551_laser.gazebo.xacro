@@ -8,12 +8,12 @@
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 
-  Laser configuration according with the SICK TiM 511 product specification:
+  Laser configuration according with the SICK TiM 551 product specification:
   http://www.sick.com/group/DE/home/pr/events/robot_day/Documents/TIM551-2050001_en.pdf
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="sick_tim511_laser_gazebo" params="name ros_topic update_rate min_angle max_angle">
+  <xacro:macro name="sick_tim551_laser_gazebo" params="name ros_topic update_rate min_angle max_angle">
     <gazebo reference="${name}_link">
       <sensor type="ray" name="${name}">
         <pose>0 0 0 0 0 0</pose>
