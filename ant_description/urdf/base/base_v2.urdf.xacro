@@ -16,7 +16,7 @@
   <xacro:include filename="$(find ant_description)/urdf/wheels/caster_v2.urdf.xacro"/>
 
   <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/sick_tim511_laser.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
@@ -78,9 +78,9 @@
 
     <!-- Laser -->
     <!-- Theoretic FOV = 220º -->
-    <xacro:sick_tim511_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+    <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
       <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
-    </xacro:sick_tim511_laser>
+    </xacro:sick_tim551_laser>
 
     <!-- Sonar -->
     <!--xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
