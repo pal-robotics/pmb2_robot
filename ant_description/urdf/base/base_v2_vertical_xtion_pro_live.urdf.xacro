@@ -45,7 +45,7 @@
   <property name="base_rgbd_x" value="0.05"/>
   <property name="base_rgbd_y" value="0.0"/>
   <property name="base_rgbd_z" value="0.6"/>
-  <property name="base_rgbd_r" value="90.0"/> <!-- 90 -->
+  <property name="base_rgbd_r" value="90.0"/>
   <property name="base_rgbd_p" value="30.0"/>
   <property name="base_rgbd_y" value="0.0"/>
 
