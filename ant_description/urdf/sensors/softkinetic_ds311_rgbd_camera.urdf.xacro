@@ -15,8 +15,11 @@
 
   <!-- Macro -->
   <xacro:macro name="softkinetic_ds311_rgbd_camera" params="name parent *origin *optical_origin">
-    <joint name="${name}_frame_joint" type="fixed">
-      <insert_block name="origin" />
+
+    <joint name="${name}_frame_joint" type="revolute">
+      <insert_block name="origin"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="0" upper="0.001" effort="100" velocity="0.01"/>
       <parent link="${parent}_link"/>
       <child link="${name}_link"/>
     </joint>
