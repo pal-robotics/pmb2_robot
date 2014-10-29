@@ -39,7 +39,7 @@
           <updateRate>30.0</updateRate>
           <cameraName>${name}</cameraName>
           <imageTopicName>ir/image_raw</imageTopicName>
-          <cameraInfoTopicName>/ir/camera_info</cameraInfoTopicName>
+          <cameraInfoTopicName>ir/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image_raw</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>depth/points</pointCloudTopicName>
@@ -74,8 +74,8 @@
           <updateRate>30.0</updateRate>
           <cameraName>${name}</cameraName>
           <imageTopicName>rgb/image_raw</imageTopicName>
-          <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
           <distortionK1>0.00000001</distortionK1>

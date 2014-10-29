@@ -37,6 +37,7 @@
       <parent link="${parent}_link"/>
       <child link="${name}_link"/>
     </joint>
+
     <link name="${name}_link">
       <inertial>
         <mass value="0.01" />
