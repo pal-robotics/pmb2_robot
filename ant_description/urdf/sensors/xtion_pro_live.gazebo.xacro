@@ -45,6 +45,7 @@
           <pointCloudTopicName>depth/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
+          <rangeMax>3.5</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
@@ -78,6 +79,7 @@
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
+          <rangeMax>3.5</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
