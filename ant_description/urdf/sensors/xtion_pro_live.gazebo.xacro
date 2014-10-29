@@ -16,8 +16,9 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="openni_camera_gazebo_v0" params="name">
+  <xacro:macro name="xtion_pro_live_rgbd_camera_gazebo" params="name">
     <gazebo reference="${name}_link">
+      <!-- IR + depth -->
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>
@@ -51,6 +52,8 @@
           <distortionT2>0.00000001</distortionT2>
         </plugin>
       </sensor>
+
+      <!-- RGB -->
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>

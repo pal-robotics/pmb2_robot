@@ -80,7 +80,7 @@
     </link>
 
     <!-- extensions -->
-    <xacro:openni_camera_gazebo_v0 name="${name}" />
+    <xacro:xtion_pro_live_rgbd_camera_gazebo name="${name}" />
 
   </xacro:macro>
 
