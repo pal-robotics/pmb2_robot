@@ -16,8 +16,9 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:macro name="openni_camera_gazebo_v0" params="name">
+  <xacro:macro name="xtion_pro_live_rgbd_camera_gazebo" params="name">
     <gazebo reference="${name}_link">
+      <!-- IR + depth -->
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>
@@ -38,12 +39,13 @@
           <updateRate>30.0</updateRate>
           <cameraName>${name}</cameraName>
           <imageTopicName>ir/image_raw</imageTopicName>
-          <cameraInfoTopicName>/ir/camera_info</cameraInfoTopicName>
+          <cameraInfoTopicName>ir/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image_raw</depthImageTopicName>
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>depth/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
+          <rangeMax>3.5</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
@@ -51,6 +53,8 @@
           <distortionT2>0.00000001</distortionT2>
         </plugin>
       </sensor>
+
+      <!-- RGB -->
       <sensor type="depth" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>30.0</update_rate>
@@ -71,10 +75,11 @@
           <updateRate>30.0</updateRate>
           <cameraName>${name}</cameraName>
           <imageTopicName>rgb/image_raw</imageTopicName>
-          <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+          <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
           <pointCloudCutoff>0.5</pointCloudCutoff>
+          <rangeMax>3.5</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
