@@ -69,6 +69,7 @@ AntHardware::AntHardware(const string &name)
   : RTT::TaskContext(name, PreOperational)
   , actuators_(actuatorPortNames(), this)
   , dummy_caster_data_(0.0)
+  , dummy_rgbd_sensor_data_(0.0)
   , e_stop_(EMERGENCY_STOP_PORT,
             this)
   , do_stop_(false)
@@ -114,6 +115,9 @@ bool AntHardware::configureHook()
 
   // Add dummy caster joints to robot hardware abstraction
   if (!addDummyCasters()) {return false;}
+
+  // Add dummy RGBD sensor joints to robot hardware abstraction
+  if (!addDummyRGBDSensors()) {return false;}
 
   // Reset controller manager
   controller_manager_.reset(new controller_manager::ControllerManager(robot_hw_.get(), cm_nh));
@@ -312,6 +316,30 @@ bool AntHardware::addDummyCasters()
   js_iface->registerHandle(caster_front_left_2);
   js_iface->registerHandle(caster_front_right_1);
   js_iface->registerHandle(caster_front_right_2);
+
+  return true;
+}
+
+bool AntHardware::addDummyRGBDSensors()
+{
+  // Preconditions
+  if (!robot_hw_)
+  {
+    ROS_ERROR("Robot hardware abstraction not yet initialized. Not adding dummy RGBD sensors.");
+    return false;
+  }
+  hardware_interface::JointStateInterface* js_iface = robot_hw_->get<hardware_interface::JointStateInterface>();
+  if (!js_iface)
+  {
+    ROS_ERROR("Robot hardware abstraction does not have a JointStates interface!. Not adding dummy RGBD sensors.");
+    return false;
+  }
+
+  // Add dummy RGBD sensors
+  double* dummy = &dummy_rgbd_sensor_data_;
+  hardware_interface::JointStateHandle base_rgbd_camera_link("base_rgbd_camera_joint", dummy, dummy, dummy);
+
+  js_iface->registerHandle(base_rgbd_camera_link);
 
   return true;
 }
