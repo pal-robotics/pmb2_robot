@@ -81,6 +81,7 @@ private:
   // Actuators manager interface
   pal_ros_control::ActuatorAccessor actuators_;
   double dummy_caster_data_; // Dummy raw caster data
+  double dummy_rgbd_sensor_data_; // Dummy raw RGBD sensor data
 
   // Emergency stop
   pal_ros_control::EmergencyStopAccessor e_stop_;
@@ -127,6 +128,13 @@ private:
    * reasons (otherwise things like tf and the RobotModel Rviz plugin can't update the frame locations).
    */
   bool addDummyCasters();
+
+  /**
+   * \brief Add dummy RGBD sensor joints to robot hardware abstraction.
+   * RGBD sensor joints don't have sensors, so we set them to zero and make them show up in joint_states mostly for cosmetic
+   * reasons (otherwise things like tf and the RobotModel Rviz plugin can't update the frame locations).
+   */
+  bool addDummyRGBDSensors();
 
   /**
    * \brief Method called at every control step for getting up-to-date time variables.
