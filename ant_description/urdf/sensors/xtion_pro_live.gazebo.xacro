@@ -12,7 +12,10 @@
    * Publishes MONO8 format "depth" image & PointCloud
    * Publishes RGB8 format color image & 2nd copy of PointCloud (for registered)
 
-  Sensor parameters are from PR2 description.  
+  Configuration according with:
+  http://www.asus.com/Multimedia/Xtion_PRO_LIVE/specifications/
+  and ant_laser_sensors/launch/xtion_pro_live.launch, with long range [0.45, 10.0]m
+  instead of [0.8, 3.5]m.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
@@ -30,8 +33,8 @@
             <height>240</height>
           </image>
           <clip>
-            <near>0.8</near>
-            <far>3.5</far>
+            <near>0.45</near>
+            <far>10.0</far>
           </clip>
         </camera>
         <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
@@ -44,8 +47,8 @@
           <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
           <pointCloudTopicName>depth/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
-          <pointCloudCutoff>0.5</pointCloudCutoff>
-          <rangeMax>3.5</rangeMax>
+          <pointCloudCutoff>0.45</pointCloudCutoff>
+          <rangeMax>10.0</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
@@ -66,8 +69,8 @@
             <height>240</height>
           </image>
           <clip>
-            <near>0.8</near>
-            <far>3.5</far>
+            <near>0.45</near>
+            <far>10.0</far>
           </clip>
         </camera>
         <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
@@ -78,8 +81,8 @@
           <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
           <pointCloudTopicName>rgb/points</pointCloudTopicName>
           <frameName>${name}_optical_frame</frameName>
-          <pointCloudCutoff>0.5</pointCloudCutoff>
-          <rangeMax>3.5</rangeMax>
+          <pointCloudCutoff>0.45</pointCloudCutoff>
+          <rangeMax>10.0</rangeMax>
           <distortionK1>0.00000001</distortionK1>
           <distortionK2>0.00000001</distortionK2>
           <distortionK3>0.00000001</distortionK3>
