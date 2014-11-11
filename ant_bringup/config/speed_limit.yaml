@@ -6,24 +6,27 @@ speed_limit:
     base_laser:
       type: laser
       topic: scan
+      disabled: false
       obstacle_max_dist: 1.5
       stop_dist: 0.0   # no padding around the footprint
       #stop_dist: 0.3    # when not using the footprint
       speed_factor: 0.5
       fixed: true
 
-#    rgbd_laser:
-#      type: laser
-#      topic: rgbd_scan
-#      obstacle_max_dist: 1.5
-#      stop_dist: 0.3   # padding around the footprint, because of the RGBD sensor blanking
-#      #stop_dist: 0.6    # when not using the footprint
-#      speed_factor: 0.5
-#      fixed: true
+    rgbd_laser:
+      type: laser
+      topic: rgbd_scan
+      disabled: true
+      obstacle_max_dist: 1.5
+      stop_dist: 0.3   # padding around the footprint, because of the RGBD sensor blanking
+      #stop_dist: 0.6    # when not using the footprint
+      speed_factor: 0.5
+      fixed: true
 
 #    base_sonars:
 #      type: range
 #      topic: sonar_base
+#      disabled: true
 #      obstacle_max_dist: 0.6
 #      stop_dist: 0.1
 #      speed_factor: 0.3
@@ -34,6 +37,7 @@ speed_limit:
 #    base_irs:
 #      type: range
 #      topic: ir_base
+#      disabled: true
 #      obstacle_max_dist: 1.0
 #      stop_dist: 0.2
 #      speed_factor: 0.5
@@ -44,6 +48,7 @@ speed_limit:
 #    base_bumpers:
 #      type: bumper
 #      topic: bumper_base
+#      disabled: true
 #      obstacle_max_dist: 1.0
 #      stop_dist: 1.0
 #      speed_factor: 1.0
