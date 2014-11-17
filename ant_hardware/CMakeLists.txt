@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(ant_hardware)
 
 find_package(catkin REQUIRED COMPONENTS roscpp
+    roscpp
     controller_manager
     pal_ros_control
     realtime_tools
@@ -14,6 +15,7 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ant_hardware
   CATKIN_DEPENDS
+    roscpp
     controller_manager
     pal_ros_control
     realtime_tools

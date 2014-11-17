@@ -11,12 +11,14 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <build_depend>roscpp</build_depend>
   <build_depend>controller_manager</build_depend>
   <build_depend>pal_ros_control</build_depend>
   <build_depend>realtime_tools</build_depend>
   <build_depend>rtt</build_depend>
   <build_depend>std_srvs</build_depend>
 
+  <run_depend>roscpp</run_depend>
   <run_depend>controller_manager</run_depend>
   <run_depend>pal_ros_control</run_depend>
   <run_depend>realtime_tools</run_depend>
