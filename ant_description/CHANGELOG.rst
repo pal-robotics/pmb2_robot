@@ -2,8 +2,8 @@
 Changelog for package ant_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2014-11-17)
+------------------
 * sets range for long range [0.45, 10.0]m
 * sets QVGA@6Hz like in the real sensor
 * adds xtion pro live for base v2

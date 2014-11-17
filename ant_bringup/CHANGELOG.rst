@@ -2,8 +2,8 @@
 Changelog for package ant_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2014-11-17)
+------------------
 * uses disabled param
 * adds rgbd_scan with 0.5m of blanking
   Note that because of the large blanking it's disabled

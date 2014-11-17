@@ -2,8 +2,8 @@
 Changelog for package ant_hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.1 (2014-11-17)
+------------------
 * adds dummy rgbd sensors
   this is needed because the base_rgbd_camera_link is revolute,
   which is needed to have a correct gazebo simulation when pitch != 0.0
