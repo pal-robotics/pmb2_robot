@@ -2,8 +2,8 @@
 Changelog for package ant_hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.3 (2014-11-21)
+------------------
 * Add pal-xenomai dependency
 * Contributors: Enrique Fernandez
 
