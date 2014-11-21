@@ -2,8 +2,8 @@
 Changelog for package ant_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2014-11-21)
+------------------
 * Update rgbd camera extrinsic calibration
 * refs #10350 : fixes base_rgbd_y collision (y, yaw)
   also sets the yaw to 7.1º (current value on the real robot)

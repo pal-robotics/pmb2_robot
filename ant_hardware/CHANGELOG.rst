@@ -2,8 +2,8 @@
 Changelog for package ant_hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2014-11-21)
+------------------
 * Don't install headers (same reason as library)
 * Don't export library
   NOTE this is a workaround because the xenomai target makes the library

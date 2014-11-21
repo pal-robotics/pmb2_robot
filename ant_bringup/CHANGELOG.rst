@@ -2,8 +2,8 @@
 Changelog for package ant_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2014-11-21)
+------------------
 * Use robot_state_publisher
 * Contributors: Enrique Fernandez
 
