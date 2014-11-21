@@ -2,6 +2,11 @@
 Changelog for package ant_hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Build against xenomai target
+* Contributors: Enrique Fernandez
+
 0.9.1 (2014-11-17)
 ------------------
 * adds dummy rgbd sensors

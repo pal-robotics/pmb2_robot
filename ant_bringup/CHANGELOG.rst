@@ -2,6 +2,11 @@
 Changelog for package ant_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use robot_state_publisher
+* Contributors: Enrique Fernandez
+
 0.9.1 (2014-11-17)
 ------------------
 * uses disabled param
