@@ -23,7 +23,6 @@ find_package(orocos-rtt)
 include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake)
 
 catkin_package(
-  LIBRARIES ${PROJECT_NAME}
   CATKIN_DEPENDS
     controller_manager
     pal_ros_control
