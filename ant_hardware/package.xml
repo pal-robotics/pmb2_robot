@@ -18,11 +18,13 @@
   <build_depend>realtime_tools</build_depend>
   <build_depend>rtt</build_depend>
   <build_depend>std_srvs</build_depend>
+  <build_depend>pal-xenomai-dev</build_depend>
 
   <run_depend>controller_manager</run_depend>
   <run_depend>pal_ros_control</run_depend>
   <run_depend>realtime_tools</run_depend>
   <run_depend>rtt</run_depend>
   <run_depend>std_srvs</run_depend>
+  <run_depend>pal-xenomai</run_depend>
 
 </package>
