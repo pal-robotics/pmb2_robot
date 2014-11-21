@@ -2,6 +2,11 @@
 Changelog for package ant_hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add pal-xenomai dependency
+* Contributors: Enrique Fernandez
+
 0.9.2 (2014-11-21)
 ------------------
 * Don't install headers (same reason as library)
