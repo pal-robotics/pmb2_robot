@@ -136,8 +136,8 @@
     <xacro:caster side="back"  radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation}" separation_y="0" offset_z="${caster_offset_z}" parent="${name}"/>
 
     <!-- Antennas -->
-    <xacro:antenna_array name="antenna" parent="base_link" side="left"  reflect=" 1.0" separation_y="${antenna_separation_y}" height_0="${antenna_height_0}" height_inc="${antenna_height_inc}" />
-    <xacro:antenna_array name="antenna" parent="base_link" side="right" reflect="-1.0" separation_y="${antenna_separation_y}" height_0="${antenna_height_0}" height_inc="${antenna_height_inc}" />
+    <xacro:antenna_array_6 name="antenna" parent="base_link" side="left"  reflect=" 1.0" separation_y="${antenna_separation_y}" height_0="${antenna_height_0}" height_inc="${antenna_height_inc}" />
+    <xacro:antenna_array_6 name="antenna" parent="base_link" side="right" reflect="-1.0" separation_y="${antenna_separation_y}" height_0="${antenna_height_0}" height_inc="${antenna_height_inc}" />
 
   </xacro:macro>
 

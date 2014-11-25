@@ -49,6 +49,12 @@
   <property name="base_rgbd_P" value="30.0"/>
   <property name="base_rgbd_Y" value="8.0"/>
 
+  <!-- Antennas characteristics -->
+  <!-- @todo ${wheel_separation + wheel_width} fails -->
+  <property name="antenna_separation_y" value="0.2"/>
+  <property name="antenna_height_0"     value="0.5"/>
+  <property name="antenna_height_inc"   value="0.45"/>
+
   <xacro:macro name="base" params="name">
 
     <!-- Base -->
@@ -155,6 +161,10 @@
 
     <xacro:caster side="back_right"  radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${ caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
     <xacro:caster side="back_left"   radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${-caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+
+    <!-- Antennas -->
+    <xacro:antenna_array_4 name="antenna" parent="base_link" side="left"  reflect=" 1.0" separation_y="${antenna_separation_y}" height_0="${antenna_height_0}" height_inc="${antenna_height_inc}" />
+    <xacro:antenna_array_4 name="antenna" parent="base_link" side="right" reflect="-1.0" separation_y="${antenna_separation_y}" height_0="${antenna_height_0}" height_inc="${antenna_height_inc}" />
 
   </xacro:macro>
 
