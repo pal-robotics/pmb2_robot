@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>ant_robot</name>
-  <version>0.9.3</version>
+  <version>0.9.4</version>
   <description>ANT robot description and launch files</description>
   <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
   <license>BSD</license>

@@ -2,8 +2,8 @@
 Changelog for package ant_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.4 (2014-11-25)
+------------------
 * Add antenna_array include to base_v2_vertical_xtion_pro_live
 * Divide antenna_array into 4 and 6 antenna variants, add antenna to ant
 * Set ground_truth odometry wrt base_footprint

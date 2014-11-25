@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>ant_bringup</name>
-  <version>0.9.3</version>
+  <version>0.9.4</version>
   <description>Launch files and scripts needed to bring up the ROS nodes of a ANT robot.</description>
   <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
   <license>Modified BSD</license>
