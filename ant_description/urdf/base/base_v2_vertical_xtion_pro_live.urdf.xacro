@@ -21,6 +21,7 @@
   <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
   <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
+  <xacro:include filename="$(find ant_description)/urdf/antennas/antenna_array.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
