@@ -13,11 +13,15 @@
   <!--File includes-->
   <xacro:include filename="$(find ant_description)/urdf/antennas/antenna.urdf.xacro" />
 
-  <xacro:macro name="antenna_array" params="name parent side reflect separation_y height_0 height_inc">
+  <xacro:macro name="antenna_array_4" params="name parent side reflect separation_y height_0 height_inc">
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="1" separation_y="${separation_y}" height="${height_0}" />
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="2" separation_y="${separation_y}" height="${height_0 +     height_inc}"  />
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="3" separation_y="${separation_y}" height="${height_0 + 2 * height_inc}" />
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="4" separation_y="${separation_y}" height="${height_0 + 3 * height_inc}" />
+  </xacro:macro>
+
+  <xacro:macro name="antenna_array_6" params="name parent side reflect separation_y height_0 height_inc">
+      <xacro:antenna_array_4 name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" separation_y="${separation_y}" height_0="${height_0}" height_inc="${height_inc}" />
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="5" separation_y="${separation_y}" height="${height_0 + 4 * height_inc}"/>
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="6" separation_y="${separation_y}" height="${height_0 + 5 * height_inc}" />
   </xacro:macro>
