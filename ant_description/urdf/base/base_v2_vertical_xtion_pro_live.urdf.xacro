@@ -45,10 +45,10 @@
   <!-- RGBD characteristics -->
   <property name="base_rgbd_x" value="0.17"/>
   <property name="base_rgbd_y" value="-0.09"/>
-  <property name="base_rgbd_z" value="1.08511"/>
-  <property name="base_rgbd_R" value="-91.0553"/>
-  <property name="base_rgbd_P" value="26.0637"/>
-  <property name="base_rgbd_Y" value="-7.0"/>
+  <property name="base_rgbd_z" value="1.0739"/>
+  <property name="base_rgbd_R" value="-92.1448"/>
+  <property name="base_rgbd_P" value="25.7426"/>
+  <property name="base_rgbd_Y" value="-3.46311"/>
 
   <!-- Antennas characteristics -->
   <!-- @todo ${wheel_separation + wheel_width} fails -->
