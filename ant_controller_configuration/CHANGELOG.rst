@@ -2,6 +2,9 @@
 Changelog for package ant_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.4 (2014-11-25)
 ------------------
 

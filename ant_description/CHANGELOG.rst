@@ -2,6 +2,12 @@
 Changelog for package ant_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* upload new calibration parameters
+* updates xtion calibration with final setup
+* Contributors: Jordi Pages, Enrique Fernandez
+
 0.9.4 (2014-11-25)
 ------------------
 * Add antenna_array include to base_v2_vertical_xtion_pro_live
