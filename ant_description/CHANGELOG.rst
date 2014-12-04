@@ -2,8 +2,8 @@
 Changelog for package ant_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.5 (2014-12-04)
+------------------
 * upload new calibration parameters
 * updates xtion calibration with final setup
 * Contributors: Jordi Pages, Enrique Fernandez

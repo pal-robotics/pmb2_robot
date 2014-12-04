@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>ant_hardware</name>
-  <version>0.9.4</version>
+  <version>0.9.5</version>
   <description>ROS control plugin for ANT</description>
 
   <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
