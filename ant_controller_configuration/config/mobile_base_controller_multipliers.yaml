@@ -1,4 +1,4 @@
 mobile_base_controller:
   # Wheel separation and radius multipliers for ANT
-  wheel_separation_multiplier: 1.018
+  wheel_separation_multiplier: 1.037
   wheel_radius_multiplier    : 0.960
