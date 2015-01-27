@@ -2,6 +2,9 @@
 Changelog for package ant_hardware_tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.9.5 (2014-12-04)
 ------------------
 

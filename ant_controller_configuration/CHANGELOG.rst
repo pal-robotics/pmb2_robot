@@ -2,6 +2,20 @@
 Changelog for package ant_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add preserve turning radius and jerk limit params
+  Note jerk limits are disabled to avoid any kind of oscillation they
+  might produce
+* Set less aggressive acceleration limits
+  With the previous values, with large accelerations (specially when
+  starting to move from 0) the odometry wasn't good enough; that could
+  be related with the rolling mean done in the diff_drive_controller
+* Re-calibrate odometry
+  Note that with acceleration there are problems, probably because of the
+  mean filter in the diff_drive_controller
+* Contributors: Enrique Fernandez
+
 0.9.5 (2014-12-04)
 ------------------
 

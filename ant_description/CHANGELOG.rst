@@ -2,6 +2,12 @@
 Changelog for package ant_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added a missing file for actually being able to launch the robot
+* Added version of the URDF with current configuration with the Xtion horizontal at 1m height and 22.5 deg inclination downwards to fix the issue with the laser not matching with the depth data
+* Contributors: Sammy Pfeiffer, Enrique Fernandez
+
 0.9.5 (2014-12-04)
 ------------------
 * upload new calibration parameters
