@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>ant_controller_configuration</name>
-  <version>0.9.5</version>
+  <version>0.9.6</version>
   <description>Launch files and scripts needed to configure
     the controllers of the ANT robot.</description>
   <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>

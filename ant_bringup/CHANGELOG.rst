@@ -2,8 +2,8 @@
 Changelog for package ant_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.6 (2015-01-27)
+------------------
 * Add marker and phone topics
 * Contributors: Enrique Fernandez
 

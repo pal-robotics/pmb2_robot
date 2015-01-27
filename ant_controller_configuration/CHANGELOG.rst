@@ -2,8 +2,8 @@
 Changelog for package ant_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.6 (2015-01-27)
+------------------
 * Add preserve turning radius and jerk limit params
   Note jerk limits are disabled to avoid any kind of oscillation they
   might produce
