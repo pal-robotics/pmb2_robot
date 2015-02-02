@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.7 (2015-02-02)
+------------------
 * Update URDF (only locations)
 * Replace ant -> pmb2
 * Rename files
