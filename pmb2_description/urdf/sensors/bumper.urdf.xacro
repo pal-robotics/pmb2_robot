@@ -10,7 +10,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.gazebo.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.gazebo.xacro" />
 
   <xacro:macro name="bumper" params="name parent ros_topic update_rate *origin">
      <joint name="${name}_joint" type="fixed">

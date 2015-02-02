@@ -11,7 +11,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/softkinetic_ds311_rgbd_camera.gazebo.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/softkinetic_ds311_rgbd_camera.gazebo.xacro" />
 
   <!-- Macro -->
   <xacro:macro name="softkinetic_ds311_rgbd_camera" params="name parent *origin *optical_origin">
@@ -34,7 +34,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://ant_description/meshes/sensors/softkinetic/softkinetic.dae"/>
+          <mesh filename="package://pmb2_description/meshes/sensors/softkinetic/softkinetic.dae"/>
         </geometry>
         <material name="Grey">
           <color rgba="0.5 0.5 0.5 1"/>

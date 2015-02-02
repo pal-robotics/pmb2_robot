@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package>
-  <name>ant_bringup</name>
+  <name>pmb2_bringup</name>
   <version>0.9.6</version>
-  <description>Launch files and scripts needed to bring up the ROS nodes of a ANT robot.</description>
+  <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.</description>
   <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
   <license>Modified BSD</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>ant_controller_configuration</run_depend>
-  <run_depend>ant_description</run_depend>
+  <run_depend>pmb2_controller_configuration</run_depend>
+  <run_depend>pmb2_description</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>tf_lookup</run_depend>
 <!--  <run_depend>sensor_to_cloud</run_depend> -->

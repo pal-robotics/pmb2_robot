@@ -11,8 +11,8 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.transmission.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.gazebo.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.transmission.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.gazebo.xacro"/>
 
   <xacro:macro name="wheel" params="side reflect radius width torque velocity separation parent">
     <link name="wheel_${side}_link">

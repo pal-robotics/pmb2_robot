@@ -11,7 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/ir_emitter.gazebo.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_emitter.gazebo.xacro" />
 
   <xacro:macro name="ir_emitter" params="name parent *origin code range_min range_max fov">
     <link name="${name}_link">

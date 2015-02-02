@@ -1,5 +1,5 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package ant_description
+Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.9.6 (2015-01-27)
@@ -17,7 +17,7 @@ Changelog for package ant_description
 0.9.4 (2014-11-25)
 ------------------
 * Add antenna_array include to base_v2_vertical_xtion_pro_live
-* Divide antenna_array into 4 and 6 antenna variants, add antenna to ant
+* Divide antenna_array into 4 and 6 antenna variants, add antenna to pmb2
 * Set ground_truth odometry wrt base_footprint
 * Contributors: Víctor López, enriquefernandez
 
@@ -84,7 +84,7 @@ Changelog for package ant_description
 * adds antennas and move them inside base
 * adds softkinetic with hfov (rotated)
 * updates antenna urdf files (more modular)
-  They will be also used for the ant with softkinetic
+  They will be also used for the pmb2 with softkinetic
 * adds antennas to Rebujito (Stockbot)
 * adds rgb part (needs 2 'sensor' items) and increases far clip
 * fixes sensor orientation (rotate 90 around z)

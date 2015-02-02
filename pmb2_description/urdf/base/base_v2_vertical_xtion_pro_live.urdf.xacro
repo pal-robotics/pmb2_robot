@@ -10,18 +10,18 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
 
-  <xacro:include filename="$(find ant_description)/urdf/wheels/wheel_v2.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/wheels/caster_v2.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel_v2.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster_v2.urdf.xacro"/>
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/antennas/antenna_array.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/antennas/antenna_array.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
@@ -70,14 +70,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/base/base_v2.stl" />
+          <mesh filename="package://pmb2_description/meshes/base/base_v2.stl" />
         </geometry>
         <material name="DarkGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/base/base_v2_collision.stl" />
+          <mesh filename="package://pmb2_description/meshes/base/base_v2_collision.stl" />
         </geometry>
         <material name="DarkGrey" />
       </collision>
@@ -132,7 +132,7 @@
     </xacro:bumper-->
 
     <!-- IMU -->
-    <!-- @todo ant_hardware_gazebo needs an IMU!  -->
+    <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
     <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:imu_sensor>

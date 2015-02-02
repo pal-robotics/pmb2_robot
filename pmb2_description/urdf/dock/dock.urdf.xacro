@@ -10,9 +10,9 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/ir_emitter.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_emitter.urdf.xacro"/>
 
   <xacro:macro name="dock" params="name">
 
@@ -26,15 +26,15 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/dock/dock.stl" />
-          <!--mesh filename="package://ant_description/meshes/dock/dock.dae" /-->
+          <mesh filename="package://pmb2_description/meshes/dock/dock.stl" />
+          <!--mesh filename="package://pmb2_description/meshes/dock/dock.dae" /-->
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/dock/dock_collision.stl" />
+          <mesh filename="package://pmb2_description/meshes/dock/dock_collision.stl" />
         </geometry>
         <material name="LightGrey" />
       </collision>

@@ -1,6 +1,6 @@
 speed_limit:
   reporters:
-    ant_web:
+    pmb2_web:
       type: reem_topic
   limiters:
     base_laser:

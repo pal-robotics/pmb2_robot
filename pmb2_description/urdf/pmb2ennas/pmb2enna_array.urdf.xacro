@@ -11,7 +11,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find ant_description)/urdf/antennas/antenna.urdf.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/antennas/antenna.urdf.xacro" />
 
   <xacro:macro name="antenna_array_4" params="name parent side reflect separation_y height_0 height_inc">
       <xacro:antenna name="${name}" parent="${parent}" side="${side}" reflect="${reflect}" num="1" separation_y="${separation_y}" height="${height_0}" />

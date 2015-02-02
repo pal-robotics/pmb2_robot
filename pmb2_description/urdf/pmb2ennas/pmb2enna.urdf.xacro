@@ -11,7 +11,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro" />
 
   <xacro:macro name="antenna" params="name parent side reflect num separation_y height">
     <joint name="${name}_${side}_${num}_link" type="fixed">

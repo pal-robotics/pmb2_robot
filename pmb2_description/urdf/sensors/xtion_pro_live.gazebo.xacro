@@ -14,7 +14,7 @@
 
   Configuration according with:
   http://www.asus.com/Multimedia/Xtion_PRO_LIVE/specifications/
-  and ant_laser_sensors/launch/xtion_pro_live.launch, with long range [0.45, 10.0]m
+  and pmb2_laser_sensors/launch/xtion_pro_live.launch, with long range [0.45, 10.0]m
   instead of [0.8, 3.5]m.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">

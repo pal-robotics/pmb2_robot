@@ -10,16 +10,16 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/deg_to_rad.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
 
-  <xacro:include filename="$(find ant_description)/urdf/wheels/wheel.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/wheels/caster.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.urdf.xacro"/>
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/range.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/imu.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/bumper.urdf.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.100"/>
@@ -58,7 +58,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/base/base.stl" />
+          <mesh filename="package://pmb2_description/meshes/base/base.stl" />
         </geometry>
         <material name="DarkGrey" />
       </visual>
@@ -114,7 +114,7 @@
     </xacro:bumper-->
 
     <!-- IMU -->
-    <!-- @todo ant_hardware_gazebo needs an IMU!  -->
+    <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
     <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
       <origin xyz="0 0 ${base_length / 2}" rpy="0 0 0"/>
     </xacro:imu_sensor>

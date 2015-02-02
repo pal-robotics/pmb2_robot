@@ -11,8 +11,8 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/wheels/caster.transmission.xacro"/>
-  <xacro:include filename="$(find ant_description)/urdf/wheels/caster.gazebo.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.transmission.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.gazebo.xacro"/>
 
   <xacro:macro name="caster" params="side radius width separation_x separation_y offset_z parent">
     <link name="caster_${side}_1_link">
@@ -26,14 +26,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://ant_description/meshes/wheels/caster.stl"/>
+          <mesh filename="package://pmb2_description/meshes/wheels/caster.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://ant_description/meshes/wheels/caster.stl"/>
+          <mesh filename="package://pmb2_description/meshes/wheels/caster.stl"/>
         </geometry>
       </collision>
     </link>

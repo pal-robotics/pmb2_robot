@@ -11,7 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/range.gazebo.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.gazebo.xacro" />
 
   <xacro:macro name="range_sensor" params="name parent *origin ros_topic update_rate maxRange minRange fov radiation">
     <link name="${name}_link">

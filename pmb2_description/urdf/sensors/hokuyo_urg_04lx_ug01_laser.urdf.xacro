@@ -10,7 +10,7 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.gazebo.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.gazebo.xacro" />
 
   <xacro:macro name="hokuyo_urg_04lx_ug01_laser" params="name parent *origin ros_topic update_rate min_angle max_angle">
 
@@ -25,7 +25,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://ant_description/meshes/sensors/hokuyo_urg_04lx_ug01.stl"/>
+          <mesh filename="package://pmb2_description/meshes/sensors/hokuyo_urg_04lx_ug01.stl"/>
         </geometry>
         <material name="DarkGrey" />
       </visual>

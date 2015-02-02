@@ -11,7 +11,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find ant_description)/urdf/sensors/ir_receiver.gazebo.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_receiver.gazebo.xacro" />
 
   <xacro:macro name="ir_receiver" params="name parent *origin ros_topic update_rate range_min range_max fov">
     <link name="${name}_link">

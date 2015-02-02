@@ -1,5 +1,5 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package ant_robot
+Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.9.6 (2015-01-27)
@@ -16,5 +16,5 @@ Changelog for package ant_robot
 
 0.9.1 (2014-11-17)
 ------------------
-* refs #8173 : ant_robot metapackage done
+* refs #8173 : pmb2_robot metapackage done
 * Contributors: Enrique Fernandez
