@@ -1,6 +1,0 @@
-<launch>
-  <arg name="dock" default="full"/>
-
-  <!-- Dock description -->
-  <param name="dock_description" command="$(find xacro)/xacro.py '$(find pmb2_description)/robots/dock_$(arg dock).urdf.xacro'" />
-</launch>
