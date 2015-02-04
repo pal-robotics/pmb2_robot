@@ -12,8 +12,8 @@
 
   <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
 
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel_v2.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster_v2.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
@@ -42,9 +42,9 @@
   <property name="base_laser_z" value="0.04"/>
 
   <!-- RGBD characteristics -->
-  <property name="base_rgbd_x" value="0.202"/>
+  <property name="base_rgbd_x" value="0.2148"/>
   <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.0925"/>
+  <property name="base_rgbd_z" value="0.078"/>
   <property name="base_rgbd_R" value="0.0"/>
   <property name="base_rgbd_P" value="0.0"/>
   <property name="base_rgbd_Y" value="0.0"/>
@@ -54,11 +54,11 @@
     <!-- Base -->
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.00144 0.00003 0.06711" rpy="0 0 0" />
-        <mass value="24.73813" />
-        <inertia ixx="0.50215676906" ixy="0.00014630224" ixz="-0.00851406322"
-                 iyy="0.41873574615" iyz="0.00001868612"
-                 izz="0.64067017495" />
+        <origin xyz="-0.00207000000 -0.00057000000 0.04683000000" rpy="0 0 0"/>
+        <mass value="17.38183000000"/>
+        <inertia ixx="0.38959485090" ixy="0.00018406948" ixz="0.00655155749"
+                 iyy="0.33743896167" iyz="0.00005724656"
+                 izz="0.45143616112"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -100,19 +100,29 @@
     </xacro:xtion_pro_live>
 
     <!-- Sonar -->
-    <!--xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.18 0.0 0.04" rpy="0.0 ${-10.0 * deg_to_rad} 0.0" />
-    </xacro:range_sensor-->
+    <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="2.00" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.17571000000 0.17571000000 0.10150000000" rpy="0.0 0.0 ${135.0 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
     <!-- Sonar -->
-    <!--xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.15 0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${40.0 * deg_to_rad}" />
-    </xacro:range_sensor-->
+    <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="2.00" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.22958000000 0.09510000000 0.10150000000" rpy="0.0 0.0 ${157.5 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
     <!-- Sonar -->
-    <!--xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.15 -0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${-40.0 * deg_to_rad}" />
-    </xacro:range_sensor-->
+    <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="2.00" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.24850000000 0.00000000000 0.10150000000" rpy="0.0 0.0 ${180.0 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <!-- Sonar -->
+    <xacro:range_sensor name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="2.00" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.22958000000 -0.09510000000 0.10150000000" rpy="0.0 0.0 ${202.5 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <!-- Sonar -->
+    <xacro:range_sensor name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="2.00" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.17571000000 -0.17571000000 0.10150000000" rpy="0.0 0.0 ${225.0 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
     <!-- Bumper right -->
     <!--xacro:bumper name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
@@ -129,21 +139,6 @@
     <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:imu_sensor>
-
-    <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.17131 0.0 0.180" rpy="0.0 0.0 0.0" />
-    </xacro:ir_receiver-->
-
-    <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 0.14919 0.180" rpy="0.0 0.0 0.349" />
-    </xacro:ir_receiver-->
-
-    <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 -0.14919 0.180" rpy="0.0 0.0 -0.349" />
-    </xacro:ir_receiver-->
 
     <!-- Wheels -->
     <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
