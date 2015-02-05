@@ -66,6 +66,9 @@ def convert(filename):
 
             # URDF link
             print '''
+            <!-- Joint %s : %s -> %s -->
+            ''' % (joint, child_link, parent_link)
+            print '''
             <link name="%s">
               <inertial>
                 <origin xyz="%0.11f %0.11f %0.11f" rpy="%0.11f %0.11f %0.11f"/>
