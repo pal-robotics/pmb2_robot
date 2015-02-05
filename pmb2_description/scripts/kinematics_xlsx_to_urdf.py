@@ -38,6 +38,9 @@ def convert(filename):
             # Type
             joint_type = str(sheet.cell(row=row, column=JOINT_TYPE_COLUMN).value)
 
+            # Comment
+            comment = str(sheet.cell(row=row, column=COMMENT_COLUMN).value)
+
             # Mass
             mass = 1e-3 * float(sheet.cell(row=row, column=MASS_COLUMN).value)
 
@@ -66,8 +69,8 @@ def convert(filename):
 
             # URDF link
             print '''
-            <!-- Joint %s : %s -> %s -->
-            ''' % (joint, child_link, parent_link)
+            <!-- Joint %s (%s) : %s -> %s -->
+            ''' % (joint, comment, child_link, parent_link)
             print '''
             <link name="%s">
               <inertial>

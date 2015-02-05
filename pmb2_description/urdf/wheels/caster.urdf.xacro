@@ -14,7 +14,7 @@
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.transmission.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.gazebo.xacro"/>
 
-  <xacro:macro name="caster" params="side radius width separation_x separation_y offset_z parent">
+  <xacro:macro name="caster" params="side radius width separation_x separation_y offset_x offset_y offset_z parent">
     <link name="caster_${side}_1_link">
       <inertial>
         <origin xyz="-0.01108 0.00003 -0.030" rpy="0 0 0"/>
@@ -72,7 +72,7 @@
     <joint name="caster_${side}_1_joint" type="continuous">
       <parent link="${parent}_link"/>
       <child link="caster_${side}_1_link"/>
-      <origin xyz="${separation_x / 2} ${-separation_y / 2} ${offset_z}" rpy="0 0 0"/>
+      <origin xyz="${offset_x + separation_x / 2} ${offset_y - separation_y / 2} ${offset_z}" rpy="0 0 0"/>
       <axis xyz="0 0 1"/>
     </joint>
 
