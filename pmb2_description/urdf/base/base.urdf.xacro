@@ -20,7 +20,6 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
