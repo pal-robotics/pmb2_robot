@@ -28,7 +28,7 @@
         <geometry>
           <mesh filename="package://pmb2_description/meshes/wheels/wheel.stl"/>
         </geometry>
-        <material name="LightGrey"/>
+        <material name="DarkGrey"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>

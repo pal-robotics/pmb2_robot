@@ -10,7 +10,7 @@ mobile_base_controller:
   cmd_vel_timeout: 0.25
 
   # Base frame_id
-  base_frame_id: base_footprint_link
+  base_frame_id: base_footprint
 
   # Preserve turning radius when limiting speed/acceleration/jerk
   preserve_turning_radius: true
