@@ -25,7 +25,7 @@
         <geometry>
           <mesh filename="package://pmb2_description/meshes/objects/battery_atp_2.stl"/>
         </geometry>
-        <material name="LightGrey"/>
+        <material name="DarkGrey"/>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
