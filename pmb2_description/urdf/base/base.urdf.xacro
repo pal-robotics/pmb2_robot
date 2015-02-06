@@ -142,7 +142,7 @@
 
     <!-- IMU -->
     <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
-    <xacro:imu_sensor name="base_inclinometer" parent="${name}_link" update_rate="100.0">
+    <xacro:imu_sensor name="${name}_inclinometer" parent="${name}_link" update_rate="100.0">
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
