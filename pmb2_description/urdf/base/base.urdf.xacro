@@ -12,15 +12,20 @@
 
   <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
 
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel_v2.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster_v2.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_receiver.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
+
+  <xacro:include filename="$(find pmb2_description)/urdf/objects/battery_tlh_2.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/objects/charger.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/objects/cover.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/objects/rear_cover_ultrasound.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
@@ -32,19 +37,21 @@
   <!-- Caster wheel characteristics -->
   <property name="caster_radius"       value="0.025"/>
   <property name="caster_width"        value="0.015"/>
-  <property name="caster_separation_x" value="0.36384"/>
+  <property name="caster_separation_x" value="0.350"/>
   <property name="caster_separation_y" value="0.20000"/>
+  <property name="caster_offset_x"     value="-0.002"/>
+  <property name="caster_offset_y"     value="0.0"/>
   <property name="caster_offset_z"     value="-0.0335"/>
 
   <!-- Laser characteristics -->
   <property name="base_laser_x" value="0.202"/>
   <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="0.04"/>
+  <property name="base_laser_z" value="-0.004"/>
 
   <!-- RGBD characteristics -->
-  <property name="base_rgbd_x" value="0.202"/>
+  <property name="base_rgbd_x" value="0.2223"/>
   <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.0925"/>
+  <property name="base_rgbd_z" value="0.099"/>
   <property name="base_rgbd_R" value="0.0"/>
   <property name="base_rgbd_P" value="0.0"/>
   <property name="base_rgbd_Y" value="0.0"/>
@@ -54,11 +61,11 @@
     <!-- Base -->
     <link name="${name}_link">
       <inertial>
-        <origin xyz="0.00144 0.00003 0.06711" rpy="0 0 0" />
-        <mass value="24.73813" />
-        <inertia ixx="0.50215676906" ixy="0.00014630224" ixz="-0.00851406322"
-                 iyy="0.41873574615" iyz="0.00001868612"
-                 izz="0.64067017495" />
+        <origin xyz="-0.00393000000 -0.00057000000 0.04788000000" rpy="0 0 0"/>
+        <mass value="17.22815000000"/>
+        <inertia ixx="0.38502800825" ixy="0.00017569597" ixz="0.00983980386"
+                 iyy="0.32897158338" iyz="-0.00013935331"
+                 izz="0.44188721859"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -85,6 +92,18 @@
       <parent link="${name}_footprint"/>
     </joint>
 
+    <!-- Battery -->
+    <xacro:battery name="${name}_battery" parent="${name}_footprint"/>
+
+    <!-- Charger -->
+    <xacro:charger name="${name}_charger" parent="${name}_footprint"/>
+
+    <!-- Cover -->
+    <xacro:cover name="${name}_cover" parent="${name}_footprint"/>
+
+    <!-- Rear cover -->
+    <xacro:rear_cover name="${name}_rear_cover" parent="${name}_footprint"/>
+
     <!-- Laser -->
     <!-- Theoretic FOV = 220º -->
     <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
@@ -99,30 +118,48 @@
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
     </xacro:xtion_pro_live>
 
-    <!-- Sonar -->
-    <!--xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.18 0.0 0.04" rpy="0.0 ${-10.0 * deg_to_rad} 0.0" />
-    </xacro:range_sensor-->
+    <!-- Sonars -->
+    <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
+      <origin xyz="-0.17571000000 0.17571000000 0.10150000000" rpy="0.0 0.0 ${135.0 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
-    <!-- Sonar -->
-    <!--xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.15 0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${40.0 * deg_to_rad}" />
-    </xacro:range_sensor-->
+    <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
+      <origin xyz="-0.22958000000 0.09510000000 0.10150000000" rpy="0.0 0.0 ${157.5 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
-    <!-- Sonar -->
-    <!--xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
-      <origin xyz="0.15 -0.1 0.04" rpy="0.0 ${-10.0 * deg_to_rad} ${-40.0 * deg_to_rad}" />
-    </xacro:range_sensor-->
+    <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
+      <origin xyz="-0.24850000000 0.00000000000 0.10150000000" rpy="0.0 0.0 ${180.0 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
-    <!-- Bumper right -->
-    <!--xacro:bumper name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="0.16 -0.12 0.00" rpy="0 0 ${-20.0 * deg_to_rad}" />
-    </xacro:bumper-->
+    <xacro:range_sensor name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
+      <origin xyz="-0.22958000000 -0.09510000000 0.10150000000" rpy="0.0 0.0 ${202.5 * deg_to_rad}"/>
+    </xacro:range_sensor>
 
-    <!-- Bumper left -->
-    <!--xacro:bumper name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="0.16 0.12 0.00" rpy="0 0 ${20.0 * deg_to_rad}" />
-    </xacro:bumper-->
+    <xacro:range_sensor name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
+      <origin xyz="-0.17571000000 -0.17571000000 0.10150000000" rpy="0.0 0.0 ${225.0 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <!-- Bumpers -->
+    <xacro:bumper name="${name}_bumper" parent="${name}" ros_topic="bumper_base" update_rate="10">
+      <origin xyz="0.257 0.00 -0.0645" rpy="0 0 0"/>
+    </xacro:bumper>
+
+    <!-- Microphones -->
+    <xacro:microphone name="${name}_mic_front_left" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_front_right" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_back_left" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_back_right" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
 
     <!-- IMU -->
     <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
@@ -130,31 +167,16 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
-    <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_01" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.17131 0.0 0.180" rpy="0.0 0.0 0.0" />
-    </xacro:ir_receiver-->
-
-    <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_02" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 0.14919 0.180" rpy="0.0 0.0 0.349" />
-    </xacro:ir_receiver-->
-
-    <!-- IR receiver -->
-    <!--xacro:ir_receiver name="${name}_ir_receiver_03" parent="${name}" ros_topic="ir_receiver_base" update_rate="10" range_min="0.0" range_max="0.75" fov="0.5">
-      <origin xyz="0.16919 -0.14919 0.180" rpy="0.0 0.0 -0.349" />
-    </xacro:ir_receiver-->
-
     <!-- Wheels -->
     <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
     <xacro:wheel side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
 
     <!-- Casters wheels -->
-    <xacro:caster side="front_right" radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation_x}" separation_y="${ caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
-    <xacro:caster side="front_left"  radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation_x}" separation_y="${-caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="front_right" radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation_x}" separation_y="${ caster_separation_y}" offset_x="${caster_offset_x}" offset_y="${caster_offset_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="front_left"  radius="${caster_radius}" width="${caster_width}" separation_x="${ caster_separation_x}" separation_y="${-caster_separation_y}" offset_x="${caster_offset_x}" offset_y="${caster_offset_y}" offset_z="${caster_offset_z}" parent="${name}"/>
 
-    <xacro:caster side="back_right"  radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${ caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
-    <xacro:caster side="back_left"   radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${-caster_separation_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="back_right"  radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${ caster_separation_y}" offset_x="${caster_offset_x}" offset_y="${caster_offset_y}" offset_z="${caster_offset_z}" parent="${name}"/>
+    <xacro:caster side="back_left"   radius="${caster_radius}" width="${caster_width}" separation_x="${-caster_separation_x}" separation_y="${-caster_separation_y}" offset_x="${caster_offset_x}" offset_y="${caster_offset_y}" offset_z="${caster_offset_z}" parent="${name}"/>
 
   </xacro:macro>
 

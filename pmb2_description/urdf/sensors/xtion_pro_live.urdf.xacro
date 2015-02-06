@@ -40,28 +40,19 @@
 
     <link name="${name}_link">
       <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <!-- inertia tensor computed analytically for a solid cuboid -->
-        <inertia ixx="0.000030"  ixy="0.0"  ixz="0.0"
-                 iyy="0.000030"  iyz="0.0"
-                 izz="0.000002" />
+        <origin xyz="-0.00936000000 -0.00003000000 -0.00273000000" rpy="0 0 0"/>
+        <mass value="0.21970000000"/>
+        <inertia ixx="0.00000429247" ixy="0.00000000000" ixz="0.00000002565"
+                 iyy="0.00000008027" iyz="0.00000000000"
+                 izz="0.00000427339"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/sensors/xtion_pro_live/xtion_pro_live.dae" />
+          <mesh filename="package://pmb2_description/meshes/sensors/xtion_pro_live.stl"/>
         </geometry>
-        <material name="Grey">
-          <color rgba="0.5 0.5 0.5 1"/>
-        </material>
+        <material name="DarkGrey"/>
       </visual>
-      <collision>
-        <origin xyz="-0.01 0.0025 0" rpy="0 0 0"/>
-        <geometry>
-          <box size="0.04 0.185 0.03"/>
-        </geometry>
-      </collision>
     </link>
 
     <joint name="${name}_optical_joint" type="fixed">
@@ -70,15 +61,7 @@
       <child link="${name}_optical_frame"/>
     </joint>
 
-    <link name="${name}_optical_frame">
-      <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
-                 iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
-      </inertial>
-    </link>
+    <link name="${name}_optical_frame"/>
 
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<!--
+  Copyright (c) 2014, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="rear_cover" params="name parent">
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="-0.20473000000 0.00000000000 0.10168000000" rpy="0.00000000000 0.00000000000 0.00000000000"/>
+        <mass value="0.14129000000"/>
+        <inertia ixx="0.00154746214" ixy="-0.00000000272" ixz="0.00000000000"
+                 iyy="0.00011342341" iyz="-0.00000064051"
+                 izz="0.00160956479"/>
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://pmb2_description/meshes/objects/rear_cover_ultrasound.stl"/>
+        </geometry>
+        <material name="LightGrey"/>
+      </visual>
+    </link>
+
+    <joint name="rear_cover_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+      <origin xyz="0 0 0.0985" rpy="0 0 0"/>
+    </joint>
+  </xacro:macro>
+</robot>

@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <!--
-
   Copyright (c) 2011, PAL Robotics, S.L.
   All rights reserved.
 
@@ -14,30 +13,28 @@
 
   <xacro:macro name="hokuyo_urg_04lx_ug01_laser" params="name parent *origin ros_topic update_rate min_angle max_angle">
 
-     <link name="${name}_link" type="laser">
+    <link name="${name}_link" type="laser">
       <inertial>
-        <origin xyz="0 0 -0.04225" rpy="0 0 0" />
-        <mass value="0.160" />
-        <inertia ixx="0.00008631543" ixy="-0.00000088815" ixz="-0.00000094079"
-                 iyy="0.00008461544" iyz="0.00000139389"
-                 izz="0.00005947238" />
+        <origin xyz="0 0 -0.04480000000" rpy="0 0 0"/>
+        <mass value="0.22963000000"/>
+        <inertia ixx="0.00003393164" ixy="0.00000064943" ixz="0.00000000000"
+                 iyy="0.00001849658" iyz="0.00000000000"
+                 izz="0.00005027615"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://pmb2_description/meshes/sensors/hokuyo_urg_04lx_ug01.stl"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="DarkGrey"/>
       </visual>
     </link>
 
     <joint name="${name}_joint" type="fixed">
-      <axis xyz="0 1 0" />
-      <insert_block name="origin" />
+      <axis xyz="0 1 0"/>
+      <insert_block name="origin"/>
       <parent link="${parent}_link"/>
       <child  link="${name}_link"/>
-      <dynamics friction="1.0" damping="1"/>
-      <limit lower="0" upper="0" effort="60" velocity="20" />
     </joint>
 
     <!-- gazebo extensions -->
