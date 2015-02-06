@@ -101,7 +101,7 @@
     <!-- Cover -->
     <xacro:cover name="${name}_cover" parent="${name}_footprint"/>
 
-    <!-- Rear cover -->
+    <!-- Rear (sonars) cover -->
     <xacro:rear_cover name="${name}_rear_cover" parent="${name}_footprint"/>
 
     <!-- Laser -->
@@ -117,27 +117,6 @@
       <!-- Pose of optical frame wrt to sensor -->
       <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
     </xacro:xtion_pro_live>
-
-    <!-- Sonars -->
-    <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
-      <origin xyz="-0.17571000000 0.17571000000 0.10150000000" rpy="0.0 0.0 ${135.0 * deg_to_rad}"/>
-    </xacro:range_sensor>
-
-    <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
-      <origin xyz="-0.22958000000 0.09510000000 0.10150000000" rpy="0.0 0.0 ${157.5 * deg_to_rad}"/>
-    </xacro:range_sensor>
-
-    <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
-      <origin xyz="-0.24850000000 0.00000000000 0.10150000000" rpy="0.0 0.0 ${180.0 * deg_to_rad}"/>
-    </xacro:range_sensor>
-
-    <xacro:range_sensor name="${name}_sonar_04" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
-      <origin xyz="-0.22958000000 -0.09510000000 0.10150000000" rpy="0.0 0.0 ${202.5 * deg_to_rad}"/>
-    </xacro:range_sensor>
-
-    <xacro:range_sensor name="${name}_sonar_05" parent="${name}" ros_topic="sonar_base" update_rate="10" maxRange="0.30" minRange="0.01" fov="${60.0 * deg_to_rad}" radiation="ultrasound">
-      <origin xyz="-0.17571000000 -0.17571000000 0.10150000000" rpy="0.0 0.0 ${225.0 * deg_to_rad}"/>
-    </xacro:range_sensor>
 
     <!-- Bumpers -->
     <xacro:bumper name="${name}_bumper" parent="${name}" ros_topic="bumper_base" update_rate="10">
