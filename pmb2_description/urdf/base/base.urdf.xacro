@@ -60,11 +60,11 @@
     <!-- Base -->
     <link name="${name}_link">
       <inertial>
-        <origin xyz="-0.00207000000 -0.00057000000 0.04683000000" rpy="0 0 0"/>
-        <mass value="17.38183000000"/>
-        <inertia ixx="0.38959485090" ixy="0.00018406948" ixz="0.00655155749"
-                 iyy="0.33743896167" iyz="0.00005724656"
-                 izz="0.45143616112"/>
+        <origin xyz="-0.00393000000 -0.00057000000 0.04788000000" rpy="0 0 0"/>
+        <mass value="17.22815000000"/>
+        <inertia ixx="0.38502800825" ixy="0.00017569597" ixz="0.00983980386"
+                 iyy="0.32897158338" iyz="-0.00013935331"
+                 izz="0.44188721859"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -139,13 +139,10 @@
     </xacro:range_sensor>
 
     <!-- Bumpers -->
-    <!--xacro:bumper name="${name}_bumper_01" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="0.16 -0.12 0.00" rpy="0 0 ${-20.0 * deg_to_rad}" />
-    </xacro:bumper-->
-
-    <!--xacro:bumper name="${name}_bumper_02" parent="${name}" ros_topic="bumper_base" update_rate="25" >
-      <origin xyz="0.16 0.12 0.00" rpy="0 0 ${20.0 * deg_to_rad}" />
-    </xacro:bumper-->
+    257.000.00-64.50
+    <xacro:bumper name="${name}_bumper" parent="${name}" ros_topic="bumper_base" update_rate="10">
+      <origin xyz="0.257 0.00 -0.0645" rpy="0 0 0"/>
+    </xacro:bumper>
 
     <!-- IMU -->
     <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->

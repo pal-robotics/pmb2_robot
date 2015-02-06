@@ -27,7 +27,7 @@
         <geometry>
           <mesh filename="package://pmb2_description/meshes/sensors/sick_tim551.stl"/>
         </geometry>
-        <material name="DarkGrey" />
+        <material name="DarkGrey"/>
       </visual>
     </link>
 
