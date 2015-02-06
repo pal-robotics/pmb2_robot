@@ -20,6 +20,7 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/objects/battery_tlh_2.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/objects/charger.urdf.xacro"/>
@@ -139,10 +140,26 @@
     </xacro:range_sensor>
 
     <!-- Bumpers -->
-    257.000.00-64.50
     <xacro:bumper name="${name}_bumper" parent="${name}" ros_topic="bumper_base" update_rate="10">
       <origin xyz="0.257 0.00 -0.0645" rpy="0 0 0"/>
     </xacro:bumper>
+
+    <!-- Microphones -->
+    <xacro:microphone name="${name}_mic_front_left" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_front_right" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_back_left" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_back_right" parent="${name}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:microphone>
 
     <!-- IMU -->
     <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
