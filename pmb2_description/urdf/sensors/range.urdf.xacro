@@ -15,7 +15,14 @@
 
   <xacro:macro name="range_sensor" params="name parent *origin ros_topic update_rate maxRange minRange fov radiation">
     <link name="${name}_link">
-       <visual>
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.000001" ixy="0" ixz="0"
+                 iyy="0.000001" iyz="0"
+                 izz="0.000001"/>
+      </inertial>
+      <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://pmb2_description/meshes/sensors/srf05.stl"/>
