@@ -61,7 +61,15 @@
       <child link="${name}_optical_frame"/>
     </joint>
 
-    <link name="${name}_optical_frame"/>
+    <link name="${name}_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
 
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
@@ -70,7 +78,15 @@
       <child link="${name}_depth_frame"/>
     </joint>
 
-    <link name="${name}_depth_frame"/>
+    <link name="${name}_depth_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
 
     <joint name="${name}_depth_optical_joint" type="fixed">
       <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
@@ -78,7 +94,15 @@
       <child link="${name}_depth_optical_frame"/>
     </joint>
 
-    <link name="${name}_depth_optical_frame"/>
+    <link name="${name}_depth_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
 
     <!-- frames of the rgb sensor -->
     <joint name="${name}_rgb_joint" type="fixed">
@@ -87,7 +111,15 @@
       <child link="${name}_rgb_frame"/>
     </joint>
 
-    <link name="${name}_rgb_frame"/>
+    <link name="${name}_rgb_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
 
     <joint name="${name}_rgb_optical_joint" type="fixed">
       <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
@@ -95,7 +127,15 @@
       <child link="${name}_rgb_optical_frame"/>
     </joint>
 
-    <link name="${name}_rgb_optical_frame"/>
+    <link name="${name}_rgb_optical_frame">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.001"/>
+        <inertia ixx="0.00001" ixy="0" ixz="0"
+                 iyy="0.00001" iyz="0"
+                 izz="0.00001"/>
+      </inertial>
+    </link>
 
     <!-- extensions -->
     <xacro:xtion_pro_live_rgbd_camera_gazebo name="${name}" />
