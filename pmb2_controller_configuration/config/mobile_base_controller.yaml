@@ -6,6 +6,10 @@ mobile_base_controller:
   pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
   twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
 
+  enable_pose_covariance_update: true
+  error_constant_left : 0.001
+  error_constant_right: 0.001
+
   # Velocity commands timeout [s]
   cmd_vel_timeout: 0.25
 
