@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.9 (2015-02-18)
+------------------
 * Put very low cov for z, pitch, roll
 * Contributors: Enrique Fernandez
 
