@@ -2,6 +2,11 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Put very low cov for z, pitch, roll
+* Contributors: Enrique Fernandez
+
 0.9.8 (2015-02-18)
 ------------------
 * Add params for pose covariance
