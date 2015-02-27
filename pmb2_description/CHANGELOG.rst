@@ -2,6 +2,12 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge from REEM-C params
+* Fix and add link names in macro
+* Contributors: Bence Magyar
+
 0.9.9 (2015-02-18)
 ------------------
 
