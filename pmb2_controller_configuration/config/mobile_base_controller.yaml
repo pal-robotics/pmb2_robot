@@ -3,8 +3,8 @@ mobile_base_controller:
   left_wheel  : 'wheel_left_joint'
   right_wheel : 'wheel_right_joint'
   publish_rate: 50.0
-  pose_covariance_diagonal : [0.001,  0.001, 1.0e-3, 1.0e-3, 1.0e-3, 0.01]
-  twist_covariance_diagonal: [0.001, 1.0e-3, 1.0e-3, 1.0e-3, 1.0e-3, 0.01]
+  pose_covariance_diagonal : [0.001, 0.001, 1.0e-3, 1.0e-3, 1.0e-3, 0.01]
+  twist_covariance_diagonal: [0.001, 0.001, 1.0e-3, 1.0e-3, 1.0e-3, 0.01]
 
   enable_pose_covariance_update: true
   error_constant_left : 0.001
