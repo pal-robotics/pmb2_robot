@@ -23,7 +23,6 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/objects/cover.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/objects/rear_cover_ultrasound.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
@@ -87,9 +86,6 @@
 
     <!-- Cover -->
     <xacro:cover name="${name}_cover" parent="${name}_footprint"/>
-
-    <!-- Rear (sonars) cover -->
-    <xacro:rear_cover name="${name}_rear_cover" parent="${name}_footprint"/>
 
     <!-- Laser -->
     <!-- Theoretic FOV = 220º -->
