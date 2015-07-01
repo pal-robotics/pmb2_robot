@@ -22,7 +22,6 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
-  <xacro:include filename="$(find pmb2_description)/urdf/objects/charger.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/objects/cover.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/objects/rear_cover_ultrasound.urdf.xacro"/>
 
