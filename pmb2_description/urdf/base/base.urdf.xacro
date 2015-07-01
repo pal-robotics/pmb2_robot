@@ -72,16 +72,19 @@
         <geometry>
           <mesh filename="package://pmb2_description/meshes/base/base.stl" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="White" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://pmb2_description/meshes/base/base_collision.stl" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="White" />
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/White</material>
+    </gazebo>
 
     <!-- Base footprint -->
     <link name="${name}_footprint"/>
@@ -91,12 +94,6 @@
       <child link="${name}_link" />
       <parent link="${name}_footprint"/>
     </joint>
-
-    <!-- Battery -->
-    <xacro:battery name="${name}_battery" parent="${name}_footprint"/>
-
-    <!-- Charger -->
-    <xacro:charger name="${name}_charger" parent="${name}_footprint"/>
 
     <!-- Cover -->
     <xacro:cover name="${name}_cover" parent="${name}_footprint"/>
