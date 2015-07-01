@@ -48,14 +48,6 @@
   <property name="base_laser_y" value="0.0"/>
   <property name="base_laser_z" value="-0.004"/>
 
-  <!-- RGBD characteristics -->
-  <property name="base_rgbd_x" value="0.2223"/>
-  <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.099"/>
-  <property name="base_rgbd_R" value="0.0"/>
-  <property name="base_rgbd_P" value="0.0"/>
-  <property name="base_rgbd_Y" value="0.0"/>
-
   <xacro:macro name="base" params="name">
 
     <!-- Base -->
@@ -106,16 +98,6 @@
     <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
       <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
     </xacro:sick_tim551_laser>
-
-    <!-- RGBD -->
-    <xacro:if value="$(arg have_base_rgbd)">
-      <xacro:xtion_pro_live name="${name}_rgbd_camera" parent="${name}">
-        <!-- Pose of sensor frame wrt to base -->
-        <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="${base_rgbd_R * deg_to_rad} ${base_rgbd_P * deg_to_rad} ${base_rgbd_Y * deg_to_rad}"/>
-        <!-- Pose of optical frame wrt to sensor -->
-        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-      </xacro:xtion_pro_live>
-    </xacro:if>
 
     <!-- Bumpers -->
     <xacro:bumper name="${name}_bumper" parent="${name}" ros_topic="bumper_base" update_rate="10">
