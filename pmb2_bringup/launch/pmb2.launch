@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="vertical_xtion_pro_live_v2"/>
+  <arg name="robot" default="full"/>
 
   <!-- Diff drive controller multipliers -->
   <rosparam command="load" file="$(find pmb2_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
