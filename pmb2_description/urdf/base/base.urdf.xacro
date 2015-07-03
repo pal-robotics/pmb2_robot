@@ -121,6 +121,19 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
     </xacro:imu_sensor>
 
+    <!-- Sonars -->
+    <xacro:range_sensor name="${name}_sonar_1" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.183 0.183 0.173" rpy="0 0 ${135 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <xacro:range_sensor name="${name}_sonar_2" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.259 0.0 0.173" rpy="0 0 ${180 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <xacro:range_sensor name="${name}_sonar_3" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.183 -0.183 0.173" rpy="0 0 ${225 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
     <!-- Wheels -->
     <xacro:wheel side="right" reflect=" 1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>
     <xacro:wheel side="left"  reflect="-1.0" radius="${wheel_radius}" width="${wheel_width}" torque="${wheel_torque}" velocity="${wheel_velocity}" separation="${wheel_separation}" parent="${name}"/>

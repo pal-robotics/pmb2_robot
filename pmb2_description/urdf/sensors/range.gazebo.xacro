@@ -50,6 +50,7 @@
           <radiation>${radiation}</radiation>
         </plugin>
       </sensor>
+      <material>Gazebo/DarkGrey</material>
     </gazebo>
   </xacro:macro>
 
