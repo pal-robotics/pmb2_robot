@@ -21,6 +21,7 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/objects/cover.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/objects/antenna.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
@@ -82,8 +83,14 @@
       <parent link="${name}_footprint"/>
     </joint>
 
-    <!-- Cover -->
+    <!-- Orange cover & antennas -->
     <xacro:cover name="${name}_cover" parent="${name}_footprint"/>
+    <xacro:antenna name="${name}_antenna_left" parent="${name}_link">
+      <origin xyz="-0.201 0.1062 0.195" rpy="0 0 0"/>
+    </xacro:antenna>
+    <xacro:antenna name="${name}_antenna_right" parent="${name}_link">
+      <origin xyz="-0.201 -0.1062 0.195" rpy="0 0 0"/>
+    </xacro:antenna>
 
     <!-- Laser -->
     <!-- Theoretic FOV = 220º -->
