@@ -13,16 +13,6 @@ speed_limit:
       speed_factor: 0.5
       fixed: true
 
-    rgbd_laser:
-      type: laser
-      topic: rgbd_scan
-      disabled: true
-      obstacle_max_dist: 1.5
-      stop_dist: 0.3   # padding around the footprint, because of the RGBD sensor blanking
-      #stop_dist: 0.6    # when not using the footprint
-      speed_factor: 0.5
-      fixed: true
-
 #    base_sonars:
 #      type: range
 #      topic: sonar_base
