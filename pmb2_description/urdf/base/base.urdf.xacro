@@ -16,7 +16,7 @@
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
@@ -33,8 +33,8 @@
   <!-- Caster wheel characteristics -->
   <property name="caster_radius"       value="0.025"/>
   <property name="caster_width"        value="0.015"/>
-  <property name="caster_separation_x" value="0.350"/>
-  <property name="caster_separation_y" value="0.20000"/>
+  <property name="caster_separation_x" value="0.343"/>
+  <property name="caster_separation_y" value="0.204"/>
   <property name="caster_offset_x"     value="-0.002"/>
   <property name="caster_offset_y"     value="0.0"/>
   <property name="caster_offset_z"     value="-0.0335"/>
@@ -94,9 +94,9 @@
 
     <!-- Laser -->
     <!-- Theoretic FOV = 220º -->
-    <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+    <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
       <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
-    </xacro:sick_tim551_laser>
+    </xacro:hokuyo_urg_04lx_ug01_laser>
 
     <!-- Microphones -->
     <xacro:microphone name="${name}_mic_front_left" parent="${name}">
