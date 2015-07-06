@@ -100,19 +100,19 @@
 
     <!-- Microphones -->
     <xacro:microphone name="${name}_mic_front_left" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0.23182 0.03902 0.195" rpy="0 0 0"/>
     </xacro:microphone>
 
     <xacro:microphone name="${name}_mic_front_right" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0.23182 -0.03902 0.195" rpy="0 0 0"/>
     </xacro:microphone>
 
     <xacro:microphone name="${name}_mic_back_left" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-0.1082 -0.0599 0.195" rpy="0 0 0"/>
     </xacro:microphone>
 
     <xacro:microphone name="${name}_mic_back_right" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="-0.1082 -0.13789 0.195" rpy="0 0 0"/>
     </xacro:microphone>
 
     <!-- IMU -->
