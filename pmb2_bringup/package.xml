@@ -3,8 +3,9 @@
   <name>pmb2_bringup</name>
   <version>0.9.10</version>
   <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.</description>
-  <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
+  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
   <license>Modified BSD</license>
+  <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
   <buildtool_depend>catkin</buildtool_depend>

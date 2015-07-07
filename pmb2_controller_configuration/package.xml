@@ -4,7 +4,7 @@
   <version>0.9.10</version>
   <description>Launch files and scripts needed to configure
     the controllers of the PMB2 robot.</description>
-  <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
+  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
   <license>Modified BSD</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
