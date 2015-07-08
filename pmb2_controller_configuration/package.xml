@@ -13,5 +13,6 @@
   <run_depend>controller_manager</run_depend>
   <run_depend>diff_drive_controller</run_depend>
   <run_depend>joint_state_controller</run_depend>
+  <run_depend>imu_sensor_controller</run_depend>
 
 </package>
