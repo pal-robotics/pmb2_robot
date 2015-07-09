@@ -1,0 +1,14 @@
+<launch>
+  <arg name="robot" default="full"/>
+
+  <!-- Diff drive controller multipliers -->
+  <rosparam command="load" file="$(find pmb2_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
+
+  <!-- Robot model -->
+  <include file="$(find pmb2_description)/robots/upload_pmb2.launch">
+    <arg name="robot" value="$(arg robot)"/>
+  </include>
+
+  <!-- Bring up robot -->
+  <include file="$(find pmb2_bringup)/launch/pmb2_bringup.launch"/>
+</launch>
