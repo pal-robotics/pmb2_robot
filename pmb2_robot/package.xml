@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>pmb2_robot</name>
-  <version>0.9.10</version>
+  <version>0.10.0</version>
   <description>PMB2 robot description and launch files</description>
   <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
   <license>BSD</license>

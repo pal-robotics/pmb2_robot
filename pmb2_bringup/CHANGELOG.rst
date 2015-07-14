@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.10.0 (2015-07-14)
+-------------------
 * Use generic pal_ros_control component
   - Load configuration for generic pal_ros_control component.
 * Contributors: Adolfo Rodriguez Tsouroukdissian
