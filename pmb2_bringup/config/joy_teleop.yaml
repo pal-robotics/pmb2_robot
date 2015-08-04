@@ -42,3 +42,11 @@ teleop:
     type: action
     action_name: joy_turbo_reset
     buttons: [4, 5, 7]
+
+  # Disable speed_limit example
+  # @todo duration param is not taken
+  #speed_limit_disable:
+  #  type: action
+  #  action_name: speed_limit/disable
+  #  duration: 10.0
+  #  buttons: [4, 5, 6, 7]

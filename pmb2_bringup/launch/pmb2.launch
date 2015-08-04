@@ -1,8 +1,16 @@
 <launch>
-  <arg name="robot" default="full"/>
+  <arg name="robot" default="default"/>
+
+  <!-- Add casters as joint_state_controller extra joints -->
+  <rosparam command="load"
+            ns="joint_state_controller"
+            file="$(find pmb2_controller_configuration)/config/joint_state_controller_extra_joints.yaml"/>
 
   <!-- Diff drive controller multipliers -->
   <rosparam command="load" file="$(find pmb2_controller_configuration)/config/mobile_base_controller_multipliers.yaml"/>
+
+  <!-- pmb2 hardware -->
+  <rosparam command="load" file="$(find pmb2_bringup)/config/pmb2_hardware.yaml"/>
 
   <!-- Robot model -->
   <include file="$(find pmb2_description)/robots/upload_pmb2.launch">

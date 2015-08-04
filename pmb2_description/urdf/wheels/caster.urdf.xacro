@@ -12,7 +12,6 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.transmission.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.gazebo.xacro"/>
 
   <xacro:macro name="caster" params="side radius width separation_x separation_y offset_x offset_y offset_z parent">
     <link name="caster_${side}_1_link">
@@ -47,12 +46,6 @@
         </geometry>
         <material name="DarkGrey"/>
       </visual>
-      <collision>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <geometry>
-          <sphere radius="${radius}"/>
-        </geometry>
-      </collision>
     </link>
 
     <joint name="caster_${side}_1_joint" type="fixed">
@@ -69,10 +62,5 @@
       <axis xyz="0 0 1"/>
     </joint>
 
-    <!-- Transmission -->
-    <!--xacro:caster_transmission name="" side="${side}" number="" reduction=""-->
-
-    <!-- Gazebo extensions -->
-    <xacro:caster_gazebo side="${side}"/>
   </xacro:macro>
 </robot>
