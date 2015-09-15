@@ -8,21 +8,20 @@ speed_limit:
       topic: scan
       disabled: false
       obstacle_max_dist: 1.5
-      stop_dist: 0.0   # no padding around the footprint
-      #stop_dist: 0.3    # when not using the footprint
+      stop_dist: 0.05   #padding around the footprint
       speed_factor: 0.5
       fixed: true
 
-#    base_sonars:
-#      type: range
-#      topic: sonar_base
-#      disabled: true
-#      obstacle_max_dist: 0.6
-#      stop_dist: 0.1
-#      speed_factor: 0.3
-#      blacklist: []
-#      whitelist: []
-#      fixed: true
+    base_sonars:
+      type: range
+      topic: sonar_base
+      disabled: false
+      obstacle_max_dist: 0.5
+      stop_dist: 0.05
+      speed_factor: 0.3
+      blacklist: []
+      whitelist: []
+      fixed: true
 
 #    base_irs:
 #      type: range
