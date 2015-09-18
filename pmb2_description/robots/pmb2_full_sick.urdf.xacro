@@ -13,7 +13,7 @@
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
-  <xacro:include filename="$(find pmb2_description)/urdf/base/base_full_sick.urdf.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/base/base_full.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find pmb2_description)/gazebo/gazebo.urdf.xacro" />
@@ -21,6 +21,6 @@
   <xacro:include filename="$(find pmb2_description)/urdf/materials.urdf.xacro" />
 
   <!-- Now we can start using the macros included above to define the actual robot -->
-  <xacro:base name="base"/>
+  <xacro:base_full name="base" laser_sick="true"/>
 </robot>
 
