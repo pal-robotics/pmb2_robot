@@ -13,7 +13,7 @@
 
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
-  <xacro:include filename="$(find pmb2_description)/urdf/base/base.urdf.xacro" />
+  <xacro:include filename="$(find pmb2_description)/urdf/base/base_full.urdf.xacro" />
 
   <!-- Generic simulator_gazebo plugins -->
   <xacro:include filename="$(find pmb2_description)/gazebo/gazebo.urdf.xacro" />
