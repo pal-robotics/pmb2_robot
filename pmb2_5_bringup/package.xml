@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>pmb2_bringup</name>
+  <name>pmb2_5_bringup</name>
   <version>0.9.10</version>
   <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.</description>
   <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
