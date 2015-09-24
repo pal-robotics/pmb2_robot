@@ -23,16 +23,20 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/objects/cover.stl"/>
+          <mesh filename="package://pmb2_description/meshes/base/base_ring.stl"/>
         </geometry>
-        <material name="LightGrey"/>
+        <material name="Orange"/>
       </visual>
     </link>
 
     <joint name="cover_joint" type="fixed">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <origin xyz="0 0 0.0985" rpy="0 0 0"/>
+      <origin xyz="0 0 0.13" rpy="0 0 0"/>
     </joint>
+
+    <gazebo reference="${name}_link">
+      <material>Gazebo/Orange</material>
+    </gazebo>
   </xacro:macro>
 </robot>

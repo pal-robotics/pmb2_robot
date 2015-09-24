@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+
+  Copyright (c) 2011-2014, PAL Robotics, S.L.
+  All rights reserved.
+
+  This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+  To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
+  Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find pmb2_description)/urdf/base/base_default.urdf.xacro"/>
+
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
+
+  <xacro:macro name="base_full" params="name laser_sick">
+
+    <!-- Microphones -->
+    <xacro:microphone name="${name}_mic_front_left" parent="${name}">
+      <origin xyz="0.23182 0.03902 0.195" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_front_right" parent="${name}">
+      <origin xyz="0.23182 -0.03902 0.195" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_back_left" parent="${name}">
+      <origin xyz="-0.1082 -0.0599 0.195" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <xacro:microphone name="${name}_mic_back_right" parent="${name}">
+      <origin xyz="-0.1082 -0.13789 0.195" rpy="0 0 0"/>
+    </xacro:microphone>
+
+    <!-- Sonars -->
+    <xacro:range_sensor name="${name}_sonar_1" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.183 0.183 0.173" rpy="0 0 ${135 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <xacro:range_sensor name="${name}_sonar_2" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.259 0.0 0.173" rpy="0 0 ${180 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <xacro:range_sensor name="${name}_sonar_3" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <origin xyz="-0.183 -0.183 0.173" rpy="0 0 ${225 * deg_to_rad}"/>
+    </xacro:range_sensor>
+
+    <xacro:base_default name="${name}" laser_sick="${laser_sick}"/>
+
+  </xacro:macro>
+
+</robot>

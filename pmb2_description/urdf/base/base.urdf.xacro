@@ -15,17 +15,10 @@
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.urdf.xacro"/>
 
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/xtion_pro_live.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/imu.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/bumper.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
-  <xacro:include filename="$(find pmb2_description)/urdf/objects/battery_tlh_2.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/objects/charger.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/objects/cover.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/objects/rear_cover_ultrasound.urdf.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/objects/antenna.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
   <property name="wheel_radius"     value="0.0985"/>
@@ -37,51 +30,41 @@
   <!-- Caster wheel characteristics -->
   <property name="caster_radius"       value="0.025"/>
   <property name="caster_width"        value="0.015"/>
-  <property name="caster_separation_x" value="0.350"/>
-  <property name="caster_separation_y" value="0.20000"/>
+  <property name="caster_separation_x" value="0.343"/>
+  <property name="caster_separation_y" value="0.204"/>
   <property name="caster_offset_x"     value="-0.002"/>
   <property name="caster_offset_y"     value="0.0"/>
   <property name="caster_offset_z"     value="-0.0335"/>
-
-  <!-- Laser characteristics -->
-  <property name="base_laser_x" value="0.202"/>
-  <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="-0.004"/>
-
-  <!-- RGBD characteristics -->
-  <property name="base_rgbd_x" value="0.2223"/>
-  <property name="base_rgbd_y" value="0.0"/>
-  <property name="base_rgbd_z" value="0.099"/>
-  <property name="base_rgbd_R" value="0.0"/>
-  <property name="base_rgbd_P" value="0.0"/>
-  <property name="base_rgbd_Y" value="0.0"/>
 
   <xacro:macro name="base" params="name">
 
     <!-- Base -->
     <link name="${name}_link">
       <inertial>
-        <origin xyz="-0.00393000000 -0.00057000000 0.04788000000" rpy="0 0 0"/>
-        <mass value="17.22815000000"/>
-        <inertia ixx="0.38502800825" ixy="0.00017569597" ixz="0.00983980386"
-                 iyy="0.32897158338" iyz="-0.00013935331"
-                 izz="0.44188721859"/>
+        <origin xyz="-0.00000106 0.00000109 0.0000387" rpy="0 0 0"/>
+        <mass value="28.26649"/>
+        <inertia ixx="0.465408937" ixy="0.002160024" ixz="-0.001760255"
+                 iyy="0.483193291" iyz="-0.000655952"
+                 izz="0.550939703"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://pmb2_description/meshes/base/base.stl" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="White" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://pmb2_description/meshes/base/base_collision.stl" />
         </geometry>
-        <material name="DarkGrey" />
+        <material name="White" />
       </collision>
     </link>
+    <gazebo reference="${name}_link">
+      <material>Gazebo/White</material>
+    </gazebo>
 
     <!-- Base footprint -->
     <link name="${name}_footprint"/>
@@ -92,60 +75,19 @@
       <parent link="${name}_footprint"/>
     </joint>
 
-    <!-- Battery -->
-    <xacro:battery name="${name}_battery" parent="${name}_footprint"/>
-
-    <!-- Charger -->
-    <xacro:charger name="${name}_charger" parent="${name}_footprint"/>
-
-    <!-- Cover -->
+    <!-- Orange cover & antennas -->
     <xacro:cover name="${name}_cover" parent="${name}_footprint"/>
-
-    <!-- Rear (sonars) cover -->
-    <xacro:rear_cover name="${name}_rear_cover" parent="${name}_footprint"/>
-
-    <!-- Laser -->
-    <!-- Theoretic FOV = 220º -->
-    <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="15" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
-      <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
-    </xacro:sick_tim551_laser>
-
-    <!-- RGBD -->
-    <xacro:if value="$(arg have_base_rgbd)">
-      <xacro:xtion_pro_live name="${name}_rgbd_camera" parent="${name}">
-        <!-- Pose of sensor frame wrt to base -->
-        <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="${base_rgbd_R * deg_to_rad} ${base_rgbd_P * deg_to_rad} ${base_rgbd_Y * deg_to_rad}"/>
-        <!-- Pose of optical frame wrt to sensor -->
-        <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-      </xacro:xtion_pro_live>
-    </xacro:if>
-
-    <!-- Bumpers -->
-    <xacro:bumper name="${name}_bumper" parent="${name}" ros_topic="bumper_base" update_rate="10">
-      <origin xyz="0.257 0.00 -0.0645" rpy="0 0 0"/>
-    </xacro:bumper>
-
-    <!-- Microphones -->
-    <xacro:microphone name="${name}_mic_front_left" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-    </xacro:microphone>
-
-    <xacro:microphone name="${name}_mic_front_right" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-    </xacro:microphone>
-
-    <xacro:microphone name="${name}_mic_back_left" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-    </xacro:microphone>
-
-    <xacro:microphone name="${name}_mic_back_right" parent="${name}">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-    </xacro:microphone>
+    <xacro:antenna name="${name}_antenna_left" parent="${name}_link">
+      <origin xyz="-0.201 0.1062 0.195" rpy="0 0 0"/>
+    </xacro:antenna>
+    <xacro:antenna name="${name}_antenna_right" parent="${name}_link">
+      <origin xyz="-0.201 -0.1062 0.195" rpy="0 0 0"/>
+    </xacro:antenna>
 
     <!-- IMU -->
     <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
-    <xacro:imu_sensor name="${name}_inclinometer" parent="${name}_link" update_rate="100.0">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+    <xacro:imu_sensor name="${name}_imu" parent="${name}_link" update_rate="100.0">
+      <origin xyz="0.10171 0 0.11282" rpy="0 ${180 * deg_to_rad} ${90 * deg_to_rad}"/>
     </xacro:imu_sensor>
 
     <!-- Wheels -->

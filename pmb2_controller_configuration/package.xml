@@ -4,7 +4,7 @@
   <version>0.10.0</version>
   <description>Launch files and scripts needed to configure
     the controllers of the PMB2 robot.</description>
-  <maintainer email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</maintainer>
+  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
   <license>Modified BSD</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
@@ -13,5 +13,6 @@
   <run_depend>controller_manager</run_depend>
   <run_depend>diff_drive_controller</run_depend>
   <run_depend>joint_state_controller</run_depend>
+  <run_depend>imu_sensor_controller</run_depend>
 
 </package>

@@ -12,16 +12,16 @@ speed_limit:
       speed_factor: 0.5
       fixed: true
 
-    base_sonars:
-      type: range
-      topic: sonar_base
-      disabled: false
-      obstacle_max_dist: 0.5
-      stop_dist: 0.05
-      speed_factor: 0.3
-      blacklist: []
-      whitelist: []
-      fixed: true
+#    base_sonars:
+#      type: range
+#      topic: sonar_base
+#      disabled: false
+#      obstacle_max_dist: 0.5
+#      stop_dist: 0.05
+#      speed_factor: 0.3
+#      blacklist: []
+#      whitelist: []
+#      fixed: true
 
 #    base_irs:
 #      type: range
