@@ -4,6 +4,17 @@ Changelog for package pmb2_bringup
 
 Forthcoming
 -----------
+* Add changelog
+* sonar related launch call moved to pmb2.launch for easier overload
+* Fixed error during ros_control starting on pmb2
+* Merging metal base branch
+* add pmb2_hardware.yaml !
+* speed_limit add padding and sonar
+* Update maintainer
+* Remove rgbd layer
+* Remove references to xtion
+* Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
+
 * sonar related launch call moved to pmb2.launch for easier overload
 * Fixed error during ros_control starting on pmb2
 * Merging metal base branch

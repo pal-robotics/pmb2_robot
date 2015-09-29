@@ -4,6 +4,17 @@ Changelog for package pmb2_bringup
 
 Forthcoming
 -----------
+* Fix package version
+* Add changelog
+* rm everything not needed
+* pmb2_5_bringup pkg.xml specify replace + format 2
+* pmb2_5_bringup install overload
+* Fixed error during ros_control starting on pmb2
+* fix pmb2_5_bringup Cmake/pkg
+* add pmb2_hardware.yaml !
+* overload pmb2_bringup for pmb2-5
+* Contributors: Jeremie Deray, Luca Marchionni
+
 * rm everything not needed
 * pmb2_5_bringup pkg.xml specify replace + format 2
 * pmb2_5_bringup install overload

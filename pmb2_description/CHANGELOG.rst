@@ -4,6 +4,38 @@ Changelog for package pmb2_description
 
 Forthcoming
 -----------
+* Add changelog
+* Merging metal base branch
+* urdf full calls default & add sonar/micro
+* urdf default calls base & add laser
+* urdf base contains basics e.g. wheels
+* add full_sick urdf
+* add base_default urdf
+* renamed base -> base_full
+* Update maintainer
+* Replace caster collision with spheres, fix spinning
+* Remove spanish character nonvalid to xacro
+* Update placement and name of base imu
+* Add collision to antenna
+* Update caster locations
+* Add microphone locations
+* Added sonars with proper colors
+* Add color to gazebo
+* Add antennas
+* New meshes
+* Remove references to xtion
+* Remove robot model scripts
+* Add inertial params to main body
+* Remove bumpers
+* Remove rear cover
+* More battery removed
+* Remove charger
+* Remove battery
+* Remove base_rgbd
+* Fix color of wheels in gazebo
+* Add new cover and orange ring around body
+* Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
+
 * Merging metal base branch
 * urdf full calls default & add sonar/micro
 * urdf default calls base & add laser

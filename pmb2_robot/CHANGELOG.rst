@@ -4,6 +4,11 @@ Changelog for package pmb2_robot
 
 Forthcoming
 -----------
+* Add changelog
+* Merging metal base branch
+* Update maintainer
+* Contributors: Bence Magyar, Luca Marchionni
+
 * Merging metal base branch
 * Update maintainer
 * Contributors: Bence Magyar, Luca Marchionni
