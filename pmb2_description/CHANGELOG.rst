@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2015-09-29)
+------------------
 * Add changelog
 * Merging metal base branch
 * urdf full calls default & add sonar/micro

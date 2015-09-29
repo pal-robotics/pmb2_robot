@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2015-09-29)
+------------------
 * Add changelog
 * sonar related launch call moved to pmb2.launch for easier overload
 * Fixed error during ros_control starting on pmb2

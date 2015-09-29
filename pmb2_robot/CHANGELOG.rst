@@ -2,8 +2,8 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2015-09-29)
+------------------
 * Add changelog
 * Merging metal base branch
 * Update maintainer

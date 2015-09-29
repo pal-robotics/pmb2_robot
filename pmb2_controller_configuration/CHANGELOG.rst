@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2015-09-29)
+------------------
 * Add changelog
 * Remove imu because on pmb2 it will be published outside ros_control
 * Merging metal base branch
