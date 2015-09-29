@@ -1,23 +1,17 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>pmb2_5_bringup</name>
   <version>0.9.10</version>
-  <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.</description>
+  <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot (overload).</description>
   <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
   <license>Modified BSD</license>
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
+  <replace>pmb2_bringup</replace>
+
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>pmb2_controller_configuration</run_depend>
-  <run_depend>pmb2_description</run_depend>
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>tf_lookup</run_depend>
-<!--  <run_depend>sensor_to_cloud</run_depend> -->
-  <run_depend>speed_limit</run_depend>
-  <run_depend>twist_mux</run_depend>
-  <run_depend>joy</run_depend>
-  <run_depend>joy_teleop</run_depend>
+  <exec_depend>pmb2_bringup</exec_depend>
 
 </package>
