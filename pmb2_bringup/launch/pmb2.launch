@@ -1,9 +1,6 @@
 <launch>
   <arg name="robot" default="full"/>
 
-  <!-- Hardware configuration -->
-  <rosparam command="load" file="$(find pmb2_bringup)/config/pmb2_hardware.yaml" />
-
   <!-- Add casters as joint_state_controller extra joints -->
   <rosparam command="load"
             ns="joint_state_controller"
