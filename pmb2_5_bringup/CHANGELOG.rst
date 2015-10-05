@@ -15,8 +15,8 @@ Changelog for package pmb2_bringup
 * overload pmb2_bringup for pmb2-5
 * Contributors: Jeremie Deray, Luca Marchionni
 
-Forthcoming
------------
+1.0.2 (2015-10-05)
+------------------
 
 1.0.1 (2015-10-01)
 ------------------
