@@ -25,14 +25,4 @@
 
   <!-- Joystick controller -->
   <include file="$(find pmb2_bringup)/launch/joystick_teleop.launch"/>
-
-  <!-- Bumper, IR and Sonar to cloud -->
-  <!-- @todo use custom config (requires changes in sensor_to_cloud -->
-  <!-- @todo no bumper, IR or sonar yet -->
-  <!--include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
-    <arg name="config" value="$(find pmb2_bringup)/config/sensor_to_cloud/bumper_to_cloud.yaml"/>
-  </include-->
-  <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch">
-    <!--rosparam command="load" file="$(find pmb2_bringup)/config/sensor_to_cloud/sonar_to_cloud.yaml" ns="sonar_to_cloud"/-->    <!-- TODO: Looks like sonar_to_cloud doesn't use those params  -->
-  </include>
 </launch>

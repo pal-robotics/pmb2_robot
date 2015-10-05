@@ -14,7 +14,7 @@
   <run_depend>pmb2_description</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>tf_lookup</run_depend>
-  <run_depend>sensor_to_cloud</run_depend>
+<!--  <run_depend>sensor_to_cloud</run_depend> -->
   <run_depend>speed_limit</run_depend>
   <run_depend>twist_mux</run_depend>
   <run_depend>joy</run_depend>
