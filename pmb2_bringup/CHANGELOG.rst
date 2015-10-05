@@ -15,15 +15,12 @@ Changelog for package pmb2_bringup
 * Remove references to xtion
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
-* sonar related launch call moved to pmb2.launch for easier overload
-* Fixed error during ros_control starting on pmb2
-* Merging metal base branch
-* add pmb2_hardware.yaml !
-* speed_limit add padding and sonar
-* Update maintainer
-* Remove rgbd layer
-* Remove references to xtion
-* Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
+Forthcoming
+-----------
+* enable sonar after revert commit
+* Revert "launch sonar_to_cloud from pmb2_bringup.launch"
+  This reverts commit 2da0a9261b75d88a42d50102923d6f121329f2c2.
+* Contributors: Jeremie Deray
 
 1.0.1 (2015-10-01)
 ------------------

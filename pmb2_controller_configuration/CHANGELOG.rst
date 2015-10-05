@@ -12,12 +12,8 @@ Changelog for package pmb2_controller_configuration
 * Update placement and name of base imu
 * Contributors: Bence Magyar, Luca Marchionni
 
-* Remove imu because on pmb2 it will be published outside ros_control
-* Merging metal base branch
-* Add missing dependency
-* Update maintainer
-* Update placement and name of base imu
-* Contributors: Bence Magyar, Luca Marchionni
+Forthcoming
+-----------
 
 1.0.1 (2015-10-01)
 ------------------
