@@ -15,6 +15,11 @@ Changelog for package pmb2_bringup
 * Remove references to xtion
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
+Forthcoming
+-----------
+* mv sonar_to_cloud to pmb2_bringup.launch
+* Contributors: Jeremie Deray
+
 1.0.2 (2015-10-05)
 ------------------
 * enable sonar after revert commit
