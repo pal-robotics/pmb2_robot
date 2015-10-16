@@ -23,7 +23,7 @@ mobile_base_controller:
   publish_cmd: false
 
   # Publish wheel data
-  publish_wheel_data: false
+  publish_wheel_data: true
 
   # Velocity and acceleration limits
   # Whenever a min_* is unspecified, default to -max_*
