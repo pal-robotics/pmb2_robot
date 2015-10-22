@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>controller_configuration_pmb2_5</name>
+  <version>0.0.0</version>
+  <description>Launch files and scripts needed to configure the controllers of the PMB2-6 robot.</description>
+  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
+  <license>Modified BSD</license>
+  <author email="luca.marchionni@pal-robotics.com">Luca Marchionni</author>
+
+  <replace>pmb2_controller_configuration</replace>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>pmb2_controller_configuration</run_depend>
+
+</package>
