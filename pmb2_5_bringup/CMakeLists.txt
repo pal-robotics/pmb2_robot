@@ -6,7 +6,7 @@ find_package(catkin REQUIRED)
 catkin_package()
 
 install(DIRECTORY
-launch
+launch config
 DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION}/pmb2_bringup
 )
 
