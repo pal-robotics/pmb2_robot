@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>controller_configuration_pmb2_5</name>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <description>Launch files and scripts needed to configure the controllers of the PMB2-6 robot.</description>
   <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
   <license>Modified BSD</license>
