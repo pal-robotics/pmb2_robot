@@ -1,0 +1,28 @@
+<launch>
+  <!-- Diff drive controller parameters -->
+  <rosparam command="load" file="$(find pmb2_controller_configuration)/config/mobile_base_controller.yaml"/>
+
+  <!-- Load default controllers -->
+  <include file="$(find pmb2_controller_configuration)/launch/default_controllers.launch"/>
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0"/>
+    <param name="tf_prefix" type="string" value=""/>
+  </node>
+
+  <!-- TF lookup -->
+  <node pkg="tf_lookup" type="tf_lookup" name="tf_lookup" output="screen"/>
+
+  <!-- Twist mux -->
+  <include file="$(find pmb2_bringup)/launch/twist_mux.launch"/>
+
+  <!-- Speed limit -->
+  <include file="$(find speed_limit)/launch/speed_limit.launch">
+    <arg name="config"    value="$(find pmb2_bringup)/config/speed_limit.yaml"/>
+    <arg name="footprint" value="$(find pmb2_description)/urdf/base/footprint.yaml"/>
+  </include>
+
+  <!-- Joystick controller -->
+  <include file="$(find pmb2_bringup)/launch/joystick_teleop.launch"/>
+</launch>
