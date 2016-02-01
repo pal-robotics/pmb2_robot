@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="full"/>
+  <arg name="robot" default="default"/>
 
   <!-- Add casters as joint_state_controller extra joints -->
   <rosparam command="load"
