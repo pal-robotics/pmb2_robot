@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2011, PAL Robotics, S.L.
+  Copyright (c) 2016, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
@@ -9,7 +9,7 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 
   Laser configuration according with the SICK TiM 561 product specification:
-  TODO
+  https://www.sick.com/media/pdf/6/46/446/dataSheet_TiM561-2050101_1071419_en.pdf
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
@@ -22,8 +22,8 @@
         <ray>
           <scan>
             <horizontal>
-              <!-- 3*270 steps in 270deg fov -->
-              <samples>${3*270*(max_angle - min_angle)/(270.0 * deg_to_rad)}</samples>
+              <!-- 818 (270/0.33) steps in 270deg fov -->
+              <samples>${818*(max_angle - min_angle)/(270.0 * deg_to_rad)}</samples>
               <resolution>1</resolution> <!-- not the sensor resolution; just 1 -->
               <min_angle>${min_angle}</min_angle>
               <max_angle>${max_angle}</max_angle>
