@@ -15,14 +15,17 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
 
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/range.urdf.xacro"/>
+
   <!-- Laser characteristics -->
   <property name="base_laser_x" value="0.202"/>
   <property name="base_laser_y" value="0.0"/>
   <property name="base_laser_z" value="-0.004"/>
 
-  <xacro:macro name="base_default" params="name laser_sick">
+  <!--xacro:macro name="base_default" params=" name hokuyo:="true" sick551:="false" sick561:="false" sick571:="false" sonars:="false" microphone:="false" "--> <!-- default value waiting for indigo -->
+  <xacro:macro name="base_default" params="name hokuyo sick551 sick561 sick571 sonars microphone">
 
-    <xacro:unless value="${laser_sick}">
+    <xacro:if value="${hokuyo}"> <!-- TODO: find expr that encure only one laser is true -->
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
@@ -30,9 +33,9 @@
         <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
       </xacro:hokuyo_urg_04lx_ug01_laser>
 
-    </xacro:unless>
+    </xacro:if>
 
-    <xacro:if value="${laser_sick}">
+    <xacro:if value="${sick551}">
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
@@ -41,7 +44,65 @@
       </xacro:sick_tim551_laser>
 
     </xacro:if>
-    
+
+    <xacro:if value="${sick561}">
+
+      <!-- Laser -->
+      <!-- Theoretic FOV = 220 -->
+      <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+        <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
+      </xacro:sick_tim551_laser>
+
+    </xacro:if>
+
+    <xacro:if value="${sick571}">
+
+      <!-- Laser -->
+      <!-- Theoretic FOV = 220 -->
+      <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+        <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
+      </xacro:sick_tim551_laser>
+
+    </xacro:if>
+
+    <xacro:if value="${sonars}">
+
+      <!-- Sonars -->
+      <xacro:range_sensor name="${name}_sonar_1" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+        <origin xyz="-0.183 0.183 0.173" rpy="0 0 ${135 * deg_to_rad}"/>
+      </xacro:range_sensor>
+
+      <xacro:range_sensor name="${name}_sonar_2" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+        <origin xyz="-0.259 0.0 0.173" rpy="0 0 ${180 * deg_to_rad}"/>
+      </xacro:range_sensor>
+
+      <xacro:range_sensor name="${name}_sonar_3" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+        <origin xyz="-0.183 -0.183 0.173" rpy="0 0 ${225 * deg_to_rad}"/>
+      </xacro:range_sensor>
+
+    </xacro:if>
+
+    <xacro:if value="${microphone}">
+
+      <!-- Microphones -->
+      <xacro:microphone name="${name}_mic_front_left" parent="${name}">
+        <origin xyz="0.23182 0.03902 0.195" rpy="0 0 0"/>
+      </xacro:microphone>
+
+      <xacro:microphone name="${name}_mic_front_right" parent="${name}">
+        <origin xyz="0.23182 -0.03902 0.195" rpy="0 0 0"/>
+      </xacro:microphone>
+
+      <xacro:microphone name="${name}_mic_back_left" parent="${name}">
+        <origin xyz="-0.1082 -0.0599 0.195" rpy="0 0 0"/>
+      </xacro:microphone>
+
+      <xacro:microphone name="${name}_mic_back_right" parent="${name}">
+        <origin xyz="-0.1082 -0.13789 0.195" rpy="0 0 0"/>
+      </xacro:microphone>
+
+    </xacro:if>
+
     <xacro:base name="${name}"/>
 
   </xacro:macro>
