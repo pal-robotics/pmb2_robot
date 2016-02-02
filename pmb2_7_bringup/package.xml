@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pmb2_7_bringup</name>
+  <version>1.0.4</version>
+  <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot (overload).</description>
+
+  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
+  <license>Modified BSD</license>
+  <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
+  <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
+  <author email="jeremie.deray@pal-robotics.com">Jeremie Deray</author>
+
+  <replace>pmb2_bringup</replace>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>pmb2_bringup</exec_depend>
+
+</package>
