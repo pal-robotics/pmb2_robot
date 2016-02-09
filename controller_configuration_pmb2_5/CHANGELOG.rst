@@ -2,6 +2,9 @@
 Changelog for package controller_configuration_pmb2_5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.4 (2015-10-26)
 ------------------
 * proper pkg version

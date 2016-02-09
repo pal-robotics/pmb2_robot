@@ -36,6 +36,18 @@ Changelog for package pmb2_description
 * Add new cover and orange ring around body
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
+Forthcoming
+-----------
+* update gazebo sick 561 571 with proper params
+* rename base_default to base_sensors
+* remove base_full.urdf.xacro
+* add gazebo draft sick 561 & 571
+* pmb2 desscription upload default
+* rm full urdf
+* base_default now holds all sensors with option
+* pmb2 urdf diff Sick
+* Contributors: Jeremie Deray
+
 1.0.4 (2015-10-26)
 ------------------
 

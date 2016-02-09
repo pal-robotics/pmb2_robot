@@ -12,6 +12,9 @@ Changelog for package pmb2_controller_configuration
 * Update placement and name of base imu
 * Contributors: Bence Magyar, Luca Marchionni
 
+Forthcoming
+-----------
+
 1.0.4 (2015-10-26)
 ------------------
 * adding new config package for pmb2-5
