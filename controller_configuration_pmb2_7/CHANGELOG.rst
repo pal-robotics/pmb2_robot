@@ -2,8 +2,8 @@
 Changelog for package controller_configuration_pmb2_7
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2016-02-09)
+------------------
 * odom calib, wheel multiplier config for pmb2_7
 * pmb2-7 controller conf
 * Contributors: Jeremie Deray, Procopio Stein
