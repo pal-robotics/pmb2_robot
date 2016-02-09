@@ -1,0 +1,5 @@
+mobile_base_controller:
+  # Wheel separation and radius multipliers for PMB2-7
+  wheel_separation_multiplier:   0.995
+  left_wheel_radius_multiplier:  0.9996
+  right_wheel_radius_multiplier: 0.9947
