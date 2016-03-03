@@ -12,7 +12,6 @@
   <run_depend>pmb2_description</run_depend>
   <run_depend>pmb2_bringup</run_depend>
   <run_depend>pmb2_controller_configuration</run_depend>
-  <run_depend>pmb2_hardware</run_depend>
 
   <export>
     <metapackage/>
