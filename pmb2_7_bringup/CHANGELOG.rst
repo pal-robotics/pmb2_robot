@@ -2,6 +2,9 @@
 Changelog for package pmb2_7_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.5 (2016-02-09)
 ------------------
 * pmb2_7_bringup

@@ -36,6 +36,9 @@ Changelog for package pmb2_description
 * Add new cover and orange ring around body
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
+Forthcoming
+-----------
+
 1.0.5 (2016-02-09)
 ------------------
 * update gazebo sick 561 571 with proper params
