@@ -36,8 +36,8 @@ Changelog for package pmb2_description
 * Add new cover and orange ring around body
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
-Forthcoming
------------
+1.0.6 (2016-03-03)
+------------------
 
 1.0.5 (2016-02-09)
 ------------------
