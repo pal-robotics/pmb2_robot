@@ -36,6 +36,15 @@ Changelog for package pmb2_description
 * Add new cover and orange ring around body
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
+Forthcoming
+-----------
+* Revert "urdf use macro param default value"
+  This works only with ros indigo
+  This reverts commit 24d19cf7e0c4056728e54cf515221a2f171ea268.
+* urdf use macro param default value
+* fix urdf laser
+* Contributors: Jeremie Deray
+
 1.0.6 (2016-03-03)
 ------------------
 

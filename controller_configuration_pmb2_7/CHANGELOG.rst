@@ -2,6 +2,9 @@
 Changelog for package controller_configuration_pmb2_7
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.6 (2016-03-03)
 ------------------
 
