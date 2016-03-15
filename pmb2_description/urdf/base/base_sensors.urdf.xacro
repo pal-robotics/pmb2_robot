@@ -25,7 +25,8 @@
   <property name="base_laser_y" value="0.0"/>
   <property name="base_laser_z" value="-0.004"/>
 
-  <xacro:macro name="base_sensors" params=" name hokuyo:=false sick551:=false sick561:=false sick571:=false sonars:=false microphone:=false ">
+  <!--xacro:macro name="base_sensors" params=" name hokuyo:="true" sick551:="false" sick561:="false" sick571:="false" sonars:="false" microphone:="false" "--> <!-- default value waiting for indigo -->
+  <xacro:macro name="base_sensors" params="name hokuyo sick551 sick561 sick571 sonars microphone">
 
     <xacro:if value="${hokuyo}"> <!-- TODO: find expr that encure only one laser is true -->
 
