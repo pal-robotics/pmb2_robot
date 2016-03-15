@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>pmb2_controller_configuration</name>
-  <version>1.0.6</version>
+  <version>1.1.0</version>
   <description>Launch files and scripts needed to configure
     the controllers of the PMB2 robot.</description>
   <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>

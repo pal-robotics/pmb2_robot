@@ -36,8 +36,8 @@ Changelog for package pmb2_description
 * Add new cover and orange ring around body
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
-Forthcoming
------------
+1.1.0 (2016-03-15)
+------------------
 * urdf use macro param default value
 * fix urdf laser
 * Contributors: Jeremie Deray
