@@ -15,6 +15,9 @@ Changelog for package pmb2_bringup
 * Remove references to xtion
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
+Forthcoming
+-----------
+
 1.1.0 (2016-03-15)
 ------------------
 
