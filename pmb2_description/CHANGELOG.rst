@@ -36,8 +36,8 @@ Changelog for package pmb2_description
 * Add new cover and orange ring around body
 * Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
 
-Forthcoming
------------
+1.1.1 (2016-04-15)
+------------------
 * Updated to new generic pal hardware gazebo plugin
 * Simplified base collision
   Now the base_link has a mesh that touches with the ground

@@ -9,8 +9,8 @@ Changelog for package pmb2_robot
 * Update maintainer
 * Contributors: Bence Magyar, Luca Marchionni
 
-Forthcoming
------------
+1.1.1 (2016-04-15)
+------------------
 
 1.1.0 (2016-03-15)
 ------------------
