@@ -70,15 +70,15 @@
     <xacro:if value="${sonars}">
 
       <!-- Sonars -->
-      <xacro:range_sensor name="${name}_sonar_1" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.183 0.183 0.173" rpy="0 0 ${135 * deg_to_rad}"/>
       </xacro:range_sensor>
 
-      <xacro:range_sensor name="${name}_sonar_2" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.259 0.0 0.173" rpy="0 0 ${180 * deg_to_rad}"/>
       </xacro:range_sensor>
 
-      <xacro:range_sensor name="${name}_sonar_3" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="0.75" minRange="0.01" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.183 -0.183 0.173" rpy="0 0 ${225 * deg_to_rad}"/>
       </xacro:range_sensor>
 
