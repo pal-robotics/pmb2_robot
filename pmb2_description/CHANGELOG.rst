@@ -43,6 +43,18 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* sonar ID two digit
+* Add imu controller to launch
+* Add imu gazebo plugin config
+* 1.1.1
+* Update changelog
+* Updated to new generic pal hardware gazebo plugin
+* Simplified base collision
+  Now the base_link has a mesh that touches with the ground
+* Contributors: Jeremie Deray, Sam Pfeiffer
+
 1.1.0 (2016-03-15)
 ------------------
 * urdf use macro param default value
