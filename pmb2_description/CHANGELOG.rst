@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+1.1.2 (2016-06-03)
+------------------
 * sonar ID two digit
 * Add imu controller to launch
 * Add imu gazebo plugin config
