@@ -43,6 +43,11 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* update sonars min/max range
+* Contributors: Jeremie Deray
+
 1.1.2 (2016-06-03)
 ------------------
 * sonar ID two digit
