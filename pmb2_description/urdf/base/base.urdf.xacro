@@ -99,7 +99,7 @@
     <!-- IMU -->
     <!-- @todo pmb2_hardware_gazebo needs an IMU!  -->
     <xacro:imu_sensor name="${name}_imu" parent="${name}_link" update_rate="100.0">
-      <origin xyz="0.10171 0 0.11282" rpy="0 ${180 * deg_to_rad} ${90 * deg_to_rad}"/>
+      <origin xyz="0.10171 0 0.11282" rpy="0 0 ${-90 * deg_to_rad}"/>
     </xacro:imu_sensor>
 
     <!-- Wheels -->
