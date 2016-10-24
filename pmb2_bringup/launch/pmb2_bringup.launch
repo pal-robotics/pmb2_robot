@@ -1,12 +1,11 @@
 <launch>
-  <!-- Diff drive controller parameters -->
-  <rosparam command="load" file="$(find pmb2_controller_configuration)/config/mobile_base_controller.yaml"/>
+  <arg name="robot" default="custom"/>
 
   <!-- Load default controllers -->
   <include file="$(find pmb2_controller_configuration)/launch/default_controllers.launch"/>
 
   <!-- Robot state publisher -->
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="50.0"/>
     <param name="tf_prefix" type="string" value=""/>
   </node>
@@ -26,12 +25,9 @@
   <!-- Joystick controller -->
   <include file="$(find pmb2_bringup)/launch/joystick_teleop.launch"/>
 
-  <!-- Bumper, IR and Sonar to cloud -->
+  <!-- Sonar to cloud -->
   <!-- @todo use custom config (requires changes in sensor_to_cloud -->
   <!-- @todo no bumper, IR or sonar yet -->
-   <!--include file="$(find sensor_to_cloud)/launch/bumper_to_cloud.launch"/>
-    <arg name="config" value="$(find pmb2_bringup)/config/sensor_to_cloud/bumper_to_cloud.yaml"/>
-  </include-->
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
     <!--arg name="config" value="$(find pmb2_bringup)/config/sensor_to_cloud/sonar_to_cloud.yaml"/>
   </include--> <!-- TODO fix param load -->
