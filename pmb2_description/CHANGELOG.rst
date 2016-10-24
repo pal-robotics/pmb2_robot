@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+1.1.5 (2016-10-24)
+------------------
 * Now launch files are more like those for TIAGo
 * add tiago_support as maintainer
 * Contributors: Jordan Palacios, Jordi Pages

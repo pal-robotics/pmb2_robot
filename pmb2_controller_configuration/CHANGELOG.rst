@@ -15,8 +15,8 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+1.1.5 (2016-10-24)
+------------------
 * Now launch files are more like those for TIAGo
 * add tiago_support as maintainer
 * Contributors: Jordan Palacios, Jordi Pages
