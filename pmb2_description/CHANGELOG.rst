@@ -43,6 +43,11 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* invert sonars 1 and 3
+* Contributors: Jordi Pages
+
 1.1.5 (2016-10-24)
 ------------------
 * Now launch files are more like those for TIAGo

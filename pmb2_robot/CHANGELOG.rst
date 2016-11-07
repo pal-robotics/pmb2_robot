@@ -12,6 +12,9 @@ Changelog for package pmb2_robot
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+
 1.1.5 (2016-10-24)
 ------------------
 * add tiago_support as maintainer
