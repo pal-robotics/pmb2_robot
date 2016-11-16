@@ -43,6 +43,17 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+1.1.6 (2016-11-07)
+------------------
+* invert sonars 1 and 3
+* Contributors: Jordi Pages
+
+1.1.5 (2016-10-24)
+------------------
+* Now launch files are more like those for TIAGo
+* add tiago_support as maintainer
+* Contributors: Jordan Palacios, Jordi Pages
+
 1.1.4 (2016-07-04)
 ------------------
 * corrected imu frame, z always point upwards

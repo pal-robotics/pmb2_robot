@@ -1,5 +1,5 @@
 <launch>
-  <arg name="robot" default="default"/>
+  <arg name="robot" default="custom"/>
 
   <!-- Robot description -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find pmb2_description)/robots/pmb2_$(arg robot).urdf.xacro'" />

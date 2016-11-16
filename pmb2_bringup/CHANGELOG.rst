@@ -18,6 +18,15 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+1.1.6 (2016-11-07)
+------------------
+
+1.1.5 (2016-10-24)
+------------------
+* Now launch files are more like those for TIAGo
+* add tiago_support as maintainer
+* Contributors: Jordan Palacios, Jordi Pages
+
 1.1.4 (2016-07-04)
 ------------------
 
