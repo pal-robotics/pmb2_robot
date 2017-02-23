@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+1.1.7 (2017-02-23)
+------------------
 * added rviz_joy_vel to twist_mux
 * refs #14797. Add required param for public sim
 * Contributors: Jordi Pages, Procópio Stein
