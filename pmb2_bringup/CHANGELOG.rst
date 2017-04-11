@@ -18,6 +18,11 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* added servoing_cmd_vel to twist_mux
+* Contributors: Procópio Stein
+
 1.1.7 (2017-02-23)
 ------------------
 * added rviz_joy_vel to twist_mux
