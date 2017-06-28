@@ -12,6 +12,11 @@ Changelog for package pmb2_robot
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* upgraded packages format, maintainers and license
+* Contributors: Procópio Stein
+
 1.1.8 (2017-04-11)
 ------------------
 

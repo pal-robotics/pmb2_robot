@@ -43,6 +43,11 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* upgraded packages format, maintainers and license
+* Contributors: Procópio Stein
+
 1.1.8 (2017-04-11)
 ------------------
 
