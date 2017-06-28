@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>pmb2_robot</name>
   <version>1.1.8</version>
   <description>PMB2 robot description and launch files</description>
-  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
-  <maintainer email="tiago_support@pal-robotics.com">TIAGo support PAL Robotics</maintainer>
-  <license>BSD</license>
+  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
+  <maintainer email="jeremie.deray@pal-robotics.com">Jeremie Deray</maintainer>
+  <license>Apache License 2.0</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>pmb2_description</run_depend>
-  <run_depend>pmb2_bringup</run_depend>
-  <run_depend>pmb2_controller_configuration</run_depend>
+  <exec_depend>pmb2_description</exec_depend>
+  <exec_depend>pmb2_bringup</exec_depend>
+  <exec_depend>pmb2_controller_configuration</exec_depend>
 
   <export>
     <metapackage/>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>pmb2_description</name>
   <version>1.1.8</version>
   <description>
@@ -8,17 +8,15 @@
       a variety of other components.  Most users will not interact directly
       with this package.
   </description>
-
-  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
-  <maintainer email="tiago_support@pal-robotics.com">TIAGo support PAL Robotics</maintainer>
-
-  <license>Creative Commons BY-NC-ND 3.0</license>
+  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
+  <maintainer email="jeremie.deray@pal-robotics.com">Jeremie Deray</maintainer>
+  <license>Apache License 2.0</license>
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>xacro</run_depend>
-  <run_depend>pal_gazebo_plugins</run_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>pal_gazebo_plugins</exec_depend>
 
 </package>

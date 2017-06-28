@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<package>
+<package format="2">
   <name>pmb2_controller_configuration</name>
   <version>1.1.8</version>
   <description>Launch files and scripts needed to configure
     the controllers of the PMB2 robot.</description>
-  <maintainer email="info@pal-robotics.com">PAL Robotics</maintainer>
-  <maintainer email="tiago_support@pal-robotics.com">TIAGo support PAL Robotics</maintainer>
-  <license>Modified BSD</license>
+  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
+  <maintainer email="jeremie.deray@pal-robotics.com">Jeremie Deray</maintainer>
+  <license>Apache License 2.0</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <run_depend>controller_manager</run_depend>
-  <run_depend>diff_drive_controller</run_depend>
-  <run_depend>joint_state_controller</run_depend>
-  <run_depend>imu_sensor_controller</run_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+  <exec_depend>joint_state_controller</exec_depend>
+  <exec_depend>imu_sensor_controller</exec_depend>
 
 </package>
