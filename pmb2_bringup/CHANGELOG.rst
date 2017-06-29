@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+1.1.10 (2017-06-29)
+-------------------
 * added launch for robot pose publisher
 * updated robot state publisher name and activated static tf
 * Contributors: Procópio Stein
