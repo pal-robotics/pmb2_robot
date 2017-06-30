@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+1.1.11 (2017-06-30)
+-------------------
 * added robot pose dep
 * Contributors: Procópio Stein
 
