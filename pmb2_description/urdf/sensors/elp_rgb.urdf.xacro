@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+  Copyright (c) 2017, PAL Robotics, S.L.
+  All rights reserved.
+-->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Macro -->
+  <xacro:macro name="elp_rgb" params="name parent *origin *optical_origin">
+
+    <!-- frames in the center of the camera -->
+    <joint name="${name}_joint" type="fixed">
+      <insert_block name="origin"/>
+      <axis xyz="0 0 1"/>
+      <parent link="${parent}_link"/>
+      <child link="${name}_link"/>
+    </joint>
+
+    <link name="${name}_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.01" />
+        <inertia ixx="0.000030"  ixy="0.0"  ixz="0.0"
+                 iyy="0.000030"  iyz="0.0"
+                 izz="0.000002" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 90 0"/>
+        <geometry>
+          <mesh filename="package://pmb2_description/meshes/sensors/elp_camera.stl" scale="0.001 0.001 0.001"/>
+        </geometry>
+        <material name="Grey" />
+      </visual>
+      <collision>
+        <origin xyz="-0.01 0.0025 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.04 0.185 0.03"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_optical_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
+      <parent link="${name}_link" />
+      <child link="${name}_optical_frame"/>
+    </joint>
+
+    <link name="${name}_optical_frame"/>
+
+  </xacro:macro>
+
+</robot>
