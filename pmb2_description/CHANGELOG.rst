@@ -43,6 +43,12 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* renamed depth sensor
+* add rgbd related files and config to description
+* Contributors: Procópio Stein
+
 1.1.12 (2017-06-30)
 -------------------
 

@@ -18,6 +18,11 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* removed commented and unused sensors
+* Contributors: Procópio Stein
+
 1.1.12 (2017-06-30)
 -------------------
 * speed limit starts disabled
