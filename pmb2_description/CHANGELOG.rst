@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+1.1.14 (2018-01-30)
+-------------------
 * Merge branch 'test_urdf' into 'dubnium-devel'
   Add URDF tests
   See merge request robots/pmb2_robot!17
