@@ -57,7 +57,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/base/base_collision.dae" />
+          <mesh filename="package://pmb2_description/meshes/base/base_collision.stl" />
         </geometry>
         <material name="White" />
       </collision>

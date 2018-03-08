@@ -16,9 +16,10 @@
     <gazebo reference="caster_${side}_1_link">
       <kp>1000000.0</kp>
       <kd>100.0</kd>
-      <mu1>0</mu1>
-      <mu2>0</mu2>
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
       <fdir1>1 0 0</fdir1>
+      <fdir2>0 1 0</fdir2>
       <maxVel>1.0</maxVel>
       <minDepth>0.00</minDepth>
       <implicitSpringDamper>1</implicitSpringDamper>
@@ -27,11 +28,13 @@
     <gazebo reference="caster_${side}_2_link">
       <kp>1000000.0</kp>
       <kd>100.0</kd>
-      <mu1>0</mu1>
-      <mu2>0</mu2>
+      <mu1>0.2</mu1>
+      <mu2>0.2</mu2>
       <fdir1>1 0 0</fdir1>
+      <fdir2>0 1 0</fdir2>
+
       <maxVel>1.0</maxVel>
-      <minDepth>0.00</minDepth>
+      <minDepth>0.05</minDepth>
       <implicitSpringDamper>1</implicitSpringDamper>
       <material>Gazebo/DarkGrey</material>
     </gazebo>

@@ -13,6 +13,7 @@
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.transmission.xacro"/>
 
+  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.gazebo.xacro"/>
   <xacro:macro name="caster" params="side radius width separation_x separation_y offset_x offset_y offset_z parent">
     <link name="caster_${side}_1_link">
       <inertial>
@@ -29,6 +30,12 @@
         </geometry>
         <material name="Grey"/>
       </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="${radius}" length="${width}"/>
+        </geometry>
+      </collision>
     </link>
 
     <link name="caster_${side}_2_link">
@@ -46,6 +53,12 @@
         </geometry>
         <material name="DarkGrey"/>
       </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="${radius}" length="${width}"/>
+        </geometry>
+      </collision>
     </link>
 
     <joint name="caster_${side}_1_joint" type="fixed">
@@ -61,6 +74,9 @@
       <origin xyz="-0.016 0.0000 -0.040" rpy="${-90.0 * deg_to_rad} 0 0"/>
       <axis xyz="0 0 1"/>
     </joint>
+
+    <!-- Gazebo extensions -->
+    <xacro:caster_gazebo side="${side}"/>
 
   </xacro:macro>
 </robot>
