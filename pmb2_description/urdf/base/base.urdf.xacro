@@ -50,7 +50,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/base/high_resolution/base_collision.stl" />
+          <mesh filename="package://pmb2_description/meshes/base/base.stl" />
         </geometry>
         <material name="White" />
       </visual>
