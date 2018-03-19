@@ -22,6 +22,7 @@
       <maxVel>1.0</maxVel>
       <minDepth>0.0</minDepth>
       <implicitSpringDamper>1</implicitSpringDamper>
+      <material>Gazebo/DarkGrey</material>
     </gazebo>
 
     <gazebo reference="caster_${side}_2_link">

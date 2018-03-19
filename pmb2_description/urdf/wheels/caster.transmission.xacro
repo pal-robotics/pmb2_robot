@@ -14,10 +14,11 @@
   <xacro:macro name="caster_transmission" params="name side number reduction" >
     <transmission name="${name}_${side}_${number}_trans">
       <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="${name}_${side}_${number}_motor" >
+        <actuator name="${name}_${side}_${number}_motor" >
         <mechanicalReduction>${reduction}</mechanicalReduction>
       </actuator>
       <joint name="${name}_${side}_${number}_joint" >
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
     </transmission>
