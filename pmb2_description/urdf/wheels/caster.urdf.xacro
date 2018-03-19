@@ -79,9 +79,9 @@
     <xacro:caster_gazebo side="${side}"/>
 
     <!-- Transmission -->
-    <xacro:caster_transmission name="caster_" side="${side}" number="1" reduction="1.0"/>
+  <!--  <xacro:caster_transmission name="caster_" side="${side}" number="1" reduction="1.0"/>
     <xacro:caster_transmission name="caster_" side="${side}" number="2" reduction="1.0"/>
-
+-->
 
   </xacro:macro>
 </robot>
