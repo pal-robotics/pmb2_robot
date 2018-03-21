@@ -42,26 +42,30 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
 
       <link name="suspension_${side}_link">
         <inertial>
-          <origin xyz="0 0 0" rpy="0 0 0"/>
-          <mass value="10"/>
-          <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
-        </inertial>
+          <origin xyz="0 0 -0.02" rpy="0 0 0"/>
+          <mass value="30"/>
+          <inertia ixx="1.0" ixy="0" ixz="0"
+                   iyy="1.0" iyz="0"
+                   izz="1.0"/>
+         </inertial>
+        <kinematic>1</kinematic>
+        <gravity>1</gravity>
       </link>
 
 
       <joint name="suspension_${side}_joint" type="prismatic">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit effort="2000.0" lower="-0.02" upper="0.02" velocity="1.0"/>
+        <limit effort="10000.0" lower="-0.04" upper="0.04" velocity="1.0"/>
         <child link="suspension_${side}_link"/>
         <parent link="${parent}_link"/>
         <calibration rising="0.0" />
-        <dynamics damping="1000" />
+        <dynamics damping="10000"/>
 
-        <safety_controller k_position="0"
-          k_velocity="20"
-          soft_lower_limit="-0.02"
-          soft_upper_limit="0.02" />
+        <safety_controller k_position="-0.03"
+          k_velocity="100"
+          soft_lower_limit="-0.05"
+          soft_upper_limit="0.05" />
         </joint>
 
 
