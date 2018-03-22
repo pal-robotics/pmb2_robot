@@ -48,7 +48,7 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
                    iyy="1.0" iyz="0"
                    izz="1.0"/>
          </inertial>
-        <kinematic>1</kinematic>
+        <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
 
@@ -56,16 +56,16 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
       <joint name="suspension_${side}_joint" type="prismatic">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit effort="10000.0" lower="-0.04" upper="0.04" velocity="1.0"/>
+        <limit effort="10000.0" lower="-0.03" upper="0.03" velocity="1.0"/>
         <child link="suspension_${side}_link"/>
         <parent link="${parent}_link"/>
         <calibration rising="0.0" />
-        <dynamics damping="10000"/>
+        <dynamics damping="1000"/>
 
-        <safety_controller k_position="-0.03"
-          k_velocity="100"
-          soft_lower_limit="-0.05"
-          soft_upper_limit="0.05" />
+        <safety_controller k_position="0"
+          k_velocity="20"
+          soft_lower_limit="-0.03"
+          soft_upper_limit="0.03" />
         </joint>
 
 

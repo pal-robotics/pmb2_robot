@@ -19,8 +19,8 @@
       <mu1>1000.0</mu1>
       <mu2>1000.0</mu2>
       <fdir1>1 0 0</fdir1>
-      <maxVel>20.0</maxVel>
-      <minDepth>0.0</minDepth>
+      <maxVel>40.0</maxVel>
+      <minDepth>0.002</minDepth>
       <implicitSpringDamper>1</implicitSpringDamper>
       <material>Gazebo/DarkGrey</material>
     </gazebo>
