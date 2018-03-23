@@ -43,7 +43,7 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
       <link name="suspension_${side}_link">
         <inertial>
           <origin xyz="0 0 -0.02" rpy="0 0 0"/>
-          <mass value="30"/>
+          <mass value="10"/>
           <inertia ixx="1.0" ixy="0" ixz="0"
                    iyy="1.0" iyz="0"
                    izz="1.0"/>
@@ -56,16 +56,16 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
       <joint name="suspension_${side}_joint" type="prismatic">
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit effort="10000.0" lower="-0.03" upper="0.03" velocity="1.0"/>
+        <limit effort="100.0" lower="-0.005" upper="0.005" velocity="1.0"/>
         <child link="suspension_${side}_link"/>
         <parent link="${parent}_link"/>
         <calibration rising="0.0" />
-        <dynamics damping="1000"/>
+        <dynamics damping="100"/>
 
         <safety_controller k_position="0"
-          k_velocity="20"
-          soft_lower_limit="-0.03"
-          soft_upper_limit="0.03" />
+          k_velocity="10"
+          soft_lower_limit="-0.005"
+          soft_upper_limit="0.005" />
         </joint>
 
 

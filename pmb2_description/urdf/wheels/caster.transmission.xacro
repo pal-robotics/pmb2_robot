@@ -19,6 +19,7 @@
       </actuator>
       <joint name="${name}_${side}_${number}_joint" >
         <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
