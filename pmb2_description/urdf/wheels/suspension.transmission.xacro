@@ -8,19 +8,21 @@
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
+
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <!-- Caster transmissions -->
-  <xacro:macro name="caster_transmission" params="name side number reduction" >
-    <transmission name="${name}_${side}_${number}_trans">
+  <!-- suspension transmission -->
+  <xacro:macro name="suspension_transmission" params="side">
+    <transmission name="suspension_${side}_trans">
       <type>transmission_interface/SimpleTransmission</type>
-        <actuator name="${name}_${side}_${number}_motor" >
-        <mechanicalReduction>${reduction}</mechanicalReduction>
+      <actuator name="suspension_${side}_motor" >
+        <mechanicalReduction>1.0</mechanicalReduction>
       </actuator>
-      <joint name="${name}_${side}_${number}_joint" >
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <joint name="suspension_${side}_joint" >
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
     </transmission>
   </xacro:macro>
+
 </robot>
