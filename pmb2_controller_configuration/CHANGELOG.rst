@@ -15,6 +15,9 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+
 1.1.14 (2018-01-30)
 -------------------
 

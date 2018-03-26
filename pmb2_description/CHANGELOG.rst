@@ -43,6 +43,25 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'collision_fix' into 'erbium-devel'
+  caster wheels and base collision
+  See merge request robots/pmb2_robot!19
+* gtests passed on the flat surface
+* linear move test passed
+* revert testing torque value
+* transmission caster
+* sufficient for tests
+* fix castor joints transmission
+* rotate and climb with a virtual suspension system and use caster wheels
+* virtual suspension and rolling caster wheels
+* high-res mesh of the base for visual geometry
+* Friction coeffs adjusted
+* caster wheels and base collision
+  Note: Frictin coeffs mu1, mu2 in caster.gazebo.xacro can me adjusted to make robot stopping immideately
+* Contributors: Andrei Pasnicenco, Victor Lopez
+
 1.1.14 (2018-01-30)
 -------------------
 * Merge branch 'test_urdf' into 'dubnium-devel'
