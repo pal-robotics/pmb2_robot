@@ -20,7 +20,7 @@ mobile_base_controller:
   preserve_turning_radius: true
 
   # Publish limited velocity
-  publish_cmd: false
+  publish_cmd: true
 
   # Publish wheel data
   publish_wheel_data: true
