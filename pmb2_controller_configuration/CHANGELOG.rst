@@ -15,6 +15,14 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'publish_cmd_true' into 'dubnium-devel'
+  Publish_cmd to true, needed since kinetic version of mobile_base_controller
+  See merge request robots/pmb2_robot!18
+* Publish_cmd to true, needed since kinetic version of mobile_base_controller
+* Contributors: Procópio Stein, Victor Lopez
+
 1.1.14 (2018-01-30)
 -------------------
 
