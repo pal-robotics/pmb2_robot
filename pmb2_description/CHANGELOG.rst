@@ -43,6 +43,11 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* delete transmission for passive joints
+* Contributors: Andrei Pasnicenco
+
 2.0.0 (2018-03-26)
 ------------------
 * Merge branch 'collision_fix' into 'erbium-devel'
