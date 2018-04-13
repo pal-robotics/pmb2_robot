@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+2.0.2 (2018-04-13)
+------------------
 * reduced sonars max range to avoid noise
 * Contributors: Procópio Stein
 
