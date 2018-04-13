@@ -15,6 +15,9 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+
 2.0.1 (2018-03-29)
 ------------------
 * Merge branch 'publish_cmd_true' into 'dubnium-devel'
