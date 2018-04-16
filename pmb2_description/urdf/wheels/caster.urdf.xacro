@@ -28,12 +28,12 @@
         </geometry>
         <material name="Grey"/>
       </visual>
-      <collision>
+      <!--collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <cylinder radius="${radius}" length="${width}"/>
         </geometry>
-      </collision>
+      </collision-->
     </link>
 
     <link name="caster_${side}_2_link">
