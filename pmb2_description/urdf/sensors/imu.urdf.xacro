@@ -26,7 +26,7 @@
     <joint name="${name}_joint" type="fixed">
       <parent link="${parent}"/>
       <child link="${name}_link"/>
-      <insert_block name="origin"/>
+      <xacro:insert_block name="origin"/>
     </joint>
 
     <gazebo reference="${name}_link">
