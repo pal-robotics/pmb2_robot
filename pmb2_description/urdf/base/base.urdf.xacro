@@ -21,20 +21,20 @@
   <xacro:include filename="$(find pmb2_description)/urdf/objects/antenna.urdf.xacro"/>
 
   <!-- Wheel characteristics -->
-  <property name="wheel_radius"     value="0.0985"/>
-  <property name="wheel_width"      value="0.040"/>
-  <property name="wheel_separation" value="0.4044"/>
-  <property name="wheel_torque"     value="6.0"/>
-  <property name="wheel_velocity"   value="1.0"/>
+  <xacro:property name="wheel_radius"     value="0.0985"/>
+  <xacro:property name="wheel_width"      value="0.040"/>
+  <xacro:property name="wheel_separation" value="0.4044"/>
+  <xacro:property name="wheel_torque"     value="6.0"/>
+  <xacro:property name="wheel_velocity"   value="1.0"/>
 
   <!-- Caster wheel characteristics -->
-  <property name="caster_radius"       value="0.025"/>
-  <property name="caster_width"        value="0.015"/>
-  <property name="caster_separation_x" value="0.343"/>
-  <property name="caster_separation_y" value="0.204"/>
-  <property name="caster_offset_x"     value="-0.002"/>
-  <property name="caster_offset_y"     value="0.0"/>
-  <property name="caster_offset_z"     value="-0.0335"/>
+  <xacro:property name="caster_radius"       value="0.025"/>
+  <xacro:property name="caster_width"        value="0.015"/>
+  <xacro:property name="caster_separation_x" value="0.343"/>
+  <xacro:property name="caster_separation_y" value="0.204"/>
+  <xacro:property name="caster_offset_x"     value="-0.002"/>
+  <xacro:property name="caster_offset_y"     value="0.0"/>
+  <xacro:property name="caster_offset_z"     value="-0.0335"/>
 
   <xacro:macro name="base" params="name">
 
