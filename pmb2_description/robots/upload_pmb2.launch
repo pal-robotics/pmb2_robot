@@ -1,9 +1,8 @@
-<launch>
+<launch deprecated="Please use 'upload.lauch' instead.">
   <arg name="robot" default="custom"/>
 
-  <!-- Robot description -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find pmb2_description)/robots/pmb2_$(arg robot).urdf.xacro'" />
+  <include file="$(find pmb2_description)/robots/upload.launch">
+        <arg name="robot" value="$(arg robot)"/>
+  </include>
 
-  <!-- Joint limits -->
-  <rosparam command="load" file="$(find pmb2_description)/config/joint_limits.yaml"/>
 </launch>
