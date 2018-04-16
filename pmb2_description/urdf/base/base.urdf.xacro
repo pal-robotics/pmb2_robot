@@ -29,7 +29,7 @@
 
   <!-- Caster wheel characteristics -->
   <property name="caster_radius"       value="0.025"/>
-  <property name="caster_width"        value="0.015"/>
+  <property name="caster_width"        value="0.025"/>
   <property name="caster_separation_x" value="0.343"/>
   <property name="caster_separation_y" value="0.204"/>
   <property name="caster_offset_x"     value="-0.002"/>
