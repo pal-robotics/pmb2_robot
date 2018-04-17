@@ -15,6 +15,9 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+
 2.0.4 (2018-04-17)
 ------------------
 * Merge branch 'fixed_extra_joints' into 'erbium-devel'
