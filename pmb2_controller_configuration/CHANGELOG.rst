@@ -15,6 +15,14 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'fixed_extra_joints' into 'erbium-devel'
+  fixed extra joint param for caster wheels in joint_state_controller
+  See merge request robots/pmb2_robot!28
+* fixed extra joint param for caster wheels in joint_state_controller
+* Contributors: Hilario Tome
+
 2.0.3 (2018-04-17)
 ------------------
 
