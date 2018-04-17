@@ -43,6 +43,30 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'test-branch' into 'erbium-devel'
+  Test branch
+  See merge request robots/pmb2_robot!27
+* Merge branch 'fix-stl' into test-branch
+* Merge remote-tracking branch 'origin/fix_xacro_warning' into test-branch
+* fixed warning when loading stl file
+* fix missing xacro namespace
+* Merge remote-tracking branch 'origin/fixing_sim' into test-branch
+* Merge remote-tracking branch 'origin/deprecate_upload_pmb2' into test-branch
+* Merge remote-tracking branch 'origin/fix_xacro_warning' into test-branch
+* updated urdf file to get correct mesh and remove rgb related info
+* added structure sensor mesh
+* deprecate upload_pmb2
+* normalize xmlns across xacro files
+* fix xacro warning
+  deprecated: xacro tags should be prepended with 'xacro' xml namespace.
+  Use the following script to fix incorrect usage:
+  find . -iname "*.xacro" | xargs sed -i 's#<\([/]\?\)\(if\|unless\|include\|arg\|property\|macro\|insert_block\)#<\1xacro:\2#g'
+* rm usuless caster 1 collision mesh
+* fix casters
+* Contributors: Jeremie Deray, Procópio Stein
+
 2.0.2 (2018-04-13)
 ------------------
 * reduced sonars max range to avoid noise

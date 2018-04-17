@@ -18,6 +18,15 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'test-branch' into 'erbium-devel'
+  Test branch
+  See merge request robots/pmb2_robot!27
+* Merge remote-tracking branch 'origin/deprecate_upload_pmb2' into test-branch
+* deprecate upload_pmb2
+* Contributors: Jeremie Deray, Procópio Stein
+
 2.0.2 (2018-04-13)
 ------------------
 
