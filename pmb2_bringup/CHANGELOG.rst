@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+2.0.3 (2018-04-17)
+------------------
 * Merge branch 'test-branch' into 'erbium-devel'
   Test branch
   See merge request robots/pmb2_robot!27

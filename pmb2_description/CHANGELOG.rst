@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+2.0.3 (2018-04-17)
+------------------
 * Merge branch 'test-branch' into 'erbium-devel'
   Test branch
   See merge request robots/pmb2_robot!27
