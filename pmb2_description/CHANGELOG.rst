@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+2.0.5 (2018-04-17)
+------------------
 * Merge branch 'fix-tests-broken-due-to-stl' into 'erbium-devel'
   Revert "fixed warning when loading stl file"
   See merge request robots/pmb2_robot!29
