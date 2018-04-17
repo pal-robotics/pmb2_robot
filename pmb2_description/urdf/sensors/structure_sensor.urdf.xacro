@@ -1,25 +1,12 @@
 <?xml version="1.0"?>
 <!--
 
-  Copyright (c) 2013, PAL Robotics, S.L.
+  Copyright (c) 2018, PAL Robotics, S.L.
   All rights reserved.
 
   This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
-
-  ASUS Xtion Pro Live
-    - visual model, without base
-    - collision geometry
-    - TF frames
-    - loads Gazebo plugin
-
-    Note: There is a bug that Gazebo in ROS Fuerte ignores the roll/pitch/yaw in the visual tag,
-          therefore it needs to be in a separate link, with the orientation specified at the joint.
-
-    ToDo: Fix visual mesh, re-scale it, & the origin is not centered along the frontal axis.
-          Can simplify collision mesh.
-          Rotate origin in mesh, to match the orientation of the base link and bypass the bug.
 
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
@@ -31,7 +18,7 @@
 
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
-      <insert_block name="origin"/>
+      <xacro:insert_block name="origin"/>
       <axis xyz="0 0 1"/>
       <!-- <limit lower="0" upper="0.001" effort="100" velocity="0.01"/> -->
       <parent link="${parent}_link"/>
@@ -50,7 +37,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/sensors/xtion_pro_live.dae" />
+          <mesh filename="package://pmb2_description/meshes/sensors/structure_sensor.stl" scale="0.001 0.001 0.001" />
         </geometry>
         <material name="Grey">
           <color rgba="0.5 0.5 0.5 1"/>
@@ -64,25 +51,9 @@
       </collision>
     </link>
 
-    <joint name="${name}_optical_joint" type="fixed">
-      <insert_block name="optical_origin" />
-      <parent link="${name}_link"/>
-      <child link="${name}_optical_frame"/>
-    </joint>
-
-    <link name="${name}_optical_frame">
-      <inertial>
-        <mass value="0.01" />
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
-                 iyy="0.0"  iyz="0.0"
-                 izz="0.0" />
-      </inertial>
-    </link>
-
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
-      <origin xyz="0.0 0.038 0.0" rpy="0 0 0" />
+      <origin xyz="0.0 0.03825 0.0" rpy="0 0 0" />
       <parent link="${name}_link" />
       <child link="${name}_depth_frame"/>
     </joint>
@@ -96,23 +67,6 @@
     </joint>
 
     <link name="${name}_depth_optical_frame"/>
-
-    <!-- frames of the rgb sensor -->
-    <joint name="${name}_rgb_joint" type="fixed">
-      <origin xyz="0.0 0.0135 0.0" rpy="0 0 0" />
-      <parent link="${name}_link" />
-      <child link="${name}_rgb_frame"/>
-    </joint>
-
-    <link name="${name}_rgb_frame"/>
-
-    <joint name="${name}_rgb_optical_joint" type="fixed">
-      <origin xyz="0 0 0" rpy="${-90.0 * deg_to_rad} 0.0 ${-90.0 * deg_to_rad}" />
-      <parent link="${name}_rgb_frame" />
-      <child link="${name}_rgb_optical_frame"/>
-    </joint>
-
-    <link name="${name}_rgb_optical_frame"/>
 
     <!-- extensions -->
     <xacro:structure_sensor_rgbd_camera_gazebo name="${name}" />
