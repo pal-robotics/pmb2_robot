@@ -11,8 +11,6 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.transmission.xacro"/>
-
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.gazebo.xacro"/>
   <xacro:macro name="caster" params="side radius width separation_x separation_y offset_x offset_y offset_z parent">
     <link name="caster_${side}_1_link">
@@ -30,12 +28,12 @@
         </geometry>
         <material name="Grey"/>
       </visual>
-      <collision>
+      <!--collision>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
           <cylinder radius="${radius}" length="${width}"/>
         </geometry>
-      </collision>
+      </collision-->
     </link>
 
     <link name="caster_${side}_2_link">
@@ -77,11 +75,6 @@
 
     <!-- Gazebo extensions -->
     <xacro:caster_gazebo side="${side}"/>
-
-    <!-- Transmission -->
-   <xacro:caster_transmission name="caster" side="${side}" number="1" reduction="1.0"/>
-   <xacro:caster_transmission name="caster" side="${side}" number="2" reduction="1.0"/>
-
 
   </xacro:macro>
 </robot>

@@ -21,9 +21,9 @@
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/microphone.urdf.xacro"/>
 
   <!-- Laser characteristics -->
-  <property name="base_laser_x" value="0.202"/>
-  <property name="base_laser_y" value="0.0"/>
-  <property name="base_laser_z" value="-0.004"/>
+  <xacro:property name="base_laser_x" value="0.202"/>
+  <xacro:property name="base_laser_y" value="0.0"/>
+  <xacro:property name="base_laser_z" value="-0.004"/>
 
   <xacro:macro name="base_sensors" params=" name hokuyo:=false sick551:=false sick561:=false sick571:=false sonars:=false microphone:=false ">
 
@@ -70,15 +70,15 @@
     <xacro:if value="${sonars}">
 
       <!-- Sonars -->
-      <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="2.0" minRange="0.02" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_03" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.183 0.183 0.173" rpy="0 0 ${135 * deg_to_rad}"/>
       </xacro:range_sensor>
 
-      <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="2.0" minRange="0.02" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_02" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.259 0.0 0.173" rpy="0 0 ${180 * deg_to_rad}"/>
       </xacro:range_sensor>
 
-      <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="2.0" minRange="0.02" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_01" parent="${name}" ros_topic="sonar_${name}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.183 -0.183 0.173" rpy="0 0 ${225 * deg_to_rad}"/>
       </xacro:range_sensor>
 

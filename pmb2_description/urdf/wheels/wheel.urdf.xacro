@@ -13,8 +13,6 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.transmission.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.gazebo.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/suspension.transmission.xacro"/>
-
 
   <xacro:macro name="wheel" params="side reflect radius width torque velocity separation parent">
     <link name="wheel_${side}_link">
@@ -79,7 +77,6 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
 
         <!-- Transmission -->
         <xacro:wheel_transmission side="${side}"/>
-        <xacro:suspension_transmission side="${side}"/>
 
         <!-- Gazebo extensions -->
         <xacro:wheel_gazebo side="${side}"/>
