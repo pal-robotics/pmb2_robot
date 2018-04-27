@@ -43,8 +43,8 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
-Forthcoming
------------
+2.0.6 (2018-04-27)
+------------------
 * Merge branch 'fix_tf_depth_sensor' into 'erbium-devel'
   fixed the frame wrongly removed previously
   See merge request robots/pmb2_robot!31
