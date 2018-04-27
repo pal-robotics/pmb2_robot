@@ -51,6 +51,22 @@
       </collision>
     </link>
 
+    <joint name="${name}_optical_joint" type="fixed">
+      <insert_block name="optical_origin" />
+      <parent link="${name}_link"/>
+      <child link="${name}_optical_frame"/>
+    </joint>
+
+    <link name="${name}_optical_frame">
+      <inertial>
+        <mass value="0.01" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.0"  ixy="0.0"  ixz="0.0"
+                 iyy="0.0"  iyz="0.0"
+                 izz="0.0" />
+      </inertial>
+    </link>
+
     <!-- frames of the depth sensor -->
     <joint name="${name}_depth_joint" type="fixed">
       <origin xyz="0.0 0.03825 0.0" rpy="0 0 0" />
