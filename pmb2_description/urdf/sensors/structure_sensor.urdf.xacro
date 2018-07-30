@@ -52,7 +52,7 @@
     </link>
 
     <joint name="${name}_optical_joint" type="fixed">
-      <insert_block name="optical_origin" />
+      <xacro:insert_block name="optical_origin" />
       <parent link="${name}_link"/>
       <child link="${name}_optical_frame"/>
     </joint>
