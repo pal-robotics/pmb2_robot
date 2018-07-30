@@ -43,6 +43,18 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'fix-xacro-warnings' into 'erbium-devel'
+  prepend missing 'xacro' tag
+  See merge request robots/pmb2_robot!33
+* prepend missing 'xacro' tag
+* Merge branch 'fix-warning-typo' into 'erbium-devel'
+  fix typo
+  See merge request robots/pmb2_robot!32
+* fix typo
+* Contributors: Hilario Tome, Jordi Pages, Victor Lopez
+
 2.0.6 (2018-04-27)
 ------------------
 * Merge branch 'fix_tf_depth_sensor' into 'erbium-devel'
