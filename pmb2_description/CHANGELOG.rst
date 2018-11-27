@@ -43,6 +43,14 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'remove-caster-friction' into 'erbium-devel'
+  Remove caster friction so it doesn't push base around
+  See merge request robots/pmb2_robot!34
+* Remove caster friction so it doesn't push base around
+* Contributors: Victor Lopez
+
 2.0.7 (2018-07-30)
 ------------------
 * Merge branch 'fix-xacro-warnings' into 'erbium-devel'
