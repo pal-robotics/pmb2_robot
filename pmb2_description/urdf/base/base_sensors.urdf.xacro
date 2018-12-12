@@ -9,9 +9,9 @@
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  
+
   <xacro:include filename="$(find pmb2_description)/urdf/base/base.urdf.xacro"/>
-  
+
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/hokuyo_urg_04lx_ug01_laser.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/sick_tim561_laser.urdf.xacro"/>
@@ -25,9 +25,10 @@
   <xacro:property name="base_laser_y" value="0.0"/>
   <xacro:property name="base_laser_z" value="-0.004"/>
 
-  <xacro:macro name="base_sensors" params=" name hokuyo:=false sick551:=false sick561:=false sick571:=false sonars:=false microphone:=false ">
+  <!-- laser_model can be: false, hokuyo, sick-551, sick-561, sick-571-->
+  <xacro:macro name="base_sensors" params=" name laser_model:=sick-571 sonars:=false microphone:=false ">
 
-    <xacro:if value="${hokuyo}"> <!-- TODO: find expr that encure only one laser is true -->
+    <xacro:if value="${laser_model == 'hokuyo'}">
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
@@ -37,7 +38,7 @@
 
     </xacro:if>
 
-    <xacro:if value="${sick551}">
+    <xacro:if value="${laser_model == 'sick-551'}">
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
@@ -47,7 +48,8 @@
 
     </xacro:if>
 
-    <xacro:if value="${sick561}">
+    <xacro:if value="${laser_model == 'sick-561'}">
+
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
@@ -57,7 +59,7 @@
 
     </xacro:if>
 
-    <xacro:if value="${sick571}">
+    <xacro:if value="${laser_model == 'sick-571'}">
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
