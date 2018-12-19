@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+3.0.0 (2018-12-19)
+------------------
 * Merge branch 'specifics-refactor' into 'erbium-devel'
   Remove upload_pmb2.launch
   See merge request robots/pmb2_robot!40
