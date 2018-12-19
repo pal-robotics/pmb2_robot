@@ -43,6 +43,17 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'specifics-refactor' into 'erbium-devel'
+  Remove upload_pmb2.launch
+  See merge request robots/pmb2_robot!40
+* Add rgbd sensors
+* Change robot parameter name
+* Parametrize urdf
+* Remove upload_pmb2.launch
+* Contributors: Victor Lopez
+
 2.0.8 (2018-11-27)
 ------------------
 * Merge branch 'remove-caster-friction' into 'erbium-devel'

@@ -18,6 +18,15 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'specifics-refactor' into 'erbium-devel'
+  Remove upload_pmb2.launch
+  See merge request robots/pmb2_robot!40
+* Add rgbd sensors
+* Change robot parameter name
+* Contributors: Victor Lopez
+
 2.0.8 (2018-11-27)
 ------------------
 
