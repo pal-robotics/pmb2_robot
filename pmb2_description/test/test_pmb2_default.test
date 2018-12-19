@@ -1,9 +1,0 @@
-<launch>
-  <include file="$(find pmb2_description)/robots/upload.launch">
-    <arg name="robot" value="default"/>
-  </include>
-
-  <include file="$(find urdf_test)/launch/test_urdf.launch">
-    <arg name="get_description" value="true"/>
-  </include>
-</launch>

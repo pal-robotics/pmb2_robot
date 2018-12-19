@@ -1,10 +1,14 @@
 <launch>
-  <arg name="robot" default="custom"/>
+  <arg name="laser_model"/>
+  <arg name="rgbd_sensors"/>
+
 
   <!-- Robot description -->
   <param name="robot_description"
       command="$(find xacro)/xacro.py --inorder
-              '$(find pmb2_description)/robots/pmb2_$(arg robot).urdf.xacro'"
+              '$(find pmb2_description)/robots/pmb2.urdf.xacro'
+    laser_model:=$(arg laser_model)
+    rgbd_sensors:=$(arg rgbd_sensors)"
       />
 
   <!-- Joint limits -->

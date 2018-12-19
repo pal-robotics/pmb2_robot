@@ -11,6 +11,13 @@
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="pmb2" >
 
+  <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
+  <xacro:arg name="rgbd_sensors" default="false"/> <!-- false, true-->
+  <xacro:property name="laser_model" value="$(arg laser_model)" />
+  <xacro:property name="rgbd_sensors" value="$(arg rgbd_sensors)"/>
+  <xacro:if value="${laser_model not in ['false', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+    <xacro:wrong_laser_model/>
+  </xacro:if>
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
   <xacro:include filename="$(find pmb2_description)/urdf/base/base_sensors.urdf.xacro" />
@@ -21,5 +28,11 @@
   <xacro:include filename="$(find pmb2_description)/urdf/materials.urdf.xacro" />
 
   <!-- Now we can start using the macros included above to define the actual robot -->
-  <xacro:base_sensors name="base" hokuyo="true"/>
+  <xacro:base_sensors name="base" laser_model="$(arg laser_model)"/>
+
+  <!-- RGBD Sensors -->
+  <xacro:if value="${rgbd_sensors}">
+    <xacro:include filename="$(find pmb2_description)/urdf/cameras_add_on/cameras_add_on.urdf.xacro" />
+    <xacro:cameras_add_on name="cameras_add_on" parent="base_link"/>
+  </xacro:if>
 </robot>

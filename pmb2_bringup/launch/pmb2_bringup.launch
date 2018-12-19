@@ -1,6 +1,4 @@
 <launch>
-  <arg name="robot" default="custom"/>
-
   <!-- Load default controllers -->
   <include file="$(find pmb2_controller_configuration)/launch/default_controllers.launch"/>
 
