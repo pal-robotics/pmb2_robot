@@ -1,5 +1,6 @@
 <launch>
   <arg name="laser_model"  default="sick-571"/>
+  <arg name="rgbd_sensors" default="false"/>
 
   <arg name="test_suffix" value="_$(arg laser_model)"/>
   <include file="$(find pmb2_description)/robots/upload.launch" pass_all_args="true"/>
