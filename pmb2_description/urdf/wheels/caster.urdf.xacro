@@ -15,11 +15,11 @@
   <xacro:macro name="caster" params="side radius width separation_x separation_y offset_x offset_y offset_z parent">
     <link name="caster_${side}_1_link">
       <inertial>
-        <origin xyz="-0.01108 0.00003 -0.030" rpy="0 0 0"/>
-        <mass value="0.101"/>
-        <inertia  ixx="0.00002779423" ixy="-0.00000001384" ixz="0.0000074479"
-                  iyy="0.00002767062" iyz="-0.00000002774"
-                  izz="0.00001727605"/>
+        <origin xyz="-0.00634599 0.00005347 -0.02037519" rpy="0 0 0"/>
+        <mass value="0.05144761"/>
+        <inertia  ixx="0.00001513" ixy="-0.00000003" ixz="0.00000267"
+                  iyy="0.00001309" iyz="-0.00000005"
+                  izz="0.00001198"/>
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -39,10 +39,10 @@
     <link name="caster_${side}_2_link">
       <inertial>
         <origin xyz="0 0 0" rpy="0 0 0"/>
-        <mass value="0.03677"/>
-        <inertia  ixx="0.00000755221" ixy="0" ixz="0"
-                  iyy="0.00000755221" iyz="0"
-                  izz="0.00001281996"/>
+        <mass value="0.08855784"/>
+        <inertia  ixx="0.00001075" ixy="0" ixz="0"
+                  iyy="0.00001541" iyz="0"
+                  izz="0.00001075"/>
         </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -64,6 +64,7 @@
       <child link="caster_${side}_1_link"/>
       <origin xyz="${offset_x + separation_x / 2} ${offset_y - separation_y / 2} ${offset_z}" rpy="0 0 0"/>
       <axis xyz="0 0 1"/>
+      <dynamics damping="0.005" friction="0.0"/>
     </joint>
 
     <joint name="caster_${side}_2_joint" type="continuous">
