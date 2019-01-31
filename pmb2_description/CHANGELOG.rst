@@ -43,6 +43,15 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'fix-inertia' into 'erbium-devel'
+  Fix inertial parameters of the caster wheels
+  See merge request robots/pmb2_robot!41
+* Fix inertial parameters of the caster wheels
+  Also added friction and damping to improve behavior
+* Contributors: Victor Lopez
+
 3.0.1 (2018-12-20)
 ------------------
 * Fix tests
