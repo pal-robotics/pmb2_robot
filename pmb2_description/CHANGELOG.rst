@@ -43,6 +43,14 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'enable_sonars' into 'erbium-devel'
+  Add sonars argument to base_sensors
+  See merge request robots/pmb2_robot!42
+* Added sonars argument to base_sensors
+* Contributors: Jordan Palacios, Victor Lopez
+
 3.0.2 (2019-01-31)
 ------------------
 * Merge branch 'fix-inertia' into 'erbium-devel'
