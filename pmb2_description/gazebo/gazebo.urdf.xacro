@@ -19,7 +19,12 @@
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
       <ns></ns>
       <robotSimType>pal_hardware_gazebo/PalHardwareGazebo</robotSimType>
-      <robotNamespace></robotNamespace>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
+      <xacro:unless value="${is_multiple}">
+          <robotNamespace></robotNamespace>
+      </xacro:unless>
       <controlPeriod>0.001</controlPeriod>
     </plugin>
 
@@ -28,6 +33,9 @@
       <topicName>ground_truth_odom</topicName>
       <alwaysOn>true</alwaysOn>
       <updateRate>100.0</updateRate>
+      <xacro:if value="${is_multiple}">
+          <robotNamespace>/${nsp}</robotNamespace>
+      </xacro:if>
     </plugin>
   </gazebo>
 

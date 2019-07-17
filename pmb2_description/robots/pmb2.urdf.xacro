@@ -18,6 +18,10 @@
   <xacro:if value="${laser_model not in ['false', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
+  <xacro:arg name="multiple" default="false"/>
+  <xacro:arg name="namespace" default=""/>
+  <xacro:property name="is_multiple" value="$(arg multiple)" />
+  <xacro:property name="nsp" value="$(arg namespace)" />
   <!-- The following included files set up definitions of parts of the robot body -->
   <!-- Base -->
   <xacro:include filename="$(find pmb2_description)/urdf/base/base_sensors.urdf.xacro" />
