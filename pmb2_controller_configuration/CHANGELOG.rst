@@ -15,6 +15,14 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'multi_pmb2' into 'erbium-devel'
+  Changes for multi pmb2 simulation
+  See merge request robots/pmb2_robot!44
+* Changes for multi pmb2 simulation
+* Contributors: Adria Roig, Victor Lopez
+
 3.0.3 (2019-04-09)
 ------------------
 

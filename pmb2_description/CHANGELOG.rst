@@ -43,6 +43,14 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Merge branch 'multi_pmb2' into 'erbium-devel'
+  Changes for multi pmb2 simulation
+  See merge request robots/pmb2_robot!44
+* Changes for multi pmb2 simulation
+* Contributors: Adria Roig, Victor Lopez
+
 3.0.3 (2019-04-09)
 ------------------
 * Merge branch 'enable_sonars' into 'erbium-devel'
