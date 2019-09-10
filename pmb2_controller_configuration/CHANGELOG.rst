@@ -15,6 +15,9 @@ Changelog for package pmb2_controller_configuration
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+
 3.0.4 (2019-07-17)
 ------------------
 * Merge branch 'multi_pmb2' into 'erbium-devel'

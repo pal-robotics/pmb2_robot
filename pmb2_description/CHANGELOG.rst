@@ -43,6 +43,11 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Sam Pfeiffer
 
+Forthcoming
+-----------
+* Melodic compatibility
+* Contributors: Victor Lopez
+
 3.0.4 (2019-07-17)
 ------------------
 * Merge branch 'multi_pmb2' into 'erbium-devel'
