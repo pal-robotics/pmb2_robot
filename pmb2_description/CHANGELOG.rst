@@ -2,46 +2,10 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.0 (2015-09-29)
-------------------
-* Add changelog
-* Merging metal base branch
-* urdf full calls default & add sonar/micro
-* urdf default calls base & add laser
-* urdf base contains basics e.g. wheels
-* add full_sick urdf
-* add base_default urdf
-* renamed base -> base_full
-* Update maintainer
-* Replace caster collision with spheres, fix spinning
-* Remove spanish character nonvalid to xacro
-* Update placement and name of base imu
-* Add collision to antenna
-* Update caster locations
-* Add microphone locations
-* Added sonars with proper colors
-* Add color to gazebo
-* Add antennas
-* New meshes
-* Remove references to xtion
-* Remove robot model scripts
-* Add inertial params to main body
-* Remove bumpers
-* Remove rear cover
-* More battery removed
-* Remove charger
-* Remove battery
-* Remove base_rgbd
-* Fix color of wheels in gazebo
-* Add new cover and orange ring around body
-* Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
-
-1.1.1 (2016-04-15)
-------------------
-* Updated to new generic pal hardware gazebo plugin
-* Simplified base collision
-  Now the base_link has a mesh that touches with the ground
-* Contributors: Sam Pfeiffer
+Forthcoming
+-----------
+* scan_raw is the default laser topic
+* Contributors: Procópio Stein
 
 3.0.5 (2019-09-10)
 ------------------
@@ -252,6 +216,13 @@ Changelog for package pmb2_description
   Now the base_link has a mesh that touches with the ground
 * Contributors: Jeremie Deray, Sam Pfeiffer
 
+1.1.1 (2016-04-15)
+------------------
+* Updated to new generic pal hardware gazebo plugin
+* Simplified base collision
+  Now the base_link has a mesh that touches with the ground
+* Contributors: Sam Pfeiffer
+
 1.1.0 (2016-03-15)
 ------------------
 * urdf use macro param default value
@@ -286,6 +257,40 @@ Changelog for package pmb2_description
 ------------------
 * 1.0.0
 * Add changelog
+* Add changelog
+* Merging metal base branch
+* urdf full calls default & add sonar/micro
+* urdf default calls base & add laser
+* urdf base contains basics e.g. wheels
+* add full_sick urdf
+* add base_default urdf
+* renamed base -> base_full
+* Update maintainer
+* Replace caster collision with spheres, fix spinning
+* Remove spanish character nonvalid to xacro
+* Update placement and name of base imu
+* Add collision to antenna
+* Update caster locations
+* Add microphone locations
+* Added sonars with proper colors
+* Add color to gazebo
+* Add antennas
+* New meshes
+* Remove references to xtion
+* Remove robot model scripts
+* Add inertial params to main body
+* Remove bumpers
+* Remove rear cover
+* More battery removed
+* Remove charger
+* Remove battery
+* Remove base_rgbd
+* Fix color of wheels in gazebo
+* Add new cover and orange ring around body
+* Contributors: Bence Magyar, Jeremie Deray, Luca Marchionni
+
+1.0.0 (2015-09-29)
+------------------
 * Add changelog
 * Merging metal base branch
 * urdf full calls default & add sonar/micro
