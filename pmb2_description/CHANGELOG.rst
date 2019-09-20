@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.6 (2019-09-20)
+------------------
 * scan_raw is the default laser topic
 * Contributors: Procópio Stein
 
