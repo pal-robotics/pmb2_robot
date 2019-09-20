@@ -32,7 +32,7 @@
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
-      <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+      <xacro:hokuyo_urg_04lx_ug01_laser name="${name}_laser" parent="${name}" ros_topic="scan_raw" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
         <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
       </xacro:hokuyo_urg_04lx_ug01_laser>
 
@@ -42,7 +42,7 @@
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
-      <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+      <xacro:sick_tim551_laser name="${name}_laser" parent="${name}" ros_topic="scan_raw" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
         <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
       </xacro:sick_tim551_laser>
 
@@ -53,7 +53,7 @@
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
-      <xacro:sick_tim561_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+      <xacro:sick_tim561_laser name="${name}_laser" parent="${name}" ros_topic="scan_raw" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
         <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
       </xacro:sick_tim561_laser>
 
@@ -63,7 +63,7 @@
 
       <!-- Laser -->
       <!-- Theoretic FOV = 220 -->
-      <xacro:sick_tim571_laser name="${name}_laser" parent="${name}" ros_topic="scan" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
+      <xacro:sick_tim571_laser name="${name}_laser" parent="${name}" ros_topic="scan_raw" update_rate="10" min_angle="${-110 * deg_to_rad}" max_angle="${110 * deg_to_rad}" >
         <origin xyz="${base_laser_x} ${base_laser_y} ${base_laser_z}" rpy="0 0 0" />
       </xacro:sick_tim571_laser>
 
