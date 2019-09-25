@@ -18,20 +18,9 @@
   <!-- Twist mux -->
   <include file="$(find pmb2_bringup)/launch/twist_mux.launch"/>
 
-  <!-- Speed limit -->
-  <include file="$(find speed_limit)/launch/speed_limit.launch">
-    <arg name="config"    value="$(find pmb2_bringup)/config/speed_limit.yaml"/>
-    <arg name="footprint" value="$(find pmb2_description)/urdf/base/footprint.yaml"/>
-  </include>
-
   <!-- Joystick controller -->
   <include file="$(find pmb2_bringup)/launch/joystick_teleop.launch"/>
 
-  <!-- Sonar to cloud -->
-  <!-- @todo use custom config (requires changes in sensor_to_cloud -->
-  <!-- @todo no bumper, IR or sonar yet -->
   <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
-    <!--arg name="config" value="$(find pmb2_bringup)/config/sensor_to_cloud/sonar_to_cloud.yaml"/>
-  </include--> <!-- TODO fix param load -->
 
 </launch>
