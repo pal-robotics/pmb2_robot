@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+3.0.7 (2019-09-25)
+------------------
 * Merge branch 'remove-speed-limit' into 'erbium-devel'
   removed speed limit
   See merge request robots/pmb2_robot!48
