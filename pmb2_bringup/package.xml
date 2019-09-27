@@ -17,7 +17,7 @@
   <exec_depend>robot_pose</exec_depend>
   <exec_depend>tf_lookup</exec_depend>
   <exec_depend>sensor_to_cloud</exec_depend>
-  <exec_depend>speed_limit</exec_depend>
+  <exec_depend>speed_limit_node</exec_depend>
   <exec_depend>twist_mux</exec_depend>
   <exec_depend>joy</exec_depend>
   <exec_depend>joy_teleop</exec_depend>
