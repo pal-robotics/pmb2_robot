@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+3.0.8 (2019-09-27)
+------------------
 * depends on speed-limit-node
 * Contributors: Procópio Stein
 
