@@ -18,6 +18,14 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'fix-twist-default' into 'erbium-devel'
+  output uses default instead of value
+  See merge request robots/pmb2_robot!49
+* output uses default instead of value
+* Contributors: Procópio Stein
+
 3.0.8 (2019-09-27)
 ------------------
 * depends on speed-limit-node
