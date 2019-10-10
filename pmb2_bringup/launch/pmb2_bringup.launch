@@ -21,6 +21,4 @@
   <!-- Joystick controller -->
   <include file="$(find pmb2_bringup)/launch/joystick_teleop.launch"/>
 
-  <include file="$(find sensor_to_cloud)/launch/sonar_to_cloud.launch"/>
-
 </launch>
