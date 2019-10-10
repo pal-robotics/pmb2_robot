@@ -4,7 +4,6 @@
   <version>3.0.8</version>
   <description>Launch files and scripts needed to bring up the ROS nodes of a PMB2 robot.</description>
   <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
-  <maintainer email="jeremie.deray@pal-robotics.com">Jeremie Deray</maintainer>
   <license>Apache License 2.0</license>
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
@@ -16,7 +15,6 @@
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>robot_pose</exec_depend>
   <exec_depend>tf_lookup</exec_depend>
-  <exec_depend>sensor_to_cloud</exec_depend>
   <exec_depend>speed_limit_node</exec_depend>
   <exec_depend>twist_mux</exec_depend>
   <exec_depend>joy</exec_depend>
