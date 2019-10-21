@@ -18,6 +18,19 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'fix-twist' into 'erbium-devel'
+  removed slash from out topi
+  See merge request robots/pmb2_robot!54
+* removed slash from out topi
+* Merge branch 'remove-sonar-cloud' into 'erbium-devel'
+  removed sonar cloud
+  See merge request robots/pmb2_robot!50
+* removed dep and maint
+* removed sonar cloud
+* Contributors: Procópio Stein
+
 3.0.9 (2019-10-02)
 ------------------
 * Merge branch 'fix-twist-default' into 'erbium-devel'
