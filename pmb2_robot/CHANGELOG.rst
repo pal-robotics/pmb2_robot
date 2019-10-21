@@ -2,16 +2,6 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.0 (2015-09-29)
-------------------
-* Add changelog
-* Merging metal base branch
-* Update maintainer
-* Contributors: Bence Magyar, Luca Marchionni
-
-1.1.1 (2016-04-15)
-------------------
-
 3.0.10 (2019-10-21)
 -------------------
 
