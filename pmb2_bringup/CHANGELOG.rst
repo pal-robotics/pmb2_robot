@@ -18,8 +18,8 @@ Changelog for package pmb2_bringup
 1.1.1 (2016-04-15)
 ------------------
 
-Forthcoming
------------
+3.0.10 (2019-10-21)
+-------------------
 * Merge branch 'fix-twist' into 'erbium-devel'
   removed slash from out topi
   See merge request robots/pmb2_robot!54
