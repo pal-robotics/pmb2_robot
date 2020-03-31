@@ -27,9 +27,9 @@
   <xacro:property name="roof_rgbd_Y" value="0.0"/>
 
   <!-- RGB characteristics -->
-  <xacro:property name="rgb_x" value="0.185"/>
+  <xacro:property name="rgb_x" value="0.18752"/>
   <xacro:property name="rgb_y" value="0.0"/>
-  <xacro:property name="rgb_z" value="0.86"/>
+  <xacro:property name="rgb_z" value="0.3301"/>
   <xacro:property name="rgb_R" value="0.0"/>
   <xacro:property name="rgb_P" value="15.0"/>
   <xacro:property name="rgb_Y" value="0.0   "/>

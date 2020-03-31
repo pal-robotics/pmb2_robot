@@ -5,6 +5,8 @@
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+ <xacro:include filename="$(find pmb2_description)/urdf/sensors/elp_rgb.gazebo.xacro" />
+
   <!-- Macro -->
   <xacro:macro name="elp_rgb" params="name parent *origin *optical_origin">
 
@@ -46,6 +48,8 @@
     </joint>
 
     <link name="${name}_optical_frame"/>
+    <!-- extensions -->
+    <xacro:elp_sensor_rgb_camera_gazebo name="${name}" />
 
   </xacro:macro>
 
