@@ -2,6 +2,19 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Use master calib multipliers
+* Merge branch 'add-master-calibration' into 'erbium-devel'
+  use multipliers from master calibration if available
+  See merge request robots/pmb2_robot!61
+* use multipliers from master calibration if available
+* Merge branch 'fix-changelog' into 'erbium-devel'
+  fixed changelog
+  See merge request robots/pmb2_robot!55
+* fixed changelog
+* Contributors: Procópio Stein, Victor Lopez, procopiostein
+
 3.0.10 (2019-10-21)
 -------------------
 * Merge branch 'fix-twist' into 'erbium-devel'

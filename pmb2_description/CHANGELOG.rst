@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'elp-camera' into 'erbium-devel'
+  Fix ELP rgb camera position and add its gazebo plugin
+  See merge request robots/pmb2_robot!58
+* Fix ELP rgb camera position and add its gazebo plugin
+* Contributors: Sara Cooper, procopiostein
+
 3.0.10 (2019-10-21)
 -------------------
 

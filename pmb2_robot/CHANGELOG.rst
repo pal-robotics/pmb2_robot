@@ -2,6 +2,14 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-changelog' into 'erbium-devel'
+  fixed changelog
+  See merge request robots/pmb2_robot!55
+* fixed changelog
+* Contributors: Procópio Stein
+
 3.0.10 (2019-10-21)
 -------------------
 
