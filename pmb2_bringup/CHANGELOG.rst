@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.11 (2020-07-10)
+-------------------
 * Use master calib multipliers
 * Merge branch 'add-master-calibration' into 'erbium-devel'
   use multipliers from master calibration if available
