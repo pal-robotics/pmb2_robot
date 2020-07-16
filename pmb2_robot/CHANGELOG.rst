@@ -2,6 +2,9 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.11 (2020-07-10)
 -------------------
 * Merge branch 'fix-changelog' into 'erbium-devel'

@@ -2,6 +2,12 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Revert "Use master calib multipliers"
+  This reverts commit b4f49b5d8f77efa562aa25bafd4676821189151d.
+* Contributors: Victor Lopez
+
 3.0.11 (2020-07-10)
 -------------------
 * Use master calib multipliers

@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.11 (2020-07-10)
 -------------------
 * Merge branch 'elp-camera' into 'erbium-devel'
