@@ -2,6 +2,14 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'rename_tf_prefix' into 'erbium-devel'
+  Rename tf_prefix to robot_namespace
+  See merge request robots/pmb2_robot!60
+* Rename tf_prefix to robot_namespace
+* Contributors: davidfernandez, victor
+
 3.0.12 (2020-07-16)
 -------------------
 * Revert "Use master calib multipliers"
