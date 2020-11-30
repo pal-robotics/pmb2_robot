@@ -14,13 +14,13 @@
   <xacro:macro name="wheel_gazebo" params="side">
     <!-- Contact model for the wheel surface -->
     <gazebo reference="wheel_${side}_link">
-      <kp>1000000.0</kp>
-      <kd>1000.0</kd>
-      <mu1>1.0</mu1>
-      <mu2>1.0</mu2>
+      <kp>500000.0</kp>
+      <kd>10.0</kd>
+      <mu1>10.0</mu1>
+      <mu2>10.0</mu2>
       <fdir1>1 0 0</fdir1>
       <maxVel>1.0</maxVel>
-      <minDepth>0.00</minDepth>
+      <minDepth>0.003</minDepth>
       <implicitSpringDamper>1</implicitSpringDamper>
       <material>Gazebo/DarkGrey</material>
     </gazebo>
