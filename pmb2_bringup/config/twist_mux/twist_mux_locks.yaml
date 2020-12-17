@@ -25,4 +25,8 @@ locks:
   topic   : joy_priority
   timeout : 0.0
   priority: 100
-
+-
+  name    : safety
+  topic   : emergency_break
+  timeout : 0.0
+  priority: 100
