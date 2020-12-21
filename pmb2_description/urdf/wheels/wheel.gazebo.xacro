@@ -19,10 +19,13 @@
       <mu1>10.0</mu1>
       <mu2>10.0</mu2>
       <fdir1>1 0 0</fdir1>
+      <!--<dampingFactor>0.9</dampingFactor>-->
       <maxVel>1.0</maxVel>
-      <minDepth>0.003</minDepth>
-      <implicitSpringDamper>1</implicitSpringDamper>
+      <minDepth>0.002</minDepth>
       <material>Gazebo/DarkGrey</material>
+    </gazebo>
+    <gazebo reference="wheel_{side}_joint">
+      <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
   </xacro:macro>
 
