@@ -2,6 +2,16 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_wheel_slippage' into 'erbium-devel'
+  Fix wheel slippage
+  See merge request robots/pmb2_robot!62
+* Tuning mu1,mu2 parameters for reducing slippage during pure rotational speed cmds
+* Uss sphere and tuned contacts for collision links
+* test sphere collision mesh and contact parameters
+* Contributors: Luca Marchionni, victor
+
 3.0.13 (2020-07-30)
 -------------------
 

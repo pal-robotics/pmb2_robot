@@ -2,6 +2,9 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.13 (2020-07-30)
 -------------------
 * Merge branch 'rename_tf_prefix' into 'erbium-devel'
