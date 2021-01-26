@@ -4,16 +4,19 @@
   <version>3.0.14</version>
   <description>Launch files and scripts needed to configure
     the controllers of the PMB2 robot.</description>
-  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
-  <maintainer email="jeremie.deray@pal-robotics.com">Jeremie Deray</maintainer>
+  <maintainer email="victor.lopez@pal-robotics.com">Victor Lopez</maintainer>
+  <maintainer email="federico.nardi@pal-robotics.com">Federico Nardi</maintainer>
   <license>Apache License 2.0</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
   <exec_depend>controller_manager</exec_depend>
   <exec_depend>diff_drive_controller</exec_depend>
   <exec_depend>joint_state_controller</exec_depend>
   <exec_depend>imu_sensor_controller</exec_depend>
 
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
