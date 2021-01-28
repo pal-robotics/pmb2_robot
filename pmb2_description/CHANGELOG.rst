@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.14 (2021-01-18)
 -------------------
 * Merge branch 'fix_wheel_slippage' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'emergency-lock' into 'erbium-devel'
+  added safety mux lock
+  See merge request robots/pmb2_robot!63
+* added safety mux lock
+* Contributors: Federico Nardi, victor
+
 3.0.14 (2021-01-18)
 -------------------
 
