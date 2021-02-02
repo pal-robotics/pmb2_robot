@@ -11,6 +11,9 @@
   <!-- Wheel Joint -->
   <xacro:macro name="wheel_ros2_control" params="side">
     <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+      </hardware>
       <joint name="wheel_${side}_joint">
         <command_interface name="velocity">
           <param name="min">-1</param>

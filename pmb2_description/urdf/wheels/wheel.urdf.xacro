@@ -77,7 +77,7 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
         </joint>
 
         <!-- ROS2 Control -->
-	    <!--<xacro:wheel_ros2_control side="${side}"/>-->
+	<xacro:wheel_ros2_control side="${side}"/>
 
         <!-- Gazebo extensions -->
         <xacro:wheel_gazebo side="${side}"/>

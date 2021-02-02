@@ -17,7 +17,6 @@
 
   <gazebo>
       <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-        <robot_sim_type>gazebo_ros2_control/GazeboSystem</robot_sim_type>
         <control_period>0.001</control_period>
         <xacro:if value="${is_multiple}">
           <!-- Do something about multirobot -->
