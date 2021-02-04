@@ -17,7 +17,8 @@
 
   <gazebo>
       <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-        <control_period>0.001</control_period>
+	    <!-- in the future move this param file somewhere else -->
+	    <parameters>$(find pmb2_controller_configuration)/config/gazebo_controller_manager_cfg.yaml</parameters>
         <xacro:if value="${is_multiple}">
           <!-- Do something about multirobot -->
         </xacro:if>
