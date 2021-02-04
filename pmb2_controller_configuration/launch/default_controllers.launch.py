@@ -39,13 +39,14 @@ from launch_ros.actions import Node
 import xacro
 
 
-def generate_load_controller_launch_description(controller_name, pkg_name, controller_params_file):
+def generate_load_controller_launch_description(controller_name, controller_type, pkg_name, controller_params_file):
 
-    pkg_path = get_package_share_directory('pmb2_description')
+    pkg_path = get_package_share_directory(pkg_name)
     param_file_path = os.path.join(pkg_path, "config", "default_controllers.yaml")
 
     spawner = Node(package='controller_manager', executable='spawner.py',
                     arguments=[controller_name, 
+                        '--controller-type', controller_type,
                         '--controller-manager', LaunchConfiguration('controller_manager_name'),
                         '--param-file', param_file_path],
                         output='screen')
@@ -61,7 +62,7 @@ def generate_load_controller_launch_description(controller_name, pkg_name, contr
 def generate_launch_description():
 
     return generate_load_controller_launch_description(controller_name='mobile_base_controller',
-                                                       controller_type='',
+                                                       controller_type='diff_drive_controller/DiffDriveController',
                                                        pkg_name='pmb2_controller_configuration',
                                                        controller_params_file=os.path.join('config', 'default_controllers.yaml'))
 
