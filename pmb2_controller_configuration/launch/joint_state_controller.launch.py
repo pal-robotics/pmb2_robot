@@ -25,23 +25,45 @@
 #  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import os
+from os import environ, pathsep
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory, get_package_prefix
+
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, SetEnvironmentVariable, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+
+from launch_ros.actions import Node
+
+import xacro
+
+
+# Todo put this somewhere reusable, see https://github.com/ros-controls/ros2_control/issues/320
+def generate_load_controller_launch_description(controller_name, controller_type, pkg_name, controller_params_file):
+
+    pkg_path = get_package_share_directory(pkg_name)
+    param_file_path = os.path.join(pkg_path, controller_params_file)
+
+    spawner = Node(package='controller_manager', executable='spawner.py',
+                    arguments=[controller_name, 
+                        '--controller-type', controller_type,
+                        '--controller-manager', LaunchConfiguration('controller_manager_name'),
+                        '--param-file', param_file_path],
+                        output='screen')
+
+    return LaunchDescription([
+        DeclareLaunchArgument(
+            'controller_manager_name', default_value='controller_manager',
+            description='Controller manager node name'
+        ),
+        spawner,
+    ])
 
 def generate_launch_description():
 
-    return LaunchDescription([
-        IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('pmb2_controller_configuration'), 'launch',
-                                        'mobile_base_controller.launch.py')]),
-        ),
-        IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('pmb2_controller_configuration'), 'launch',
-                                        'joint_state_controller.launch.py')]),
-        )])
+    return generate_load_controller_launch_description(controller_name='joint_state_controller',
+                                                       controller_type='joint_state_controller/JointStateController',
+                                                       pkg_name='pmb2_controller_configuration',
+                                                       controller_params_file=os.path.join('config', 'joint_state_controller.yaml'))
 
