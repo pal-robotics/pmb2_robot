@@ -13,7 +13,6 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.transmission.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.gazebo.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
 
   <xacro:macro name="wheel" params="side reflect radius width torque velocity separation parent">
     <link name="wheel_${side}_link">
@@ -38,7 +37,7 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
           </geometry>
         </collision>
       </link>
-      
+
       <link name="suspension_${side}_link">
         <inertial>
           <origin xyz="0 0 -0.02" rpy="0 0 0"/>
@@ -66,7 +65,7 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
           soft_lower_limit="-0.005"
           soft_upper_limit="0.005" />
         </joint>
-       
+
 
         <joint name="wheel_${side}_joint" type="continuous">
           <parent link="suspension_${side}_link"/>
@@ -75,9 +74,6 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
           <axis xyz="0 0 1"/>
           <limit effort="${torque}" velocity="${velocity / radius}"/>
         </joint>
-
-        <!-- ROS2 Control -->
-	<xacro:wheel_ros2_control side="${side}"/>
 
         <!-- Gazebo extensions -->
         <xacro:wheel_gazebo side="${side}"/>
