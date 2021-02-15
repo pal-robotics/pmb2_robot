@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'bigger-collision-mesh' into 'erbium-devel'
+  Use bigger mesh for collisions
+  See merge request robots/pmb2_robot!66
+* Use bigger mesh for collisions
+* Contributors: victor
+
 3.0.15 (2021-01-28)
 -------------------
 

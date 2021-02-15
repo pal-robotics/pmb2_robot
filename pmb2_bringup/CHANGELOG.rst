@@ -2,6 +2,9 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.15 (2021-01-28)
 -------------------
 * Merge branch 'emergency-lock' into 'erbium-devel'
