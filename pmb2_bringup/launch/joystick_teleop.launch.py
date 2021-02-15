@@ -33,7 +33,7 @@ def generate_launch_description():
             default_value=joy_teleop_path,
             description='Joystick teleop configuration file')
     joy_teleop_node = Node(
-            package='joy_teleop', node_executable='joy_teleop',
+            package='joy_teleop', executable='joy_teleop',
             parameters=[LaunchConfiguration('teleop_config')],
             remappings=[('cmd_vel', LaunchConfiguration('cmd_vel'))])
 
