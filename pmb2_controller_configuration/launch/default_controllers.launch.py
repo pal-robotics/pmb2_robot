@@ -24,24 +24,17 @@
 #  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 #  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-import os
-
-from ament_index_python.packages import get_package_share_directory
-from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_pal.include_utils import include_launch_py_description
 
 def generate_launch_description():
 
     return LaunchDescription([
-        IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('pmb2_controller_configuration'), 'launch',
-                                        'mobile_base_controller.launch.py')]),
-        ),
-        IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('pmb2_controller_configuration'), 'launch',
-                                        'joint_state_controller.launch.py')]),
-        )])
+        include_launch_py_description(
+            'pmb2_controller_configuration', ['launch', 'mobile_base_controller.launch.py']),
+        include_launch_py_description(
+            'pmb2_controller_configuration', ['launch', 'joint_state_controller.launch.py']),
+        # imu_sensor_controller not migrated to ROS2 yet
+        # include_launch_py_description(
+        #    'imu_sensor_controller', ['launch', 'imu_sensor_controller.launch.py']),
+        ])
 
