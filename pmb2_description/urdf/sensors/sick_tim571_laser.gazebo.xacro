@@ -42,7 +42,6 @@
         </ray>
 	<plugin name="bytes_laserscan" filename="libgazebo_ros_ray_sensor.so">
           <ros>
-              <namespace>lidar</namespace>
 	      <remapping>~/out:=${ros_topic}</remapping>
           </ros>
           <output_type>sensor_msgs/LaserScan</output_type>
