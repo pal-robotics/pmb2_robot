@@ -24,7 +24,7 @@ def generate_launch_description():
 
     ld = LaunchDescription([
         include_launch_py_description('twist_mux', ['launch', 'twist_mux_launch.py'],
-            launch_arguments={'cmd_vel_out': 'mobile_base_controller/cmd_vel',
+            launch_arguments={'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
                 'config_locks': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_locks.yaml'),
                 'config_topics': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_topics.yaml'),
                 'joystick': os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml'),
