@@ -37,6 +37,8 @@ def generate_launch_description():
             parameters=[LaunchConfiguration('teleop_config')],
             remappings=[('cmd_vel', LaunchConfiguration('cmd_vel'))])
 
+    # Missing joy_node (not ported to ROS2 yet)
+
     ld = LaunchDescription([
         declare_cmd_vel,
         declare_teleop_config,
