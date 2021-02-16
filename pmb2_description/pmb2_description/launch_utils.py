@@ -24,25 +24,21 @@ from typing import List
 from typing import Text
 
 
-
-
 def read_launch_argument(arg_name, context):
     return launch.utilities.perform_substitutions(context,
                                                   [LaunchConfiguration(arg_name)])
 
 
 class DeviceYamlParams(Substitution):
-    """
-    Substitution that modifies the given YAML file.
-    Used in launch system
-    """
+    """Substitution that modifies the given YAML file."""
 
     def __init__(self) -> None:
         super().__init__()
         """
-    Construct the substitution
-    :param: source_file the original YAML file to modify
-    """
+        Construct the substitution.
+
+        :param: source_file the original YAML file to modify
+        """
 
     @property
     def name(self) -> List[Substitution]:
