@@ -19,17 +19,20 @@ from launch import LaunchDescription
 
 import os
 
+
 def generate_launch_description():
     pkg = get_package_share_directory('pmb2_bringup')
 
     ld = LaunchDescription([
-        include_launch_py_description('twist_mux', ['launch', 'twist_mux_launch.py'],
-            launch_arguments={'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
+        include_launch_py_description(
+            'twist_mux', ['launch', 'twist_mux_launch.py'],
+            launch_arguments={
+                'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
                 'config_locks': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_locks.yaml'),
                 'config_topics': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_topics.yaml'),
                 'joystick': os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml'),
-                }.items()),
+            }.items()),
         include_launch_py_description('pmb2_bringup', ['launch', 'joystick_teleop.launch.py']),
-        ])
+    ])
 
     return ld

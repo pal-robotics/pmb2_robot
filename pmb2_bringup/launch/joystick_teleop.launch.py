@@ -19,23 +19,22 @@ from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
-from launch_pal.include_utils import include_launch_py_description
-
 import os
+
 
 def generate_launch_description():
     pkg_dir = get_package_share_directory('pmb2_bringup')
     joy_teleop_path = os.path.join(pkg_dir, 'config', 'joy_teleop.yaml')
 
     declare_cmd_vel = DeclareLaunchArgument('cmd_vel', default_value='input_joy/cmd_vel',
-            description='Joystick cmd_vel topic')
-    declare_teleop_config = DeclareLaunchArgument('teleop_config', 
-            default_value=joy_teleop_path,
-            description='Joystick teleop configuration file')
+                                            description='Joystick cmd_vel topic')
+    declare_teleop_config = DeclareLaunchArgument('teleop_config',
+                                                  default_value=joy_teleop_path,
+                                                  description='Joystick teleop configuration file')
     joy_teleop_node = Node(
-            package='joy_teleop', executable='joy_teleop',
-            parameters=[LaunchConfiguration('teleop_config')],
-            remappings=[('cmd_vel', LaunchConfiguration('cmd_vel'))])
+        package='joy_teleop', executable='joy_teleop',
+        parameters=[LaunchConfiguration('teleop_config')],
+        remappings=[('cmd_vel', LaunchConfiguration('cmd_vel'))])
 
     # Missing joy_node (not ported to ROS2 yet)
 
@@ -43,6 +42,6 @@ def generate_launch_description():
         declare_cmd_vel,
         declare_teleop_config,
         joy_teleop_node,
-        ])
+    ])
 
     return ld

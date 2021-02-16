@@ -15,13 +15,16 @@
 from launch import LaunchDescription
 from launch_pal.include_utils import include_launch_py_description
 
+
 def generate_launch_description():
     # Create the launch description and populate
     ld = LaunchDescription([
         # TODO missing equivalent to ROS1 robot_pose_node
         # TODO missing equivalent to tf_lookup, but it may have been legacy from tf1
+        include_launch_py_description(
+            'pmb2_controller_configuration', ['launch', 'default_controllers.launch.py']),
         include_launch_py_description('pmb2_bringup', ['launch', 'twist_mux.launch.py']),
         include_launch_py_description('pmb2_bringup', ['launch', 'joystick_teleop.launch.py']),
-        ])
+    ])
 
     return ld
