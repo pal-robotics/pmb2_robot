@@ -58,11 +58,11 @@ def get_tiago_base_hw_arguments(wheel_model=False,
 def get_tiago_hw_arguments(arm=False,
                            wrist_model=False,
                            end_effector_model=False,
-                           ft_sensor_model=False,
-                           default_arm=True,
-                           default_wrist_model="wrist-2017",
+                           ft_sensor=False,
+                           default_arm="True",
+                           default_wrist_model="wrist-2010",
                            default_end_effector_model="pal-hey5",
-                           default_ft_sensor_model="schunk-ft",
+                           default_ft_sensor="schunk-ft",
                            **kwargs):
     """
     Return TIAGo Hardware arguments.
@@ -77,13 +77,13 @@ def get_tiago_hw_arguments(arm=False,
                                                    default_laser_model='sick-571')])
     """
     args = get_tiago_base_hw_arguments(
-        rgbd_sensors=False,
         **kwargs)  # RGBD on top of base are impossible if torso is installed
     if arm:
-        args.append(DeclareLaunchArgument(
-            'arm',
-            default_value=default_arm,
-            description='Whether TIAGo has arm or not. ', choices=["True", "False"]))
+        args.append(
+            DeclareLaunchArgument(
+                'arm',
+                default_value=default_arm,
+                description='Whether TIAGo has arm or not. ', choices=["True", "False"]))
     if wrist_model:
         args.append(
             DeclareLaunchArgument(
@@ -95,12 +95,12 @@ def get_tiago_hw_arguments(arm=False,
             DeclareLaunchArgument(
                 'end_effector_model',
                 default_value=default_end_effector_model,
-                description='Wrist model.',
+                description='End effector model.',
                 choices=["pal-gripper", "pal-hey5", "schunk-wsg", "custom", "False"]))
-    if ft_sensor_model:
+    if ft_sensor:
         args.append(
             DeclareLaunchArgument(
-                'ft_sensor_model',
-                default_value=default_ft_sensor_model,
-                description='Wrist model. ', choices=["schunk-ft", "False"]))
+                'ft_sensor',
+                default_value=default_ft_sensor,
+                description='FT sensor model. ', choices=["schunk-ft", "False"]))
     return args
