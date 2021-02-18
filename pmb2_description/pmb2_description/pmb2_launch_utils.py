@@ -60,11 +60,11 @@ def get_tiago_base_hw_arguments(
 def get_tiago_hw_arguments(
         arm=False,
         wrist_model=False,
-        end_effector_model=False,
+        end_effector=False,
         ft_sensor=False,
         default_arm="True",
         default_wrist_model="wrist-2010",
-        default_end_effector_model="pal-hey5",
+        default_end_effector="pal-hey5",
         default_ft_sensor="schunk-ft",
         **kwargs):
     """
@@ -97,11 +97,11 @@ def get_tiago_hw_arguments(
                 default_value=default_wrist_model,
                 description='Wrist model. ',
                 choices=["wrist-2010", "wrist-2017"]))
-    if end_effector_model:
+    if end_effector:
         args.append(
             DeclareLaunchArgument(
-                'end_effector_model',
-                default_value=default_end_effector_model,
+                'end_effector',
+                default_value=default_end_effector,
                 description='End effector model.',
                 choices=["pal-gripper", "pal-hey5", "schunk-wsg",
                          "custom", "False"]))
