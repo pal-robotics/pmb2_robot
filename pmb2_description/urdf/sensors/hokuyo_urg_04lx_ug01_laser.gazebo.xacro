@@ -34,13 +34,18 @@
             <max>5.6</max>
             <resolution>0.001</resolution>
           </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.03</stddev>
+          </noise>
         </ray>
-        <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_hokuyo_laser">
-          <gaussianNoise>0.03</gaussianNoise>
-          <alwaysOn>true</alwaysOn>
-          <updateRate>${update_rate}</updateRate>
-          <topicName>${ros_topic}</topicName>
-          <frameName>${name}_link</frameName>
+      	<plugin name="bytes_laserscan" filename="libgazebo_ros_ray_sensor.so">
+          <ros>
+      	    <remapping>~/out:=${ros_topic}</remapping>
+          </ros>
+          <output_type>sensor_msgs/LaserScan</output_type>
+      	  <frame_name>${name}_link</frame_name>
         </plugin>
       </sensor>
       <material>Gazebo/DarkGrey</material>

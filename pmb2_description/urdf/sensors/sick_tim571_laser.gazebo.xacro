@@ -8,7 +8,7 @@
   To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to
   Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 
-  Laser configuration according with the SICK TiM 551 product specification:
+  Laser configuration according with the SICK TiM 571 product specification:
   https://www.sick.com/media/pdf/4/44/444/dataSheet_TiM571-2050101_1075091_en.pdf
 -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
@@ -40,12 +40,12 @@
             <stddev>0.06</stddev>
           </noise>
         </ray>
-	<plugin name="bytes_laserscan" filename="libgazebo_ros_ray_sensor.so">
+      	<plugin name="bytes_laserscan" filename="libgazebo_ros_ray_sensor.so">
           <ros>
-	      <remapping>~/out:=${ros_topic}</remapping>
+      	    <remapping>~/out:=${ros_topic}</remapping>
           </ros>
           <output_type>sensor_msgs/LaserScan</output_type>
-	  <frame_name>${name}_link</frame_name>
+      	  <frame_name>${name}_link</frame_name>
         </plugin>
       </sensor>
       <material>Gazebo/DarkGrey</material>
