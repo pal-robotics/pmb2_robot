@@ -11,7 +11,6 @@ Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.transmission.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.gazebo.xacro"/>
 
   <xacro:macro name="wheel" params="side reflect radius width torque velocity separation parent">

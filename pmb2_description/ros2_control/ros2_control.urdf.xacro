@@ -11,6 +11,7 @@
        name="pmb2" >
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
+  <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
 
   <ros2_control name="ros2_control_pmb2_system" type="system">
     <hardware>
@@ -20,6 +21,7 @@
     <!-- wheels -->
     <xacro:ros2_control_wheel side="right" />
     <xacro:ros2_control_wheel side="left" />
+    <xacro:ros2_control_imu name="base_imu_sensor"/>
 
   </ros2_control>
 </robot>
