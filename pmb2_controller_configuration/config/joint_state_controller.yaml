@@ -1,7 +1,0 @@
-/joint_state_controller:
-  ros__parameters:
-    type: joint_state_controller/JointStateController
-    use_sim_time: True
-    publish_rate: 50.0
-
-
