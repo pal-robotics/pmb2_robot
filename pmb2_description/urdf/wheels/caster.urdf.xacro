@@ -64,7 +64,7 @@
       <child link="caster_${side}_1_link"/>
       <origin xyz="${offset_x + separation_x / 2} ${offset_y - separation_y / 2} ${offset_z}" rpy="0 0 0"/>
       <axis xyz="0 0 1"/>
-      <dynamics damping="0.005" friction="0.0"/>
+      <dynamics damping="0.015" friction="0.0"/>
     </joint>
 
     <joint name="caster_${side}_2_joint" type="continuous">
@@ -72,6 +72,7 @@
       <child link="caster_${side}_2_link"/>
       <origin xyz="-0.016 0.0000 -0.040" rpy="${-90.0 * deg_to_rad} 0 0"/>
       <axis xyz="0 0 1"/>
+      <dynamics damping="0.015" friction="0.0"/>
     </joint>
 
     <!-- Gazebo extensions -->

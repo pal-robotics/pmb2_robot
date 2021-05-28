@@ -16,7 +16,7 @@
 
     <gazebo reference="caster_${side}_1_link">
       <kp>100000000.0</kp>
-      <kd>10.0</kd>
+      <kd>100000.0</kd>
       <friction>
         <ode>
           <mu>1.0</mu>
@@ -24,14 +24,14 @@
         </ode>
       </friction>
       <!--<fdir1>1 0 0</fdir1>-->
-      <max_vel>10.0</max_vel>
-      <min_depth>0.0005</min_depth>
+      <max_vel>1.0</max_vel>
+      <min_depth>0.005</min_depth>
       <material>Gazebo/DarkGrey</material>
     </gazebo>
 
     <gazebo reference="caster_${side}_2_link">
       <kp>100000000.0</kp>
-      <kd>10.0</kd>
+      <kd>100000.0</kd>
       <friction>
         <ode>
           <mu>1.0</mu>
@@ -39,8 +39,8 @@
         </ode>
       </friction>
       <!--<fdir1>1 0 0</fdir1>-->
-      <max_vel>10.0</max_vel>
-      <min_depth>0.0005</min_depth>
+      <max_vel>1.0</max_vel>
+      <min_depth>0.005</min_depth>
       <material>Gazebo/DarkGrey</material>
     </gazebo>
 
