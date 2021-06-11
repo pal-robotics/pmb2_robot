@@ -41,8 +41,8 @@ class Pmb2XacroConfigSubstitution(Substitution):
     def perform(self, context: LaunchContext) -> Text:
         """Generate the robot description and return it as a string."""
         laser_model = read_launch_argument("laser_model", context)
-        rgbd_sensors = read_launch_argument("rgbd_sensors", context)
-        return " laser_model:=" + laser_model + " rgbd_sensors:=" + rgbd_sensors
+        courier_rgbd_sensors = read_launch_argument("courier_rgbd_sensors", context)
+        return " laser_model:=" + laser_model + " courier_rgbd_sensors:=" + courier_rgbd_sensors
 
 
 def generate_launch_description():
@@ -63,8 +63,8 @@ def generate_launch_description():
                parameters=[parameters])
     return LaunchDescription([
         *get_tiago_base_hw_arguments(laser_model=True,
-                                     rgbd_sensors=True,
+                                     courier_rgbd_sensors=True,
                                      default_laser_model="sick-571",
-                                     default_rgbd_sensors="False"),
+                                     default_courier_rgbd_sensors="False"),
         rsp
     ])

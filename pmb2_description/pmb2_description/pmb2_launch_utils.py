@@ -18,10 +18,10 @@ from launch.actions import DeclareLaunchArgument
 def get_tiago_base_hw_arguments(
         wheel_model=False,
         laser_model=False,
-        rgbd_sensors=False,
+        courier_rgbd_sensors=False,
         default_wheel_model="moog",
         default_laser_model="sick-571",
-        default_rgbd_sensors="False"):
+        default_courier_rgbd_sensors="False"):
     """
     Return TIAGo Base Hardware arguments.
 
@@ -46,12 +46,12 @@ def get_tiago_base_hw_arguments(
                 'laser_model',
                 default_value=default_laser_model,
                 description='Base laser model. ',
-                choices=["sick-571", "sick-561", "sick-551", "hokuyo"]))
-    if rgbd_sensors:
+                choices=["no-laser", "sick-571", "sick-561", "sick-551", "hokuyo"]))
+    if courier_rgbd_sensors:
         args.append(
             DeclareLaunchArgument(
-                'rgbd_sensors',
-                default_value=default_rgbd_sensors,
+                'courier_rgbd_sensors',
+                default_value=default_courier_rgbd_sensors,
                 description='Whether the base has RGBD sensors or not. ',
                 choices=["True", "False"]))
     return args

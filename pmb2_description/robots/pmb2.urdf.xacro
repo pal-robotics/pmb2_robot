@@ -11,11 +11,11 @@
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="pmb2" >
 
-  <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
-  <xacro:arg name="rgbd_sensors" default="false"/> <!-- false, true-->
+  <xacro:arg name="laser_model" default="sick-571"/> <!-- no-laser, hokuyo, sick-551, sick-561, sick-571-->
+  <xacro:arg name="courier_rgbd_sensors" default="false"/> <!-- false, true-->
   <xacro:property name="laser_model" value="$(arg laser_model)" />
-  <xacro:property name="rgbd_sensors" value="$(arg rgbd_sensors)"/>
-  <xacro:if value="${laser_model not in ['false', False, 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+  <xacro:property name="courier_rgbd_sensors" value="$(arg courier_rgbd_sensors)"/>
+  <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
   <xacro:arg name="multiple" default="false"/>
@@ -39,7 +39,7 @@
   <xacro:base_sensors name="base" laser_model="$(arg laser_model)" sonars="true"/>
 
   <!-- RGBD Sensors -->
-  <xacro:if value="${rgbd_sensors}">
+  <xacro:if value="${courier_rgbd_sensors}">
     <xacro:include filename="$(find pmb2_description)/urdf/cameras_add_on/cameras_add_on.urdf.xacro" />
     <xacro:cameras_add_on name="cameras_add_on" parent="base_link"/>
   </xacro:if>
