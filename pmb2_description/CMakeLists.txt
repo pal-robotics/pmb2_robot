@@ -16,15 +16,21 @@ ament_auto_find_build_dependencies()
 if(BUILD_TESTING)
 
   find_package(ament_lint_auto REQUIRED)
+  find_package(urdf_test REQUIRED)
 
   ament_lint_auto_find_test_dependencies()
 
-  #  find_package(rostest REQUIRED)
-  #  foreach(laser_model false hokuyo sick-551 sick-561 sick-571)
-  #      foreach(rgbd_sensors false true)
-  #        add_rostest(test/test_pmb2.test ARGS laser_model:=${laser_model} rgbd_sensors:=${rgbd_sensors})
-  #      endforeach(rgbd_sensors)
-  #  endforeach(laser_model)
+  find_package(launch_testing_ament_cmake)
+
+  foreach(laser_model no-laser hokuyo sick-551 sick-561 sick-571)
+      foreach(courier_rgbd_sensors False True)
+      add_launch_test(
+        test/test_description.launch.py
+        TARGET "pmb2_description_${laser_model}_${courier_rgbd_sensors}"
+        ARGS "laser_model:=${laser_model}" "courier_rgbd_sensors:=${courier_rgbd_sensors}"
+      )
+      endforeach()
+  endforeach()
 endif()
 
 # Install Python modules

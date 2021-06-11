@@ -13,13 +13,13 @@
 # limitations under the License.
 
 from launch import LaunchDescription, Substitution, LaunchContext
+from launch_pal.arg_utils import read_launch_argument
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare, ExecutableInPackage
 from launch.substitutions import Command, PathJoinSubstitution
 from typing import List
 from typing import Text
 
-from pmb2_description.launch_utils import read_launch_argument
 from pmb2_description.pmb2_launch_utils import get_tiago_base_hw_arguments
 
 
@@ -41,7 +41,8 @@ class Pmb2XacroConfigSubstitution(Substitution):
     def perform(self, context: LaunchContext) -> Text:
         """Generate the robot description and return it as a string."""
         laser_model = read_launch_argument("laser_model", context)
-        courier_rgbd_sensors = read_launch_argument("courier_rgbd_sensors", context)
+        courier_rgbd_sensors = read_launch_argument(
+            "courier_rgbd_sensors", context)
         return " laser_model:=" + laser_model + " courier_rgbd_sensors:=" + courier_rgbd_sensors
 
 
