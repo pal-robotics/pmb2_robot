@@ -27,6 +27,6 @@ locks:
   priority: 100
 -
   name    : safety
-  topic   : emergency_break
+  topic   : emergency_brake
   timeout : 0.0
   priority: 100
