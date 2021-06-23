@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.16 (2021-02-15)
 -------------------
 * Merge branch 'bigger-collision-mesh' into 'erbium-devel'
