@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.17 (2021-06-23)
+-------------------
 * Merge branch 'breaking-bad' into 'erbium-devel'
   renaming
   See merge request robots/pmb2_robot!67
