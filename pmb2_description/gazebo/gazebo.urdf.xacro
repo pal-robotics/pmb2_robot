@@ -27,13 +27,13 @@
         </xacro:unless>
       </plugin>
 
-    <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
-      <body_name>base_footprint</body_name>
-      <topic_name>ground_truth_odom</topic_name>
-      <always_on>true</always_on>
-      <update_rate>100.0</update_rate>
+    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
+      <frameName>world</frameName>
+      <bodyName>base_footprint</bodyName>
+      <topicName>ground_truth_odom</topicName>
+      <updateRate>100.0</updateRate>
       <xacro:if value="${is_multiple}">
-	    <!--<robotNamespace>/${nsp}</robotNamespace>-->
+          <robotNamespace>/${nsp}</robotNamespace>
       </xacro:if>
     </plugin>
   </gazebo>
