@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2021-07-12)
+------------------
 * Cleanup unused files
 * Add linters and fix errors
 * Cleanup pmb2_bringup

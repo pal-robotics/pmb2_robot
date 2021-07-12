@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2021-07-12)
+------------------
 * Correct dependency name
 * Using joint_state_broadcaster instead of controller
 * Adapt to proper parameter naming

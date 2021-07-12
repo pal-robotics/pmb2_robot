@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2021-07-12)
+------------------
 * Set back old version number before release
 * Restructuring code and add description test
 * No laser value is 'no-laser', change rgbd_sensors to courier_rgbd_sensors

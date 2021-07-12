@@ -2,8 +2,8 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.0 (2021-07-12)
+------------------
 * Set back old version number before release
 * Cleanup unused files
 * First working version
