@@ -2,6 +2,17 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Cleanup unused files
+* Add linters and fix errors
+* Cleanup pmb2_bringup
+* Remove old joystick_teleop.launch
+* Use unstamped topic in mobile_base_controller
+* Migrate pmb2_bringup to ROS2
+* First working version
+* Contributors: Victor Lopez
+
 3.0.14 (2021-01-18)
 -------------------
 

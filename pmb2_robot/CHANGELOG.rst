@@ -2,6 +2,14 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set back old version number before release
+* Cleanup unused files
+* First working version
+* First WIP of upload.py
+* Contributors: Victor Lopez
+
 3.0.14 (2021-01-18)
 -------------------
 

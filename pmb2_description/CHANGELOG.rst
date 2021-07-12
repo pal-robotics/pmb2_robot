@@ -2,6 +2,35 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set back old version number before release
+* Restructuring code and add description test
+* No laser value is 'no-laser', change rgbd_sensors to courier_rgbd_sensors
+* Tune a bit physics to avoid joint slippage, specially in TIAGo
+* Correct physic property names for newer gazebo
+* Add ROS2 control imu
+* Add imu plugin
+* Migrate rest of lasers to ROS2
+* Renamed end_effector argument
+* Format
+* Fixed some tiago arguments
+* Add linters to pmb2_description and apply fixes
+* Move param utils to launch_pal
+* Add show.launch.py
+* Remove gazebo laser plugin namespace
+* Merge branch 'single_ros2_control_system' into 'foxy-devel'
+  Single ROS2 control system
+  See merge request robots/pmb2_robot!65
+* All joints now form part of a single ros2_control system
+* Fixes to gazebo ros2 control param changes
+* Update how ros2 gazebo plugin is loaded
+* Add wheel ros2_control file
+* First working version
+* Remove comments to workaround https://github.com/ros2/launch_ros/issues/214
+* First WIP of upload.py
+* Contributors: Jordan Palacios, Victor Lopez, victor
+
 3.0.14 (2021-01-18)
 -------------------
 * Merge branch 'fix_wheel_slippage' into 'erbium-devel'

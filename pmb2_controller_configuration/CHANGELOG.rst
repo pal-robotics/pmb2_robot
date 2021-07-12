@@ -2,6 +2,23 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Correct dependency name
+* Using joint_state_broadcaster instead of controller
+* Adapt to proper parameter naming
+* Add linters to pmb2_bringup and apply fixes
+* use_sim_time in controllers and cleanup
+* Split default_controllers launch file
+* Fixes to gazebo ros2 control param changes
+* More fixes to default_controllers
+* Add default_controllers.launch.py
+* Update default_controllers.yaml
+  Update gazebo controller name
+* Add pmb2_controller_configuration
+* First working version
+* Contributors: Jordan Palacios, Victor Lopez
+
 3.0.14 (2021-01-18)
 -------------------
 
