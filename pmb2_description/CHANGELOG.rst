@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix typo
+* Contributors: Victor Lopez
+
 4.0.1 (2021-07-15)
 ------------------
 * Fix missing dependencies
