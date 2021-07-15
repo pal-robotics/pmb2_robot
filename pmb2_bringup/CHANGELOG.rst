@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix missing dependencies
+* Contributors: Victor Lopez
+
 4.0.0 (2021-07-12)
 ------------------
 * Cleanup unused files
