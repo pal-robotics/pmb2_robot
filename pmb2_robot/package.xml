@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>pmb2_robot</name>
-  <version>4.0.0</version>
+  <version>4.0.1</version>
   <description>PMB2 robot description and launch files</description>
   <maintainer email="victor.lopez@pal-robotics.com">Victor Lopez</maintainer>
   <license>Apache License 2.0</license>
