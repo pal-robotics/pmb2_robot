@@ -8,7 +8,7 @@
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <exec_depend>launch_pal</exec_depend>
   <exec_depend>pmb2_controller_configuration</exec_depend>
