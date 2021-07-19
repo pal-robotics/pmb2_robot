@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.18 (2021-07-19)
+-------------------
 * Merge branch 'expand-world-odometry' into 'erbium-devel'
   use our world odometry plugin
   See merge request robots/pmb2_robot!68
