@@ -2,6 +2,18 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'expand-world-odometry' into 'erbium-devel'
+  use our world odometry plugin
+  See merge request robots/pmb2_robot!68
+* Merge branch 'update-apache-license' into 'erbium-devel'
+  Update apache license
+  See merge request robots/pmb2_robot!69
+* Update apache license
+* use our world odometry plugin
+* Contributors: ThomasPeyrucain, Victor Lopez, victor
+
 3.0.17 (2021-06-23)
 -------------------
 
