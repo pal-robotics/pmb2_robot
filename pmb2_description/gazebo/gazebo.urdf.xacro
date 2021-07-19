@@ -32,10 +32,10 @@
       <controlPeriod>0.001</controlPeriod>
     </plugin>
 
-    <plugin filename="libgazebo_ros_p3d.so" name="gazebo_ros_p3d">
+    <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
+      <frameName>world</frameName>
       <bodyName>base_footprint</bodyName>
       <topicName>ground_truth_odom</topicName>
-      <alwaysOn>true</alwaysOn>
       <updateRate>100.0</updateRate>
       <xacro:if value="${is_multiple}">
           <robotNamespace>/${nsp}</robotNamespace>
