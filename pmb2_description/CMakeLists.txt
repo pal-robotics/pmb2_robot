@@ -16,11 +16,7 @@ ament_auto_find_build_dependencies()
 if(BUILD_TESTING)
 
   find_package(ament_lint_auto REQUIRED)
-  find_package(urdf_test REQUIRED)
-
   ament_lint_auto_find_test_dependencies()
-
-  find_package(launch_testing_ament_cmake)
 
   foreach(laser_model no-laser hokuyo sick-551 sick-561 sick-571)
       foreach(courier_rgbd_sensors False True)
