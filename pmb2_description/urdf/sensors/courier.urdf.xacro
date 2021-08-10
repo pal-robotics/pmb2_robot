@@ -9,11 +9,12 @@
 
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/structure_sensor.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/elp_rgb.urdf.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/base/base_pmb2_calib.urdf.xacro"/>
   
   <xacro:property name="default_calibration_path" value="$(find pmb2_description)"/>
   <xacro:property name="calibration_path" value="$(optenv pmb2_description_calibration_path ${default_calibration_path})"/>
 
+  <!-- base/roof RGBD calibratable characteristics -->
+  <!-- spec: rgbd_z, rgbd_R and rgbd_P -->
   <xacro:include filename="${calibration_path}/urdf/base/base_pmb2_calib.urdf.xacro"/>
 
   <!-- base RGBD characteristics -->
