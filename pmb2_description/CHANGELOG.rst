@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.19 (2021-08-11)
+-------------------
 * Merge branch 'feature-use-master-calibration-for-rgbd-cameras' into 'erbium-devel'
   Load rgbd cameras extrinsic parameters from master calibration
   See merge request robots/pmb2_robot!71
