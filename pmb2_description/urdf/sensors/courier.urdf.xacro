@@ -17,21 +17,22 @@
 
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/structure_sensor.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/elp_rgb.urdf.xacro"/>
+  
+  <xacro:property name="default_calibration_path" value="$(find pmb2_description)"/>
+  <xacro:property name="calibration_path" value="$(optenv pmb2_description_calibration_path ${default_calibration_path})"/>
+
+  <!-- base/roof RGBD calibratable characteristics -->
+  <!-- spec: rgbd_z, rgbd_R and rgbd_P -->
+  <xacro:include filename="${calibration_path}/urdf/base/base_pmb2_calib.urdf.xacro"/>
 
   <!-- base RGBD characteristics -->
   <xacro:property name="base_rgbd_x" value="0.22697"/>
   <xacro:property name="base_rgbd_y" value="0.0"/>
-  <xacro:property name="base_rgbd_z" value="0.52635"/>
-  <xacro:property name="base_rgbd_R" value="-0.171709"/>
-  <xacro:property name="base_rgbd_P" value="57.9362"/>
   <xacro:property name="base_rgbd_Y" value="0.0"/>
 
   <!-- roof RGBD characteristics -->
   <xacro:property name="roof_rgbd_x" value="0.18473"/>
   <xacro:property name="roof_rgbd_y" value="0.0"/>
-  <xacro:property name="roof_rgbd_z" value="0.470428"/>
-  <xacro:property name="roof_rgbd_R" value="-0.299256"/>
-  <xacro:property name="roof_rgbd_P" value="10.596"/>
   <xacro:property name="roof_rgbd_Y" value="0.0"/>
 
   <!-- RGB characteristics -->
