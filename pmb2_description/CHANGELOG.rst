@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'gallium_fixes' into 'erbium-devel'
+  Gallium fixes
+  See merge request robots/pmb2_robot!73
+* Using xacro instead of deprecated xacro.py
+* Contributors: Jordan Palacios
+
 3.0.19 (2021-08-11)
 -------------------
 * Merge branch 'feature-use-master-calibration-for-rgbd-cameras' into 'erbium-devel'
