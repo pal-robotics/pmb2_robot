@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.20 (2021-09-01)
+-------------------
 * Merge branch 'gallium_fixes' into 'erbium-devel'
   Gallium fixes
   See merge request robots/pmb2_robot!73
