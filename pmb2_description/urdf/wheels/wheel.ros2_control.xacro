@@ -18,11 +18,11 @@
     </joint>
 
     <transmission name="wheel_${side}_trans">
-      <type>transmission_interface/SimpleTransmission</type>
-      <actuator name="wheel_${side}_motor">
+      <plugin>transmission_interface/SimpleTransmission</plugin>
+      <actuator name="wheel_${side}_motor" role="actuator1">
         <mechanicalReduction>1.0</mechanicalReduction>
       </actuator>
-      <joint name="wheel_${side}_joint">
+      <joint name="wheel_${side}_joint" role="joint1">
         <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
         <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
       </joint>
