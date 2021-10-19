@@ -2,6 +2,12 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update to new transmission format
+* Cleanup
+* Contributors: Victor Lopez
+
 4.0.2 (2021-07-15)
 ------------------
 * Fix typo

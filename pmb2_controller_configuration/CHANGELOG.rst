@@ -2,6 +2,15 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_extra_joints' into 'foxy-devel'
+  Add extra joints
+  See merge request robots/pmb2_robot!74
+* add extra joints to joint state
+* add extra joints to joint state
+* Contributors: cescfolch, victor
+
 4.0.2 (2021-07-15)
 ------------------
 
