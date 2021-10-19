@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.4 (2021-10-19)
+------------------
 * Add missing exec dependency
 * Contributors: Victor Lopez
 
