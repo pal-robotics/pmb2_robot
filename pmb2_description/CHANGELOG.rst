@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add missing exec dependency
+* Contributors: Victor Lopez
+
 4.0.3 (2021-10-19)
 ------------------
 * Update to new transmission format
