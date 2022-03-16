@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.20 (2021-09-01)
 -------------------
 * Merge branch 'gallium_fixes' into 'erbium-devel'

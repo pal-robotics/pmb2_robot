@@ -2,6 +2,14 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'use-tf2-convention' into 'erbium-devel'
+  Use tf2 convention
+  See merge request robots/pmb2_robot!75
+* added changes to use tf2 convention
+* Contributors: Jordan Palacios, josegarcia
+
 3.0.20 (2021-09-01)
 -------------------
 
