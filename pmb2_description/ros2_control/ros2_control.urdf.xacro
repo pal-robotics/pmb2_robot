@@ -10,18 +10,30 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="pmb2" >
 
-  <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
+<xacro:macro name="pmb2_ros2_control" params="use_sim:=^|true">
 
-  <ros2_control name="ros2_control_pmb2_system" type="system">
-    <hardware>
-      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
-    </hardware>
+    <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
+    <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
 
-    <!-- wheels -->
-    <xacro:ros2_control_wheel side="right" />
-    <xacro:ros2_control_wheel side="left" />
-    <xacro:ros2_control_imu name="base_imu_sensor"/>
+    <ros2_control name="ros2_control_pmb2_system" type="system">
 
-  </ros2_control>
+      <xacro:if value="$(arg use_sim)">
+        <xacro:ros2_control_imu name="base_imu_sensor"/>
+        <hardware>
+          <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+      </xacro:if>
+      <xacro:unless value="$(arg use_sim)">
+        <hardware>
+          <plugin>robot_control/RobotControl</plugin>
+        </hardware>
+      </xacro:unless>
+
+      <!-- wheels -->
+      <xacro:ros2_control_wheel side="right" />
+      <xacro:ros2_control_wheel side="left" />
+
+    </ros2_control>
+  </xacro:macro>
+
 </robot>
