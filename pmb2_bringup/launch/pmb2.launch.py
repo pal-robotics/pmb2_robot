@@ -6,6 +6,9 @@
 # nondisclosure agreement with PAL Robotics SL. In this case it may not be
 # copied or disclosed except in accordance with the terms of that agreement.
 
+import os
+from ament_index_python.packages import get_package_share_directory
+
 from launch import LaunchDescription
 from launch_pal.include_utils import include_launch_py_description
 
@@ -16,6 +19,8 @@ def generate_launch_description():
         include_launch_py_description(
             'robot_control', ['launch', 'robot_control.launch.py'],
             launch_arguments={
+              'description_path': os.path.join(
+                get_package_share_directory('pmb2_description'), 'robots', 'pmb2.urdf.xacro'),
               'config_pkg': 'pal_deployer_cfg_pmb2',
             }.items(),
         ),
