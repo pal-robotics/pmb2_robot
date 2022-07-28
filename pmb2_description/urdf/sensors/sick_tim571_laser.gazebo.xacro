@@ -15,7 +15,8 @@
 
   <xacro:macro name="sick_tim571_laser_gazebo" params="name ros_topic update_rate min_angle max_angle">
     <gazebo reference="${name}_link">
-      <sensor type="ray" name="${name}">
+      <!-- Using gpu laser instead of normal laser because it was causing issues with the omni_base -->
+      <sensor type="gpu_ray" name="${name}">
         <pose>0 0 0 0 0 0</pose>
         <update_rate>${update_rate}</update_rate>
         <visualize>true</visualize>
@@ -35,7 +36,7 @@
             <resolution>0.001</resolution>
           </range>
         </ray>
-        <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_sick_laser">
+        <plugin filename="libgazebo_ros_gpu_laser.so" name="gazebo_ros_sick_laser">
           <gaussianNoise>0.06</gaussianNoise>
           <alwaysOn>true</alwaysOn>
           <updateRate>${update_rate}</updateRate>
