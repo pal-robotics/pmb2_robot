@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.22 (2022-08-10)
+-------------------
 * Merge branch 'fix_omni_base_laser_collision' into 'erbium-devel'
   Fix collision error with the omni base + indetation fix
   See merge request robots/pmb2_robot!77
