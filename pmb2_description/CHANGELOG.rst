@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/pmb2-rviz' into 'erbium-devel'
+  Fixed pmb2 rviz visualization
+  See merge request robots/pmb2_robot!78
+* Fixed pmb2 rviz visualization
+* Contributors: antoniobrandi
+
 3.0.22 (2022-08-10)
 -------------------
 * Merge branch 'fix_omni_base_laser_collision' into 'erbium-devel'
