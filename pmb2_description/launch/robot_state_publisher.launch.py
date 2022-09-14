@@ -15,18 +15,17 @@
 import os
 from pathlib import Path
 
+from ament_index_python.packages import get_package_share_directory
+
 from launch import LaunchDescription
 from launch.actions import OpaqueFunction
 
-from launch_ros.actions import Node
 from launch_pal.arg_utils import read_launch_argument
-
-from launch_param_builder import load_xacro
-from ament_index_python.packages import get_package_share_directory
-
-from launch_pal.robot_utils import (get_robot_name,
+from launch_pal.robot_utils import (get_courier_rgbd_sensors,
                                     get_laser_model,
-                                    get_courier_rgbd_sensors)
+                                    get_robot_name)
+from launch_param_builder import load_xacro
+from launch_ros.actions import Node
 
 
 def declare_args(context, *args, **kwargs):
@@ -40,10 +39,11 @@ def declare_args(context, *args, **kwargs):
 def launch_setup(context, *args, **kwargs):
 
     parameters = {'robot_description': load_xacro(
-        Path(os.path.join(get_package_share_directory('pmb2_description'), 'robots', 'pmb2.urdf.xacro')),
+        Path(os.path.join(
+            get_package_share_directory('pmb2_description'), 'robots', 'pmb2.urdf.xacro')),
         {
-            "laser_model": read_launch_argument('laser_model', context),
-            "courier_rgbd_sensors": read_launch_argument('courier_rgbd_sensors', context)
+            'laser_model': read_launch_argument('laser_model', context),
+            'courier_rgbd_sensors': read_launch_argument('courier_rgbd_sensors', context)
         },
     )}
 
@@ -53,6 +53,7 @@ def launch_setup(context, *args, **kwargs):
                parameters=[parameters])
 
     return [rsp]
+
 
 def generate_launch_description():
 
