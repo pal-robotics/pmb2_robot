@@ -6,7 +6,6 @@
     use_stamped_vel: False
     left_wheel_names  : ['wheel_left_joint']
     right_wheel_names : ['wheel_right_joint']
-    #wheels_per_side: 1
 
     # In ROS1 these physical properties were parsed from the URDF
     wheel_radius: 0.0985
@@ -22,24 +21,14 @@
     pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
 
-    enable_pose_covariance_update: true
-    error_constant_left : 0.001
-    error_constant_right: 0.001
-
     # Velocity commands timeout [s]
     cmd_vel_timeout: 0.25
 
     # Base frame_id
     base_frame_id: base_footprint
 
-    # Preserve turning radius when limiting speed/acceleration/jerk
-    preserve_turning_radius: true
-
     # Publish limited velocity
-    publish_cmd: true
-
-    # Publish wheel data
-    publish_wheel_data: true
+    publish_limited_velocity: true
 
     # Velocity and acceleration limits
     # Whenever a min_* is unspecified, default to -max_*
