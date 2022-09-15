@@ -1,4 +1,4 @@
-# Copyright (c) 2021 PAL Robotics S.L.
+# Copyright (c) 2022 PAL Robotics S.L.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,60 +12,59 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from launch import LaunchDescription, Substitution, LaunchContext
+import os
+from pathlib import Path
+
+from ament_index_python.packages import get_package_share_directory
+
+from launch import LaunchDescription
+from launch.actions import OpaqueFunction
+
 from launch_pal.arg_utils import read_launch_argument
+from launch_pal.robot_utils import (get_courier_rgbd_sensors,
+                                    get_laser_model,
+                                    get_robot_name)
+from launch_param_builder import load_xacro
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare, ExecutableInPackage
-from launch.substitutions import Command, PathJoinSubstitution
-from typing import List
-from typing import Text
-
-from pmb2_description.pmb2_launch_utils import get_tiago_base_hw_arguments
 
 
-class Pmb2XacroConfigSubstitution(Substitution):
-    """Extract the pmb2 hardware args and passes them as xacro variables."""
+def declare_args(context, *args, **kwargs):
 
-    def __init__(self) -> None:
-        super().__init__()
+    robot_name = read_launch_argument('robot_name', context)
 
-    @property
-    def name(self) -> List[Substitution]:
-        """Getter for name."""
-        return "PMB2 Xacro Config"
-
-    def describe(self) -> Text:
-        """Return a description of this substitution as a string."""
-        return 'Parses pmb2 hardware launch arguments into xacro arguments potat describe'
-
-    def perform(self, context: LaunchContext) -> Text:
-        """Generate the robot description and return it as a string."""
-        laser_model = read_launch_argument("laser_model", context)
-        courier_rgbd_sensors = read_launch_argument(
-            "courier_rgbd_sensors", context)
-        return " laser_model:=" + laser_model + " courier_rgbd_sensors:=" + courier_rgbd_sensors
+    return [get_laser_model(robot_name),
+            get_courier_rgbd_sensors(robot_name)]
 
 
-def generate_launch_description():
+def launch_setup(context, *args, **kwargs):
 
-    parameters = {'robot_description': Command(
-        [
-            ExecutableInPackage(package='xacro', executable="xacro"),
-            ' ',
-            PathJoinSubstitution(
-                [FindPackageShare('pmb2_description'), 'robots', 'pmb2.urdf.xacro']),
-            Pmb2XacroConfigSubstitution()
-        ])
-    }
+    parameters = {'robot_description': load_xacro(
+        Path(os.path.join(
+            get_package_share_directory('pmb2_description'), 'robots', 'pmb2.urdf.xacro')),
+        {
+            'laser_model': read_launch_argument('laser_model', context),
+            'courier_rgbd_sensors': read_launch_argument('courier_rgbd_sensors', context)
+        },
+    )}
 
     rsp = Node(package='robot_state_publisher',
                executable='robot_state_publisher',
                output='both',
                parameters=[parameters])
-    return LaunchDescription([
-        *get_tiago_base_hw_arguments(laser_model=True,
-                                     courier_rgbd_sensors=True,
-                                     default_laser_model="sick-571",
-                                     default_courier_rgbd_sensors="False"),
-        rsp
-    ])
+
+    return [rsp]
+
+
+def generate_launch_description():
+
+    ld = LaunchDescription()
+
+    # Declare arguments
+    # we use OpaqueFunction so the callbacks have access to the context
+    ld.add_action(get_robot_name())
+    ld.add_action(OpaqueFunction(function=declare_args))
+
+    # Execute robot_state_publisher node
+    ld.add_action(OpaqueFunction(function=launch_setup))
+
+    return ld
