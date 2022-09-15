@@ -21,25 +21,32 @@ from launch_pal.include_utils import include_launch_py_description
 
 
 def generate_launch_description():
+
+    robot_control_launch = include_launch_py_description(
+        'robot_control', ['launch', 'robot_control.launch.py'],
+        launch_arguments={
+          'description_path': os.path.join(
+            get_package_share_directory('pmb2_description'), 'robots', 'pmb2.urdf.xacro'),
+          'config_pkg': 'pal_deployer_cfg_pmb2',
+        }.items(),
+    )
+
+    pmb2_bringup_launch = include_launch_py_description(
+        'pmb2_bringup', ['launch', 'pmb2_bringup.launch.py']
+    )
+
+    pmb2_nav_bringup_launch = include_launch_py_description(
+        'pmb2_2dnav', ['launch', 'pmb2_nav_bringup.launch.py'],
+        launch_arguments={
+            'use_sim_time': 'False',
+            'use_rviz': 'False',
+            }.items())
+
     # Create the launch description and populate
-    ld = LaunchDescription([
-        include_launch_py_description(
-            'robot_control', ['launch', 'robot_control.launch.py'],
-            launch_arguments={
-              'description_path': os.path.join(
-                get_package_share_directory('pmb2_description'), 'robots', 'pmb2.urdf.xacro'),
-              'config_pkg': 'pal_deployer_cfg_pmb2',
-            }.items(),
-        ),
-        include_launch_py_description(
-            'pmb2_bringup', ['launch', 'pmb2_bringup.launch.py']
-        ),
-        include_launch_py_description(
-            'pmb2_2dnav', ['launch', 'pmb2_nav_bringup.launch.py'],
-            launch_arguments={
-                'use_sim_time': 'False',
-                'use_rviz': 'False',
-                }.items()),
-    ])
+    ld = LaunchDescription()
+
+    ld.add_action(robot_control_launch)
+    ld.add_action(pmb2_bringup_launch)
+    ld.add_action(pmb2_nav_bringup_launch)
 
     return ld

@@ -18,12 +18,20 @@ from launch_pal.include_utils import include_launch_py_description
 
 def generate_launch_description():
 
-    return LaunchDescription([
-        include_launch_py_description(
-            'pmb2_controller_configuration', ['launch', 'mobile_base_controller.launch.py']),
-        include_launch_py_description(
-            'pmb2_controller_configuration', ['launch', 'joint_state_broadcaster.launch.py']),
-        # imu_sensor_controller not migrated to ROS2 yet
-        # include_launch_py_description(
-        #    'imu_sensor_controller', ['launch', 'imu_sensor_controller.launch.py']),
-    ])
+    mobile_base_controller_launch = include_launch_py_description(
+        'pmb2_controller_configuration', ['launch', 'mobile_base_controller.launch.py'])
+
+    joint_state_broadcaster_launch = include_launch_py_description(
+        'pmb2_controller_configuration', ['launch', 'joint_state_broadcaster.launch.py'])
+
+    # imu_sensor_controller not migrated to ROS2 yet
+    # imu_sensor_controller_launch = include_launch_py_description(
+    #    'imu_sensor_controller', ['launch', 'imu_sensor_controller.launch.py'])
+
+    ld = LaunchDescription()
+
+    ld.add_action(mobile_base_controller_launch)
+    ld.add_action(joint_state_broadcaster_launch)
+    # ld.add_action(imu_sensor_controller_launch)
+
+    return ld

@@ -38,10 +38,10 @@ def generate_launch_description():
 
     # Missing joy_node (not ported to ROS2 yet)
 
-    ld = LaunchDescription([
-        declare_cmd_vel,
-        declare_teleop_config,
-        joy_teleop_node,
-    ])
+    ld = LaunchDescription()
+
+    ld.add_action(declare_cmd_vel)
+    ld.add_action(declare_teleop_config)
+    ld.add_action(joy_teleop_node)
 
     return ld
