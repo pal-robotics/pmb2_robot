@@ -23,15 +23,17 @@ from launch_pal.include_utils import include_launch_py_description
 def generate_launch_description():
     pkg = get_package_share_directory('pmb2_bringup')
 
-    ld = LaunchDescription([
-        include_launch_py_description(
-            'twist_mux', ['launch', 'twist_mux_launch.py'],
-            launch_arguments={
-                'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
-                'config_locks': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_locks.yaml'),
-                'config_topics': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_topics.yaml'),
-                'joystick': os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml'),
-            }.items()),
-    ])
+    twist_mux_launch = include_launch_py_description(
+        'twist_mux', ['launch', 'twist_mux_launch.py'],
+        launch_arguments={
+            'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
+            'config_locks': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_locks.yaml'),
+            'config_topics': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_topics.yaml'),
+            'joystick': os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml'),
+        }.items())
+
+    ld = LaunchDescription()
+
+    ld.add_action(twist_mux_launch)
 
     return ld
