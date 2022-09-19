@@ -3,7 +3,8 @@
   <name>pmb2_robot</name>
   <version>4.0.4</version>
   <description>PMB2 robot description and launch files</description>
-  <maintainer email="victor.lopez@pal-robotics.com">Victor Lopez</maintainer>
+  <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
+  <maintainer email="noel.jimenez@pal-robotics.com">Noel Jimenez</maintainer>
   <license>Apache License 2.0</license>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
