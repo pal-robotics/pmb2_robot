@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.5 (2022-10-21)
+------------------
 * Merge branch 'cleanup' into 'humble-devel'
   update package.xml deps, indentation fix
   See merge request robots/pmb2_robot!85

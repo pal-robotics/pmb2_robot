@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.0.5 (2022-10-21)
+------------------
 * Merge branch 'rm_launcher' into 'humble-devel'
   Remove pmb2.launch.py and dependencies
   See merge request robots/pmb2_robot!87
