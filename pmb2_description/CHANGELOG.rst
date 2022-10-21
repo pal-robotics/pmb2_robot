@@ -2,6 +2,45 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'cleanup' into 'humble-devel'
+  update package.xml deps, indentation fix
+  See merge request robots/pmb2_robot!85
+* indentation fix
+* update package.xml deps
+* Merge branch 'fix_gz_physics' into 'humble-devel'
+  Tune wheels physics to avoid slippage
+  See merge request robots/pmb2_robot!84
+* tune wheels physics to avoid slippage
+* Merge branch 'update_copyright' into 'humble-devel'
+  Update copyright
+  See merge request robots/pmb2_robot!82
+* update copyright
+* Merge branch 'refactor_ld_population' into 'humble-devel'
+  Refactor ld population
+  See merge request robots/pmb2_robot!81
+* refactor LaunchDescription population
+* Merge branch 'update_maintainers' into 'humble-devel'
+  update maintainers
+  See merge request robots/pmb2_robot!80
+* update maintainers
+* Merge branch 'humble_fixes' into 'humble-devel'
+  humble distro fixes
+  See merge request robots/pmb2_robot!79
+* linters
+* launch files refactor
+* material Black
+* Merge branch 'pmb2_launcher' into 'galactic-devel'
+  pmb2 launcher
+  See merge request robots/pmb2_robot!76
+* robot control plugin if no simulation
+* Merge branch 'use-world-odometry-ros2' into 'foxy-devel'
+  use our world odometry plugin
+  See merge request robots/pmb2_robot!72
+* use our world odometry plugin
+* Contributors: Jordan Palacios, Noel Jimenez, Noel Jimenez Garcia, Victor Lopez, victor
+
 4.0.4 (2021-10-19)
 ------------------
 * Add missing exec dependency

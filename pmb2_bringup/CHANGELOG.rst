@@ -2,6 +2,44 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'rm_launcher' into 'humble-devel'
+  Remove pmb2.launch.py and dependencies
+  See merge request robots/pmb2_robot!87
+* rm pmb2.launch.py and dependencies
+* Merge branch 'cleanup' into 'humble-devel'
+  update package.xml deps, indentation fix
+  See merge request robots/pmb2_robot!85
+* update package.xml deps
+* Merge branch 'update_copyright' into 'humble-devel'
+  Update copyright
+  See merge request robots/pmb2_robot!82
+* update copyright
+* Merge branch 'cleanup' into 'humble-devel'
+  Cleanup
+  See merge request robots/pmb2_robot!83
+* cleanup
+* Merge branch 'refactor_ld_population' into 'humble-devel'
+  Refactor ld population
+  See merge request robots/pmb2_robot!81
+* refactor LaunchDescription population
+* Merge branch 'update_maintainers' into 'humble-devel'
+  update maintainers
+  See merge request robots/pmb2_robot!80
+* update maintainers
+* Merge branch 'humble_fixes' into 'humble-devel'
+  humble distro fixes
+  See merge request robots/pmb2_robot!79
+* linters
+* Merge branch 'pmb2_launcher' into 'galactic-devel'
+  pmb2 launcher
+  See merge request robots/pmb2_robot!76
+* add description_path arg
+* pmb2 launcher
+* temporal fix deadman buttons empty
+* Contributors: Jordan Palacios, Noel Jimenez, Noel Jimenez Garcia
+
 4.0.4 (2021-10-19)
 ------------------
 

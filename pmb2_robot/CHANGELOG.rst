@@ -2,6 +2,14 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'update_maintainers' into 'humble-devel'
+  update maintainers
+  See merge request robots/pmb2_robot!80
+* update maintainers
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.4 (2021-10-19)
 ------------------
 
