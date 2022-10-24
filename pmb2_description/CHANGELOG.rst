@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.23 (2022-08-17)
 -------------------
 * Merge branch 'fix/pmb2-rviz' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/robust-odometry-integration' into 'erbium-devel'
+  Disable odom tf publication
+  See merge request robots/pmb2_robot!86
+* Update mobile_base_controller.yaml
+* Contributors: josegarcia
+
 3.0.23 (2022-08-17)
 -------------------
 
