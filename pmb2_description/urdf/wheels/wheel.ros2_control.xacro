@@ -26,12 +26,9 @@
 
     <transmission name="wheel_${side}_trans">
       <plugin>transmission_interface/SimpleTransmission</plugin>
-      <actuator name="wheel_${side}_motor" role="actuator1">
-        <mechanicalReduction>1.0</mechanicalReduction>
-      </actuator>
+      <actuator name="wheel_${side}_motor" role="actuator1"/>
       <joint name="wheel_${side}_joint" role="joint1">
-        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
-        <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
+        <mechanical_reduction>1.0</mechanical_reduction>
       </joint>
     </transmission>
   </xacro:macro>
