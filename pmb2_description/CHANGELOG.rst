@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.25 (2023-02-07)
+-------------------
 * Merge branch 'fix_collision_shape' into 'erbium-devel'
   Fix collision shape
   See merge request robots/pmb2_robot!92
