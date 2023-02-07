@@ -2,6 +2,15 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_collision_shape' into 'erbium-devel'
+  Fix collision shape
+  See merge request robots/pmb2_robot!92
+* fix width of wheels
+* fix shape of wheel collision
+* Contributors: andreacapodacqua, antoniobrandi
+
 3.0.24 (2022-10-24)
 -------------------
 
