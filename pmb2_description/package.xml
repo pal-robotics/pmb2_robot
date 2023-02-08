@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>pmb2_description</name>
-  <version>4.0.5</version>
+  <version>5.0.0</version>
   <description>
       Mechanical, kinematic, visual, etc. description of the PMB2 robot.
       The files in this package are parsed and used by
