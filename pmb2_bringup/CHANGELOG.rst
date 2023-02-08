@@ -2,6 +2,14 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'robot_state_publisher' into 'humble-devel'
+  launch robot_state_publisher from pmb2_bringup
+  See merge request robots/pmb2_robot!90
+* launch robot_state_publisher from pmb2_bringup
+* Contributors: Jordan Palacios, Noel Jimenez
+
 4.0.5 (2022-10-21)
 ------------------
 * Merge branch 'rm_launcher' into 'humble-devel'
