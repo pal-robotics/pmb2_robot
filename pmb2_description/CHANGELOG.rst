@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 5.0.0 (2023-02-08)
 ------------------
 * Merge branch 'transmissions' into 'humble-devel'

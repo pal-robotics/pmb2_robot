@@ -2,6 +2,14 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix_controllers_config' into 'humble-devel'
+  Remove initial / from controllers config
+  See merge request robots/pmb2_robot!93
+* remove initial / from controllers config
+* Contributors: Jordan Palacios, Noel Jimenez
+
 5.0.0 (2023-02-08)
 ------------------
 
