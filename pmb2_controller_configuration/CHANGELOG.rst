@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.1 (2023-03-02)
+------------------
 * Merge branch 'fix_controllers_config' into 'humble-devel'
   Remove initial / from controllers config
   See merge request robots/pmb2_robot!93
