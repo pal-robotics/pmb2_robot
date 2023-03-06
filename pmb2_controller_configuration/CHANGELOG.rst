@@ -2,6 +2,14 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'rm_use_sim_time' into 'humble-devel'
+  remove use_sim_time parameter
+  See merge request robots/pmb2_robot!94
+* remove use_sim_time parameter
+* Contributors: Jordan Palacios, Noel Jimenez
+
 5.0.1 (2023-03-02)
 ------------------
 * Merge branch 'fix_controllers_config' into 'humble-devel'
