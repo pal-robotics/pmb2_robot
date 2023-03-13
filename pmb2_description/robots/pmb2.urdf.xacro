@@ -20,7 +20,7 @@
   <xacro:arg name="rgbd_sensors" default="false"/> <!-- false, true-->
   <xacro:property name="laser_model" value="$(arg laser_model)" />
   <xacro:property name="rgbd_sensors" value="$(arg rgbd_sensors)"/>
-  <xacro:if value="${laser_model not in ['false', False, 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+  <xacro:if value="${laser_model not in ['false', False, 'sick-551', 'sick-561', 'sick-571', 'hokuyo', 'ydlidar-tg30', 'ydlidar-tg15']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
   <xacro:arg name="multiple" default="false"/>
