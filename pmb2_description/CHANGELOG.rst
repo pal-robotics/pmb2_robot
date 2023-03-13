@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/ydlidar' into 'erbium-devel'
+  added ydlidar
+  See merge request robots/pmb2_robot!88
+* added ydlidar
+* Contributors: antoniobrandi
+
 3.0.25 (2023-02-07)
 -------------------
 * Merge branch 'fix_collision_shape' into 'erbium-devel'
