@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.26 (2023-03-13)
+-------------------
 * Merge branch 'feat/ydlidar' into 'erbium-devel'
   added ydlidar
   See merge request robots/pmb2_robot!88
