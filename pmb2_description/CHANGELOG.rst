@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/ydlidar-angle' into 'erbium-devel'
+  updated laser mounting angle
+  See merge request robots/pmb2_robot!95
+* updated laser mounting angle
+* Contributors: AntoBrandi, antoniobrandi
+
 3.0.26 (2023-03-13)
 -------------------
 * Merge branch 'feat/ydlidar' into 'erbium-devel'
