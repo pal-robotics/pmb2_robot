@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* rename motors to actuators
+* Contributors: Noel Jimenez
+
 5.0.2 (2023-03-06)
 ------------------
 
