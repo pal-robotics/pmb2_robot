@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.28 (2023-04-18)
+-------------------
 * Merge branch 'update-joystick' into 'erbium-devel'
   Update joystick name
   See merge request robots/pmb2_robot!98
