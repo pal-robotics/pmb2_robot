@@ -1,5 +1,6 @@
 <launch>
 
+  <arg name="input_device" default="/dev/joystick"/>
   <arg name="cmd_vel" default="input_joy/cmd_vel" />
   <arg name="teleop_config" default="$(find pmb2_bringup)/config/joy_teleop.yaml" />
 
@@ -10,6 +11,7 @@
 
   <node pkg="joy" type="joy_node" name="joystick">
     <param name="autorepeat_rate" value="10" />
+    <param name="dev" value="$(arg input_device)" />
   </node>
 
 </launch>
