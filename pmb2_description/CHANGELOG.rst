@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/ydlidar_min_max_angle' into 'erbium-devel'
+  fix min and max angle ydlidar
+  See merge request robots/pmb2_robot!99
+* fix min and max angle ydlidar
+* Contributors: andreacapodacqua, sergiomoyano
+
 3.0.28 (2023-04-18)
 -------------------
 

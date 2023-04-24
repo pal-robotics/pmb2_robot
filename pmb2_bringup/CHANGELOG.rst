@@ -2,6 +2,9 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.28 (2023-04-18)
 -------------------
 * Merge branch 'update-joystick' into 'erbium-devel'
