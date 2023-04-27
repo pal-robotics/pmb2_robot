@@ -22,24 +22,24 @@
        name="pmb2">
 
   <gazebo>
-      <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-	    <!-- in the future move this param file somewhere else -->
-	    <parameters>$(find pmb2_controller_configuration)/config/gazebo_controller_manager_cfg.yaml</parameters>
-        <xacro:if value="${is_multiple}">
-          <!-- Do something about multirobot -->
-        </xacro:if>
-        <xacro:unless value="${is_multiple}">
-          <!-- Do something about multirobot -->
-        </xacro:unless>
-      </plugin>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+      <!-- in the future move this param file somewhere else -->
+      <parameters>$(find pmb2_controller_configuration)/config/gazebo_controller_manager_cfg.yaml</parameters>
+      <xacro:if value="${is_multiple}">
+        <!-- Do something about multirobot -->
+      </xacro:if>
+      <xacro:unless value="${is_multiple}">
+        <!-- Do something about multirobot -->
+      </xacro:unless>
+    </plugin>
 
     <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
-      <frameName>world</frameName>
-      <bodyName>base_footprint</bodyName>
-      <topicName>ground_truth_odom</topicName>
-      <updateRate>100.0</updateRate>
+      <frame_name>world</frame_name>
+      <body_name>base_footprint</body_name>
+      <topic_name>ground_truth_odom</topic_name>
+      <update_rate>100.0</update_rate>
       <xacro:if value="${is_multiple}">
-          <robotNamespace>/${nsp}</robotNamespace>
+          <namespace>/${nsp}</namespace>
       </xacro:if>
     </plugin>
   </gazebo>
