@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.4 (2023-04-28)
+------------------
 * set sim time for gazebo controller_manager
 * Contributors: Noel Jimenez
 
