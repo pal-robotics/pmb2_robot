@@ -1,10 +1,10 @@
-/**:
+joy_teleop:
   ros__parameters:
     move:
       type: topic
       interface_type: geometry_msgs/msg/Twist
       topic_name: cmd_vel
-      deadman_buttons: [0]
+      deadman_buttons: [5]
       axis_mappings:
         linear-x:
           axis: 1
@@ -17,44 +17,36 @@
 
     joy_priority:
       type: action
-      interface_type: teleop_tools_msgs/action/Increment
+      interface_type: twist_mux_msgs/action/JoyPriority
       action_name: joy_priority_action
       buttons: [0]
 
     joy_turbo_decrease:
       type: action
-      interface_type: teleop_tools_msgs/action/Increment
+      interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_decrease
       buttons: [1, 4, 5]
 
     joy_turbo_increase:
       type: action
-      interface_type: teleop_tools_msgs/action/Increment
+      interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_increase
       buttons: [3, 4, 5]
 
     joy_turbo_angular_decrease:
       type: action
-      interface_type: teleop_tools_msgs/action/Increment
+      interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_angular_decrease
       buttons: [0, 4, 5]
 
     joy_turbo_angular_increase:
       type: action
-      interface_type: teleop_tools_msgs/action/Increment
+      interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_angular_increase
       buttons: [2, 4, 5]
 
     joy_turbo_reset:
       type: action
-      interface_type: teleop_tools_msgs/action/Increment
+      interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_reset
       buttons: [4, 5, 7]
-
-    # Disable speed_limit example
-    # @todo duration param is not taken
-    #speed_limit_disable:
-    #  type: action
-    #  action_name: speed_limit/disable
-    #  duration: 10.0
-    #  buttons: [4, 5, 6, 7]
