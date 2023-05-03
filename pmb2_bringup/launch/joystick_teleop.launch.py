@@ -44,7 +44,7 @@ def generate_launch_description():
         package='joy',
         executable='joy_node',
         name='joystick',
-        parameters=[os.path.join(pkg_dir, 'config', 'joy.yaml')])
+        parameters=[os.path.join(pkg_dir, 'config', 'joy_config.yaml')])
 
     ld = LaunchDescription()
 
