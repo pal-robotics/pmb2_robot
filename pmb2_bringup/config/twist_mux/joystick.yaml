@@ -1,7 +1,6 @@
-/**:
+joystick_relay:
   ros__parameters:
-    priority: false
-
+    priority: False
     turbo:
       linear_forward_min  : 0.05
       linear_forward_max  : 1.00
