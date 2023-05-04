@@ -2,6 +2,16 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tg' into 'erbium-devel'
+  Fix urdf tg values
+  See merge request robots/pmb2_robot!102
+* General case for parameter
+* Update urdf tg values
+* Fix urdf tg values
+* Contributors: sergiomoyano
+
 3.0.29 (2023-04-24)
 -------------------
 * Merge branch 'fix/ydlidar_min_max_angle' into 'erbium-devel'
