@@ -6,6 +6,6 @@ joystick_relay:
       linear_forward_max  : 1.00
       linear_backward_min : 0.05
       linear_backward_max : 0.20
-      angular_min : !degrees  10.0
-      angular_max : !degrees 120.0
+      angular_min : 0.1745  # !degrees  10.0 (not supported)
+      angular_max : 2.0944  # !degrees 120.0 (not supported)
       steps       : 8
