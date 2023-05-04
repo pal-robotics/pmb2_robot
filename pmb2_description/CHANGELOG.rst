@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.30 (2023-05-04)
+-------------------
 * Merge branch 'tg' into 'erbium-devel'
   Fix urdf tg values
   See merge request robots/pmb2_robot!102
