@@ -32,6 +32,18 @@
   <xacro:property name="base_laser_y" value="0.0"/>
   <xacro:property name="base_laser_z" value="-0.004"/>
 
+  <xacro:if value="${laser_model == 'ydlidar-tg15' or laser_model == 'ydlidar-tg30'}">
+    <xacro:property name="base_laser_x" value="0.2195"/>
+    <xacro:property name="base_laser_y" value="0.0"/>
+    <xacro:property name="base_laser_z" value="0.00890"/>
+  </xacro:if>
+
+  <xacro:unless value="${laser_model == 'ydlidar-tg15' or laser_model == 'ydlidar-tg30'}">
+      <xacro:property name="base_laser_x" value="0.202"/>
+      <xacro:property name="base_laser_y" value="0.0"/>
+      <xacro:property name="base_laser_z" value="-0.004"/>
+  </xacro:unless>
+
   <!-- laser_model can be: false, hokuyo, sick-551, sick-561, sick-571-->
   <xacro:macro name="base_sensors" params=" name laser_model:=sick-571 sonars:=false microphone:=false ">
 
