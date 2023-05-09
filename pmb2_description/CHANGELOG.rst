@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'urdf-tg' into 'erbium-devel'
+  Put theoretical values urdf tg
+  See merge request robots/pmb2_robot!103
+* Put theoretical values urdf tg
+* Contributors: antoniobrandi, sergiomoyano
+
 3.0.30 (2023-05-04)
 -------------------
 * Merge branch 'tg' into 'erbium-devel'
