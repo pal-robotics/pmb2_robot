@@ -33,7 +33,7 @@
   <xacro:property name="base_laser_z" value="-0.004"/>
 
   <xacro:if value="${laser_model == 'ydlidar-tg15' or laser_model == 'ydlidar-tg30'}">
-    <xacro:property name="base_laser_x" value="0.2195"/>
+    <xacro:property name="base_laser_x" value="0.2095"/>
     <xacro:property name="base_laser_y" value="0.0"/>
     <xacro:property name="base_laser_z" value="0.00890"/>
   </xacro:if>
