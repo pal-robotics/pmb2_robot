@@ -26,22 +26,32 @@ def generate_launch_description():
     pkg_dir = get_package_share_directory('pmb2_bringup')
     joy_teleop_path = os.path.join(pkg_dir, 'config', 'joy_teleop.yaml')
 
-    declare_cmd_vel = DeclareLaunchArgument('cmd_vel', default_value='input_joy/cmd_vel',
-                                            description='Joystick cmd_vel topic')
-    declare_teleop_config = DeclareLaunchArgument('teleop_config',
-                                                  default_value=joy_teleop_path,
-                                                  description='Joystick teleop configuration file')
+    declare_cmd_vel = DeclareLaunchArgument(
+        'cmd_vel', default_value='input_joy/cmd_vel',
+        description='Joystick cmd_vel topic')
+
+    declare_teleop_config = DeclareLaunchArgument(
+        'teleop_config', default_value=joy_teleop_path,
+        description='Joystick teleop configuration file')
+
     joy_teleop_node = Node(
-        package='joy_teleop', executable='joy_teleop',
+        package='joy_teleop',
+        executable='joy_teleop',
         parameters=[LaunchConfiguration('teleop_config')],
         remappings=[('cmd_vel', LaunchConfiguration('cmd_vel'))])
 
-    # Missing joy_node (not ported to ROS2 yet)
+    joy_node = Node(
+        package='joy',
+        executable='joy_node',
+        name='joystick',
+        parameters=[os.path.join(pkg_dir, 'config', 'joy_config.yaml')])
 
     ld = LaunchDescription()
 
     ld.add_action(declare_cmd_vel)
     ld.add_action(declare_teleop_config)
+
     ld.add_action(joy_teleop_node)
+    ld.add_action(joy_node)
 
     return ld

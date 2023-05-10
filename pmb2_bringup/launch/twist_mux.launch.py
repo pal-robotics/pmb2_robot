@@ -29,7 +29,7 @@ def generate_launch_description():
             'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
             'config_locks': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_locks.yaml'),
             'config_topics': os.path.join(pkg, 'config', 'twist_mux', 'twist_mux_topics.yaml'),
-            'joystick': os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml'),
+            'config_joy': os.path.join(pkg, 'config', 'twist_mux', 'joystick.yaml'),
         }.items())
 
     ld = LaunchDescription()
