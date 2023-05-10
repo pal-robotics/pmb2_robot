@@ -19,7 +19,6 @@
   <exec_depend>pmb2_description</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>twist_mux</exec_depend>
-<!--  waiting on https://github.com/ros-teleop/twist_mux_msgs/pull/2-->
 <!--  <exec_depend>twist_mux_msgs</exec_depend>-->
 
   <test_depend>ament_lint_auto</test_depend>
