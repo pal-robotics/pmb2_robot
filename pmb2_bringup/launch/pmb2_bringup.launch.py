@@ -27,9 +27,6 @@ def generate_launch_description():
     twist_mux_launch = include_launch_py_description(
         'pmb2_bringup', ['launch', 'twist_mux.launch.py'])
 
-    joy_teleop_launch = include_launch_py_description(
-        'pmb2_bringup', ['launch', 'joystick_teleop.launch.py'])
-
     pmb2_state_publisher = include_launch_py_description(
         'pmb2_description', ['launch', 'robot_state_publisher.launch.py'])
 
@@ -38,7 +35,6 @@ def generate_launch_description():
 
     ld.add_action(default_controllers_launch)
     ld.add_action(twist_mux_launch)
-    ld.add_action(joy_teleop_launch)
     ld.add_action(pmb2_state_publisher)
 
     return ld
