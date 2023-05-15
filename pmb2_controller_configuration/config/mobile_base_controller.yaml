@@ -12,8 +12,6 @@ mobile_base_controller:
     wheel_separation_multiplier: 1.0
     left_wheel_radius_multiplier: 1.0
     right_wheel_radius_multiplier: 1.0
-
-    # The params below were used in ROS1 but not yet in ROS2
     
     publish_rate: 50.0
     pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
@@ -36,15 +34,14 @@ mobile_base_controller:
         max_velocity           :  1.0 # m/s
         min_velocity           : -0.2 # m/s
         has_acceleration_limits: true
-        max_acceleration       :  1.0 # m/s^2
+        max_acceleration       :  0.5 # m/s^2
         has_jerk_limits        : false
         max_jerk               :  5.0 # m/s^3
     angular:
       z:
         has_velocity_limits    : true
-        max_velocity           : 2.09 # 120.0º
+        max_velocity           : 1.05 # 60.0º
         has_acceleration_limits: true
-        max_acceleration       : 2.09 # 120.0º
+        max_acceleration       : 1.05 # 60.0º
         has_jerk_limits        : false
         max_jerk               : 10.47 # 600.0º
-
