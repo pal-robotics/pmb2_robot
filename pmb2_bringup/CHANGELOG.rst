@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.5 (2023-05-15)
+------------------
 * Merge branch 'joystick_disable_default' into 'humble-devel'
   disable joystick launch on bringup
   See merge request robots/pmb2_robot!104
