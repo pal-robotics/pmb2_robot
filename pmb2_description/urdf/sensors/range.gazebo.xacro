@@ -52,7 +52,7 @@
         </ray>
 	<plugin name="${name}_gazebo_ros_range" filename="libgazebo_ros_ray_sensor.so">
             <ros>
-                <namespace>distance</namespace>
+                <namespace></namespace>
                 <remapping>~/out:=${ros_topic}</remapping>
             </ros>
             <output_type>sensor_msgs/Range</output_type>
