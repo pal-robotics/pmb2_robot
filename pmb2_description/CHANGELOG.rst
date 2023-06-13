@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.6 (2023-06-13)
+------------------
 * remove namespace for base sonars
 * Contributors: Noel Jimenez
 
