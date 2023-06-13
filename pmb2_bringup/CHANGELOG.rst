@@ -2,6 +2,9 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 5.0.5 (2023-05-15)
 ------------------
 * Merge branch 'joystick_disable_default' into 'humble-devel'
