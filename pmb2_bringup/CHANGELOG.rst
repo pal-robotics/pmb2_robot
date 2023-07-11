@@ -2,6 +2,12 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Uncomment twist_mux_msgs dependency
+* Remove pal flags dependency
+* Contributors: Noel Jimenez
+
 5.0.6 (2023-06-13)
 ------------------
 

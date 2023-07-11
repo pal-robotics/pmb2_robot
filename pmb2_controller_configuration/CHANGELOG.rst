@@ -2,6 +2,11 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove pal flags dependency
+* Contributors: Noel Jimenez
+
 5.0.6 (2023-06-13)
 ------------------
 

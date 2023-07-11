@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove pal flags dependency
+* Contributors: Noel Jimenez
+
 5.0.6 (2023-06-13)
 ------------------
 * remove namespace for base sonars
