@@ -2,6 +2,9 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 5.0.7 (2023-07-11)
 ------------------
 * Uncomment twist_mux_msgs dependency

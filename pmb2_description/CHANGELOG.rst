@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add use_sim_time argument to use it in the robot description
+* Contributors: Noel Jimenez
+
 5.0.7 (2023-07-11)
 ------------------
 * Remove pal flags dependency
