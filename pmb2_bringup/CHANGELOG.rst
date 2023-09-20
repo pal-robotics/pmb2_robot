@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.9 (2023-09-20)
+------------------
 * Merge branch 'add_modules' into 'humble-devel'
   Adding modules
   See merge request robots/pmb2_robot!109
