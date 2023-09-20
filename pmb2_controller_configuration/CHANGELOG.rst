@@ -2,6 +2,14 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/load_wheels_calibration' into 'humble-devel'
+  Use wheels calibration if exists
+  See merge request robots/pmb2_robot!110
+* Use wheels calibration if exists
+* Contributors: Jordan Palacios, Noel Jimenez
+
 5.0.8 (2023-09-04)
 ------------------
 
