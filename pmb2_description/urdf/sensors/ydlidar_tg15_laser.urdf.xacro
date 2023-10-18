@@ -29,6 +29,12 @@
         </geometry>
         <material name="DarkGrey"/>
       </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.02" length="0.04"/>
+        </geometry>
+      </collision>
     </link>
 
     <joint name="${name}_joint" type="fixed">

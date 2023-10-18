@@ -15,7 +15,6 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.urdf.xacro"/>
   <xacro:include filename="$(find pmb2_description)/urdf/wheels/caster.urdf.xacro"/>
