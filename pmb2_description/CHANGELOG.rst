@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix laser_node name
+* Contributors: andreacapodacqua
+
 5.0.9 (2023-09-20)
 ------------------
 

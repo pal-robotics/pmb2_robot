@@ -2,6 +2,9 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 5.0.9 (2023-09-20)
 ------------------
 * Merge branch 'feat/load_wheels_calibration' into 'humble-devel'
