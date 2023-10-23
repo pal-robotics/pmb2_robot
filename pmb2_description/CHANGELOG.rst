@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.32 (2023-10-23)
+-------------------
 * Merge branch 'feat/use_urdf_utils' into 'erbium-devel'
   Use urdf_utils
   See merge request robots/pmb2_robot!112
