@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'smd/fix/laser_properties' into 'erbium-devel'
+  Right inicialization laser properties
+  See merge request robots/pmb2_robot!113
+* Right inicialization laser properties
+* Contributors: sergiomoyano
+
 3.0.32 (2023-10-23)
 -------------------
 * Merge branch 'feat/use_urdf_utils' into 'erbium-devel'
