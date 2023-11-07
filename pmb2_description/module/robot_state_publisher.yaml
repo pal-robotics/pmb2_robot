@@ -1,0 +1,6 @@
+robot_state_publisher:
+  launch: "pmb2_description robot_state_publisher.launch.py
+           robot_name:=@robot_type@
+           laser_model:=@laser_model@
+           courier_rgbd_sensors:=@rgbd_sensors@
+           use_sim_time:=false"
