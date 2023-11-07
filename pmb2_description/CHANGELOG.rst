@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.11 (2023-11-07)
+-------------------
 * Split bringup module
 * Contributors: Noel Jimenez
 
