@@ -17,7 +17,7 @@ limitations under the License.
 <robot xmlns:xacro="http://ros.org/wiki/xacro"
        name="pmb2" >
 
-<xacro:macro name="pmb2_ros2_control" params="use_sim:=^|true">
+<xacro:macro name="pmb2_ros2_control" params="use_sim:=^|false">
 
     <xacro:include filename="$(find pmb2_description)/urdf/wheels/wheel.ros2_control.xacro"/>
     <xacro:include filename="$(find pmb2_description)/urdf/sensors/sensors.ros2_control.xacro"/>
