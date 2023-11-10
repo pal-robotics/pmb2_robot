@@ -17,7 +17,7 @@
 <robot  xmlns:xacro="http://ros.org/wiki/xacro"
         name="pmb2" >
 
-  <xacro:arg name="use_sim" default="true"/>
+  <xacro:arg name="use_sim" default="false"/>
   <xacro:arg name="laser_model" default="sick-571"/> <!-- no-laser, hokuyo, sick-551, sick-561, sick-571-->
   <xacro:arg name="courier_rgbd_sensors" default="false"/> <!-- false, true-->
   <xacro:property name="laser_model" value="$(arg laser_model)" />
