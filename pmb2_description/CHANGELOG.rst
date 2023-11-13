@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.12 (2023-11-13)
+-------------------
 * Set use_sim_time false as default
 * Contributors: Noel Jimenez
 
