@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set use_sim_time false as default
+* Contributors: Noel Jimenez
+
 5.0.11 (2023-11-07)
 -------------------
 * Split bringup module
