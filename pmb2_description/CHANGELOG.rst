@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.13 (2023-11-14)
+-------------------
 * Add website tag
 * Rename description and controller modules
 * Contributors: Noel Jimenez
