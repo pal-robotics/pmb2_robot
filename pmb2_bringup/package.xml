@@ -9,6 +9,8 @@
   <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
   <author email="enrique.fernandez@pal-robotics.com">Enrique Fernandez</author>
 
+  <url type="website">https://github.com/pal-robotics/pmb2_simulation</url>
+
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <build_depend condition="$PAL_DISTRO >= alum">pal_module_cmake</build_depend>
