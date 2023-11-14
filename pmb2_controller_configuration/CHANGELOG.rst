@@ -2,6 +2,12 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add website tag
+* Rename description and controller modules
+* Contributors: Noel Jimenez
+
 5.0.12 (2023-11-13)
 -------------------
 
