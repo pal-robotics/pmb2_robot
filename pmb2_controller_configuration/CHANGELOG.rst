@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.0.14 (2023-11-22)
+-------------------
 * Set 'finishes: True' for default_controllers module
 * Contributors: Noel Jimenez
 
