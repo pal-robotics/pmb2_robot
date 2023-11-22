@@ -1,2 +1,3 @@
 default_controllers:
   launch: "pmb2_controller_configuration default_controllers.launch.py"
+  finishes: True
