@@ -2,6 +2,11 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Set 'finishes: True' for default_controllers module
+* Contributors: Noel Jimenez
+
 5.0.13 (2023-11-14)
 -------------------
 * Add website tag
