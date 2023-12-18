@@ -16,7 +16,7 @@
  -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find pmb2_description)/urdf/deg_to_rad.xacro"/>
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro"/>
 
   <xacro:include filename="$(find pmb2_description)/urdf/sensors/ir_emitter.urdf.xacro"/>
 
