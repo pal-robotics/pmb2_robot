@@ -2,8 +2,8 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.34 (2024-04-11)
+-------------------
 * Merge branch 'add_readme' into 'erbium-devel'
   update readme with the lastest info on TIAGo Base
   See merge request robots/pmb2_robot!123
