@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.33 (2023-10-23)
 -------------------
 * Merge branch 'smd/fix/laser_properties' into 'erbium-devel'
