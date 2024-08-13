@@ -30,7 +30,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${-90.0 * (1 - reflect) * deg_to_rad} 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/wheels/wheel.stl"/>
+          <mesh filename="file://$(find pmb2_description)/meshes/wheels/wheel.stl"/>
         </geometry>
         <material name="DarkGrey"/>
       </visual>

@@ -29,7 +29,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/wheels/caster_1.stl"/>
+          <mesh filename="file://$(find pmb2_description)/meshes/wheels/caster_1.stl"/>
         </geometry>
         <material name="Grey"/>
       </visual>
@@ -50,7 +50,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/wheels/caster_2.stl"/>
+          <mesh filename="file://$(find pmb2_description)/meshes/wheels/caster_2.stl"/>
         </geometry>
         <material name="DarkGrey"/>
       </visual>
