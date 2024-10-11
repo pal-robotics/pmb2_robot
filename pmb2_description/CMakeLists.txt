@@ -21,6 +21,8 @@ if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
 
+  ament_add_pytest_test(test_xacro test/test_xacro.py)
+
   foreach(laser_model no-laser hokuyo sick-551 sick-561 sick-571)
       foreach(add_on_module no-add-on rgbd-sensors)
       add_launch_test(
