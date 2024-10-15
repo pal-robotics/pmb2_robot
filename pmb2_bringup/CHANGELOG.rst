@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.3.1 (2024-10-15)
+------------------
 * Merge branch 'fix/aca/joy-turbo' into 'humble-devel'
   using same configuration of joy_teleop of TIAGo
   See merge request robots/pmb2_robot!148
