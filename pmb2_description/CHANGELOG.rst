@@ -2,6 +2,9 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 5.3.0 (2024-09-03)
 ------------------
 * Merge branch 'man/feat/docking' into 'humble-devel'
