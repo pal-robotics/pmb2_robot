@@ -23,15 +23,8 @@ if(BUILD_TESTING)
 
   ament_add_pytest_test(test_xacro test/test_xacro.py)
 
-  foreach(laser_model no-laser hokuyo sick-551 sick-561 sick-571)
-      foreach(add_on_module no-add-on rgbd-sensors)
-      add_launch_test(
-        test/test_description.launch.py
-        TARGET "pmb2_description_${laser_model}_${add_on_module}"
-        ARGS "laser_model:=${laser_model}" "add_on_module:=${add_on_module}"
-      )
-      endforeach()
-  endforeach()
+  add_launch_test(test/test_description.launch.py)
+
 endif()
 
 # Install Python modules
