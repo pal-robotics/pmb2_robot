@@ -1,4 +1,4 @@
 joint_state_broadcaster:
   ros__parameters:
     type: joint_state_broadcaster/JointStateBroadcaster
-    publish_rate: 50.0
+    update_rate: 50
