@@ -23,9 +23,9 @@
   <!-- base RGBD characteristics -->
   <xacro:property name="base_rgbd_x" value="0.22697"/>
   <xacro:property name="base_rgbd_y" value="0.0"/>
-  <xacro:property name="base_rgbd_z" value="0.52635"/>
+  <xacro:property name="base_rgbd_z" value="0.535"/>
   <xacro:property name="base_rgbd_R" value="-0.171709"/>
-  <xacro:property name="base_rgbd_P" value="57.9362"/>
+  <xacro:property name="base_rgbd_P" value="60"/>
   <xacro:property name="base_rgbd_Y" value="0.0"/>
 
   <!-- roof RGBD characteristics -->
@@ -33,7 +33,7 @@
   <xacro:property name="roof_rgbd_y" value="0.0"/>
   <xacro:property name="roof_rgbd_z" value="0.470428"/>
   <xacro:property name="roof_rgbd_R" value="-0.299256"/>
-  <xacro:property name="roof_rgbd_P" value="10.596"/>
+  <xacro:property name="roof_rgbd_P" value="12"/>
   <xacro:property name="roof_rgbd_Y" value="0.0"/>
 
   <!-- RGB characteristics -->

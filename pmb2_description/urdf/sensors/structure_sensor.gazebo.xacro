@@ -33,24 +33,27 @@
             <near>0.45</near>
             <far>10.0</far>
           </clip>
+          <distortion>
+            <k1>0.1</k1>
+            <k2>0.2</k2>
+            <k3>0.3</k3>
+            <p1>0.4</p1>
+            <p2>0.5</p2>
+            <center>0.5 0.5</center>
+          </distortion>
         </camera>
-        <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
-          <alwaysOn>true</alwaysOn>
-          <updateRate>6.0</updateRate>
-          <cameraName>${name}</cameraName>
-          <imageTopicName>ir/image_raw</imageTopicName>
-          <cameraInfoTopicName>ir/camera_info</cameraInfoTopicName>
-          <depthImageTopicName>depth/image_raw</depthImageTopicName>
-          <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
-          <pointCloudTopicName>depth/points</pointCloudTopicName>
-          <frameName>${name}_optical_frame</frameName>
-          <pointCloudCutoff>0.45</pointCloudCutoff>
-          <rangeMax>10.0</rangeMax>
-          <distortionK1>0.00000001</distortionK1>
-          <distortionK2>0.00000001</distortionK2>
-          <distortionK3>0.00000001</distortionK3>
-          <distortionT1>0.00000001</distortionT1>
-          <distortionT2>0.00000001</distortionT2>
+        <plugin name="${name}_ir" filename="libgazebo_ros_camera.so">
+          <camera_name>${name}</camera_name>
+          <frame_name>${name}_optical_frame</frame_name>
+          <max_depth>10.0</max_depth>
+          <ros>
+            <remapping>${name}/image_raw:=${name}/ir/image_raw</remapping>
+            <remapping>${name}/camera_info:=${name}/ir/camera_info</remapping>
+            <remapping>${name}/image_raw/compressed:=${name}/ir/image_raw/compressed</remapping>
+            <remapping>${name}/image_raw/compressedDepth:=${name}/ir/image_raw/compressedDepth</remapping>
+            <remapping>${name}/image_raw/theora:=${name}/ir/image_raw/theora</remapping>
+            <remapping>${name}/points:=${name}/depth/points</remapping>
+          </ros>  
         </plugin>
       </sensor>
 
@@ -69,22 +72,27 @@
             <near>0.45</near>
             <far>10.0</far>
           </clip>
+          <distortion>
+            <k1>0.1</k1>
+            <k2>0.2</k2>
+            <k3>0.3</k3>
+            <p1>0.4</p1>
+            <p2>0.5</p2>
+            <center>0.5 0.5</center>
+          </distortion>
         </camera>
-        <plugin name="${name}_frame_controller" filename="libgazebo_ros_openni_kinect.so">
-          <alwaysOn>true</alwaysOn>
-          <updateRate>6.0</updateRate>
-          <cameraName>${name}</cameraName>
-          <imageTopicName>rgb/image_raw</imageTopicName>
-          <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
-          <pointCloudTopicName>rgb/points</pointCloudTopicName>
-          <frameName>${name}_optical_frame</frameName>
-          <pointCloudCutoff>0.45</pointCloudCutoff>
-          <rangeMax>10.0</rangeMax>
-          <distortionK1>0.00000001</distortionK1>
-          <distortionK2>0.00000001</distortionK2>
-          <distortionK3>0.00000001</distortionK3>
-          <distortionT1>0.00000001</distortionT1>
-          <distortionT2>0.00000001</distortionT2>
+        <plugin name="${name}_rgb" filename="libgazebo_ros_camera.so">
+          <camera_name>${name}</camera_name>
+          <frame_name>${name}_optical_frame</frame_name>
+          <max_depth>10.0</max_depth>
+          <ros>
+            <remapping>${name}/image_raw:=${name}/rgb/image_raw</remapping>
+            <remapping>${name}/camera_info:=${name}/rgb/camera_info</remapping>
+            <remapping>${name}/image_raw/compressed:=${name}/rgb/image_raw/compressed</remapping>
+            <remapping>${name}/image_raw/compressedDepth:=${name}/rgb/image_raw/compressedDepth</remapping>
+            <remapping>${name}/image_raw/theora:=${name}/rgb/image_raw/theora</remapping>
+            <remapping>${name}/points:=${name}/rgb/points</remapping>
+          </ros>
         </plugin>
       </sensor>
     </gazebo>
