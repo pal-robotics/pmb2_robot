@@ -34,12 +34,11 @@
             <far>10.0</far>
           </clip>
           <distortion>
-            <k1>0.1</k1>
-            <k2>0.2</k2>
-            <k3>0.3</k3>
-            <p1>0.4</p1>
-            <p2>0.5</p2>
-            <center>0.5 0.5</center>
+            <k1>0.0</k1>
+            <k2>0.0</k2>
+            <k3>0.0</k3>
+            <p1>0.0</p1>
+            <p2>0.0</p2>
           </distortion>
         </camera>
         <plugin name="${name}_ir" filename="libgazebo_ros_camera.so">
@@ -53,12 +52,70 @@
             <remapping>${name}/image_raw/compressedDepth:=${name}/ir/image_raw/compressedDepth</remapping>
             <remapping>${name}/image_raw/theora:=${name}/ir/image_raw/theora</remapping>
             <remapping>${name}/points:=${name}/depth/points</remapping>
+            <qos>
+              <topic name="${name}/ir/image_raw">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/ir/image_raw/compressed">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/ir/image_raw/compressedDepth">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/depth/image_raw">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/depth/image_raw/compressed">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/depth/image_raw/compressedDepth">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/depth/points">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+            </qos>
           </ros>  
         </plugin>
       </sensor>
 
       <!-- RGB -->
-      <sensor type="depth" name="${name}_frame_sensor">
+      <sensor type="camera" name="${name}_frame_sensor">
         <always_on>true</always_on>
         <update_rate>6.0</update_rate>
         <camera>
@@ -73,25 +130,48 @@
             <far>10.0</far>
           </clip>
           <distortion>
-            <k1>0.1</k1>
-            <k2>0.2</k2>
-            <k3>0.3</k3>
-            <p1>0.4</p1>
-            <p2>0.5</p2>
-            <center>0.5 0.5</center>
+            <k1>0.0</k1>
+            <k2>0.0</k2>
+            <k3>0.0</k3>
+            <p1>0.0</p1>
+            <p2>0.0</p2>
           </distortion>
         </camera>
         <plugin name="${name}_rgb" filename="libgazebo_ros_camera.so">
           <camera_name>${name}</camera_name>
           <frame_name>${name}_optical_frame</frame_name>
-          <max_depth>10.0</max_depth>
           <ros>
             <remapping>${name}/image_raw:=${name}/rgb/image_raw</remapping>
             <remapping>${name}/camera_info:=${name}/rgb/camera_info</remapping>
             <remapping>${name}/image_raw/compressed:=${name}/rgb/image_raw/compressed</remapping>
             <remapping>${name}/image_raw/compressedDepth:=${name}/rgb/image_raw/compressedDepth</remapping>
             <remapping>${name}/image_raw/theora:=${name}/rgb/image_raw/theora</remapping>
-            <remapping>${name}/points:=${name}/rgb/points</remapping>
+            <qos>
+              <topic name="${name}/rgb/image_raw">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/rgb/image_raw/compressed">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+              <topic name="${name}/rgb/image_raw/compressedDepth">
+                <publisher>
+                  <reliability>best_effort</reliability>
+                  <durability>volatile</durability>
+                  <history depth="1">keep_last</history>
+                  <liveliness>automatic</liveliness>
+                </publisher>
+              </topic>
+            </qos>
           </ros>
         </plugin>
       </sensor>
