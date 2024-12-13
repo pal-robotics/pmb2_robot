@@ -49,7 +49,7 @@
   <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
-  <xacro:if value="${add_on_module not in ['no-add-on', 'rgbd-sensors']}">
+  <xacro:if value="${add_on_module not in ['no-add-on', 'cobra']}">
     <xacro:wrong_add_on_module/>
   </xacro:if>
 
@@ -65,7 +65,7 @@
   <xacro:include filename="$(find pmb2_description)/urdf/base/base_sensors.urdf.xacro" />
 
   <!-- Courier rgbd sensors -->
-  <xacro:if value="${add_on_module == 'rgbd-sensors'}">
+  <xacro:if value="${add_on_module == 'cobra'}">
     <xacro:include filename="$(find pmb2_description)/urdf/cameras_add_on/cameras_add_on.urdf.xacro" />
   </xacro:if>
 
@@ -85,7 +85,7 @@
   <xacro:base_sensors name="base" laser_model="${laser_model}" has_sonars="${has_sonars}" has_microphone="${has_microphone}"/>
 
   <!-- RGBD Sensors -->
-  <xacro:if value="${add_on_module == 'rgbd-sensors'}">
+  <xacro:if value="${add_on_module == 'cobra'}">
     <xacro:cameras_add_on name="cameras_add_on" parent="base_link"/>
   </xacro:if>
 
