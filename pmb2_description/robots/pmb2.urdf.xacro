@@ -31,6 +31,9 @@
   <!-- false, true-->
   <xacro:arg name="add_on_module" default="no-add-on"/>
 
+  <!-- no-camera, orbbec-astra, orbbec-astra-pro, asus-xtion -->
+  <xacro:arg name="camera_model" default="no-camera"/>
+
   <!-- Execution env config -->
   <xacro:arg name="use_sim_time" default="false"/>
   <xacro:arg name="is_multiple" default="false"/>
@@ -44,6 +47,7 @@
   <xacro:property name="has_sonars" value="$(arg has_sonars)" />
   <xacro:property name="has_microphone" value="$(arg has_microphone)" />
   <xacro:property name="add_on_module" value="$(arg add_on_module)"/>
+  <xacro:property name="camera_model" value="$(arg camera_model)" />
 
   <!-- HW configuration check -->
   <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
@@ -51,6 +55,9 @@
   </xacro:if>
   <xacro:if value="${add_on_module not in ['no-add-on', 'cobra']}">
     <xacro:wrong_add_on_module/>
+  </xacro:if>
+  <xacro:if value="${camera_model not in ['no-camera', 'structure']}">
+    <xacro:wrong_camera_model/>
   </xacro:if>
 
   <!-- Execution env configuration -->

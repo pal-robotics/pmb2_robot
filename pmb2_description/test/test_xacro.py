@@ -28,6 +28,7 @@ xacro_file_path = Path(
 pmb2_args = (
     PMB2Args.laser_model,
     PMB2Args.add_on_module,
+    PMB2Args.camera_model,
 )
 
 test_xacro = define_xacro_test(xacro_file_path, pmb2_args)

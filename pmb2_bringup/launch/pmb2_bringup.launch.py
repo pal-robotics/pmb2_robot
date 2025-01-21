@@ -28,6 +28,7 @@ class LaunchArguments(LaunchArgumentsBase):
     wheel_model: DeclareLaunchArgument = PMB2Args.wheel_model
     laser_model: DeclareLaunchArgument = PMB2Args.laser_model
     add_on_module: DeclareLaunchArgument = PMB2Args.add_on_module
+    camera_model: DeclareLaunchArgument = PMB2Args.camera_model
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
 
@@ -76,6 +77,7 @@ def declare_actions(
             'wheel_model': launch_args.wheel_model,
             'laser_model': launch_args.laser_model,
             'add_on_module': launch_args.add_on_module,
+            'camera_model': launch_args.camera_model,
             'use_sim_time': launch_args.use_sim_time,
             'is_public_sim': launch_args.is_public_sim,
         },
