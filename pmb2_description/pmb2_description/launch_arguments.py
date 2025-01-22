@@ -31,3 +31,4 @@ class PMB2Args:
     wheel_model: DLA = __arg_creator.get_argument('wheel_model')
     laser_model: DLA = __arg_creator.get_argument('laser_model')
     add_on_module: DLA = __arg_creator.get_argument('add_on_module')
+    camera_model: DLA = __arg_creator.get_argument('camera_model')

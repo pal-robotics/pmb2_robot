@@ -23,9 +23,9 @@
   <!-- base RGBD characteristics -->
   <xacro:property name="base_rgbd_x" value="0.22697"/>
   <xacro:property name="base_rgbd_y" value="0.0"/>
-  <xacro:property name="base_rgbd_z" value="0.52635"/>
+  <xacro:property name="base_rgbd_z" value="0.535"/>
   <xacro:property name="base_rgbd_R" value="-0.171709"/>
-  <xacro:property name="base_rgbd_P" value="57.9362"/>
+  <xacro:property name="base_rgbd_P" value="60"/>
   <xacro:property name="base_rgbd_Y" value="0.0"/>
 
   <!-- roof RGBD characteristics -->
@@ -33,7 +33,7 @@
   <xacro:property name="roof_rgbd_y" value="0.0"/>
   <xacro:property name="roof_rgbd_z" value="0.470428"/>
   <xacro:property name="roof_rgbd_R" value="-0.299256"/>
-  <xacro:property name="roof_rgbd_P" value="10.596"/>
+  <xacro:property name="roof_rgbd_P" value="12"/>
   <xacro:property name="roof_rgbd_Y" value="0.0"/>
 
   <!-- RGB characteristics -->
@@ -44,29 +44,31 @@
   <xacro:property name="rgb_P" value="15.0"/>
   <xacro:property name="rgb_Y" value="0.0   "/>
 
-  <!-- RGBD base -->
-  <xacro:structure_sensor name="base_rgbd_camera" parent="base_link">
-    <!-- Pose of sensor frame wrt to base -->
-    <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="${base_rgbd_R * deg_to_rad} ${base_rgbd_P * deg_to_rad} ${base_rgbd_Y * deg_to_rad}"/>
-    <!-- Pose of optical frame wrt to sensor -->
-    <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-  </xacro:structure_sensor>
+  <xacro:if value="${camera_model == 'structure'}">
+    <!-- RGBD base -->
+    <xacro:structure_sensor name="base_rgbd_camera" parent="base_link">
+      <!-- Pose of sensor frame wrt to base -->
+      <origin xyz="${base_rgbd_x} ${base_rgbd_y} ${base_rgbd_z}" rpy="${base_rgbd_R * deg_to_rad} ${base_rgbd_P * deg_to_rad} ${base_rgbd_Y * deg_to_rad}"/>
+      <!-- Pose of optical frame wrt to sensor -->
+      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
+    </xacro:structure_sensor>
 
-  <!-- RGBD roof -->
-  <xacro:structure_sensor name="roof_rgbd_camera" parent="base_link">
-    <!-- Pose of sensor frame wrt to base -->
-    <origin xyz="${roof_rgbd_x} ${roof_rgbd_y} ${roof_rgbd_z}" rpy="${roof_rgbd_R * deg_to_rad} ${roof_rgbd_P * deg_to_rad} ${roof_rgbd_Y * deg_to_rad}"/>
-    <!-- Pose of optical frame wrt to sensor -->
-    <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-  </xacro:structure_sensor>
+    <!-- RGBD roof -->
+    <xacro:structure_sensor name="roof_rgbd_camera" parent="base_link">
+      <!-- Pose of sensor frame wrt to base -->
+      <origin xyz="${roof_rgbd_x} ${roof_rgbd_y} ${roof_rgbd_z}" rpy="${roof_rgbd_R * deg_to_rad} ${roof_rgbd_P * deg_to_rad} ${roof_rgbd_Y * deg_to_rad}"/>
+      <!-- Pose of optical frame wrt to sensor -->
+      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
+    </xacro:structure_sensor>
 
-  <!-- RGB -->
-  <xacro:elp_rgb name="rgb_camera" parent="base_link">
-    <!-- Pose of sensor frame wrt to base -->
-    <origin xyz="${rgb_x} ${rgb_y} ${rgb_z}" rpy="${rgb_R * deg_to_rad} ${rgb_P * deg_to_rad} ${rgb_Y * deg_to_rad}"/>
-    <!-- Pose of optical frame wrt to sensor -->
-    <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
-  </xacro:elp_rgb>
+    <!-- RGB -->
+    <xacro:elp_rgb name="rgb_camera" parent="base_link">
+      <!-- Pose of sensor frame wrt to base -->
+      <origin xyz="${rgb_x} ${rgb_y} ${rgb_z}" rpy="${rgb_R * deg_to_rad} ${rgb_P * deg_to_rad} ${rgb_Y * deg_to_rad}"/>
+      <!-- Pose of optical frame wrt to sensor -->
+      <origin xyz="0 0 0" rpy="${-90 * deg_to_rad} 0 ${-90 * deg_to_rad}"/>
+    </xacro:elp_rgb>
+  </xacro:if>
 
   <!-- RGBD Laser Link -->
   <joint name="rgbd_laser_joint" type="fixed">

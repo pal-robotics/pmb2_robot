@@ -31,6 +31,9 @@
   <!-- false, true-->
   <xacro:arg name="add_on_module" default="no-add-on"/>
 
+  <!-- no-camera, orbbec-astra, orbbec-astra-pro, asus-xtion -->
+  <xacro:arg name="camera_model" default="no-camera"/>
+
   <!-- Execution env config -->
   <xacro:arg name="use_sim_time" default="false"/>
   <xacro:arg name="is_multiple" default="false"/>
@@ -44,13 +47,17 @@
   <xacro:property name="has_sonars" value="$(arg has_sonars)" />
   <xacro:property name="has_microphone" value="$(arg has_microphone)" />
   <xacro:property name="add_on_module" value="$(arg add_on_module)"/>
+  <xacro:property name="camera_model" value="$(arg camera_model)" />
 
   <!-- HW configuration check -->
   <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
-  <xacro:if value="${add_on_module not in ['no-add-on', 'rgbd-sensors']}">
+  <xacro:if value="${add_on_module not in ['no-add-on', 'cobra']}">
     <xacro:wrong_add_on_module/>
+  </xacro:if>
+  <xacro:if value="${camera_model not in ['no-camera', 'structure']}">
+    <xacro:wrong_camera_model/>
   </xacro:if>
 
   <!-- Execution env configuration -->
@@ -65,7 +72,7 @@
   <xacro:include filename="$(find pmb2_description)/urdf/base/base_sensors.urdf.xacro" />
 
   <!-- Courier rgbd sensors -->
-  <xacro:if value="${add_on_module == 'rgbd-sensors'}">
+  <xacro:if value="${add_on_module == 'cobra'}">
     <xacro:include filename="$(find pmb2_description)/urdf/cameras_add_on/cameras_add_on.urdf.xacro" />
   </xacro:if>
 
@@ -85,7 +92,7 @@
   <xacro:base_sensors name="base" laser_model="${laser_model}" has_sonars="${has_sonars}" has_microphone="${has_microphone}"/>
 
   <!-- RGBD Sensors -->
-  <xacro:if value="${add_on_module == 'rgbd-sensors'}">
+  <xacro:if value="${add_on_module == 'cobra'}">
     <xacro:cameras_add_on name="cameras_add_on" parent="base_link"/>
   </xacro:if>
 

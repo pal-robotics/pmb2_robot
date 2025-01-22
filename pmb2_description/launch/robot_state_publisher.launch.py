@@ -33,6 +33,7 @@ class LaunchArguments(LaunchArgumentsBase):
     wheel_model: DeclareLaunchArgument = PMB2Args.wheel_model
     laser_model: DeclareLaunchArgument = PMB2Args.laser_model
     add_on_module: DeclareLaunchArgument = PMB2Args.add_on_module
+    camera_model: DeclareLaunchArgument = PMB2Args.camera_model
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
 
@@ -90,6 +91,7 @@ def create_robot_description_param(context, *args, **kwargs):
     xacro_input_args = {
         'laser_model': read_launch_argument('laser_model', context),
         'add_on_module': read_launch_argument('add_on_module', context),
+        'camera_model': read_launch_argument('camera_model', context),
         'use_sim_time': read_launch_argument('use_sim_time', context),
         'is_public_sim': read_launch_argument('is_public_sim', context),
 
