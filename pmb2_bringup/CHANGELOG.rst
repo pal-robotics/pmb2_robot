@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* lock robot if charging
+* Contributors: antoniobrandi
+
 5.5.0 (2025-01-22)
 ------------------
 * support camera_model argument
