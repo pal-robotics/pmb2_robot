@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.5.0 (2025-01-22)
+------------------
 * support camera_model argument
 * support add_on_module cobra
 * use sensor qos profile
