@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* support camera_model argument
+* Contributors: antoniobrandi
+
 5.4.0 (2024-11-05)
 ------------------
 

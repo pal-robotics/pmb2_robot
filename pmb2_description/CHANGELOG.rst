@@ -2,6 +2,14 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* support camera_model argument
+* support add_on_module cobra
+* use sensor qos profile
+* support to structure cameras in simulation
+* Contributors: antoniobrandi
+
 5.4.0 (2024-11-05)
 ------------------
 * Only run test_description test for the default config
