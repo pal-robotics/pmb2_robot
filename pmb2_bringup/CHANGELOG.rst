@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.7.0 (2025-02-24)
+------------------
 * update locks and topics to integrate assisted_teleop
 * Contributors: andreacapodacqua
 
