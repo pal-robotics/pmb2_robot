@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update locks and topics to integrate assisted_teleop
+* Contributors: andreacapodacqua
+
 5.6.0 (2025-01-22)
 ------------------
 * lock robot if charging
