@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* removed marker_vel
+* Contributors: andreacapodacqua
+
 5.8.0 (2025-03-25)
 ------------------
 * added tab_vel to twist_mux
