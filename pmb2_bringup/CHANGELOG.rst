@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added tab_vel to twist_mux
+* Contributors: andreacapodacqua
+
 5.7.0 (2025-02-24)
 ------------------
 * update locks and topics to integrate assisted_teleop
