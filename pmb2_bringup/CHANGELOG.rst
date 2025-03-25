@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.8.1 (2025-03-25)
+------------------
 * removed marker_vel
 * Contributors: andreacapodacqua
 
