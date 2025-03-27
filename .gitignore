@@ -1,0 +1,16 @@
+# Build and development folders
+build/
+devel/
+install/
+log/
+
+# Temporary files
+*~
+*.swp
+
+# Python cache
+__pycache__/
+
+# System files
+.DS_Store
+Thumbs.db
