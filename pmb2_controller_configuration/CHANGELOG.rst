@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.8.2 (2025-03-28)
+------------------
 * Remove unused imu broadcaster and hardware interface
 * Contributors: Noel Jimenez
 
