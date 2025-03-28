@@ -44,9 +44,6 @@ limitations under the License.
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
 
-        <!-- IMU sensor (only in simulation)-->
-        <xacro:ros2_control_imu name="base_imu_sensor"/>
-
       </xacro:if>
       <xacro:unless value="${use_sim_time}">
 
