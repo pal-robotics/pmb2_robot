@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove unused imu broadcaster and hardware interface
+* Contributors: Noel Jimenez
+
 5.8.1 (2025-03-25)
 ------------------
 
