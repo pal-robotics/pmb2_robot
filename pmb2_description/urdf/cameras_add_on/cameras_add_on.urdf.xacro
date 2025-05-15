@@ -18,7 +18,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!-- INCLUDES -->
-  <xacro:include filename="$(find pmb2_description)/urdf/sensors/courier.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/sensors/bases/pmb2/courier.urdf.xacro" />
 
   <!-- MACRO DEFINITION-->
   <xacro:macro name="cameras_add_on" params="name parent">
