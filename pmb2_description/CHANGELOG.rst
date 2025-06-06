@@ -2,6 +2,15 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Change path related to restructure path
+* Change path from sensor courier to add_on cameras
+* Delete sensors files
+* Change path for hokuyo and courier
+* Remove missing sensors.ros2_control.xacro
+* Contributors: Aina, Noel Jimenez
+
 5.8.2 (2025-03-28)
 ------------------
 * Remove unused imu broadcaster and hardware interface
