@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.8.3 (2025-06-06)
+------------------
 * Change path related to restructure path
 * Change path from sensor courier to add_on cameras
 * Delete sensors files
