@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add support to namespaces
+* Contributors: antoniobrandi
+
 5.8.3 (2025-06-06)
 ------------------
 
