@@ -36,6 +36,7 @@ class LaunchArguments(LaunchArgumentsBase):
     camera_model: DeclareLaunchArgument = PMB2Args.camera_model
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
+    namespace: DeclareLaunchArgument = CommonArgs.namespace
 
 
 def generate_launch_description():
@@ -63,6 +64,7 @@ def declare_actions(
     rsp = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
+        namespace=LaunchConfiguration('namespace'),
         output='both',
         parameters=[
             {
@@ -70,6 +72,11 @@ def declare_actions(
                     LaunchConfiguration('robot_description'), value_type=str
                 )
             }
+        ],
+        # Provide support to <namespace>/tf and <namespace>/tf_static
+        remappings=[
+            ('/tf', 'tf'),
+            ('/tf_static', 'tf_static'),
         ],
     )
 
@@ -94,6 +101,7 @@ def create_robot_description_param(context, *args, **kwargs):
         'camera_model': read_launch_argument('camera_model', context),
         'use_sim_time': read_launch_argument('use_sim_time', context),
         'is_public_sim': read_launch_argument('is_public_sim', context),
+        'namespace': read_launch_argument('namespace', context),
 
     }
     robot_description = load_xacro(xacro_file_path, xacro_input_args)

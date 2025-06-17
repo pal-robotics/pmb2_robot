@@ -18,6 +18,7 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase
 from launch_pal.include_utils import include_scoped_launch_py_description
@@ -26,6 +27,7 @@ from launch_pal.include_utils import include_scoped_launch_py_description
 @dataclass(frozen=True)
 class LaunchArguments(LaunchArgumentsBase):
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
+    namespace: DeclareLaunchArgument = CommonArgs.namespace
 
 
 def generate_launch_description():
@@ -49,12 +51,14 @@ def declare_actions(
 
     twist_mux = include_scoped_launch_py_description(
         'twist_mux', ['launch', 'twist_mux_launch.py'],
+        namespace=LaunchConfiguration('namespace'),
         launch_arguments={
             'cmd_vel_out': 'mobile_base_controller/cmd_vel_unstamped',
             'config_locks': os.path.join(pkg_dir, 'config', 'twist_mux', 'twist_mux_locks.yaml'),
             'config_topics': os.path.join(pkg_dir, 'config', 'twist_mux', 'twist_mux_topics.yaml'),
             'config_joy': os.path.join(pkg_dir, 'config', 'twist_mux', 'joystick.yaml'),
             'use_sim_time': launch_args.use_sim_time,
+            'namespace': launch_args.namespace,
         }
     )
 

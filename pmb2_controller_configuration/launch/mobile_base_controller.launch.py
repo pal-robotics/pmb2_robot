@@ -21,6 +21,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, GroupAction, OpaqueFunction
 from launch.actions import SetLaunchConfiguration
 from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import PushRosNamespace
 from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
 
@@ -29,6 +30,7 @@ from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
 class LaunchArguments(LaunchArgumentsBase):
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
+    namespace: DeclareLaunchArgument = CommonArgs.namespace
 
 
 def generate_launch_description():
@@ -54,6 +56,7 @@ def declare_actions(
     # Base controller
     base_controller = GroupAction(
         [
+            PushRosNamespace(LaunchConfiguration('namespace')),
             generate_load_controller_launch_description(
                 controller_name='mobile_base_controller',
                 controller_params_file=LaunchConfiguration("base_config_file")

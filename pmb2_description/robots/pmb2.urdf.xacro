@@ -36,7 +36,6 @@
 
   <!-- Execution env config -->
   <xacro:arg name="use_sim_time" default="false"/>
-  <xacro:arg name="is_multiple" default="false"/>
   <xacro:arg name="namespace" default=""/>
   <xacro:arg name="is_public_sim" default="false"/>
 
@@ -62,7 +61,6 @@
 
   <!-- Execution env configuration -->
   <xacro:property name="use_sim_time" default="$(arg use_sim_time)"/>
-  <xacro:property name="is_multiple" value="$(arg is_multiple)" />
   <xacro:property name="namespace" value="$(arg namespace)" />
   <xacro:property name="is_public_sim" value="$(arg is_public_sim)" />
 
