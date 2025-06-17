@@ -27,6 +27,11 @@ limitations under the License.
     <xacro:if value="${use_sim_time}">
       <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+          <ros>
+            <namespace>${namespace}</namespace>
+            <remapping>/tf:=tf</remapping>
+            <remapping>/tf_static:=tf_static</remapping>
+          </ros>
           <parameters>$(find pmb2_description)/ros2_control/gazebo_controller_manager_cfg.yaml</parameters>
         </plugin>
       </gazebo>

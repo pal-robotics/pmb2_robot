@@ -1,4 +1,4 @@
-mobile_base_controller:
+/**/mobile_base_controller:
   ros__parameters:
     type: diff_drive_controller/DiffDriveController
     use_stamped_vel: False
@@ -21,6 +21,7 @@ mobile_base_controller:
     cmd_vel_timeout: 0.25
 
     # Base frame_id
+    tf_frame_prefix_enable: false
     base_frame_id: base_footprint
 
     # odom tf will be published by direct laser odometry
