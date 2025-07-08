@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add diagnostic analyzers
+* Contributors: Noel Jimenez
+
 5.9.0 (2025-06-17)
 ------------------
 * add support to namespaces
