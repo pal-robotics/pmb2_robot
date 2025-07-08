@@ -2,8 +2,8 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.10.0 (2025-07-08)
+-------------------
 * Add diagnostic analyzers
 * Contributors: Noel Jimenez
 
