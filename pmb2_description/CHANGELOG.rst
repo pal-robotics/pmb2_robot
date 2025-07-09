@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix use_sim_time
+* Contributors: andreacapodacqua
+
 5.10.0 (2025-07-08)
 -------------------
 
