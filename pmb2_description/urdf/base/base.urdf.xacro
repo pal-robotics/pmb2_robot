@@ -24,7 +24,8 @@
   <xacro:property name="wheel_width" value="0.040"/>
   <xacro:property name="wheel_separation" value="0.4044"/>
   <xacro:property name="wheel_torque" value="6.0"/>
-  <xacro:property name="wheel_velocity" value="1.0"/>
+  <!-- TODO Compute real wheel max velocity -->
+  <xacro:property name="wheel_velocity" value="100.0"/>
 
   <!-- Caster wheel characteristics -->
   <xacro:property name="caster_radius" value="0.025"/>
