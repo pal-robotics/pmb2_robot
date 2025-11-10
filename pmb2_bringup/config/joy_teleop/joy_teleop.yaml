@@ -4,7 +4,7 @@
       type: topic
       interface_type: geometry_msgs/msg/Twist
       topic_name: cmd_vel
-      deadman_buttons: [5]
+      deadman_buttons: [10]
       axis_mappings:
         linear-x:
           axis: 1
@@ -19,40 +19,46 @@
       type: action
       interface_type: twist_mux_msgs/action/JoyPriority
       action_name: joy_priority_action
-      buttons: [9]
+      buttons: [10, 6]
 
     assisted_teleop_priority:
       type: action
       interface_type: twist_mux_msgs/action/JoyPriority
       action_name: assisted_teleop_priority_action
-      buttons: [5,8]
+      buttons: [10, 4]
 
     joy_turbo_decrease:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_decrease
-      buttons: [8, 1]
+      buttons: [10, 0]
 
     joy_turbo_increase:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_increase
-      buttons: [8, 3]
+      buttons: [10, 3]
 
     joy_turbo_angular_decrease:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_angular_decrease
-      buttons: [8, 2]
+      buttons: [10, 2]
 
     joy_turbo_angular_increase:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_angular_increase
-      buttons: [8, 0]
+      buttons: [10, 1]
 
-    joy_turbo_reset:
+    joy_turbo_reset_left:
       type: action
       interface_type: twist_mux_msgs/action/JoyTurbo
       action_name: joy_turbo_reset
-      buttons: [10, 11]
+      buttons: [10, 7]
+
+    joy_turbo_reset_right:
+      type: action
+      interface_type: twist_mux_msgs/action/JoyTurbo
+      action_name: joy_turbo_reset
+      buttons: [10, 8]
