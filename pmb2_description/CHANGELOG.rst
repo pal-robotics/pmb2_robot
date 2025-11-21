@@ -2,6 +2,11 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added realsense2_description exec depend
+* Contributors: martinaannicelli
+
 5.10.2 (2025-07-23)
 -------------------
 * Merge branch 'tpe/update_wheel_max_vel' into 'humble-devel'

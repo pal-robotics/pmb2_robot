@@ -2,6 +2,14 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove deprecated parameter has_jerk_limits
+  [deprecated] has_jerk_limits parameter is deprecated, instead set the respective limits to NAN
+  ￼
+  max_jerk already defaults to NAN
+* Contributors: Noel Jimenez
+
 5.10.2 (2025-07-23)
 -------------------
 
