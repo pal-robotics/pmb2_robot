@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.10.3 (2025-11-21)
+-------------------
 * added realsense2_description exec depend
 * Contributors: martinaannicelli
 
