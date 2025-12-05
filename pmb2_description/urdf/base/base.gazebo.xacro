@@ -38,17 +38,46 @@
     </gazebo>
 
     <!-- Odometry plugin for ground truth -->
-    <!-- <gazebo>
-      <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
-        <ros>
-          <namespace>${namespace}</namespace>
-        </ros>
-        <frame_name>world</frame_name>
-        <body_name>base_footprint</body_name>
-        <topic_name>ground_truth_odom</topic_name>
-        <update_rate>100.0</update_rate>
-      </plugin>
-    </gazebo> -->
+    <gazebo>
+      <xacro:if value="${gazebo_version == 'classic'}">
+        <plugin filename="libgazebo_world_odometry.so" name="gazebo_ros_odometry">
+          <ros>
+            <namespace>${namespace}</namespace>
+          </ros>
+          <frame_name>world</frame_name>
+          <body_name>base_footprint</body_name>
+          <topic_name>ground_truth_odom</topic_name>
+          <update_rate>100.0</update_rate>
+        </plugin>
+      </xacro:if>
+      <xacro:if value="${gazebo_version == 'gazebo'}">
+        <!-- Diff drive plugin -->
+        <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+          <odom_publisher_frequency>50</odom_publisher_frequency>
+          <left_joint>wheel_left_joint</left_joint>
+          <right_joint>wheel_right_joint</right_joint>
+          <wheel_separation>0.35</wheel_separation>
+          <wheel_diameter>0.2</wheel_diameter>
+          <max_wheel_torque>20</max_wheel_torque>
+          <max_linear_acceleration>1.0</max_linear_acceleration>
+          <topic>cmd_vel</topic>
+          <publish_odom>true</publish_odom>
+          <publish_odom_tf>true</publish_odom_tf>
+          <publish_wheel_tf>true</publish_wheel_tf>
+          <odom_topic>odom</odom_topic>
+          <frame_id>odom</frame_id>
+          <child_frame_id>base_link</child_frame_id>
+        </plugin>
+
+        <!-- Joint state publisher plugin -->
+        <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+          <update_rate>50</update_rate>
+          <topic>joint_states</topic>
+          <joint_name>wheel_right_joint</joint_name>
+          <joint_name>wheel_left_joint</joint_name>
+        </plugin>
+      </xacro:if>
+    </gazebo>
 
   </xacro:macro>
 

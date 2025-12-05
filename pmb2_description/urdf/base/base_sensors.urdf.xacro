@@ -85,15 +85,29 @@
     <!-- Sonars -->
     <xacro:if value="${has_sonars}">
 
-      <xacro:range_sensor name="${name}_sonar_03" parent="${name}_link" ros_topic="sonar_${name}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
+      <!-- Gazebo: use numbered topics to visualize independently -->
+      <xacro:if value="${gazebo_version == 'gazebo'}">
+        <xacro:property name="sonar_topic_01" value="sonar_${name}_01"/>
+        <xacro:property name="sonar_topic_02" value="sonar_${name}_02"/>
+        <xacro:property name="sonar_topic_03" value="sonar_${name}_03"/>
+      </xacro:if>
+
+      <!-- Gazebo classic: all use same topic -->
+      <xacro:if value="${gazebo_version == 'classic'}">
+        <xacro:property name="sonar_topic_01" value="sonar_${name}"/>
+        <xacro:property name="sonar_topic_02" value="sonar_${name}"/>
+        <xacro:property name="sonar_topic_03" value="sonar_${name}"/>
+      </xacro:if>
+
+      <xacro:range_sensor name="${name}_sonar_03" parent="${name}_link" ros_topic="${sonar_topic_03}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.183 0.183 0.173" rpy="0 0 ${135 * deg_to_rad}"/>
       </xacro:range_sensor>
 
-      <xacro:range_sensor name="${name}_sonar_02" parent="${name}_link" ros_topic="sonar_${name}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_02" parent="${name}_link" ros_topic="${sonar_topic_02}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.259 0.0 0.173" rpy="0 0 ${180 * deg_to_rad}"/>
       </xacro:range_sensor>
 
-      <xacro:range_sensor name="${name}_sonar_01" parent="${name}_link" ros_topic="sonar_${name}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
+      <xacro:range_sensor name="${name}_sonar_01" parent="${name}_link" ros_topic="${sonar_topic_01}" update_rate="5" maxRange="1.0" minRange="0.02" fov="0.5" radiation="ultrasound">
         <origin xyz="-0.183 -0.183 0.173" rpy="0 0 ${225 * deg_to_rad}"/>
       </xacro:range_sensor>
 
