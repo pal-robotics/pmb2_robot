@@ -33,14 +33,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/dock/dock.stl" />
+          <mesh filename="file://$(find pmb2_description)/meshes/dock/dock.stl" />
         </geometry>
         <material name="LightGrey" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/dock/dock_collision.stl" />
+          <mesh filename="file://$(find pmb2_description)/meshes/dock/dock_collision.stl" />
         </geometry>
         <material name="LightGrey" />
       </collision>

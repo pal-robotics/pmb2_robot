@@ -29,7 +29,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/objects/antenna.stl"/>
+          <mesh filename="file://$(find pmb2_description)/meshes/objects/antenna.stl"/>
         </geometry>
         <material name="Black"/>
       </visual>

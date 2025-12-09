@@ -98,14 +98,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/cameras_add_on/cameras_add_on.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find pmb2_description)/meshes/cameras_add_on/cameras_add_on.stl" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://pmb2_description/meshes/cameras_add_on/cameras_add_on_collision.stl" scale="1 1 1"/>
+          <mesh filename="file://$(find pmb2_description)/meshes/cameras_add_on/cameras_add_on_collision.stl" scale="1 1 1"/>
         </geometry>
         <material name="White" />
       </collision>
@@ -120,4 +120,3 @@
   </xacro:macro>
 
 </robot>
-
