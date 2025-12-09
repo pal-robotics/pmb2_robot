@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.11.0 (2025-12-09)
+-------------------
 * Remove usage of gazebo plugins for JointStatePublisher and DiffDrive
   Already handled by ros2_control
 * Add support for new gazebo
