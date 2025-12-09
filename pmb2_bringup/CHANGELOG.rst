@@ -2,6 +2,11 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add support for new gazebo
+* Contributors: Noel Jimenez
+
 5.10.3 (2025-11-21)
 -------------------
 

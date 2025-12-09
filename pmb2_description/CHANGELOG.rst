@@ -2,6 +2,15 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove usage of gazebo plugins for JointStatePublisher and DiffDrive
+  Already handled by ros2_control
+* Add support for new gazebo
+* Changes for new Gazebo
+  Signed-off-by: Juancams <jc.manzanares.serrano@gmail.com>
+* Contributors: Juancams, Noel Jimenez
+
 5.10.3 (2025-11-21)
 -------------------
 * added realsense2_description exec depend
