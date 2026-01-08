@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.11.1 (2026-01-08)
+-------------------
 * Add "Hardware Components Activity" module dependency
 * Contributors: Noel Jimenez
 
