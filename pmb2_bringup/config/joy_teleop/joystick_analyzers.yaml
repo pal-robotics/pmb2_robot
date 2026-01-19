@@ -1,4 +1,4 @@
-/joystick/add_analyzer_node:
+/**/joystick/add_analyzer_node:
   ros__parameters:
     path: Diagnostics
     hardware:
