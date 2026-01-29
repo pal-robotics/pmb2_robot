@@ -2,8 +2,8 @@
 Changelog for package pmb2_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.11.2 (2026-01-29)
+-------------------
 * Use package instead of find for meshes lookup
   This change avoids errors when visualizing the robot in rviz2 from a
   remote host instead of directly inside the robot
