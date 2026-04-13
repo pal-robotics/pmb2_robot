@@ -1,4 +1,4 @@
-/twist_mux/add_analyzer_node:
+/**/twist_mux/add_analyzer_node:
   ros__parameters:
     path: Diagnostics
     navigation:
