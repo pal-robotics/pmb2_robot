@@ -2,6 +2,13 @@
 Changelog for package pmb2_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add pal configuration
+* Add compatibility for namespace
+* Switch to pal_joy + Update layout
+* Contributors: thomaspeyrucain
+
 5.11.2 (2026-01-29)
 -------------------
 
