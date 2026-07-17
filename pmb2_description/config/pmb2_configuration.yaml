@@ -4,7 +4,7 @@ wheel_model:
   default_value: 'moog'
 laser_model:
   description: 'Base laser model'
-  choices: ['no-laser', 'sick-571', 'sick-561', 'sick-551', 'hokuyo']
+  choices: ['no-laser', 'sick-571', 'sick-561', 'sick-551', 'hokuyo', 'ydlidar-tg30']
   default_value: 'sick-571'
 add_on_module:
   description: 'Whether the base has an extra add on module'
