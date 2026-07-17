@@ -19,7 +19,7 @@
 
   <!-- ARGUMENTS -->
 
-  <!-- no-laser, hokuyo, sick-551, sick-561, sick-571-->
+  <!-- no-laser, hokuyo, sick-551, sick-561, sick-571, ydlidar-tg30 -->
   <xacro:arg name="laser_model" default="sick-571"/>
 
   <!-- false, true -->
@@ -50,7 +50,7 @@
   <xacro:property name="camera_model" value="$(arg camera_model)" />
 
   <!-- HW configuration check -->
-  <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
+  <xacro:if value="${laser_model not in ['no-laser', 'sick-551', 'sick-561', 'sick-571', 'hokuyo', 'ydlidar-tg30']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
   <xacro:if value="${add_on_module not in ['no-add-on', 'cobra']}">
