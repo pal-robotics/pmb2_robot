@@ -1,4 +1,4 @@
 /joy_teleop:
-  use preset: "joy_teleop_diff_base.yaml"
+  use_preset: "joy_teleop_diff_base.yaml"
   use_if:
     base_type: pmb2
