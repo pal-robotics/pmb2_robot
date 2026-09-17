@@ -14,9 +14,10 @@
 
 
 from dataclasses import dataclass
+
+from ament_index_python.packages import get_package_share_directory
 from launch.actions import DeclareLaunchArgument as DLA
 from launch_pal.arg_utils import parse_launch_args_from_yaml
-from ament_index_python.packages import get_package_share_directory
 
 
 @dataclass(frozen=True)
@@ -24,9 +25,9 @@ class PMB2Args:
     """This dataclass contains launch arguments for PMB2."""
 
     __robot_name = 'pmb2'
-    __pkg_dir = get_package_share_directory(f"{__robot_name}_description")
+    __pkg_dir = get_package_share_directory(f'{__robot_name}_description')
     __arg_creator = parse_launch_args_from_yaml(
-        f"{__pkg_dir}/config/{__robot_name}_configuration.yaml")
+        f'{__pkg_dir}/config/{__robot_name}_configuration.yaml')
 
     wheel_model: DLA = __arg_creator.get_argument('wheel_model')
     laser_model: DLA = __arg_creator.get_argument('laser_model')

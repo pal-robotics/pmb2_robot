@@ -21,10 +21,10 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.actions import GroupAction
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import PushRosNamespace
 from launch_pal.arg_utils import LaunchArgumentsBase
-from launch_pal.robot_arguments import CommonArgs
 from launch_pal.include_utils import include_scoped_launch_py_description
+from launch_pal.robot_arguments import CommonArgs
+from launch_ros.actions import PushRosNamespace
 
 
 @dataclass(frozen=True)

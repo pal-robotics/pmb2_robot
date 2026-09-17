@@ -21,9 +21,9 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, GroupAction, OpaqueFunction
 from launch.actions import SetLaunchConfiguration
 from launch.substitutions import LaunchConfiguration
-from launch_ros.actions import PushRosNamespace
-from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
+from launch_pal.robot_arguments import CommonArgs
+from launch_ros.actions import PushRosNamespace
 
 
 @dataclass(frozen=True)
@@ -59,7 +59,7 @@ def declare_actions(
             PushRosNamespace(LaunchConfiguration('namespace')),
             generate_load_controller_launch_description(
                 controller_name='mobile_base_controller',
-                controller_params_file=LaunchConfiguration("base_config_file")
+                controller_params_file=LaunchConfiguration('base_config_file')
             )
         ],
     )
@@ -69,7 +69,7 @@ def declare_actions(
 
 def set_base_config_file(context):
 
-    is_public_sim = read_launch_argument("is_public_sim", context)
+    is_public_sim = read_launch_argument('is_public_sim', context)
     pkg_share_folder = get_package_share_directory('pmb2_controller_configuration')
 
     controller_file = 'mobile_base_controller.yaml'
@@ -79,4 +79,4 @@ def set_base_config_file(context):
 
     base_config_file = os.path.join(pkg_share_folder, 'config', controller_file)
 
-    return [SetLaunchConfiguration("base_config_file", base_config_file)]
+    return [SetLaunchConfiguration('base_config_file', base_config_file)]
