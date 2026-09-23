@@ -2,8 +2,8 @@
 Changelog for package pmb2_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+5.12.3 (2026-09-23)
+-------------------
 * Fix flake8 linter issues
 * Bump cmake_minimum_required to 3.10
 * Contributors: Noel Jimenez
