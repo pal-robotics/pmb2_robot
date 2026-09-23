@@ -2,6 +2,11 @@
 Changelog for package pmb2_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Bump cmake_minimum_required to 3.10
+* Contributors: Noel Jimenez
+
 5.12.2 (2026-08-24)
 -------------------
 
