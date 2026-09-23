@@ -54,8 +54,8 @@ def declare_actions(
     # PAL helper function to fetch the configuration for this package,
     # which might be installed also from other packages
     joy_teleop_config = get_pal_configuration(
-        pkg="joy_teleop",
-        node="joy_teleop",
+        pkg='joy_teleop',
+        node='joy_teleop',
         ld=launch_description)
 
     joy_teleop_node = Node(
@@ -67,8 +67,8 @@ def declare_actions(
     launch_description.add_action(joy_teleop_node)
 
     joy_config = get_pal_configuration(
-        pkg="joystick",
-        node="joystick",
+        pkg='joystick',
+        node='joystick',
         ld=launch_description)
 
     joy_node = Node(
